@@ -1,7 +1,7 @@
 import { addDays, type DateKey } from '@/lib/dates';
 
 // Упрощённый SM-2. Оценки: верно → 5, почти верно → 3, неверно → 1.
-// При q < 3 карточка начинается заново (интервал 1 день), лёгкость падает.
+// При q < 3 карточка начинается заново и доступна к повторению сразу, лёгкость падает.
 
 export type Card = {
   ease: number;
@@ -26,7 +26,8 @@ export function review(card: Card, grade: Grade, today: DateKey): Card {
   const q = QUALITY[grade];
   const ease = Math.max(MIN_EASE, card.ease + 0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
   if (q < 3) {
-    return { ease, interval: 1, reps: 0, lapses: card.lapses + 1, due: addDays(today, 1), lastReviewed: today };
+    // Ошибку можно повторить в тот же день (экран «Повторение»); дальше — заново с интервала 1.
+    return { ease, interval: 1, reps: 0, lapses: card.lapses + 1, due: today, lastReviewed: today };
   }
   const reps = card.reps + 1;
   const interval = reps === 1 ? 1 : reps === 2 ? 6 : Math.round(card.interval * ease);

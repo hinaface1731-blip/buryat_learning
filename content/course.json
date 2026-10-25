@@ -1220,63 +1220,63 @@
     {
       "id": "t-znakomstvo",
       "title": "Знакомство",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-semya",
       "title": "Семья",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-chisla",
       "title": "Числа",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-tsveta",
       "title": "Цвета",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-eda",
       "title": "Еда",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-odezhda",
       "title": "Одежда",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-zhivotnye",
       "title": "Животные",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-chasti-tela",
       "title": "Части тела",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-dom",
       "title": "Дом",
-      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "description": "Слова добавит носитель языка.",
       "locked": true,
       "lessons": []
     }

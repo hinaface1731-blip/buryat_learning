@@ -19,7 +19,7 @@ describe('SM-2', () => {
   it('ошибка сбрасывает карточку и снижает лёгкость, но не ниже 1.3', () => {
     let c = review(review(newCard(D), 'correct', D), 'correct', D);
     c = review(c, 'wrong', D);
-    expect(c).toMatchObject({ reps: 0, interval: 1, lapses: 1, due: '2026-10-26' });
+    expect(c).toMatchObject({ reps: 0, interval: 1, lapses: 1, due: D });
     for (let i = 0; i < 20; i++) c = review(c, 'wrong', D);
     expect(c.ease).toBeCloseTo(1.3);
   });

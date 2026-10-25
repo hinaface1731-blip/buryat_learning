@@ -140,7 +140,7 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
         return {
           id: `t-${id}`,
           title,
-          description: 'Слова придут от носителя языка (content/templates/thematic-words.csv).',
+          description: 'Слова добавит носитель языка.',
           locked: true,
           lessons: [],
         };
