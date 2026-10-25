@@ -2,3 +2,4 @@
 *.png binary
 *.m4a binary
 *.pdf binary
+*.csv text eol=crlf
