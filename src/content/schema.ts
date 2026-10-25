@@ -42,6 +42,8 @@ export const Word = z.object({
   /** Не попадает в уроки (dated/sensitive или решение ревьюера). */
   excluded: z.boolean(),
   comment: z.string(),
+  /** Строка книги как есть — ключ слияния при повторном импорте, чтобы правки ревьюера не терялись. */
+  origin: z.object({ buryat: z.string(), russian: z.string() }),
 });
 export type Word = z.infer<typeof Word>;
 
@@ -56,6 +58,7 @@ export const Sentence = z.object({
   verified: z.boolean(),
   excluded: z.boolean(),
   comment: z.string(),
+  origin: z.string(),
 });
 export type Sentence = z.infer<typeof Sentence>;
 

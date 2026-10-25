@@ -1,1 +1,838 @@
-[]
+[
+  {
+    "id": "mp-khaluun-khalyuun",
+    "a": "khaluun",
+    "b": "khalyuun",
+    "a_text": "халуун",
+    "b_text": "халюун",
+    "contrast": "soft",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-kharuu-kharyuu",
+    "a": "kharuu",
+    "b": "kharyuu",
+    "a_text": "харуу",
+    "b_text": "харюу",
+    "contrast": "soft",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-rroo-oryoo",
+    "a": "rroo",
+    "b": "oryoo",
+    "a_text": "рроо",
+    "b_text": "орёо",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 5,
+      "section": "§8"
+    },
+    "usable": false,
+    "reasons": [
+      "в таблице «твёрдое — мягкое», но различие не в мягкости: проверить написание"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-kholoo-kholyoo",
+    "a": "kholoo",
+    "b": "kholyoo",
+    "a_text": "холоо",
+    "b_text": "холёо",
+    "contrast": "soft",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 5,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-khalaa-khalyaa",
+    "a": "khalaa",
+    "b": "khalyaa",
+    "a_text": "халаа",
+    "b_text": "халяа",
+    "contrast": "soft",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 5,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-baraa-baryaa",
+    "a": "baraa-2",
+    "b": "baryaa",
+    "a_text": "бараа",
+    "b_text": "баряа",
+    "contrast": "soft",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 5,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-huen-han",
+    "a": "huen",
+    "b": "han",
+    "a_text": "һүн",
+    "b_text": "һан",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": false,
+    "reasons": [
+      "«һан» — служебное слово/помета"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-khuen-khun",
+    "a": "khuen",
+    "b": "khun",
+    "a_text": "хүн",
+    "b_text": "хун",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": false,
+    "reasons": [
+      "одинаковый перевод"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-ger-gar",
+    "a": "ger",
+    "b": "gar",
+    "a_text": "гэр",
+    "b_text": "гар",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-ueder-udar",
+    "a": null,
+    "b": null,
+    "a_text": "үдэр",
+    "b_text": "удар",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «үдэр»",
+      "нет перевода для «удар»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-huukha-haakha",
+    "a": "huukha",
+    "b": "haakha",
+    "a_text": "һууха",
+    "b_text": "һааха",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-buekhe-bakha",
+    "a": null,
+    "b": "bakha",
+    "a_text": "бүхэ",
+    "b_text": "баха",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «бүхэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-zon-zun",
+    "a": "zon",
+    "b": "zun",
+    "a_text": "зон",
+    "b_text": "зун",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 15,
+      "lesson": 3,
+      "section": "упр. 1"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-dakha-daakha",
+    "a": "dakha",
+    "b": "daakha",
+    "a_text": "даха",
+    "b_text": "дааха",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-taba-taaba",
+    "a": "taba",
+    "b": null,
+    "a_text": "таба",
+    "b_text": "тааба",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «тааба»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-shakha-shaakha",
+    "a": null,
+    "b": "shaakha",
+    "a_text": "шаха",
+    "b_text": "шааха",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «шаха»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-khataba-khataaba",
+    "a": null,
+    "b": null,
+    "a_text": "хатаба",
+    "b_text": "хатааба",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «хатаба»",
+      "нет перевода для «хатааба»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-zan-zaan",
+    "a": "zan",
+    "b": "zaan",
+    "a_text": "зан",
+    "b_text": "заан",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-bara-baraa",
+    "a": "bara",
+    "b": "baraa",
+    "a_text": "бара",
+    "b_text": "бараа",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": false,
+    "reasons": [
+      "«бара» — служебное слово/помета"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-dara-daaraa",
+    "a": "dara",
+    "b": null,
+    "a_text": "дара",
+    "b_text": "даараа",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 2"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «даараа»",
+      "«дара» — служебное слово/помета"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-doro-doroo",
+    "a": "doro",
+    "b": "doroo",
+    "a_text": "доро",
+    "b_text": "дороо",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 3"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-ono-onoo",
+    "a": "ono",
+    "b": "onoo",
+    "a_text": "оно",
+    "b_text": "оноо",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 3"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-bozho-boozho",
+    "a": null,
+    "b": "boozho",
+    "a_text": "божо",
+    "b_text": "боожо",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 3"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «божо»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-bodol-boodo-l",
+    "a": "bodol",
+    "b": "boodol",
+    "a_text": "бодол",
+    "b_text": "боодо л",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 3"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-bolgokho-boolgokho",
+    "a": "bolgokho",
+    "b": null,
+    "a_text": "болгохо",
+    "b_text": "боолгохо",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 16,
+      "lesson": 3,
+      "section": "упр. 3"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «боолгохо»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-zuraba-zuuraba",
+    "a": null,
+    "b": null,
+    "a_text": "зураба",
+    "b_text": "зуураба",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 17,
+      "lesson": 3,
+      "section": "упр. 4"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «зураба»",
+      "нет перевода для «зуураба»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-buda-buuda",
+    "a": "buda",
+    "b": null,
+    "a_text": "буда",
+    "b_text": "бууда",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 17,
+      "lesson": 3,
+      "section": "упр. 4"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «бууда»",
+      "«Буда» — перевод не на русском"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-ug-uug",
+    "a": "ug",
+    "b": null,
+    "a_text": "уг",
+    "b_text": "ууг",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 17,
+      "lesson": 3,
+      "section": "упр. 4"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «ууг»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-urag-uurag",
+    "a": "urag",
+    "b": null,
+    "a_text": "ураг",
+    "b_text": "уураг",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 17,
+      "lesson": 3,
+      "section": "упр. 4"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «уураг»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-tukha-tuukha",
+    "a": "tukha",
+    "b": "tuukha",
+    "a_text": "туха",
+    "b_text": "тууха",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 17,
+      "lesson": 3,
+      "section": "упр. 4"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-beeley-beley",
+    "a": "beeley-2",
+    "b": "beley",
+    "a_text": "бээлэй",
+    "b_text": "бэлэй",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 5"
+    },
+    "usable": false,
+    "reasons": [
+      "«бэлэй» — служебное слово/помета"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-tekhe-teekhe",
+    "a": "tekhe",
+    "b": null,
+    "a_text": "тэхэ",
+    "b_text": "тээхэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 5"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «тээхэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-beshe-beshee",
+    "a": "beshe",
+    "b": null,
+    "a_text": "бэшэ",
+    "b_text": "бэшээ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 5"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «бэшээ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-eshe-eshee-n",
+    "a": "eshe",
+    "b": "eshee-n",
+    "a_text": "эшэ",
+    "b_text": "эшээ (н)",
+    "contrast": "other",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 5"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-zuebshe-zueuebshe",
+    "a": null,
+    "b": "zueuebshe",
+    "a_text": "зүбшэ",
+    "b_text": "зүүбшэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 6"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «зүбшэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-khuerge-khueuerge",
+    "a": null,
+    "b": "khueuerge",
+    "a_text": "хүргэ",
+    "b_text": "хүүргэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 6"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «хүргэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-uerge-ueuerge",
+    "a": null,
+    "b": "ueuerge",
+    "a_text": "үргэ",
+    "b_text": "үүргэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 6"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «үргэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-duere-dueuere",
+    "a": "duere",
+    "b": null,
+    "a_text": "дүрэ",
+    "b_text": "дүүрэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 6"
+    },
+    "usable": false,
+    "reasons": [
+      "нет перевода для «дүүрэ»"
+    ],
+    "verified": false
+  },
+  {
+    "id": "mp-duerekhe-dueuerekhe",
+    "a": "duerekhe",
+    "b": "dueuerekhe",
+    "a_text": "дүрэхэ",
+    "b_text": "дүүрэхэ",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 18,
+      "lesson": 3,
+      "section": "упр. 6"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-khada-khuda",
+    "a": "khada",
+    "b": "khuda",
+    "a_text": "хада",
+    "b_text": "худа",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§7"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-khara-khura",
+    "a": "khara",
+    "b": "khura",
+    "a_text": "хара",
+    "b_text": "хура",
+    "contrast": "quality",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§7"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-ula-uula",
+    "a": "ula",
+    "b": "uula",
+    "a_text": "ула",
+    "b_text": "уула",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-ula-ulaa",
+    "a": "ula",
+    "b": "ulaa",
+    "a_text": "ула",
+    "b_text": "улаа",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-dara-daara",
+    "a": "dara-2",
+    "b": "daara",
+    "a_text": "дара",
+    "b_text": "даара",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-boro-boroo",
+    "a": "boro",
+    "b": "boroo",
+    "a_text": "боро",
+    "b_text": "бороо",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-shueder-shueueder",
+    "a": "shueder",
+    "b": "shueueder",
+    "a_text": "шүдэр",
+    "b_text": "шүүдэр",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  },
+  {
+    "id": "mp-uelen-ueuelen",
+    "a": "uelen",
+    "b": "ueuelen-2",
+    "a_text": "үлэн",
+    "b_text": "үүлэн",
+    "contrast": "length",
+    "source": {
+      "book": "bxr-textbook",
+      "page": 4,
+      "section": "§8"
+    },
+    "usable": true,
+    "reasons": [],
+    "verified": false
+  }
+]

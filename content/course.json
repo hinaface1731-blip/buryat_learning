@@ -1,1 +1,1284 @@
-{ "id": "buryat-mvp", "title": "Бурятский язык с нуля", "units": [] }
+{
+  "id": "buryat-mvp",
+  "title": "Бурятский язык с нуля",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Алфавит и особые буквы Ү Ө Һ",
+      "description": "36 букв и их названия; три буквы, которых нет в русском.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "u1-l1",
+          "title": "Буквы А–Й",
+          "noteIds": [
+            "note-alphabet"
+          ],
+          "wordIds": [],
+          "minimalPairIds": [],
+          "letterIds": [
+            "letter-a",
+            "letter-b",
+            "letter-v",
+            "letter-g",
+            "letter-d",
+            "letter-ye",
+            "letter-yo",
+            "letter-zh",
+            "letter-z",
+            "letter-i",
+            "letter-j"
+          ],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u1-l2",
+          "title": "Буквы К–Ф",
+          "noteIds": [],
+          "wordIds": [],
+          "minimalPairIds": [],
+          "letterIds": [
+            "letter-k",
+            "letter-l",
+            "letter-m",
+            "letter-n",
+            "letter-o",
+            "letter-p",
+            "letter-r",
+            "letter-s",
+            "letter-t",
+            "letter-u",
+            "letter-f"
+          ],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u1-l3",
+          "title": "Буквы Х–Я",
+          "noteIds": [],
+          "wordIds": [],
+          "minimalPairIds": [],
+          "letterIds": [
+            "letter-kh",
+            "letter-ts",
+            "letter-ch",
+            "letter-sh",
+            "letter-shch",
+            "letter-hard-sign",
+            "letter-y",
+            "letter-soft-sign",
+            "letter-e",
+            "letter-yu",
+            "letter-ya"
+          ],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u1-l4",
+          "title": "Ү, Ө, Һ",
+          "noteIds": [
+            "note-special-sounds"
+          ],
+          "wordIds": [],
+          "minimalPairIds": [],
+          "letterIds": [
+            "letter-oe",
+            "letter-ue",
+            "letter-h"
+          ],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Звуки һ, ү, өө, н",
+      "description": "Урок 1 учебника: особые звуки и два звука н.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "u2-l1",
+          "title": "Урок 1",
+          "noteIds": [
+            "note-special-sounds",
+            "note-n"
+          ],
+          "wordIds": [
+            "haalishan",
+            "haalta",
+            "haba",
+            "modon-haba",
+            "habar",
+            "hadnag",
+            "huen",
+            "hueler"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "hueueder",
+            "heshkhel",
+            "hiikhe",
+            "honyuusha",
+            "holongo",
+            "hungalta",
+            "hungalga",
+            "hurguuli"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "hurgaal",
+            "huuri",
+            "huezeg",
+            "huni",
+            "haynder",
+            "ham",
+            "hambay",
+            "hamgan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l4",
+          "title": "Урок 4",
+          "noteIds": [],
+          "wordIds": [
+            "handali",
+            "hongino",
+            "khuebueuen",
+            "uebgen",
+            "nuekher",
+            "uekhibueuen",
+            "uege",
+            "gueroeoehen"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l5",
+          "title": "Урок 5",
+          "noteIds": [],
+          "wordIds": [
+            "khuebshe",
+            "uebel",
+            "uender",
+            "tuekheryeen",
+            "tuerel",
+            "tueuekhe",
+            "uelen",
+            "ueuelen"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l6",
+          "title": "Урок 6",
+          "noteIds": [],
+          "wordIds": [
+            "ueueden",
+            "ueymoeoen",
+            "oeoerynkhin",
+            "oeoekheguey",
+            "zueydoeoel",
+            "oeoederkhueue",
+            "oeoekhen",
+            "nogoon"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l7",
+          "title": "Урок 7",
+          "noteIds": [],
+          "wordIds": [
+            "khara",
+            "khueyten",
+            "namar",
+            "manay",
+            "nyutag",
+            "hueuelshyn",
+            "hara",
+            "nimgen"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l8",
+          "title": "Урок 8",
+          "noteIds": [],
+          "wordIds": [
+            "muelhen",
+            "shere",
+            "shanga",
+            "halkhin",
+            "khonkho",
+            "duugarkha",
+            "shubuun",
+            "ueden"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l9",
+          "title": "Урок 9",
+          "noteIds": [],
+          "wordIds": [
+            "ende",
+            "narhan",
+            "ulyaahan",
+            "urgadag",
+            "moyhon",
+            "oy",
+            "soo",
+            "tomo"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u2-l10",
+          "title": "Урок 10",
+          "noteIds": [
+            "note-vowel-harmony"
+          ],
+          "wordIds": [
+            "zhezhe",
+            "an",
+            "bulgan",
+            "zerlig",
+            "amitan",
+            "zhel",
+            "ene",
+            "alirhan",
+            "elbeg"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [
+            "s-l1-e5-1",
+            "s-l1-e5-2",
+            "s-l1-e5-3",
+            "s-l1-e5-4",
+            "s-l1-e5-5",
+            "s-l1-e5-6",
+            "s-l1-e5-7",
+            "s-l1-e5-8",
+            "s-l1-e6-1",
+            "s-l1-e6-2",
+            "s-l1-e6-3",
+            "s-l1-e6-4",
+            "s-l1-e6-5",
+            "s-l1-e6-6",
+            "s-l1-e6-7"
+          ],
+          "categorize": true
+        }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Йотированные гласные",
+      "description": "Урок 2 учебника: я, е, ю, ё и долгие яа, ёо, еэ, юу.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "u3-l1",
+          "title": "Урок 1",
+          "noteIds": [
+            "note-iotated"
+          ],
+          "wordIds": [
+            "urda-negen-sagta",
+            "nyutag-2",
+            "bayan",
+            "shodogorkhon-shodon-hueuel",
+            "babana-tekhe-eshegen",
+            "ekhe-oron",
+            "baygaali",
+            "bayalig"
+          ],
+          "minimalPairIds": [
+            "mp-khaluun-khalyuun"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "uuzham",
+            "eber",
+            "yamar",
+            "yadagarkhan",
+            "yahan",
+            "ueye",
+            "nahan",
+            "uhan"
+          ],
+          "minimalPairIds": [
+            "mp-kharuu-kharyuu"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "yeren",
+            "ueyer",
+            "ayuultay",
+            "uyerlekhe",
+            "nuur",
+            "yuhe",
+            "khoyor",
+            "nege-yuumen-tukhay"
+          ],
+          "minimalPairIds": [
+            "mp-kholoo-kholyoo"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l4",
+          "title": "Урок 4",
+          "noteIds": [],
+          "wordIds": [
+            "shebenen",
+            "nyuden",
+            "arban-nayma",
+            "khoeoereldene",
+            "shekhen",
+            "duulakha",
+            "khudal",
+            "uenen"
+          ],
+          "minimalPairIds": [
+            "mp-khalaa-khalyaa"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l5",
+          "title": "Урок 5",
+          "noteIds": [],
+          "wordIds": [
+            "ger",
+            "goyo",
+            "barigdana",
+            "namda",
+            "beeley",
+            "yoho-zanshalta",
+            "yohotoy",
+            "khuen"
+          ],
+          "minimalPairIds": [
+            "mp-baraa-baryaa"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l6",
+          "title": "Урок 6",
+          "noteIds": [],
+          "wordIds": [
+            "dulaan",
+            "oyono",
+            "takhyaa",
+            "dalbaraa",
+            "harkhyaag",
+            "olon",
+            "gazaaguur",
+            "urgakha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l7",
+          "title": "Урок 7",
+          "noteIds": [],
+          "wordIds": [
+            "taryaan",
+            "haynaar",
+            "yootogor",
+            "goyookho",
+            "oryoo",
+            "medueuelel",
+            "uenyeen",
+            "uekhibueued"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l8",
+          "title": "Урок 8",
+          "noteIds": [],
+          "wordIds": [
+            "tuelyeen",
+            "huekhe",
+            "uezeg",
+            "erdem",
+            "ayaga",
+            "edyeen",
+            "edyeelueuelkhe",
+            "khyuroeoedekhe"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l9",
+          "title": "Урок 9",
+          "noteIds": [],
+          "wordIds": [
+            "khakhalkha",
+            "deezhe",
+            "say",
+            "khuekhyuun",
+            "gazaa",
+            "besheg",
+            "kharyuu",
+            "tanyuulkha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l10",
+          "title": "Урок 10",
+          "noteIds": [],
+          "wordIds": [
+            "naadakha",
+            "namayye",
+            "khuebueuen-2",
+            "beshekhe",
+            "ekhin",
+            "sharasa",
+            "ulaykha",
+            "nogoon-2"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l11",
+          "title": "Урок 11",
+          "noteIds": [],
+          "wordIds": [
+            "edyeen-2",
+            "khuhan",
+            "seseg",
+            "nabshahan",
+            "ubhen",
+            "urgasa",
+            "khuryaakha",
+            "khaluun"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u3-l12",
+          "title": "Урок 12",
+          "noteIds": [
+            "note-vowel-harmony"
+          ],
+          "wordIds": [
+            "khalyuun",
+            "kharuu",
+            "kholoo",
+            "kholyoo",
+            "khalaa",
+            "khalyaa",
+            "baraa-2",
+            "baryaa"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [
+            "s-l2-e1-1",
+            "s-l2-e1-2",
+            "s-l2-e1-3",
+            "s-l2-e1-4",
+            "s-l2-e1-5",
+            "s-l2-e1-6",
+            "s-l2-e1-7",
+            "s-l2-e1-8",
+            "s-l2-e1-9",
+            "s-l2-e1-10",
+            "s-l2-e1-11",
+            "s-l2-e1-12",
+            "s-l2-e1-13",
+            "s-l2-e1-14",
+            "s-l2-e2-1",
+            "s-l2-e2-3",
+            "s-l2-e2-4",
+            "s-l2-e2-5",
+            "s-l2-e2-6",
+            "s-l2-e2-7",
+            "s-l2-e2-8",
+            "s-l2-e2-9",
+            "s-l2-e2-10",
+            "s-l2-e2-11",
+            "s-l2-e2-12",
+            "s-l2-e2-13",
+            "s-l2-e2-14",
+            "s-l2-e2-15",
+            "s-l2-t1-1",
+            "s-l2-t1-2",
+            "s-l2-t1-3",
+            "s-l2-t1-4",
+            "s-l2-t1-5",
+            "s-l2-t1-6",
+            "s-l2-t1-7",
+            "s-l2-t1-8",
+            "s-l2-t1-9"
+          ],
+          "categorize": true
+        }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Краткие и долгие гласные",
+      "description": "Урок 3 учебника и §7–8 введения: минимальные пары.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "u4-l1",
+          "title": "Урок 1",
+          "noteIds": [
+            "note-short-long"
+          ],
+          "wordIds": [
+            "hayn",
+            "han-huukha",
+            "berkhe",
+            "gar",
+            "khayakha",
+            "huukha",
+            "khazhuudan",
+            "zun"
+          ],
+          "minimalPairIds": [
+            "mp-ger-gar",
+            "mp-ula-ulaa"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "zon",
+            "uekher",
+            "udara-tatakha",
+            "khun-shubuun",
+            "shene",
+            "haakha",
+            "bakha",
+            "yerakhe"
+          ],
+          "minimalPairIds": [
+            "mp-huukha-haakha",
+            "mp-dara-daara"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "dakha",
+            "ueuerge",
+            "taba",
+            "taabari",
+            "shakhakha",
+            "shaakha",
+            "khatakha",
+            "khataakha"
+          ],
+          "minimalPairIds": [
+            "mp-zon-zun",
+            "mp-boro-boroo"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l4",
+          "title": "Урок 4",
+          "noteIds": [],
+          "wordIds": [
+            "zan",
+            "abari-zan",
+            "baraa",
+            "uemdekhe",
+            "daakha",
+            "nahan-2",
+            "taakha",
+            "gakhay"
+          ],
+          "minimalPairIds": [
+            "mp-dakha-daakha",
+            "mp-shueder-shueueder"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l5",
+          "title": "Урок 5",
+          "noteIds": [],
+          "wordIds": [
+            "khadaahan",
+            "modon",
+            "namag",
+            "zaan",
+            "barbagar",
+            "abakha",
+            "dalbagar",
+            "daarakha"
+          ],
+          "minimalPairIds": [
+            "mp-zan-zaan",
+            "mp-uelen-ueuelen"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l6",
+          "title": "Урок 6",
+          "noteIds": [],
+          "wordIds": [
+            "doro",
+            "doroo",
+            "tere-doroo",
+            "argamzha",
+            "hanal",
+            "bolgokho",
+            "bookho",
+            "bozho-zhezhe"
+          ],
+          "minimalPairIds": [
+            "mp-doro-doroo"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l7",
+          "title": "Урок 7",
+          "noteIds": [],
+          "wordIds": [
+            "boozho",
+            "boozhyn-tashuur",
+            "negel-onotoy-yohotoy",
+            "onoo",
+            "ono",
+            "godli",
+            "bayna",
+            "bodol"
+          ],
+          "minimalPairIds": [
+            "mp-ono-onoo"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l8",
+          "title": "Урок 8",
+          "noteIds": [],
+          "wordIds": [
+            "boodol",
+            "undegen",
+            "tashuur",
+            "zurakha",
+            "khueyten-2",
+            "ug",
+            "uukha",
+            "yerekhe"
+          ],
+          "minimalPairIds": [
+            "mp-bodol-boodo-l"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l9",
+          "title": "Урок 9",
+          "noteIds": [],
+          "wordIds": [
+            "tukha",
+            "mal",
+            "tukhamni-bolonoguey",
+            "zuurakha",
+            "buudakha",
+            "ug-garbal",
+            "urag",
+            "uurag-tarkhi"
+          ],
+          "minimalPairIds": [
+            "mp-tukha-tuukha"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l10",
+          "title": "Урок 10",
+          "noteIds": [],
+          "wordIds": [
+            "tuukha",
+            "beeley-2",
+            "yabakha",
+            "tekhe",
+            "muergedeg",
+            "khaana",
+            "eshe",
+            "eshee-n"
+          ],
+          "minimalPairIds": [
+            "mp-eshe-eshee-n"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l11",
+          "title": "Урок 11",
+          "noteIds": [],
+          "wordIds": [
+            "noohon",
+            "beshe",
+            "tuekhyeerkhe",
+            "zueuebshe",
+            "zuebshekhe",
+            "khuergekhe",
+            "khueuerge",
+            "duere"
+          ],
+          "minimalPairIds": [
+            "mp-duerekhe-dueuerekhe"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l12",
+          "title": "Урок 12",
+          "noteIds": [],
+          "wordIds": [
+            "tuemer",
+            "dueuerekhe",
+            "barikha",
+            "ueuerge-2",
+            "naran",
+            "ezhy",
+            "dueuergekhe",
+            "kharakha"
+          ],
+          "minimalPairIds": [
+            "mp-khada-khuda"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l13",
+          "title": "Урок 13",
+          "noteIds": [],
+          "wordIds": [
+            "aashalkha",
+            "duerekhe",
+            "uergekhe",
+            "dueuerekhe-2",
+            "rroo",
+            "khada",
+            "khuda",
+            "khura"
+          ],
+          "minimalPairIds": [
+            "mp-khara-khura"
+          ],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u4-l14",
+          "title": "Урок 14",
+          "noteIds": [
+            "note-vowel-harmony"
+          ],
+          "wordIds": [
+            "ula",
+            "uula",
+            "ulaa",
+            "zan-2",
+            "dara-2",
+            "daara",
+            "boro",
+            "boroo",
+            "shueder",
+            "shueueder",
+            "ueuelen-2"
+          ],
+          "minimalPairIds": [
+            "mp-ula-uula"
+          ],
+          "letterIds": [],
+          "sentenceIds": [
+            "s-l3-e1-1",
+            "s-l3-e1-2",
+            "s-l3-e1-3",
+            "s-l3-e1-4",
+            "s-l3-e1-5",
+            "s-l3-e1-6",
+            "s-l3-e1-7",
+            "s-l3-e1-8",
+            "s-l3-e1-9",
+            "s-l3-e1-10",
+            "s-l3-e1-11",
+            "s-l3-e1-12",
+            "s-l3-e1-13",
+            "s-l3-e2-1",
+            "s-l3-e2-2",
+            "s-l3-e2-3",
+            "s-l3-e2-4",
+            "s-l3-e2-5",
+            "s-l3-e2-6",
+            "s-l3-e2-7",
+            "s-l3-e2-8",
+            "s-l3-e2-9",
+            "s-l3-e2-10",
+            "s-l3-e2-11",
+            "s-l3-e2-12",
+            "s-l3-e2-13",
+            "s-l3-e2-14",
+            "s-l3-e3-1",
+            "s-l3-e3-2",
+            "s-l3-e3-3",
+            "s-l3-e3-4",
+            "s-l3-e3-5",
+            "s-l3-e3-6",
+            "s-l3-e3-7",
+            "s-l3-e3-8",
+            "s-l3-e3-9",
+            "s-l3-e3-10",
+            "s-l3-e4-1",
+            "s-l3-e4-2",
+            "s-l3-e4-3",
+            "s-l3-e4-4",
+            "s-l3-e4-5",
+            "s-l3-e4-6",
+            "s-l3-e4-7",
+            "s-l3-e4-8",
+            "s-l3-e4-9",
+            "s-l3-e4-10",
+            "s-l3-e5-1",
+            "s-l3-e5-2",
+            "s-l3-e5-3",
+            "s-l3-e5-4",
+            "s-l3-e5-5",
+            "s-l3-e5-6",
+            "s-l3-e5-7",
+            "s-l3-e5-8",
+            "s-l3-e6-1",
+            "s-l3-e6-2",
+            "s-l3-e6-3",
+            "s-l3-e6-4",
+            "s-l3-e6-5",
+            "s-l3-e6-6",
+            "s-l3-e6-7",
+            "s-l3-e6-8",
+            "s-l3-e6-9",
+            "s-l3-e6-10"
+          ],
+          "categorize": true
+        }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Дифтонги",
+      "description": "Урок 4 учебника: ай, ой, уй, эй, үй.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "u5-l1",
+          "title": "Урок 1",
+          "noteIds": [
+            "note-diphthongs"
+          ],
+          "wordIds": [
+            "gakhayshan",
+            "ayl",
+            "albatay",
+            "dayda",
+            "zayran",
+            "gubshakha",
+            "uta",
+            "bayra"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "tezheekhe",
+            "zaykha",
+            "azhaltay",
+            "ayran",
+            "dalay",
+            "zam",
+            "alkham",
+            "tolgoy"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "khoohon",
+            "tokhonog",
+            "oy-2",
+            "seezhe",
+            "dokholon",
+            "tuerehen",
+            "hanaatay",
+            "nozog"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l4",
+          "title": "Урок 4",
+          "noteIds": [],
+          "wordIds": [
+            "dotoroo",
+            "noyon",
+            "minaa",
+            "oligtoy",
+            "hokhor",
+            "nokhoy",
+            "nobsho",
+            "uytan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l5",
+          "title": "Урок 5",
+          "noteIds": [],
+          "wordIds": [
+            "khabshakha",
+            "khashadag",
+            "amzhalta",
+            "agnuuri",
+            "gutal",
+            "uymar",
+            "haalishad",
+            "tuylakha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l6",
+          "title": "Урок 6",
+          "noteIds": [],
+          "wordIds": [
+            "guykha",
+            "ekhe",
+            "khelen",
+            "asha-tupa",
+            "khuendy",
+            "miisgey",
+            "deere",
+            "ekhe-esege"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l7",
+          "title": "Урок 7",
+          "noteIds": [],
+          "wordIds": [
+            "uelgekhe",
+            "uergemzhe",
+            "buekhen",
+            "sagaan",
+            "eber-2",
+            "uengerkhe",
+            "uetelhen",
+            "kheregtey"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l8",
+          "title": "Урок 8",
+          "noteIds": [],
+          "wordIds": [
+            "too",
+            "gay",
+            "uragshaguey",
+            "ukhaaguey",
+            "taharshaguey",
+            "tooloshoguey",
+            "torokho",
+            "gartakha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l9",
+          "title": "Урок 9",
+          "noteIds": [],
+          "wordIds": [
+            "zhargal",
+            "medekheguey",
+            "zobolon",
+            "shandagan",
+            "sag",
+            "burgaahan",
+            "obyoorkhoguy",
+            "unge"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "u5-l10",
+          "title": "Урок 10",
+          "noteIds": [
+            "note-vowel-harmony"
+          ],
+          "wordIds": [
+            "orokho",
+            "shugy",
+            "kharanguey",
+            "uber",
+            "sahan",
+            "bayarlakha",
+            "harshaganakha",
+            "ayran-2",
+            "khurdan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [
+            "s-l4-e1-2",
+            "s-l4-e1-3",
+            "s-l4-e1-5",
+            "s-l4-e1-6",
+            "s-l4-e2-1",
+            "s-l4-e2-2",
+            "s-l4-e2-3",
+            "s-l4-e2-4",
+            "s-l4-e2-5",
+            "s-l4-e3-1",
+            "s-l4-e3-2",
+            "s-l4-e3-3",
+            "s-l4-e4-1",
+            "s-l4-e4-2",
+            "s-l4-e4-3",
+            "s-l4-e4-4",
+            "s-l4-e4-5",
+            "s-l4-e4-6",
+            "s-l4-e4-7",
+            "s-l4-e5-1",
+            "s-l4-e5-2",
+            "s-l4-e5-3",
+            "s-l4-e5-4",
+            "s-l4-e5-5",
+            "s-l4-e5-6",
+            "s-l4-t2-1",
+            "s-l4-t2-2",
+            "s-l4-t2-3",
+            "s-l4-t2-4",
+            "s-l4-t2-5",
+            "s-l4-t2-6"
+          ],
+          "categorize": true
+        }
+      ]
+    },
+    {
+      "id": "t-znakomstvo",
+      "title": "Знакомство",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-semya",
+      "title": "Семья",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-chisla",
+      "title": "Числа",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-tsveta",
+      "title": "Цвета",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-eda",
+      "title": "Еда",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-odezhda",
+      "title": "Одежда",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-zhivotnye",
+      "title": "Животные",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-chasti-tela",
+      "title": "Части тела",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    },
+    {
+      "id": "t-dom",
+      "title": "Дом",
+      "description": "Слова придут от носителя языка (content/templates/thematic-words.csv).",
+      "locked": true,
+      "lessons": []
+    }
+  ]
+}

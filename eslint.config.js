@@ -7,4 +7,9 @@ module.exports = defineConfig([
   {
     ignores: ['dist/*', 'content/sources/*'],
   },
+  {
+    // zod-схема и её тип намеренно носят одно имя.
+    files: ['src/content/schema.ts'],
+    rules: { '@typescript-eslint/no-redeclare': 'off' },
+  },
 ]);
