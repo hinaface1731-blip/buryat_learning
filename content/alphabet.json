@@ -1,0 +1,542 @@
+[
+  {
+    "id": "letter-a",
+    "upper": "А",
+    "lower": "а",
+    "name": "а",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-b",
+    "upper": "Б",
+    "lower": "б",
+    "name": "бэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-v",
+    "upper": "В",
+    "lower": "в",
+    "name": "вэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-g",
+    "upper": "Г",
+    "lower": "г",
+    "name": "гэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-d",
+    "upper": "Д",
+    "lower": "д",
+    "name": "дэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-ye",
+    "upper": "Е",
+    "lower": "е",
+    "name": "е",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-yo",
+    "upper": "Ё",
+    "lower": "ё",
+    "name": "ё",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-zh",
+    "upper": "Ж",
+    "lower": "ж",
+    "name": "жэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-z",
+    "upper": "З",
+    "lower": "з",
+    "name": "зэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-i",
+    "upper": "И",
+    "lower": "и",
+    "name": "и",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-j",
+    "upper": "Й",
+    "lower": "й",
+    "name": "богони и",
+    "type": "semivowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-k",
+    "upper": "К",
+    "lower": "к",
+    "name": "ка",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-l",
+    "upper": "Л",
+    "lower": "л",
+    "name": "лэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-m",
+    "upper": "М",
+    "lower": "м",
+    "name": "мэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-n",
+    "upper": "Н",
+    "lower": "н",
+    "name": "нэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-o",
+    "upper": "О",
+    "lower": "о",
+    "name": "о",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-oe",
+    "upper": "Ө",
+    "lower": "ө",
+    "name": "өө",
+    "type": "vowel",
+    "special": true,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-p",
+    "upper": "П",
+    "lower": "п",
+    "name": "пэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-r",
+    "upper": "Р",
+    "lower": "р",
+    "name": "рэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-s",
+    "upper": "С",
+    "lower": "с",
+    "name": "сэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-t",
+    "upper": "Т",
+    "lower": "т",
+    "name": "тэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-u",
+    "upper": "У",
+    "lower": "у",
+    "name": "у",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-ue",
+    "upper": "Ү",
+    "lower": "ү",
+    "name": "ү",
+    "type": "vowel",
+    "special": true,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-f",
+    "upper": "Ф",
+    "lower": "ф",
+    "name": "фэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-kh",
+    "upper": "Х",
+    "lower": "х",
+    "name": "ха",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-h",
+    "upper": "Һ",
+    "lower": "һ",
+    "name": "һа",
+    "type": "consonant",
+    "special": true,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-ts",
+    "upper": "Ц",
+    "lower": "ц",
+    "name": "цэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-ch",
+    "upper": "Ч",
+    "lower": "ч",
+    "name": "чэ",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-sh",
+    "upper": "Ш",
+    "lower": "ш",
+    "name": "ша",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-shch",
+    "upper": "Щ",
+    "lower": "щ",
+    "name": "ща",
+    "type": "consonant",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-hard-sign",
+    "upper": "",
+    "lower": "ъ",
+    "name": "хатуу тэмдэг",
+    "type": "sign",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-y",
+    "upper": "",
+    "lower": "ы",
+    "name": "ы",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-soft-sign",
+    "upper": "",
+    "lower": "ь",
+    "name": "зөөлэн тэмдэг",
+    "type": "sign",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-e",
+    "upper": "Э",
+    "lower": "э",
+    "name": "э",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-yu",
+    "upper": "Ю",
+    "lower": "ю",
+    "name": "ю",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  },
+  {
+    "id": "letter-ya",
+    "upper": "Я",
+    "lower": "я",
+    "name": "я",
+    "type": "vowel",
+    "special": false,
+    "source": {
+      "book": "bxr-textbook",
+      "page": 1,
+      "section": "§2 Алфавит"
+    },
+    "verified": false,
+    "needs_image_check": true
+  }
+]
