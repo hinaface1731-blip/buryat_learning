@@ -13,6 +13,7 @@ import { useLastResult } from '@/store/last-result';
 import { heartsToday } from '@/store/logic';
 import { Button, ProgressBar, T } from '@/ui/components';
 import { fonts, space, useTheme } from '@/ui/theme';
+import { useWebKeys } from '@/ui/useWebKeys';
 
 import {
   BuildSentenceView,
@@ -74,9 +75,19 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
 
   const onResult = (outcome: Outcome, feedback: Feedback) => {
     setPending({ outcome, feedback });
+    if (Platform.OS === 'web') return; // в браузере вибрации нет
     const type = { correct: Haptics.NotificationFeedbackType.Success, almost: Haptics.NotificationFeedbackType.Warning, wrong: Haptics.NotificationFeedbackType.Error }[feedback.result];
     Haptics.notificationAsync(type).catch(() => {});
   };
+
+  // Урок мог открыться по прямой ссылке (веб) — тогда «назад» некуда, идём на главную.
+  const close = () => (router.canGoBack() ? router.back() : router.replace('/'));
+
+  const canContinue = !!ex && (!isGraded(ex) || pending !== null);
+  useWebKeys((key) => {
+    if (key === 'Enter' && canContinue) next();
+    if (key === 'Escape') close();
+  });
 
   if (!ex) return null;
   const answered = pending !== null;
@@ -86,7 +97,7 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top', 'bottom']}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <View style={styles.header}>
-          <Pressable accessibilityRole="button" accessibilityLabel="Закрыть урок" onPress={() => router.back()} hitSlop={12}>
+          <Pressable accessibilityRole="button" accessibilityLabel="Закрыть урок" onPress={close} hitSlop={12}>
             <Text style={{ fontSize: 22, color: c.textMuted, fontFamily: fonts.regular }}>✕</Text>
           </Pressable>
           <ProgressBar value={progressOf(session)} />
@@ -104,7 +115,12 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
               {pending.feedback.result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
             </View>
           )}
-          {(!isGraded(ex) || pending) && <Button title="Дальше" onPress={next} />}
+          {canContinue && <Button title="Дальше" onPress={next} />}
+          {Platform.OS === 'web' && (
+            <T v="caption" muted style={{ textAlign: 'center' }}>
+              {canContinue ? 'Enter — дальше' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти
+            </T>
+          )}
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>

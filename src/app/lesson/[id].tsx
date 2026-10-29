@@ -6,6 +6,11 @@ import { buildLesson } from '@/engine/lesson';
 import { SessionRunner } from '@/features/session/SessionRunner';
 import { Screen, T } from '@/ui/components';
 
+/** Веб (output: static): по HTML-странице на каждый урок курса. */
+export async function generateStaticParams(): Promise<{ id: string }[]> {
+  return getCourse().content.course.units.flatMap((u) => u.lessons.map((l) => ({ id: l.id })));
+}
+
 export default function LessonScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   // Очередь собирается один раз при открытии; новый seed — при повторном прохождении порядок другой.

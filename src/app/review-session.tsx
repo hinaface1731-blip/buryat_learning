@@ -24,7 +24,7 @@ export default function ReviewSession() {
     return (
       <Screen>
         <T v="heading">Сейчас нечего повторять</T>
-        <Button title="Назад" onPress={() => router.back()} />
+        <Button title="Назад" onPress={() => (router.canGoBack() ? router.back() : router.replace('/'))} />
       </Screen>
     );
   }

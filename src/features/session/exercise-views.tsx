@@ -8,6 +8,7 @@ import type { Exercise, Outcome } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
+import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
 
 export type Feedback = { result: Outcome['result']; correctAnswer?: string };
 export type ViewProps<K extends Exercise['type']> = {
@@ -18,6 +19,14 @@ export type ViewProps<K extends Exercise['type']> = {
 };
 
 const one = (id: string, result: Outcome['result']): Outcome => ({ result, perItem: { [id]: result } });
+
+/** Веб: клавиши 1…N выбирают вариант ответа. */
+function useOptionKeys(options: string[], pick: (o: string) => void, answered: boolean) {
+  useWebKeys((key) => {
+    const i = optionIndex(key, options.length);
+    if (i !== null) pick(options[i]);
+  }, !answered);
+}
 
 function sourceLine(s: { book: string; page?: number; section?: string }): string {
   const book = s.book === 'bxr-textbook' ? 'Учебник' : s.book === 'native-speaker' ? 'Носитель' : s.book;
@@ -84,6 +93,7 @@ export function MultipleChoiceView({ ex, answered, onResult }: ViewProps<'multip
     const ok = buryatOptions ? normalizeAnswer(o) === normalizeAnswer(ex.answer) : checkRussian(o, [ex.answer]) === 'correct';
     onResult(one(ex.item.id, ok ? 'correct' : 'wrong'), { result: ok ? 'correct' : 'wrong', correctAnswer: ex.answer });
   };
+  useOptionKeys(ex.options, pick, answered);
   const state = (o: string): OptionState => {
     if (!answered) return 'idle';
     if (o === ex.answer) return 'correct';
@@ -211,6 +221,7 @@ export function MinimalPairView({ ex, answered, onResult }: ViewProps<'minimal_p
     const result = normalizeAnswer(o) === normalizeAnswer(ex.answer) ? 'correct' : 'wrong';
     onResult(one(ex.target.id, result), { result, correctAnswer: `${ex.target.buryat} — ${ex.target.russian}; ${ex.other.buryat} — ${ex.other.russian}` });
   };
+  useOptionKeys(ex.options, pick, answered);
   return (
     <View style={{ gap: space.lg }}>
       <T muted>Выберите слово со значением</T>
@@ -235,6 +246,7 @@ export function ListenView({ ex, answered, onResult }: ViewProps<'listen_and_cho
     const result = o === ex.answer ? 'correct' : 'wrong';
     onResult(one(ex.item.id, result), { result, correctAnswer: `${ex.answer} — ${ex.item.russian}` });
   };
+  useOptionKeys(ex.options, pick, answered);
   return (
     <View style={{ gap: space.lg }}>
       <T muted>Что вы слышите?</T>

@@ -81,5 +81,6 @@ export function useHydrated(): boolean {
   return useSyncExternalStore(
     (onChange) => useAppStore.persist.onFinishHydration(onChange),
     () => useAppStore.persist.hasHydrated(),
+    () => false, // статическая сборка веба: состояние появляется только в браузере
   );
 }
