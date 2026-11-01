@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 
+import type { Achievement } from './achievements';
+
 /** Итог последней сессии для экрана результата (не сохраняется между запусками). */
 export type LastResult = {
   kind: 'lesson' | 'review';
@@ -15,6 +17,10 @@ export type LastResult = {
   mastered: boolean;
   /** Разговорный урок: чему человек научился («здороваться»). */
   skill?: string;
+  /** Занятие завершило главу: награда на экране итога. */
+  chapter?: { title: string; badge?: string };
+  /** Достижения, полученные этим занятием. */
+  achievements: Achievement[];
 };
 
 export const useLastResult = create<{ result: LastResult | null; set: (r: LastResult) => void }>()((set) => ({

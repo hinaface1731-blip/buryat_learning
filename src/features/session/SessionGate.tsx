@@ -6,7 +6,7 @@ import { getCourse, reviewableDueIds } from '@/content/course';
 import { startSession } from '@/engine/session';
 import type { Exercise } from '@/engine/types';
 import { dateKey } from '@/lib/dates';
-import { useAppStore } from '@/store/app-store';
+import { useAppStore, useHydrated } from '@/store/app-store';
 import { heartsToday } from '@/store/logic';
 import { useSessionStore } from '@/store/session-store';
 import { Button, Screen, T } from '@/ui/components';
@@ -20,8 +20,13 @@ type Mode = 'ask' | 'resume' | 'fresh' | 'no-hearts' | 'practice';
 
 type Props = { sessionKey: string; kind: 'lesson' | 'review'; lessonId?: string; title: string; skill?: string; build: () => Exercise[] };
 
+/** Статичная страница веба не собирает занятие: порядок заданий случайный, а сохранение есть только в браузере. */
+export function SessionGate(props: Props) {
+  return useHydrated() ? <Gate {...props} /> : null;
+}
+
 /** Вход в занятие: продолжить сохранённое, начать заново или, без сердечек, свободная практика. */
-export function SessionGate({ sessionKey, kind, lessonId, title, skill, build }: Props) {
+function Gate({ sessionKey, kind, lessonId, title, skill, build }: Props) {
   const router = useRouter();
   const [saved] = useState(() => {
     const s = useSessionStore.getState().saved[sessionKey];

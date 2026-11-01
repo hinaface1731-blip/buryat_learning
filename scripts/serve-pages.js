@@ -35,6 +35,8 @@ http
         }
       }
     }
-    send(path.join(DIST, '404.html'), 404);
+    // 404.html копирует только predeploy; после простого build:web есть лишь исходная страница.
+    const notFound = path.join(DIST, '404.html');
+    send(fs.existsSync(notFound) ? notFound : path.join(DIST, '+not-found.html'), 404);
   })
   .listen(PORT, () => console.log(`http://localhost:${PORT}${BASE}/`));

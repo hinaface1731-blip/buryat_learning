@@ -9,12 +9,15 @@ import { EXPLAIN_RETRY } from '@/engine/feedback';
 import { accuracy, advance, currentExercise, isFinished, isGraded, progressOf, sessionXp, startSession, type SessionState } from '@/engine/session';
 import type { Exercise, Outcome } from '@/engine/types';
 import { dateKey } from '@/lib/dates';
+import { isUnitDone, newlyUnlocked } from '@/store/achievements';
 import { useAppStore } from '@/store/app-store';
 import { useLastResult } from '@/store/last-result';
 import { heartsToday, MASTERY_THRESHOLD } from '@/store/logic';
 import { useSessionStore } from '@/store/session-store';
+import { CharacterPose, type PoseId } from '@/ui/Character';
 import { Button, ProgressBar, Row, T } from '@/ui/components';
 import { Mascot, type MascotMood } from '@/ui/Mascot';
+import { Appear } from '@/ui/motion';
 import { fonts, space, useTheme } from '@/ui/theme';
 import { useWebKeys } from '@/ui/useWebKeys';
 
@@ -52,6 +55,9 @@ const FEEDBACK_TEXT: Record<Feedback['result'], string> = { correct: 'Верно
 
 const FEEDBACK_MOOD: Record<Feedback['result'], MascotMood> = { correct: 'happy', almost: 'think', wrong: 'support' };
 
+/** В сцене реагируют сами герои, а не талисман. */
+const FEEDBACK_POSE: Record<Feedback['result'], PoseId> = { correct: 'bair-wave', almost: 'seseg-think', wrong: 'bair-think' };
+
 export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice, skill }: Props) {
   const { c } = useTheme();
   const router = useRouter();
@@ -71,8 +77,12 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
   const finish = (s: SessionState, outOfHearts: boolean) => {
     const counts = kind === 'lesson' && !!lessonId && !outOfHearts && !practice;
     const xp = outOfHearts ? s.correct : sessionXp(s, counts ? 'lesson' : 'review');
+    const before = useAppStore.getState().progress;
     if (counts) finishLesson({ lessonId: lessonId!, accuracy: accuracy(s), xp, grades: s.itemGrades });
     else finishReview({ xp, grades: s.itemGrades }); // ответы идут в SRS, урок не засчитывается
+    const after = useAppStore.getState().progress;
+    const units = getCourse().content.course.units;
+    const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
     if (sessionKey) clear(sessionKey);
     setLastResult({
       kind,
@@ -85,6 +95,9 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
       practice: !!practice,
       mastered: accuracy(s) >= MASTERY_THRESHOLD,
       skill: counts ? skill : undefined,
+      chapter: unit && isUnitDone(unit, after) && !isUnitDone(unit, before) ? { title: unit.title, badge: unit.badge } : undefined,
+      // Награду за главу экран итога показывает отдельно, второй раз её не перечисляем.
+      achievements: newlyUnlocked(before, after, units).filter((a) => a.id !== `chapter-${unit?.id}`),
     });
     router.replace('/result');
   };
@@ -141,16 +154,18 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
         </ScrollView>
         <View style={[styles.footer, { borderColor: c.border, backgroundColor: result ? { correct: c.successBg, almost: c.warningBg, wrong: c.errorBg }[result] : c.bg }]}>
           {pending && result && (
-            <Row gap={space.md} style={{ alignItems: 'center' }}>
-              <Mascot mood={FEEDBACK_MOOD[result]} size={64} />
-              <View style={{ flex: 1, gap: space.xs }}>
+            <Appear>
+              <Row gap={space.md} style={{ alignItems: 'center' }}>
+                <Appear kind="pop">{ex.type === 'dialogue' ? <CharacterPose pose={FEEDBACK_POSE[result]} height={84} /> : <Mascot mood={FEEDBACK_MOOD[result]} size={64} />}</Appear>
+                <View style={{ flex: 1, gap: space.xs }}>
                 <T v="heading" color={{ correct: c.success, almost: c.warning, wrong: c.error }[result]}>
                   {celebrate ? `${FEEDBACK_TEXT[result]} · ${pending.combo} подряд!` : FEEDBACK_TEXT[result]}
                 </T>
                 {detail && <T>{detail}</T>}
                 {result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
-              </View>
-            </Row>
+                </View>
+              </Row>
+            </Appear>
           )}
           {canContinue && <Button title="Дальше" onPress={next} />}
           {Platform.OS === 'web' && (

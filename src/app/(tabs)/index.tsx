@@ -19,10 +19,10 @@ import { fonts, radius, space, useTheme } from '@/ui/theme';
 // Сдвиг узлов дорожки: путь извивается, а не лежит сеткой.
 const WAVE = [0, 44, 66, 44, 0, -44, -66, -44];
 
-function greeting(progress: ProgressState, goal: number, today: string): { mood: MascotMood; text: string } {
+function greeting(progress: ProgressState, goal: number, today: string, name: string): { mood: MascotMood; text: string } {
   const xp = progress.xpByDate[today] ?? 0;
-  if (xp >= goal) return { mood: 'happy', text: 'Цель на сегодня выполнена. Отлично!' };
-  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'wave', text: 'Привет! Я нерпёнок. Давайте научимся здороваться по-бурятски.' };
+  if (xp >= goal) return { mood: 'happy', text: `Цель на сегодня выполнена. Отлично${name ? `, ${name}` : ''}!` };
+  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'wave', text: `Привет${name ? `, ${name}` : ''}! Я нерпёнок. Давайте научимся здороваться по-бурятски.` };
   // Первое приветствие — с поднятой ластой.
   if (xp > 0) return { mood: 'explain', text: 'Хорошо идём. До цели совсем немного.' };
   if (progress.xpByDate[addDays(today, -1)]) return { mood: 'happy', text: 'С возвращением! Продолжаем серию.' };
@@ -48,7 +48,8 @@ export default function PathScreen() {
   const currentUnit = open.find((u) => u.lessons.some((l) => l.id === next))?.id ?? null;
   const [expanded, setExpanded] = useState<string | null>(null);
   const shownUnit = expanded ?? currentUnit;
-  const hello = greeting(progress, goal, today);
+  const name = useAppStore((s) => s.settings.name.trim());
+  const hello = greeting(progress, goal, today, name);
 
   return (
     <Screen scroll>

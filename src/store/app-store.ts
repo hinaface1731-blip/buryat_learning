@@ -26,9 +26,15 @@ export type Settings = {
   theme: ThemePref;
   /** Пометка «не проверено» на единицах с verified:false. В dev-сборке видна всегда. */
   showUnverified: boolean;
+  /** Имя в профиле: хранится только на устройстве, может быть пустым. */
+  name: string;
+  /** Ключ аватара из src/ui/Avatar.tsx. */
+  avatar: string;
 };
 
 const initialSettings: Settings = {
+  name: '',
+  avatar: 'seal',
   onboarded: false,
   dailyGoal: 20,
   heartsEnabled: false,
@@ -62,7 +68,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: STORE_KEY,
-      version: 2,
+      version: 3,
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (s) => ({ settings: s.settings, progress: s.progress }),
       // Будущие версии схемы стора мигрируются здесь; неизвестное — к значениям по умолчанию.
