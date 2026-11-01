@@ -1,4 +1,5 @@
 import { buildContent, rawContent, type Content } from '@/content/load';
+import { ART } from '@/ui/art';
 
 import { normalizeAnswer } from '../check';
 import { buildLesson, buildReview, MAX_TASKS } from '../lesson';
@@ -66,6 +67,25 @@ describe('buildLesson на реальном курсе', () => {
     }
   });
 
+  it('слова с картинками дают упражнение «картинка → слово», ключи картинок существуют', () => {
+    const withImage = content.words.filter((w) => w.image);
+    expect(withImage.length).toBeGreaterThanOrEqual(20);
+    for (const w of withImage) expect(ART[w.image!]).toBeDefined();
+    for (const d of content.dialogues) if (d.art) expect(ART[d.art]).toBeDefined();
+    for (const u of content.course.units) if (u.badge) expect(ART[u.badge]).toBeDefined();
+    const eda = content.course.units.find((u) => u.id === 't-eda')!;
+    const ex = eda.lessons.flatMap((l) => buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 8 }));
+    const pic = ex.find((e) => e.type === 'picture_choice');
+    if (pic?.type !== 'picture_choice') throw new Error('нет упражнения с картинкой');
+    expect(pic.options).toContain(pic.answer);
+  });
+
+  it('темы идут сразу после разговоров, без фонетических заданий', () => {
+    const ids = content.course.units.map((u) => u.id);
+    expect(ids.slice(0, 7)).toEqual(['route', 't-semya', 't-eda', 't-dom', 't-zhivotnye', 't-priroda', 't-shkola']);
+    for (const u of content.course.units.slice(1, 7)) expect(u.lessons.some((l) => l.categorize)).toBe(false);
+  });
+
   it('фразы маршрута не смешиваются с главами учебника', () => {
     const route = new Set(content.words.filter((w) => w.tags.includes('route')).map((w) => w.id));
     for (const unit of content.course.units.slice(1)) {
@@ -131,7 +151,7 @@ describe('buildReview', () => {
   it('одно задание на единицу; новые — только выбор', () => {
     const fresh = buildReview(ids, content, pools, { hasAudio: noAudio, repsById: {}, seed: 1 });
     expect(fresh).toHaveLength(ids.length);
-    expect(fresh.every((e) => e.type === 'multiple_choice')).toBe(true);
+    expect(fresh.every((e) => e.type === 'multiple_choice' || e.type === 'picture_choice')).toBe(true);
   });
 
   it('знакомые единицы: разные типы подряд, аудио доходит до очереди', () => {

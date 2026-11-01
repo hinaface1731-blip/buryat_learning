@@ -28,6 +28,7 @@ import {
   MinimalPairView,
   MultipleChoiceView,
   NoteView,
+  PictureChoiceView,
   TypeAnswerView,
   type Feedback,
 } from './exercise-views';
@@ -171,6 +172,8 @@ function ExerciseView({ ex, ...p }: { ex: Exercise; answered: boolean; onResult:
       return <IntroView ex={ex} />;
     case 'multiple_choice':
       return <MultipleChoiceView ex={ex} {...p} />;
+    case 'picture_choice':
+      return <PictureChoiceView ex={ex} {...p} />;
     case 'match_pairs':
       return <MatchPairsView ex={ex} {...p} />;
     case 'type_answer':

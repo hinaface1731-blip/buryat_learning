@@ -1,3 +1,4 @@
+import { Image } from 'expo-image';
 import { useMemo, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
@@ -8,7 +9,8 @@ import { EXPLAIN_MATCH, EXPLAIN_ORDER, EXPLAIN_ROWS, explainPair, explainTyped }
 import type { Exercise, Outcome } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
-import { CharacterFace, CharacterFigure } from '@/ui/Character';
+import { ART } from '@/ui/art';
+import { CharacterFace, CharacterFigure, CharacterPose } from '@/ui/Character';
 import { Mascot } from '@/ui/Mascot';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
 import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
@@ -49,11 +51,34 @@ function letterTip(text: string): string | null {
   return LETTER_TIPS.find(([ch]) => lower.includes(ch))?.[1] ?? null;
 }
 
+export function PictureChoiceView({ ex, answered, onResult }: ViewProps<'picture_choice'>) {
+  const [picked, setPicked] = useState<string | null>(null);
+  const pick = (o: string) => {
+    if (answered) return;
+    setPicked(o);
+    const result = o === ex.answer ? 'correct' : 'wrong';
+    onResult(one(ex.item.id, result), { result, correctAnswer: `${ex.answer} — ${ex.item.russian}` });
+  };
+  useOptionKeys(ex.options, pick, answered);
+  return (
+    <View style={{ gap: space.lg }}>
+      <T muted>Как это по-бурятски?</T>
+      <Image source={ART[ex.image]} style={styles.picture} contentFit="contain" loading="eager" accessible={false} />
+      <UnverifiedBadge verified={ex.item.verified} />
+      <View style={{ gap: space.sm }}>
+        {ex.options.map((o) => (
+          <OptionButton key={o} label={o} buryat state={!answered ? 'idle' : o === ex.answer ? 'correct' : o === picked ? 'wrong' : 'dim'} onPress={() => pick(o)} disabled={answered} />
+        ))}
+      </View>
+    </View>
+  );
+}
+
 export function NoteView({ ex }: { ex: Extract<Exercise, { type: 'note' }> }) {
   return (
     <Card>
       <Row gap={space.md}>
-        <Mascot mood="explain" size={64} />
+        <Mascot mood="read" size={64} />
         <T v="caption" muted>
           Что нужно знать
         </T>
@@ -79,6 +104,7 @@ export function IntroView({ ex }: { ex: Extract<Exercise, { type: 'intro' }> }) 
       <T v="caption" muted>
         {item.kind === 'letter' ? 'Новая буква' : 'Новое слово'}
       </T>
+      {item.kind === 'word' && item.word.image && <Image source={ART[item.word.image]} style={styles.picture} contentFit="contain" loading="eager" accessible={false} />}
       <Row gap={space.lg}>
         <T v="buryatLarge" selectable>
           {item.buryat}
@@ -401,13 +427,16 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
     <View style={{ gap: space.md }}>
       <T v="heading">{ex.title}</T>
       <T muted>{ex.scene}</T>
-      {/* В начале сцены герои в полный рост, дальше место нужно репликам. */}
-      {shown.length <= 1 && (
-        <Row style={{ justifyContent: 'center' }} gap={space.xl}>
-          <CharacterFigure id="seseg" />
-          <CharacterFigure id="bair" />
-        </Row>
-      )}
+      {/* В начале сцены — иллюстрация, дальше место нужно репликам. */}
+      {shown.length <= 1 &&
+        (ex.art ? (
+          <Image source={ART[ex.art]} style={styles.sceneArt} contentFit="cover" loading="eager" accessible={false} />
+        ) : (
+          <Row style={{ justifyContent: 'center' }} gap={space.xl}>
+            <CharacterFigure id="seseg" />
+            <CharacterFigure id="bair" />
+          </Row>
+        ))}
       <View style={{ gap: space.sm }}>
         {shown.map((line, i) => {
           const partner = line.role === 'partner';
@@ -429,6 +458,14 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
       </View>
       {current && !answered && (
         <View style={{ gap: space.sm }}>
+          {lastWrong && (
+            <Row gap={space.md}>
+              <CharacterPose pose="bair-think" height={84} />
+              <T muted style={{ flex: 1 }}>
+                Не эта реплика. Подумайте ещё.
+              </T>
+            </Row>
+          )}
           <T muted>Ваша реплика: «{current.item.russian}»</T>
           {current.options.map((o) => (
             <OptionButton key={o} label={o} buryat state={o === lastWrong ? 'wrong' : 'idle'} onPress={() => pick(o)} />
@@ -441,6 +478,8 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
 }
 
 const styles = StyleSheet.create({
+  picture: { width: '100%', height: 170 },
+  sceneArt: { width: '100%', aspectRatio: 3 / 2, borderRadius: radius.lg },
   bubbleRow: { flexDirection: 'row', alignItems: 'flex-end', gap: space.sm },
   bubble: { flexShrink: 1, maxWidth: '78%', borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, paddingVertical: space.sm, paddingHorizontal: space.md, gap: 2 },
   input: { borderWidth: 1.5, borderRadius: radius.md, paddingHorizontal: space.lg, paddingVertical: 14, fontSize: 22, fontFamily: fonts.semibold },

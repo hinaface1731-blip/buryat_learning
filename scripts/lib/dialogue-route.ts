@@ -8,6 +8,9 @@ export type RouteLesson = { n: number; title: string; skill: string; dialogue: D
 
 const SOURCES: Record<string, BookId> = { zugaa: 'zugaa', translator: 'translator', textbook: 'bxr-textbook' };
 
+// Иллюстрация сцены по номеру урока маршрута.
+const SCENE_ART: Record<number, string> = { 1: 'scene-baikal', 2: 'scene-baikal', 3: 'scene-baikal', 4: 'scene-baikal', 5: 'scene-baikal', 6: 'scene-road', 7: 'scene-family', 8: 'scene-family', 9: 'scene-cafe', 10: 'scene-cafe' };
+
 const originKey = (buryat: string, russian: string) => `${buryat}|${russian}`.toLowerCase();
 
 export function buildRoute(rows: Record<string, string>[], existing: Word[]): { words: Word[]; lessons: RouteLesson[]; added: number; errors: string[] } {
@@ -34,7 +37,7 @@ export function buildRoute(rows: Record<string, string>[], existing: Word[]): { 
     }
     let lesson = lessons.get(n);
     if (!lesson) {
-      lesson = { n, title: row.title, skill: row.skill, wordIds: [], dialogue: { id: `d-route-${n}`, title: row.title, scene: row.scene, lines: [] } };
+      lesson = { n, title: row.title, skill: row.skill, wordIds: [], dialogue: { id: `d-route-${n}`, title: row.title, scene: row.scene, art: SCENE_ART[n], lines: [] } };
       lessons.set(n, lesson);
     }
     let word = byOrigin.get(originKey(buryat, russian));

@@ -7,6 +7,7 @@
       "title": "Первые разговоры",
       "description": "Поздороваться, представиться, рассказать о семье, заказать чай.",
       "locked": false,
+      "badge": "badge-speech",
       "lessons": [
         {
           "id": "route-l1",
@@ -172,6 +173,281 @@
           "dialogueId": "d-route-10"
         }
       ]
+    },
+    {
+      "id": "t-semya",
+      "title": "Семья",
+      "description": "Отец, мать, братья и сёстры.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-semya-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "hamgan",
+            "khuebueuen-2",
+            "ezhy",
+            "aba",
+            "akha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-semya-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "egeshe",
+            "dueue-khuebueuen",
+            "dueue-basagan",
+            "basagan",
+            "khuegshen-aba",
+            "khuegshen-ezhy",
+            "uebgen-2"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-family"
+    },
+    {
+      "id": "t-eda",
+      "title": "Еда",
+      "description": "Позы, чай, хлеб и молоко.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-eda-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "huen",
+            "hongino",
+            "uhan",
+            "say",
+            "buuza"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-eda-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "khileemen",
+            "myakhan",
+            "shuelen",
+            "tohon",
+            "dabhan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-eda-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "khartaabkha",
+            "uendegen",
+            "alima"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-tea"
+    },
+    {
+      "id": "t-dom",
+      "title": "Дом",
+      "description": "Что вокруг вас дома.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-dom-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "ueueden",
+            "ger",
+            "ayaga",
+            "sonkho",
+            "stul"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-dom-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "khalbaga",
+            "tuempen",
+            "khibes",
+            "dere",
+            "khuenzhel"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-dom-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "gal",
+            "khana",
+            "sheree"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-family"
+    },
+    {
+      "id": "t-zhivotnye",
+      "title": "Животные",
+      "description": "Домашние животные.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-zhivotnye-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "takhyaa",
+            "uenyeen",
+            "gakhay",
+            "nokhoy",
+            "miisgey"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-zhivotnye-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "morin",
+            "khonin",
+            "yamaan",
+            "bukha",
+            "temeen"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-journey"
+    },
+    {
+      "id": "t-priroda",
+      "title": "Природа",
+      "description": "Солнце, лес и озеро.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-priroda-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "halkhin",
+            "oy",
+            "nuur",
+            "naran",
+            "sahan",
+            "khuhan-2"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-journey"
+    },
+    {
+      "id": "t-shkola",
+      "title": "Школа",
+      "description": "Книга, тетрадь, учитель.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-shkola-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "hurguuli",
+            "uege",
+            "beshekhe",
+            "nom",
+            "debter"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-shkola-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "sueuemkhe",
+            "bagsha",
+            "huragsha",
+            "sambar",
+            "shugam"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-shkola-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "khesheel",
+            "unshakha",
+            "kharandaa"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-speech"
     },
     {
       "id": "u1",
@@ -1358,7 +1634,8 @@
             "boroo",
             "shueder",
             "shueueder",
-            "ueuelen-2"
+            "ueuelen-2",
+            "khuhan-2"
           ],
           "minimalPairIds": [],
           "letterIds": [],
@@ -1735,65 +2012,30 @@
       ]
     },
     {
-      "id": "t-znakomstvo",
-      "title": "Знакомство",
-      "description": "Слова добавит носитель языка.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-semya",
-      "title": "Семья",
-      "description": "Слова добавит носитель языка.",
-      "locked": true,
-      "lessons": []
-    },
-    {
       "id": "t-chisla",
       "title": "Числа",
-      "description": "Слова добавит носитель языка.",
+      "description": "Скоро.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-tsveta",
       "title": "Цвета",
-      "description": "Слова добавит носитель языка.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-eda",
-      "title": "Еда",
-      "description": "Слова добавит носитель языка.",
+      "description": "Скоро.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-odezhda",
       "title": "Одежда",
-      "description": "Слова добавит носитель языка.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-zhivotnye",
-      "title": "Животные",
-      "description": "Слова добавит носитель языка.",
+      "description": "Скоро.",
       "locked": true,
       "lessons": []
     },
     {
       "id": "t-chasti-tela",
       "title": "Части тела",
-      "description": "Слова добавит носитель языка.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-dom",
-      "title": "Дом",
-      "description": "Слова добавит носитель языка.",
+      "description": "Скоро.",
       "locked": true,
       "lessons": []
     }

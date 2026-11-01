@@ -3,6 +3,7 @@
     "id": "d-route-1",
     "title": "Поздоровайся",
     "scene": "Вы — Баир. Навстречу идёт Сэсэг, поздоровайтесь с ней.",
+    "art": "scene-baikal",
     "lines": [
       {
         "role": "partner",
@@ -26,6 +27,7 @@
     "id": "d-route-2",
     "title": "Спроси о новостях",
     "scene": "Вы давно не видели Сэсэг.",
+    "art": "scene-baikal",
     "lines": [
       {
         "role": "partner",
@@ -45,6 +47,7 @@
     "id": "d-route-3",
     "title": "Поблагодари и попрощайся",
     "scene": "Разговор закончен: поблагодарите Сэсэг и попрощайтесь.",
+    "art": "scene-baikal",
     "lines": [
       {
         "role": "learner",
@@ -64,6 +67,7 @@
     "id": "d-route-4",
     "title": "Представься",
     "scene": "Вас знакомят с Сэсэг.",
+    "art": "scene-baikal",
     "lines": [
       {
         "role": "partner",
@@ -83,6 +87,7 @@
     "id": "d-route-5",
     "title": "Спроси имя",
     "scene": "Вы встретили нового человека.",
+    "art": "scene-baikal",
     "lines": [
       {
         "role": "learner",
@@ -106,6 +111,7 @@
     "id": "d-route-6",
     "title": "Скажи, откуда ты",
     "scene": "Сэсэг спрашивает о вас.",
+    "art": "scene-road",
     "lines": [
       {
         "role": "partner",
@@ -125,6 +131,7 @@
     "id": "d-route-7",
     "title": "Покажи семью",
     "scene": "Вы показываете Сэсэг семейное фото.",
+    "art": "scene-family",
     "lines": [
       {
         "role": "learner",
@@ -140,6 +147,7 @@
     "id": "d-route-8",
     "title": "Расскажи о семье",
     "scene": "Сэсэг спрашивает о вашей семье.",
+    "art": "scene-family",
     "lines": [
       {
         "role": "partner",
@@ -159,6 +167,7 @@
     "id": "d-route-9",
     "title": "Закажи чай",
     "scene": "Вы в кафе, Сэсэг принимает заказ.",
+    "art": "scene-cafe",
     "lines": [
       {
         "role": "partner",
@@ -182,6 +191,7 @@
     "id": "d-route-10",
     "title": "Поговори",
     "scene": "Весь разговор целиком: вы встретили Сэсэг, познакомились и попрощались.",
+    "art": "scene-cafe",
     "lines": [
       {
         "role": "partner",

@@ -4,7 +4,7 @@ import { z } from 'zod';
 // (content/SOURCES.md) или от носителя через CSV; всё хранится с verified:false
 // до подтверждения.
 
-export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual', 'zugaa', 'translator']);
+export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual', 'zugaa', 'translator', 'temslov']);
 export type BookId = z.infer<typeof BookId>;
 
 const SourceRef = z.object({
@@ -44,6 +44,8 @@ export const Word = z.object({
   comment: z.string(),
   /** Строка книги как есть — ключ слияния при повторном импорте, чтобы правки ревьюера не терялись. */
   origin: z.object({ buryat: z.string(), russian: z.string() }),
+  /** Ключ картинки из src/ui/art.ts. */
+  image: z.string().optional(),
 });
 export type Word = z.infer<typeof Word>;
 
@@ -143,6 +145,8 @@ export const Dialogue = z.object({
   id: z.string().regex(/^d-[a-z0-9-]+$/),
   title: z.string(),
   scene: z.string(),
+  /** Иллюстрация сцены из src/ui/art.ts. */
+  art: z.string().optional(),
   lines: z.array(z.object({ role: z.enum(['partner', 'learner']), wordId: z.string() })).min(1),
 });
 export type Dialogue = z.infer<typeof Dialogue>;
@@ -154,6 +158,8 @@ export const Unit = z.object({
   description: z.string(),
   /** Тематический юнит ждёт слов от носителя. */
   locked: z.boolean(),
+  /** Значок главы из src/ui/art.ts. */
+  badge: z.string().optional(),
   lessons: z.array(Lesson),
 });
 export type Unit = z.infer<typeof Unit>;

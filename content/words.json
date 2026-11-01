@@ -186,7 +186,8 @@
       ]
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:eda"
     ],
     "verified": false,
     "needs_review": false,
@@ -199,7 +200,8 @@
     "origin": {
       "buryat": "һүн",
       "russian": "молоко"
-    }
+    },
+    "image": "milk"
   },
   {
     "id": "hueler",
@@ -438,7 +440,8 @@
       ]
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:shkola"
     ],
     "verified": false,
     "needs_review": false,
@@ -668,7 +671,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:semya"
     ],
     "verified": false,
     "needs_review": false,
@@ -724,7 +728,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:eda"
     ],
     "verified": false,
     "needs_review": false,
@@ -934,7 +939,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:shkola"
     ],
     "verified": false,
     "needs_review": false,
@@ -1292,7 +1298,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:dom"
     ],
     "verified": false,
     "needs_review": false,
@@ -1859,7 +1866,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:priroda"
     ],
     "verified": false,
     "needs_review": false,
@@ -2145,7 +2153,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "unit:priroda"
     ],
     "verified": false,
     "needs_review": false,
@@ -2974,7 +2983,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:eda"
     ],
     "verified": false,
     "needs_review": false,
@@ -2987,7 +2997,8 @@
     "origin": {
       "buryat": "уһан",
       "russian": "вода"
-    }
+    },
+    "image": "water"
   },
   {
     "id": "yeren",
@@ -3115,7 +3126,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:priroda"
     ],
     "verified": false,
     "needs_review": false,
@@ -3490,7 +3502,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:dom"
     ],
     "verified": false,
     "needs_review": false,
@@ -3503,7 +3516,8 @@
     "origin": {
       "buryat": "гэр",
       "russian": "дом"
-    }
+    },
+    "image": "house"
   },
   {
     "id": "goyo",
@@ -3797,7 +3811,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:zhivotnye"
     ],
     "verified": false,
     "needs_review": false,
@@ -4151,7 +4166,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:zhivotnye"
     ],
     "verified": false,
     "needs_review": false,
@@ -4320,7 +4336,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:dom"
     ],
     "verified": false,
     "needs_review": false,
@@ -4491,7 +4508,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:eda"
     ],
     "verified": false,
     "needs_review": false,
@@ -4504,7 +4522,8 @@
     "origin": {
       "buryat": "сай",
       "russian": "чай"
-    }
+    },
+    "image": "tea"
   },
   {
     "id": "khuekhyuun",
@@ -4723,7 +4742,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:semya"
     ],
     "verified": false,
     "needs_review": false,
@@ -4757,7 +4777,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "unit:shkola"
     ],
     "verified": false,
     "needs_review": false,
@@ -6120,7 +6141,8 @@
       ]
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "unit:zhivotnye"
     ],
     "verified": false,
     "needs_review": false,
@@ -7949,7 +7971,8 @@
       "lesson": 3
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "unit:priroda"
     ],
     "verified": false,
     "needs_review": false,
@@ -7962,7 +7985,8 @@
     "origin": {
       "buryat": "наран",
       "russian": "солнце"
-    }
+    },
+    "image": "sun"
   },
   {
     "id": "ezhy",
@@ -7976,7 +8000,8 @@
       "lesson": 3
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "unit:semya"
     ],
     "verified": false,
     "needs_review": false,
@@ -9033,7 +9058,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "unit:zhivotnye"
     ],
     "verified": false,
     "needs_review": false,
@@ -9046,7 +9072,8 @@
     "origin": {
       "buryat": "нохой",
       "russian": "собака"
-    }
+    },
+    "image": "dog"
   },
   {
     "id": "nobsho",
@@ -9572,7 +9599,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "unit:zhivotnye"
     ],
     "verified": false,
     "needs_review": false,
@@ -9585,7 +9613,8 @@
     "origin": {
       "buryat": "миисгэй",
       "russian": "кошка, котенок"
-    }
+    },
+    "image": "cat"
   },
   {
     "id": "deere",
@@ -10492,7 +10521,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "unit:priroda"
     ],
     "verified": false,
     "needs_review": false,
@@ -11291,7 +11321,8 @@
     "tags": [
       "route",
       "phrase",
-      "route-lesson-1"
+      "route-lesson-1",
+      "confirmed:temslov"
     ],
     "verified": false,
     "needs_review": false,
@@ -11300,7 +11331,7 @@
     "typo_candidates": [],
     "form": null,
     "excluded": false,
-    "comment": "обратный перевод: Привет!",
+    "comment": "обратный перевод: Привет!; есть в TemSlov, стр. 5",
     "origin": {
       "buryat": "Сайн байна!",
       "russian": "Здравствуйте!"
@@ -11487,7 +11518,8 @@
     "tags": [
       "route",
       "phrase",
-      "route-lesson-3"
+      "route-lesson-3",
+      "confirmed:temslov"
     ],
     "verified": false,
     "needs_review": true,
@@ -11498,7 +11530,7 @@
     "typo_candidates": [],
     "form": null,
     "excluded": false,
-    "comment": "обратный перевод: Спасибо!",
+    "comment": "обратный перевод: Спасибо!; есть в TemSlov, стр. 5",
     "origin": {
       "buryat": "Баярлаа!",
       "russian": "Спасибо!"
@@ -11517,7 +11549,8 @@
     "tags": [
       "route",
       "phrase",
-      "route-lesson-3"
+      "route-lesson-3",
+      "confirmed:temslov"
     ],
     "verified": false,
     "needs_review": false,
@@ -11526,7 +11559,7 @@
     "typo_candidates": [],
     "form": null,
     "excluded": false,
-    "comment": "Встречается в текстах учебника; обратный перевод: Пока!",
+    "comment": "Встречается в текстах учебника; обратный перевод: Пока!; есть в TemSlov, стр. 5",
     "origin": {
       "buryat": "Баяртай!",
       "russian": "До свидания!"
@@ -11545,7 +11578,8 @@
     "tags": [
       "route",
       "phrase",
-      "route-lesson-3"
+      "route-lesson-3",
+      "confirmed:temslov"
     ],
     "verified": false,
     "needs_review": true,
@@ -11556,7 +11590,7 @@
     "typo_candidates": [],
     "form": null,
     "excluded": false,
-    "comment": "В учебнике: «дахин уулзатараа баяртай»; обратный перевод: Увидимся!",
+    "comment": "В учебнике: «дахин уулзатараа баяртай»; обратный перевод: Увидимся!; есть в TemSlov, стр. 5",
     "origin": {
       "buryat": "Уулзатараа баяртай!",
       "russian": "До встречи!"
@@ -12250,6 +12284,1175 @@
     "origin": {
       "buryat": "Үглөөдэр уулзая.",
       "russian": "Увидимся завтра."
+    }
+  },
+  {
+    "id": "aba",
+    "kind": "word",
+    "buryat": "аба",
+    "russian": "отец",
+    "alternatives": [
+      "папа"
+    ],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "аба",
+      "russian": "отец"
+    }
+  },
+  {
+    "id": "akha",
+    "kind": "word",
+    "buryat": "аха",
+    "russian": "старший брат",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "аха",
+      "russian": "старший брат"
+    }
+  },
+  {
+    "id": "egeshe",
+    "kind": "word",
+    "buryat": "эгэшэ",
+    "russian": "старшая сестра",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "эгэшэ",
+      "russian": "старшая сестра"
+    }
+  },
+  {
+    "id": "dueue-khuebueuen",
+    "kind": "word",
+    "buryat": "дүү хүбүүн",
+    "russian": "младший брат",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "дүү хүбүүн",
+      "russian": "младший брат"
+    }
+  },
+  {
+    "id": "dueue-basagan",
+    "kind": "word",
+    "buryat": "дүү басаган",
+    "russian": "младшая сестра",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "дүү басаган",
+      "russian": "младшая сестра"
+    }
+  },
+  {
+    "id": "basagan",
+    "kind": "word",
+    "buryat": "басаган",
+    "russian": "дочь",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "басаган",
+      "russian": "дочь"
+    }
+  },
+  {
+    "id": "khuegshen-aba",
+    "kind": "word",
+    "buryat": "хүгшэн аба",
+    "russian": "дедушка",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В словаре: дедушка по отцу",
+    "origin": {
+      "buryat": "хүгшэн аба",
+      "russian": "дедушка"
+    }
+  },
+  {
+    "id": "khuegshen-ezhy",
+    "kind": "word",
+    "buryat": "хүгшэн эжы",
+    "russian": "бабушка",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В словаре: бабушка по отцу",
+    "origin": {
+      "buryat": "хүгшэн эжы",
+      "russian": "бабушка"
+    }
+  },
+  {
+    "id": "uebgen-2",
+    "kind": "word",
+    "buryat": "үбгэн",
+    "russian": "муж",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 6
+    },
+    "tags": [
+      "unit:semya"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "үбгэн",
+      "russian": "муж"
+    }
+  },
+  {
+    "id": "buuza",
+    "kind": "word",
+    "buryat": "бууза",
+    "russian": "позы",
+    "alternatives": [
+      "буузы"
+    ],
+    "source": {
+      "book": "temslov",
+      "page": 16
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "buuza",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "бууза",
+      "russian": "позы"
+    }
+  },
+  {
+    "id": "khileemen",
+    "kind": "word",
+    "buryat": "хилээмэн",
+    "russian": "хлеб",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 17
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "bread",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хилээмэн",
+      "russian": "хлеб"
+    }
+  },
+  {
+    "id": "myakhan",
+    "kind": "word",
+    "buryat": "мяхан",
+    "russian": "мясо",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 17
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "мяхан",
+      "russian": "мясо"
+    }
+  },
+  {
+    "id": "shuelen",
+    "kind": "word",
+    "buryat": "шүлэн",
+    "russian": "суп",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 16
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "шүлэн",
+      "russian": "суп"
+    }
+  },
+  {
+    "id": "tohon",
+    "kind": "word",
+    "buryat": "тоһон",
+    "russian": "масло",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 16
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "тоһон",
+      "russian": "масло"
+    }
+  },
+  {
+    "id": "dabhan",
+    "kind": "word",
+    "buryat": "дабһан",
+    "russian": "соль",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 16
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "дабһан",
+      "russian": "соль"
+    }
+  },
+  {
+    "id": "khartaabkha",
+    "kind": "word",
+    "buryat": "хартаабха",
+    "russian": "картофель",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 17
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хартаабха",
+      "russian": "картофель"
+    }
+  },
+  {
+    "id": "uendegen",
+    "kind": "word",
+    "buryat": "үндэгэн",
+    "russian": "яйцо",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 17
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "үндэгэн",
+      "russian": "яйцо"
+    }
+  },
+  {
+    "id": "sonkho",
+    "kind": "word",
+    "buryat": "сонхо",
+    "russian": "окно",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 10
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "сонхо",
+      "russian": "окно"
+    }
+  },
+  {
+    "id": "stul",
+    "kind": "word",
+    "buryat": "стул",
+    "russian": "стул",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 11
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "chair",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "стул",
+      "russian": "стул"
+    }
+  },
+  {
+    "id": "khalbaga",
+    "kind": "word",
+    "buryat": "халбага",
+    "russian": "ложка",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 11
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "spoon",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "халбага",
+      "russian": "ложка"
+    }
+  },
+  {
+    "id": "tuempen",
+    "kind": "word",
+    "buryat": "түмпэн",
+    "russian": "миска",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 10
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "bowl",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В словаре по-русски «чашка»; по-английски bowl",
+    "origin": {
+      "buryat": "түмпэн",
+      "russian": "миска"
+    }
+  },
+  {
+    "id": "khibes",
+    "kind": "word",
+    "buryat": "хибэс",
+    "russian": "ковёр",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 11
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хибэс",
+      "russian": "ковёр"
+    }
+  },
+  {
+    "id": "dere",
+    "kind": "word",
+    "buryat": "дэрэ",
+    "russian": "подушка",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 10
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "дэрэ",
+      "russian": "подушка"
+    }
+  },
+  {
+    "id": "khuenzhel",
+    "kind": "word",
+    "buryat": "хүнжэл",
+    "russian": "одеяло",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 11
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хүнжэл",
+      "russian": "одеяло"
+    }
+  },
+  {
+    "id": "gal",
+    "kind": "word",
+    "buryat": "гал",
+    "russian": "огонь",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 10
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "гал",
+      "russian": "огонь"
+    }
+  },
+  {
+    "id": "khana",
+    "kind": "word",
+    "buryat": "хана",
+    "russian": "стена",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 11
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хана",
+      "russian": "стена"
+    }
+  },
+  {
+    "id": "morin",
+    "kind": "word",
+    "buryat": "морин",
+    "russian": "конь",
+    "alternatives": [
+      "лошадь"
+    ],
+    "source": {
+      "book": "temslov",
+      "page": 14
+    },
+    "tags": [
+      "unit:zhivotnye"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "horse",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "морин",
+      "russian": "конь"
+    }
+  },
+  {
+    "id": "khonin",
+    "kind": "word",
+    "buryat": "хонин",
+    "russian": "овца",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 14
+    },
+    "tags": [
+      "unit:zhivotnye"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "sheep",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хонин",
+      "russian": "овца"
+    }
+  },
+  {
+    "id": "yamaan",
+    "kind": "word",
+    "buryat": "ямаан",
+    "russian": "коза",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 14
+    },
+    "tags": [
+      "unit:zhivotnye"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "ямаан",
+      "russian": "коза"
+    }
+  },
+  {
+    "id": "bukha",
+    "kind": "word",
+    "buryat": "буха",
+    "russian": "бык",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 14
+    },
+    "tags": [
+      "unit:zhivotnye"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "буха",
+      "russian": "бык"
+    }
+  },
+  {
+    "id": "temeen",
+    "kind": "word",
+    "buryat": "тэмээн",
+    "russian": "верблюд",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 13
+    },
+    "tags": [
+      "unit:zhivotnye"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "тэмээн",
+      "russian": "верблюд"
+    }
+  },
+  {
+    "id": "khuhan-2",
+    "kind": "word",
+    "buryat": "хуһан",
+    "russian": "берёза",
+    "alternatives": [],
+    "source": {
+      "book": "bxr-textbook",
+      "page": 14
+    },
+    "tags": [
+      "unit:priroda"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "birch",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хуһан",
+      "russian": "берёза"
+    }
+  },
+  {
+    "id": "nom",
+    "kind": "word",
+    "buryat": "ном",
+    "russian": "книга",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 19
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "book",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "ном",
+      "russian": "книга"
+    }
+  },
+  {
+    "id": "debter",
+    "kind": "word",
+    "buryat": "дэбтэр",
+    "russian": "тетрадь",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "notebook",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "дэбтэр",
+      "russian": "тетрадь"
+    }
+  },
+  {
+    "id": "sueuemkhe",
+    "kind": "word",
+    "buryat": "сүүмхэ",
+    "russian": "сумка",
+    "alternatives": [
+      "рюкзак"
+    ],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "image": "backpack",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "сүүмхэ",
+      "russian": "сумка"
+    }
+  },
+  {
+    "id": "bagsha",
+    "kind": "word",
+    "buryat": "багша",
+    "russian": "учитель",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "багша",
+      "russian": "учитель"
+    }
+  },
+  {
+    "id": "huragsha",
+    "kind": "word",
+    "buryat": "һурагша",
+    "russian": "ученик",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "һурагша",
+      "russian": "ученик"
+    }
+  },
+  {
+    "id": "sambar",
+    "kind": "word",
+    "buryat": "самбар",
+    "russian": "доска",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "самбар",
+      "russian": "доска"
+    }
+  },
+  {
+    "id": "shugam",
+    "kind": "word",
+    "buryat": "шугам",
+    "russian": "линейка",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "шугам",
+      "russian": "линейка"
+    }
+  },
+  {
+    "id": "khesheel",
+    "kind": "word",
+    "buryat": "хэшээл",
+    "russian": "урок",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 19
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "хэшээл",
+      "russian": "урок"
+    }
+  },
+  {
+    "id": "unshakha",
+    "kind": "word",
+    "buryat": "уншаха",
+    "russian": "читать",
+    "alternatives": [],
+    "source": {
+      "book": "temslov",
+      "page": 18
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "",
+    "origin": {
+      "buryat": "уншаха",
+      "russian": "читать"
+    }
+  },
+  {
+    "id": "alima",
+    "kind": "word",
+    "buryat": "алима",
+    "russian": "яблоко",
+    "alternatives": [],
+    "source": {
+      "book": "translator"
+    },
+    "tags": [
+      "unit:eda"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "image": "apple",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Обратный перевод совпал",
+    "origin": {
+      "buryat": "алима",
+      "russian": "яблоко"
+    }
+  },
+  {
+    "id": "kharandaa",
+    "kind": "word",
+    "buryat": "харандаа",
+    "russian": "карандаш",
+    "alternatives": [],
+    "source": {
+      "book": "translator"
+    },
+    "tags": [
+      "unit:shkola"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "image": "pencil",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Обратный перевод совпал",
+    "origin": {
+      "buryat": "харандаа",
+      "russian": "карандаш"
+    }
+  },
+  {
+    "id": "sheree",
+    "kind": "word",
+    "buryat": "шэрээ",
+    "russian": "стол",
+    "alternatives": [],
+    "source": {
+      "book": "translator"
+    },
+    "tags": [
+      "unit:dom"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "image": "table",
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Обратный перевод совпал",
+    "origin": {
+      "buryat": "шэрээ",
+      "russian": "стол"
     }
   }
 ]

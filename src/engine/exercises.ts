@@ -167,7 +167,16 @@ export function dialogueScene(dialogue: Dialogue, itemById: Map<string, StudyIte
     if (others.length < 1) return null;
     lines.push({ role: 'learner', item, options: shuffle([item.buryat, ...others.map((o) => o.buryat)], rng) });
   }
-  return { key: `dialogue-${dialogue.id}`, stage: 'control', type: 'dialogue', title: dialogue.title, scene: dialogue.scene, lines };
+  return { key: `dialogue-${dialogue.id}`, stage: 'control', type: 'dialogue', title: dialogue.title, scene: dialogue.scene, art: dialogue.art, lines };
+}
+
+/** Картинка → бурятское слово: без русского посредника. */
+export function pictureChoice(item: StudyItem, pools: StudyItem[][], rng: Rng, stage: Stage): Exercise | null {
+  const image = item.kind === 'word' ? item.word.image : undefined;
+  if (!image) return null;
+  const distractors = pickDistractors(item, pools, 3, rng, 'buryat');
+  if (distractors.length < MIN_DISTRACTORS) return null;
+  return { key: `pic-${item.id}`, stage, type: 'picture_choice', item, image, options: shuffle([item.buryat, ...distractors.map((d) => d.buryat)], rng), answer: item.buryat };
 }
 
 export function buildSentence(sentence: Sentence, rng: Rng, stage: Stage): Exercise | null {

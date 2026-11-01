@@ -1,6 +1,6 @@
 import type { Content } from '@/content/load';
 
-import { buildPhrase, buildSentence, categorize, dialogueScene, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, typeAnswer } from './exercises';
+import { buildPhrase, buildSentence, categorize, dialogueScene, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, pictureChoice, typeAnswer } from './exercises';
 import type { Pools } from './pool';
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng';
 import type { Exercise } from './types';
@@ -30,6 +30,7 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
 
   const match = matchPairs(items, rng, 'training');
   const rest = [
+    ...sample(items, items.length, rng).map((it) => pictureChoice(it, pool, rng, 'training')).filter(notNull).slice(0, 3),
     ...sample(pairs, 2, rng).map((p) => minimalPairChoose(p, content.wordById, rng, 'training')),
     // Реплику собирают из слов; вводить целиком — только короткие.
     ...sample(items, 2, rng).map((it) => (dialogue ? (buildPhrase(it, rng, 'application') ?? typeAnswer(it, 'application')) : typeAnswer(it, 'application'))),
@@ -66,7 +67,7 @@ function reviewCandidates(id: string, reps: number, content: Content, pools: Poo
   const list =
     reps >= 2
       ? [buildPhrase(item, rng, 'control') ?? typeAnswer(item, 'control'), listenAndChoose(item, opts.hasAudio, pool, rng, 'control'), multipleChoice(item, 'ru-bur', pool, rng, 'control')]
-      : [multipleChoice(item, reps === 0 ? 'bur-ru' : 'ru-bur', pool, rng, 'control'), listenAndChoose(item, opts.hasAudio, pool, rng, 'control')];
+      : [multipleChoice(item, reps === 0 ? 'bur-ru' : 'ru-bur', pool, rng, 'control'), pictureChoice(item, pool, rng, 'control'), listenAndChoose(item, opts.hasAudio, pool, rng, 'control')];
   return list.filter(notNull);
 }
 

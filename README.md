@@ -71,6 +71,12 @@ npm run deploy
 
 > Лицензия учебника не подтверждена (см. `content/SOURCES.md`), а слова из него есть в публичном репозитории и на сайте.
 
+## Графика
+
+Сжатые копии лежат в `assets/art/`, ключи — в `src/ui/art.ts`. Исходники (`assets/art-src/`, 50 МБ) в git не попадают. Слово получает картинку через колонку `image` в `content/templates/thematic-words.csv`, и тогда на его карточке появляется картинка, а в уроке — упражнение «картинка → слово». Иллюстрации сцен задаются в `SCENE_ART` (`scripts/lib/dialogue-route.ts`), значки глав — в `THEMATIC_INFO` (`scripts/lib/course-builder.ts`).
+
+Слова тематических глав правятся в `thematic-words.csv` и загружаются командой `npm run review:import -- --thematic --apply`. Опись всех учебников — в `content/SOURCES.md`.
+
 ## Талисман
 
 Нерпа из `assets/mascot/`, компонент `src/ui/Mascot.tsx`:

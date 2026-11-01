@@ -42,7 +42,7 @@ export default function ResultScreen() {
   return (
     <Screen scroll edges={['top', 'bottom']}>
       <View style={{ gap: space.xs, marginTop: space.lg }}>
-        <Mascot mood={result.mastered && !result.outOfHearts ? 'happy' : 'support'} size={132} />
+        <Mascot mood={result.outOfHearts || !result.mastered ? 'support' : result.kind === 'lesson' && !result.practice ? 'star' : 'happy'} size={132} />
         <T v="title">{title}</T>
         <T muted>{result.title}</T>
       </View>

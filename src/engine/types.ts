@@ -21,6 +21,7 @@ export type Exercise = Base &
         options: string[];
         answer: string;
       }
+    | { type: 'picture_choice'; item: StudyItem; image: string; options: string[]; answer: string }
     | { type: 'match_pairs'; items: StudyItem[]; left: string[]; right: string[] }
     | { type: 'type_answer'; item: StudyItem; prompt: string; answers: string[] }
     | {
@@ -39,7 +40,7 @@ export type Exercise = Base &
         rows: VowelRowId[];
       }
     | { type: 'build_sentence'; sentence: Pick<Sentence, 'id' | 'buryat' | 'verified'>; prompt: string; tokens: string[]; answer: string[] }
-    | { type: 'dialogue'; title: string; scene: string; lines: DialogueLine[] }
+    | { type: 'dialogue'; title: string; scene: string; art?: string; lines: DialogueLine[] }
   );
 
 export type DialogueLine = { role: 'partner' | 'learner'; item: StudyItem; /** Варианты реплики ученика. */ options: string[] };

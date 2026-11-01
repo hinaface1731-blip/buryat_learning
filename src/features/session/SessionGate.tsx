@@ -10,6 +10,7 @@ import { useAppStore } from '@/store/app-store';
 import { heartsToday } from '@/store/logic';
 import { useSessionStore } from '@/store/session-store';
 import { Button, Screen, T } from '@/ui/components';
+import { CharacterPose } from '@/ui/Character';
 import { Mascot } from '@/ui/Mascot';
 import { space } from '@/ui/theme';
 
@@ -60,7 +61,7 @@ export function SessionGate({ sessionKey, kind, lessonId, title, skill, build }:
   return (
     <Screen>
       <View style={{ gap: space.md, marginTop: space.xl }}>
-        <Mascot mood="explain" size={132} />
+        <CharacterPose pose="seseg-explain" height={170} />
         <T v="title">Продолжим?</T>
         <T muted>
           {title}. Вы остановились на шаге {step} из {total}.

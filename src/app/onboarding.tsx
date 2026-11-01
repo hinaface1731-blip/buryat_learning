@@ -1,3 +1,4 @@
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { View } from 'react-native';
@@ -6,8 +7,8 @@ import { useAppStore } from '@/store/app-store';
 import { DAILY_GOALS, type DailyGoal } from '@/store/logic';
 import { Button, OptionButton, Screen, T } from '@/ui/components';
 import { GOAL_LABELS } from '@/ui/labels';
-import { Mascot } from '@/ui/Mascot';
-import { space } from '@/ui/theme';
+import { ART } from '@/ui/art';
+import { radius, space } from '@/ui/theme';
 
 export default function Onboarding() {
   const router = useRouter();
@@ -23,7 +24,7 @@ export default function Onboarding() {
   return (
     <Screen scroll>
       <View style={{ gap: space.sm, marginTop: space.lg }}>
-        <Mascot mood="explain" size={132} />
+        <Image source={ART['scene-baikal']} style={{ width: '100%', aspectRatio: 3 / 2, borderRadius: radius.lg }} contentFit="cover" loading="eager" accessible={false} />
         <T v="title">Бурятский язык</T>
         <T muted>
           Курс для взрослых, которые начинают с нуля. Литературный бурятский (на основе хоринского диалекта). Короткие уроки, повторение по интервалам, без спешки.

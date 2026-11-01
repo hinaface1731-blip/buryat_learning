@@ -1,3 +1,4 @@
+import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
@@ -9,6 +10,7 @@ import { addDays, dateKey } from '@/lib/dates';
 import { useAppStore } from '@/store/app-store';
 import { heartsToday, streak, type ProgressState } from '@/store/logic';
 import { latestSavedLesson, useSessionStore } from '@/store/session-store';
+import { ART } from '@/ui/art';
 import { Button, Card, ProgressBar, Row, Screen, T } from '@/ui/components';
 import { days, words } from '@/ui/labels';
 import { Mascot, type MascotMood } from '@/ui/Mascot';
@@ -20,7 +22,8 @@ const WAVE = [0, 44, 66, 44, 0, -44, -66, -44];
 function greeting(progress: ProgressState, goal: number, today: string): { mood: MascotMood; text: string } {
   const xp = progress.xpByDate[today] ?? 0;
   if (xp >= goal) return { mood: 'happy', text: 'Цель на сегодня выполнена. Отлично!' };
-  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'explain', text: 'Привет! Я нерпёнок. Давайте научимся здороваться по-бурятски.' };
+  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'wave', text: 'Привет! Я нерпёнок. Давайте научимся здороваться по-бурятски.' };
+  // Первое приветствие — с поднятой ластой.
   if (xp > 0) return { mood: 'explain', text: 'Хорошо идём. До цели совсем немного.' };
   if (progress.xpByDate[addDays(today, -1)]) return { mood: 'happy', text: 'С возвращением! Продолжаем серию.' };
   return { mood: 'think', text: 'Давно не виделись. Начнём с небольшого шага?' };
@@ -49,7 +52,8 @@ export default function PathScreen() {
 
   return (
     <Screen scroll>
-      <Row style={{ justifyContent: 'flex-end' }} gap={space.md}>
+      <Row style={{ justifyContent: 'flex-end' }} gap={space.xs}>
+        <Image source={ART['badge-flame']} style={{ width: 28, height: 28 }} contentFit="contain" loading="eager" accessible={false} />
         <T v="label" color={c.accent}>
           Серия: {days(streak(progress, goal, today))}
         </T>
@@ -89,15 +93,15 @@ export default function PathScreen() {
       ))}
 
       {later.length > 0 && (
-        <View style={[styles.later, { borderColor: c.border }]}>
-          <T v="label">Дальше в путешествии</T>
-          <T v="caption" muted>
-            {later.map((u) => u.title).join(' · ')}
-          </T>
-          <T v="caption" muted>
-            Эти главы откроются, когда носитель языка подготовит фразы.
-          </T>
-        </View>
+        <Row style={[styles.later, { borderColor: c.border }]} gap={space.md}>
+          <Image source={ART['badge-journey']} style={styles.badge} contentFit="contain" loading="eager" accessible={false} />
+          <View style={{ flex: 1, gap: space.xs }}>
+            <T v="label">Дальше в путешествии</T>
+            <T v="caption" muted>
+              {later.map((u) => u.title).join(' · ')}
+            </T>
+          </View>
+        </Row>
       )}
     </Screen>
   );
@@ -110,18 +114,23 @@ function Chapter({ number, unit, nextId, progress, isOpen, onToggle, onOpen }: {
     <View style={{ gap: space.sm }}>
       <Pressable accessibilityRole="button" accessibilityState={{ expanded: isOpen }} accessibilityLabel={`Глава ${number}. ${unit.title}. Пройдено ${done} из ${unit.lessons.length}`} onPress={onToggle}>
         <Card>
-          <Row style={{ justifyContent: 'space-between' }}>
-            <T v="caption" muted>
-              Глава {number}
-            </T>
-            <T v="caption" muted>
-              {done} / {unit.lessons.length}
-            </T>
+          <Row gap={space.md}>
+            {unit.badge && <Image source={ART[unit.badge]} style={styles.badge} contentFit="contain" loading="eager" accessible={false} />}
+            <View style={{ flex: 1, gap: 2 }}>
+              <Row style={{ justifyContent: 'space-between' }}>
+                <T v="caption" muted>
+                  Глава {number}
+                </T>
+                <T v="caption" muted>
+                  {done} / {unit.lessons.length}
+                </T>
+              </Row>
+              <T v="heading">{unit.title}</T>
+              <T v="caption" muted>
+                {unit.description}
+              </T>
+            </View>
           </Row>
-          <T v="heading">{unit.title}</T>
-          <T v="caption" muted>
-            {unit.description}
-          </T>
           <ProgressBar value={unit.lessons.length ? done / unit.lessons.length : 0} color={c.accent} />
         </Card>
       </Pressable>
@@ -173,6 +182,7 @@ function PathNode({ number, title, offset, status, isNext, onPress }: { number: 
 }
 
 const styles = StyleSheet.create({
+  badge: { width: 52, height: 52 },
   later: { borderWidth: 1, borderStyle: 'dashed', borderRadius: radius.md, padding: space.md, gap: space.xs },
   trail: { alignItems: 'center', gap: space.md, paddingVertical: space.sm },
   nodeRow: { alignItems: 'center', justifyContent: 'center' },

@@ -1,5 +1,5 @@
 import { foreignChars, translit } from '../../src/lib/buryat';
-import type { Letter, Sentence, Word } from '../../src/content/schema';
+import type { BookId, Letter, Sentence, Word } from '../../src/content/schema';
 
 import { THEMATIC_UNITS } from './course-builder';
 import { parseBool, splitList } from './csv';
@@ -100,7 +100,9 @@ export function applyReviewRows(input: { words: Word[]; sentences: Sentence[]; l
   return { words, sentences, letters, changes, errors };
 }
 
-export const THEMATIC_HEADER = ['unit', 'buryat', 'russian', 'alternatives', 'comment', 'speaker'];
+export const THEMATIC_HEADER = ['unit', 'buryat', 'russian', 'alternatives', 'comment', 'speaker', 'source', 'page', 'image'];
+
+const BOOKS: Record<string, BookId> = { temslov: 'temslov', textbook: 'bxr-textbook', translator: 'translator', zugaa: 'zugaa', speaker: 'native-speaker' };
 
 /** Слова от носителя для тематических юнитов. verified остаётся false до вашего подтверждения. */
 export function applyThematicRows(words: Word[], rows: Record<string, string>[]): { words: Word[]; added: Word[]; errors: string[] } {
@@ -109,6 +111,7 @@ export function applyThematicRows(words: Word[], rows: Record<string, string>[])
     unitByKey.set(id, id);
     unitByKey.set(title.toLowerCase(), id);
   }
+  const out = words.map((w) => ({ ...w }));
   const taken = new Set(words.map((w) => w.id));
   const origins = new Set(words.map((w) => `${w.origin.buryat}|${w.origin.russian}`.toLowerCase()));
   const added: Word[] = [];
@@ -123,9 +126,19 @@ export function applyThematicRows(words: Word[], rows: Record<string, string>[])
     if (!buryat || !russianRaw) return void errors.push(`строка ${line}: нужны и buryat, и russian`);
     const foreign = foreignChars(buryat);
     if (foreign.length) return void errors.push(`строка ${line}: символы вне алфавита в «${buryat}»: ${foreign.join(' ')}`);
+    const image = (row.image ?? '').trim();
+    // Слово уже есть в курсе (с тем же значением) — добавляем его в главу, новую запись не заводим.
+    const same = [...out, ...added].find((w) => w.buryat === buryat && [w.russian, ...w.alternatives].some((m) => m.toLowerCase() === russianRaw.toLowerCase()));
+    if (same) {
+      if (!same.tags.includes(`unit:${unit}`)) same.tags = [...same.tags, `unit:${unit}`];
+      if (image) same.image = image;
+      return;
+    }
     const originKey = `${buryat}|${russianRaw}`.toLowerCase();
     if (origins.has(originKey)) return;
     origins.add(originKey);
+    const book = BOOKS[(row.source ?? '').trim()] ?? 'native-speaker';
+    const page = Number(row.page);
     let id = translit(buryat);
     for (let n = 2; taken.has(id); n++) id = `${translit(buryat)}-${n}`;
     taken.add(id);
@@ -135,11 +148,12 @@ export function applyThematicRows(words: Word[], rows: Record<string, string>[])
       buryat,
       russian: russianRaw,
       alternatives: splitList(row.alternatives ?? ''),
-      source: { book: 'native-speaker', ...(row.speaker ? { section: row.speaker.trim() } : {}) },
+      source: { book, ...(page ? { page } : {}), ...(row.speaker ? { section: row.speaker.trim() } : {}) },
       tags: [`unit:${unit}`],
       verified: false,
-      needs_review: false,
-      review_reasons: [],
+      needs_review: book === 'translator',
+      review_reasons: book === 'translator' ? ['машинный перевод'] : [],
+      ...(image ? { image } : {}),
       possible_typo: false,
       typo_candidates: [],
       form: null,
@@ -148,5 +162,5 @@ export function applyThematicRows(words: Word[], rows: Record<string, string>[])
       origin: { buryat, russian: russianRaw },
     });
   });
-  return { words: [...words, ...added], added, errors };
+  return { words: [...out, ...added], added, errors };
 }

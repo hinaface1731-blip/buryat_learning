@@ -35,7 +35,7 @@ const emptyLesson = (id: string, title: string): Lesson => ({
   categorize: false,
 });
 
-type WordUnitSpec = { id: string; title: string; description: string; noteIds: string[]; words: Word[]; pairs: MinimalPair[]; sentences: Sentence[] };
+type WordUnitSpec = { id: string; title: string; description: string; noteIds: string[]; words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; thematic?: boolean; badge?: string };
 
 function wordUnit(spec: WordUnitSpec): Unit {
   const chunks = chunk(spec.words, WORDS_PER_LESSON);
@@ -47,24 +47,34 @@ function wordUnit(spec: WordUnitSpec): Unit {
   spec.pairs.forEach((p, i) => lessons[i % lessons.length]?.minimalPairIds.push(p.id));
   for (const s of spec.sentences) lessons[lessons.length - 1]?.sentenceIds.push(s.id);
   const last = lessons[lessons.length - 1];
-  if (last) {
+  if (last && !spec.thematic) {
     last.categorize = true;
     last.noteIds = [...new Set([...last.noteIds, 'note-vowel-harmony'])];
   }
-  return { id: spec.id, title: spec.title, description: spec.description, locked: false, lessons };
+  return { id: spec.id, title: spec.title, description: spec.description, locked: false, lessons, ...(spec.badge ? { badge: spec.badge } : {}) };
 }
 
 export const THEMATIC_UNITS: [string, string][] = [
-  ['znakomstvo', 'Знакомство'],
   ['semya', 'Семья'],
+  ['eda', 'Еда'],
+  ['dom', 'Дом'],
+  ['zhivotnye', 'Животные'],
+  ['priroda', 'Природа'],
+  ['shkola', 'Школа'],
   ['chisla', 'Числа'],
   ['tsveta', 'Цвета'],
-  ['eda', 'Еда'],
   ['odezhda', 'Одежда'],
-  ['zhivotnye', 'Животные'],
   ['chasti-tela', 'Части тела'],
-  ['dom', 'Дом'],
 ];
+
+const THEMATIC_INFO: Record<string, { description: string; badge?: string }> = {
+  semya: { description: 'Отец, мать, братья и сёстры.', badge: 'badge-family' },
+  eda: { description: 'Позы, чай, хлеб и молоко.', badge: 'badge-tea' },
+  dom: { description: 'Что вокруг вас дома.', badge: 'badge-family' },
+  zhivotnye: { description: 'Домашние животные.', badge: 'badge-journey' },
+  priroda: { description: 'Солнце, лес и озеро.', badge: 'badge-journey' },
+  shkola: { description: 'Книга, тетрадь, учитель.', badge: 'badge-speech' },
+};
 
 export type RouteMeta = { n: number; title: string; skill: string; wordIds: string[]; dialogueId: string };
 
@@ -76,6 +86,7 @@ function routeUnit(route: RouteMeta[], words: Word[]): Unit {
     title: 'Первые разговоры',
     description: 'Поздороваться, представиться, рассказать о семье, заказать чай.',
     locked: false,
+    badge: 'badge-speech',
     lessons: route.map((r) => ({
       ...emptyLesson(`route-l${r.n}`, r.title),
       wordIds: r.wordIds.filter((id) => usable.has(id)),
@@ -117,8 +128,19 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
     ],
   };
 
+  const thematic = THEMATIC_UNITS.map(([id, title]): Unit => {
+    const info = THEMATIC_INFO[id];
+    const words = teachable.filter((w) => w.tags.includes(`unit:${id}`));
+    if (words.length === 0) {
+      return { id: `t-${id}`, title, description: 'Скоро.', locked: true, lessons: [] };
+    }
+    return wordUnit({ id: `t-${id}`, title, description: info?.description ?? '', noteIds: [], words, pairs: [], sentences: [], thematic: true, badge: info?.badge });
+  });
+
   const units: Unit[] = [
     ...(input.route.length ? [routeUnit(input.route, input.words)] : []),
+    // Сначала живая лексика с картинками, затем системная фонетика; закрытые темы — в конце.
+    ...thematic.filter((u) => !u.locked),
     alphabet,
     wordUnit({
       id: 'u2',
@@ -156,19 +178,7 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
       pairs: [],
       sentences: sentencesOf(4),
     }),
-    ...THEMATIC_UNITS.map(([id, title]): Unit => {
-      const words = teachable.filter((w) => w.source.book === 'native-speaker' && w.tags.includes(`unit:${id}`));
-      if (words.length === 0) {
-        return {
-          id: `t-${id}`,
-          title,
-          description: 'Слова добавит носитель языка.',
-          locked: true,
-          lessons: [],
-        };
-      }
-      return wordUnit({ id: `t-${id}`, title, description: 'Слова от носителя языка.', noteIds: [], words, pairs: [], sentences: [] });
-    }),
+    ...thematic.filter((u) => u.locked),
   ];
 
   return { id: 'buryat-mvp', title: 'Бурятский язык с нуля', units };

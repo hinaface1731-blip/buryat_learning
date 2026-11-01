@@ -2,7 +2,7 @@ import { Redirect } from 'expo-router';
 import { Tabs } from 'expo-router/js-tabs';
 import { SymbolView, type SymbolViewProps } from 'expo-symbols';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import type { ColorValue } from 'react-native';
+import { Platform, type ColorValue } from 'react-native';
 
 import { useAppStore } from '@/store/app-store';
 import { fonts, useTheme } from '@/ui/theme';
@@ -25,7 +25,8 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarActiveTintColor: c.primary,
         tabBarInactiveTintColor: c.textMuted,
-        tabBarStyle: { backgroundColor: c.surface, borderTopColor: c.border },
+        // В вебе нет безопасной зоны снизу: без отступа подписи упираются в край окна.
+        tabBarStyle: { backgroundColor: c.surface, borderTopColor: c.border, ...(Platform.OS === 'web' ? { height: 64, paddingBottom: 8 } : {}) },
         tabBarLabelStyle: { fontFamily: fonts.medium, fontSize: 11 },
         sceneStyle: { backgroundColor: c.bg },
       }}>
