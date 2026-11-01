@@ -8,8 +8,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { buildPairs, buildSentences, buildWords } from './lib/build-content';
-import { readLetters, readPairs, readSentences, readWords, SOURCES, writeJson } from './lib/content-io';
-import { buildCourse } from './lib/course-builder';
+import { contentPath, readLetters, readPairs, readSentences, readWords, SOURCES, writeJson } from './lib/content-io';
+import { buildCourse, type RouteMeta } from './lib/course-builder';
 import { loadPdfText } from './lib/pdf-text';
 import { parseTextbook } from './lib/textbook-parser';
 
@@ -29,7 +29,8 @@ async function main() {
   const { words, added, orphans } = buildWords(parsed, readWords());
   const sentences = buildSentences(parsed, readSentences());
   const pairs = buildPairs(parsed.pairs, words, readPairs());
-  const course = buildCourse({ words, pairs, sentences, letters: readLetters() });
+  const route: RouteMeta[] = JSON.parse(fs.readFileSync(contentPath('route.json'), 'utf8'));
+  const course = buildCourse({ words, pairs, sentences, letters: readLetters(), route });
 
   writeJson('words.json', words);
   writeJson('sentences.json', sentences);

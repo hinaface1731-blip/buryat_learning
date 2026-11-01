@@ -1,0 +1,115 @@
+[
+  {
+    "n": 1,
+    "title": "Поздоровайся",
+    "skill": "здороваться",
+    "wordIds": [
+      "sayn-bayna",
+      "hayn-bayna-guet",
+      "hayn-hayn-daa",
+      "amgalan-ueder"
+    ],
+    "dialogueId": "d-route-1"
+  },
+  {
+    "n": 2,
+    "title": "Спроси о новостях",
+    "skill": "спрашивать о новостях",
+    "wordIds": [
+      "taniiye-ueniney-kharaagueyb",
+      "bi-baha",
+      "yuu-honin-be"
+    ],
+    "dialogueId": "d-route-2"
+  },
+  {
+    "n": 3,
+    "title": "Поблагодари и попрощайся",
+    "skill": "благодарить и прощаться",
+    "wordIds": [
+      "bayarlaa",
+      "bayartay",
+      "uulzataraa-bayartay"
+    ],
+    "dialogueId": "d-route-3"
+  },
+  {
+    "n": 4,
+    "title": "Представься",
+    "skill": "представляться",
+    "wordIds": [
+      "bi-seseg-gezhe-nereteyb",
+      "bi-bair-gezhe-nereteyb",
+      "tanilsahandaa-bayartay-baynab"
+    ],
+    "dialogueId": "d-route-4"
+  },
+  {
+    "n": 5,
+    "title": "Спроси имя",
+    "skill": "спрашивать имя",
+    "wordIds": [
+      "khen-gezhe-nereteysh",
+      "shinii-nereshni-khen-be"
+    ],
+    "dialogueId": "d-route-5"
+  },
+  {
+    "n": 6,
+    "title": "Скажи, откуда ты",
+    "skill": "рассказывать о себе",
+    "wordIds": [
+      "shi-khaanakhimshi",
+      "bi-ulaan-uedehoeoe-yereeb",
+      "bi-moskvahaa-yereeb",
+      "bi-ulaan-uedede-azhahuudagbi"
+    ],
+    "dialogueId": "d-route-6"
+  },
+  {
+    "n": 7,
+    "title": "Покажи семью",
+    "skill": "называть близких",
+    "wordIds": [
+      "ene-minii-ezhy",
+      "ene-minii-aba",
+      "ene-minii-akha",
+      "ene-minii-dueue-basagan"
+    ],
+    "dialogueId": "d-route-7"
+  },
+  {
+    "n": 8,
+    "title": "Расскажи о семье",
+    "skill": "рассказывать о семье",
+    "wordIds": [
+      "ta-olon-ger-bueletey-guet",
+      "bi-yekhe-ger-bueleteyb",
+      "bi-akhatayb",
+      "bi-egesheteyb"
+    ],
+    "dialogueId": "d-route-8"
+  },
+  {
+    "n": 9,
+    "title": "Закажи чай",
+    "skill": "заказывать чай",
+    "wordIds": [
+      "say-uukha-duratay-guet",
+      "tiime-bayarlaab",
+      "namda-nege-say-uegyt-daa",
+      "khedy-senteyb",
+      "yekhe-amtatay"
+    ],
+    "dialogueId": "d-route-9"
+  },
+  {
+    "n": 10,
+    "title": "Поговори",
+    "skill": "вести короткий разговор",
+    "wordIds": [
+      "uegloeoeder-uulzaya"
+    ],
+    "dialogueId": "d-route-10"
+  }
+]

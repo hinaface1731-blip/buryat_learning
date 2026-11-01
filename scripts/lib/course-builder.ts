@@ -8,7 +8,7 @@ const LETTERS_PER_LESSON = 6;
 /** Слово годится для уроков: не исключено, не подозревается в опечатке, не служебная помета. */
 export function isTeachable(w: Word): boolean {
   if (w.excluded) return false;
-  if (w.verified) return true;
+  if (w.verified || w.tags.includes('route')) return true; // реплики маршрута отобраны вручную
   if (w.possible_typo) return false;
   return !w.review_reasons.some((r) => r === 'помета в переводе' || r === 'перевод не на русском' || r.startsWith('символы вне алфавита'));
 }
@@ -66,10 +66,29 @@ export const THEMATIC_UNITS: [string, string][] = [
   ['dom', 'Дом'],
 ];
 
-export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; letters: Letter[] }): Course {
+export type RouteMeta = { n: number; title: string; skill: string; wordIds: string[]; dialogueId: string };
+
+/** Глава-разговор идёт первой: человек сразу получает понятные фразы, а фонетика — следом. */
+function routeUnit(route: RouteMeta[], words: Word[]): Unit {
+  const usable = new Set(words.filter(isTeachable).map((w) => w.id));
+  return {
+    id: 'route',
+    title: 'Первые разговоры',
+    description: 'Поздороваться, представиться, рассказать о семье, заказать чай.',
+    locked: false,
+    lessons: route.map((r) => ({
+      ...emptyLesson(`route-l${r.n}`, r.title),
+      wordIds: r.wordIds.filter((id) => usable.has(id)),
+      skill: r.skill,
+      dialogueId: r.dialogueId,
+    })),
+  };
+}
+
+export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; letters: Letter[]; route: RouteMeta[] }): Course {
   const teachable = input.words.filter(isTeachable);
   const byLesson = (n: number) => teachable.filter((w) => w.source.book === 'bxr-textbook' && w.source.lesson === n);
-  const introWords = teachable.filter((w) => w.source.book === 'bxr-textbook' && w.source.lesson === undefined);
+  const introWords = teachable.filter((w) => w.source.book === 'bxr-textbook' && w.source.lesson === undefined && !w.tags.includes('route'));
   const usable = input.pairs.filter((p) => p.usable);
   const softPairs = usable.filter((p) => p.contrast === 'soft');
   const otherPairs = usable.filter((p) => p.contrast !== 'soft');
@@ -99,6 +118,7 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
   };
 
   const units: Unit[] = [
+    ...(input.route.length ? [routeUnit(input.route, input.words)] : []),
     alphabet,
     wordUnit({
       id: 'u2',

@@ -23,6 +23,7 @@ function main() {
       letters: read('alphabet.json'),
       notes: read('notes.json'),
       vowelRows: read('vowel-rows.json'),
+      dialogues: read('dialogues.json'),
     });
   } catch (e) {
     console.error('Контент не проходит проверку:\n', e instanceof Error ? e.message : e);

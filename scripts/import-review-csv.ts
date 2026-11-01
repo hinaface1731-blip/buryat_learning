@@ -12,7 +12,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { contentPath, readLetters, readPairs, readSentences, readWords, writeJson } from './lib/content-io';
-import { buildCourse } from './lib/course-builder';
+import { buildCourse, type RouteMeta } from './lib/course-builder';
 import { parseCsv } from './lib/csv';
 import { applyReviewRows, applyThematicRows } from './lib/review-merge';
 
@@ -58,7 +58,8 @@ function main() {
   writeJson('words.json', words);
   writeJson('sentences.json', sentences);
   writeJson('alphabet.json', letters);
-  writeJson('course.json', buildCourse({ words, sentences, letters, pairs: readPairs() }));
+  const route: RouteMeta[] = JSON.parse(fs.readFileSync(contentPath('route.json'), 'utf8'));
+  writeJson('course.json', buildCourse({ words, sentences, letters, pairs: readPairs(), route }));
   console.log(`\nЗаписано (${path.relative(process.cwd(), file)}). Курс пересобран.`);
 }
 

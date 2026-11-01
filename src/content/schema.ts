@@ -4,7 +4,7 @@ import { z } from 'zod';
 // (content/SOURCES.md) или от носителя через CSV; всё хранится с verified:false
 // до подтверждения.
 
-export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual']);
+export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual', 'zugaa', 'translator']);
 export type BookId = z.infer<typeof BookId>;
 
 const SourceRef = z.object({
@@ -133,8 +133,20 @@ export const Lesson = z.object({
   letterIds: z.array(z.string()),
   sentenceIds: z.array(z.string()),
   categorize: z.boolean(),
+  /** Разговорный урок: чему он учит («здороваться») и итоговая сцена. */
+  skill: z.string().optional(),
+  dialogueId: z.string().optional(),
 });
 export type Lesson = z.infer<typeof Lesson>;
+
+export const Dialogue = z.object({
+  id: z.string().regex(/^d-[a-z0-9-]+$/),
+  title: z.string(),
+  scene: z.string(),
+  lines: z.array(z.object({ role: z.enum(['partner', 'learner']), wordId: z.string() })).min(1),
+});
+export type Dialogue = z.infer<typeof Dialogue>;
+export const Dialogues = z.array(Dialogue);
 
 export const Unit = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),

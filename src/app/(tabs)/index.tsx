@@ -20,7 +20,7 @@ const WAVE = [0, 44, 66, 44, 0, -44, -66, -44];
 function greeting(progress: ProgressState, goal: number, today: string): { mood: MascotMood; text: string } {
   const xp = progress.xpByDate[today] ?? 0;
   if (xp >= goal) return { mood: 'happy', text: 'Цель на сегодня выполнена. Отлично!' };
-  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'explain', text: 'Привет! Начнём с трёх букв, которых нет в русском.' };
+  if (Object.keys(progress.xpByDate).length === 0) return { mood: 'explain', text: 'Привет! Я нерпёнок. Давайте научимся здороваться по-бурятски.' };
   if (xp > 0) return { mood: 'explain', text: 'Хорошо идём. До цели совсем немного.' };
   if (progress.xpByDate[addDays(today, -1)]) return { mood: 'happy', text: 'С возвращением! Продолжаем серию.' };
   return { mood: 'think', text: 'Давно не виделись. Начнём с небольшого шага?' };
@@ -158,6 +158,11 @@ function PathNode({ number, title, offset, status, isNext, onPress }: { number: 
         ]}>
         <Text style={{ color: isNext ? c.onPrimary : fg, fontFamily: fonts.bold, fontSize: isNext ? 24 : 18 }}>{mark}</Text>
       </Pressable>
+      {!/^Урок \d+$/.test(title) && (
+        <Text numberOfLines={1} style={{ color: status === 'locked' ? c.textMuted : c.text, fontFamily: isNext ? fonts.semibold : fonts.regular, fontSize: 13, marginTop: 4, maxWidth: 200 }}>
+          {title}
+        </Text>
+      )}
       {isNext && (
         <View style={[styles.nextTag, offset > 0 ? { right: size + space.sm } : { left: size + space.sm }]}>
           <Mascot mood="explain" size={56} />

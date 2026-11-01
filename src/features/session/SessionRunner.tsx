@@ -21,6 +21,7 @@ import { useWebKeys } from '@/ui/useWebKeys';
 import {
   BuildSentenceView,
   CategorizeView,
+  DialogueView,
   IntroView,
   ListenView,
   MatchPairsView,
@@ -42,13 +43,15 @@ type Props = {
   sessionKey?: string;
   /** Свободная практика: без сердечек, урок не засчитывается. */
   practice?: boolean;
+  /** Чему учит урок: показывается в итоге. */
+  skill?: string;
 };
 
 const FEEDBACK_TEXT: Record<Feedback['result'], string> = { correct: 'Верно', almost: 'Почти верно', wrong: 'Неверно' };
 
 const FEEDBACK_MOOD: Record<Feedback['result'], MascotMood> = { correct: 'happy', almost: 'think', wrong: 'support' };
 
-export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice }: Props) {
+export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice, skill }: Props) {
   const { c } = useTheme();
   const router = useRouter();
   const { pools, stamp } = getCourse();
@@ -80,6 +83,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
       outOfHearts,
       practice: !!practice,
       mastered: accuracy(s) >= MASTERY_THRESHOLD,
+      skill: counts ? skill : undefined,
     });
     router.replace('/result');
   };
@@ -179,6 +183,8 @@ function ExerciseView({ ex, ...p }: { ex: Exercise; answered: boolean; onResult:
       return <CategorizeView ex={ex} {...p} />;
     case 'build_sentence':
       return <BuildSentenceView ex={ex} {...p} />;
+    case 'dialogue':
+      return <DialogueView ex={ex} {...p} />;
   }
 }
 

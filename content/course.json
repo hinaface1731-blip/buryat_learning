@@ -3,6 +3,177 @@
   "title": "Бурятский язык с нуля",
   "units": [
     {
+      "id": "route",
+      "title": "Первые разговоры",
+      "description": "Поздороваться, представиться, рассказать о семье, заказать чай.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "route-l1",
+          "title": "Поздоровайся",
+          "noteIds": [],
+          "wordIds": [
+            "sayn-bayna",
+            "hayn-bayna-guet",
+            "hayn-hayn-daa",
+            "amgalan-ueder"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "здороваться",
+          "dialogueId": "d-route-1"
+        },
+        {
+          "id": "route-l2",
+          "title": "Спроси о новостях",
+          "noteIds": [],
+          "wordIds": [
+            "taniiye-ueniney-kharaagueyb",
+            "bi-baha",
+            "yuu-honin-be"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "спрашивать о новостях",
+          "dialogueId": "d-route-2"
+        },
+        {
+          "id": "route-l3",
+          "title": "Поблагодари и попрощайся",
+          "noteIds": [],
+          "wordIds": [
+            "bayarlaa",
+            "bayartay",
+            "uulzataraa-bayartay"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "благодарить и прощаться",
+          "dialogueId": "d-route-3"
+        },
+        {
+          "id": "route-l4",
+          "title": "Представься",
+          "noteIds": [],
+          "wordIds": [
+            "bi-seseg-gezhe-nereteyb",
+            "bi-bair-gezhe-nereteyb",
+            "tanilsahandaa-bayartay-baynab"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "представляться",
+          "dialogueId": "d-route-4"
+        },
+        {
+          "id": "route-l5",
+          "title": "Спроси имя",
+          "noteIds": [],
+          "wordIds": [
+            "khen-gezhe-nereteysh",
+            "shinii-nereshni-khen-be"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "спрашивать имя",
+          "dialogueId": "d-route-5"
+        },
+        {
+          "id": "route-l6",
+          "title": "Скажи, откуда ты",
+          "noteIds": [],
+          "wordIds": [
+            "shi-khaanakhimshi",
+            "bi-ulaan-uedehoeoe-yereeb",
+            "bi-moskvahaa-yereeb",
+            "bi-ulaan-uedede-azhahuudagbi"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "рассказывать о себе",
+          "dialogueId": "d-route-6"
+        },
+        {
+          "id": "route-l7",
+          "title": "Покажи семью",
+          "noteIds": [],
+          "wordIds": [
+            "ene-minii-ezhy",
+            "ene-minii-aba",
+            "ene-minii-akha",
+            "ene-minii-dueue-basagan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "называть близких",
+          "dialogueId": "d-route-7"
+        },
+        {
+          "id": "route-l8",
+          "title": "Расскажи о семье",
+          "noteIds": [],
+          "wordIds": [
+            "ta-olon-ger-bueletey-guet",
+            "bi-yekhe-ger-bueleteyb",
+            "bi-akhatayb",
+            "bi-egesheteyb"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "рассказывать о семье",
+          "dialogueId": "d-route-8"
+        },
+        {
+          "id": "route-l9",
+          "title": "Закажи чай",
+          "noteIds": [],
+          "wordIds": [
+            "say-uukha-duratay-guet",
+            "tiime-bayarlaab",
+            "namda-nege-say-uegyt-daa",
+            "khedy-senteyb",
+            "yekhe-amtatay"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "заказывать чай",
+          "dialogueId": "d-route-9"
+        },
+        {
+          "id": "route-l10",
+          "title": "Поговори",
+          "noteIds": [],
+          "wordIds": [
+            "uegloeoeder-uulzaya"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "вести короткий разговор",
+          "dialogueId": "d-route-10"
+        }
+      ]
+    },
+    {
       "id": "u1",
       "title": "Алфавит и особые буквы Ү Ө Һ",
       "description": "36 букв и их названия; три буквы, которых нет в русском.",

@@ -14,8 +14,8 @@ function headline(r: LastResult): { title: string; note?: string } {
   if (r.outOfHearts) return { title: 'Сердечки закончились', note: 'Урок не засчитан. Сердечки восстановятся завтра; повторять можно без ограничений.' };
   if (r.practice) return { title: 'Практика завершена', note: 'Урок не засчитан, но слова уже в повторении.' };
   if (r.kind === 'review') return { title: 'Повторение завершено' };
-  if (r.mastered) return { title: 'Урок освоен' };
-  return { title: 'Занятие завершено', note: `Следующий урок открыт, но этот пока не закреплён: точность ниже ${threshold}%. Короткое повторение ошибок поможет.` };
+  if (r.mastered) return { title: r.skill ? `Теперь вы умеете ${r.skill}` : 'Урок освоен' };
+  return { title: 'Занятие завершено', note: r.skill ? `Ещё немного — и вы уверенно сможете ${r.skill}. Следующий урок открыт, а короткое повторение ошибок закрепит этот.` : `Следующий урок открыт, но этот пока не закреплён: точность ниже ${threshold}%. Короткое повторение ошибок поможет.` };
 }
 
 export default function ResultScreen() {

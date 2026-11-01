@@ -17,10 +17,10 @@ import { SessionRunner } from './SessionRunner';
 
 type Mode = 'ask' | 'resume' | 'fresh' | 'no-hearts' | 'practice';
 
-type Props = { sessionKey: string; kind: 'lesson' | 'review'; lessonId?: string; title: string; build: () => Exercise[] };
+type Props = { sessionKey: string; kind: 'lesson' | 'review'; lessonId?: string; title: string; skill?: string; build: () => Exercise[] };
 
 /** Вход в занятие: продолжить сохранённое, начать заново или, без сердечек, свободная практика. */
-export function SessionGate({ sessionKey, kind, lessonId, title, build }: Props) {
+export function SessionGate({ sessionKey, kind, lessonId, title, skill, build }: Props) {
   const router = useRouter();
   const [saved] = useState(() => {
     const s = useSessionStore.getState().saved[sessionKey];
@@ -33,8 +33,8 @@ export function SessionGate({ sessionKey, kind, lessonId, title, build }: Props)
   });
   const [queue] = useState(build);
 
-  if (mode === 'resume' && saved) return <SessionRunner queue={saved.session.queue} initial={saved.session} kind={kind} lessonId={lessonId} title={title} sessionKey={sessionKey} />;
-  if (mode === 'fresh') return <SessionRunner queue={queue} kind={kind} lessonId={lessonId} title={title} sessionKey={sessionKey} />;
+  if (mode === 'resume' && saved) return <SessionRunner queue={saved.session.queue} initial={saved.session} kind={kind} lessonId={lessonId} title={title} sessionKey={sessionKey} skill={skill} />;
+  if (mode === 'fresh') return <SessionRunner queue={queue} kind={kind} lessonId={lessonId} title={title} sessionKey={sessionKey} skill={skill} />;
   if (mode === 'practice') return <SessionRunner queue={queue} kind={kind} lessonId={lessonId} title={`Практика · ${title}`} practice />;
 
   const home = () => (router.canGoBack() ? router.back() : router.replace('/'));

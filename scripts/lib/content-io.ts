@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { Course, Letters, MinimalPairs, Sentences, Words } from '../../src/content/schema';
-import type { Course as CourseT, Letter, MinimalPair, Sentence, Word } from '../../src/content/schema';
+import { Course, Dialogues, Letters, MinimalPairs, Sentences, Words } from '../../src/content/schema';
+import type { Course as CourseT, Dialogue, Letter, MinimalPair, Sentence, Word } from '../../src/content/schema';
 
 export const ROOT = path.resolve(__dirname, '..', '..');
 export const CONTENT = path.join(ROOT, 'content');
@@ -23,3 +23,4 @@ export const readSentences = (): Sentence[] => Sentences.parse(readJson('sentenc
 export const readPairs = (): MinimalPair[] => MinimalPairs.parse(readJson('minimal-pairs.json'));
 export const readLetters = (): Letter[] => Letters.parse(readJson('alphabet.json'));
 export const readCourse = (): CourseT => Course.parse(readJson('course.json'));
+export const readDialogues = (): Dialogue[] => Dialogues.parse(readJson('dialogues.json'));

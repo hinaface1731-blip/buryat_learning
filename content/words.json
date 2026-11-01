@@ -11277,5 +11277,979 @@
       "buryat": "үүлэн",
       "russian": "тучи"
     }
+  },
+  {
+    "id": "sayn-bayna",
+    "kind": "word",
+    "buryat": "Сайн байна!",
+    "russian": "Здравствуйте!",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Привет!",
+    "origin": {
+      "buryat": "Сайн байна!",
+      "russian": "Здравствуйте!"
+    }
+  },
+  {
+    "id": "hayn-bayna-guet",
+    "kind": "word",
+    "buryat": "Һайн байна гүт?",
+    "russian": "Как поживаете?",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Обратный перевод неточный; фраза из разговорника; обратный перевод: Привет?",
+    "origin": {
+      "buryat": "Һайн байна гүт?",
+      "russian": "Как поживаете?"
+    }
+  },
+  {
+    "id": "hayn-hayn-daa",
+    "kind": "word",
+    "buryat": "Һайн, һайн даа!",
+    "russian": "Хорошо, спасибо.",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В разговорнике: «Хорошо, в порядке, спасибо»; обратный перевод: Хорошо, хорошо!",
+    "origin": {
+      "buryat": "Һайн, һайн даа!",
+      "russian": "Хорошо, спасибо."
+    }
+  },
+  {
+    "id": "amgalan-ueder",
+    "kind": "word",
+    "buryat": "Амгалан үдэр!",
+    "russian": "Добрый день!",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Желаю вам спокойного дня!",
+    "origin": {
+      "buryat": "Амгалан үдэр!",
+      "russian": "Добрый день!"
+    }
+  },
+  {
+    "id": "taniiye-ueniney-kharaagueyb",
+    "kind": "word",
+    "buryat": "Таниие үнинэй хараагүйб",
+    "russian": "Давно вас не видела.",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Давно тебя не видел",
+    "origin": {
+      "buryat": "Таниие үнинэй хараагүйб",
+      "russian": "Давно вас не видела."
+    }
+  },
+  {
+    "id": "bi-baha",
+    "kind": "word",
+    "buryat": "Би баһа",
+    "russian": "Я тоже.",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я тоже",
+    "origin": {
+      "buryat": "Би баһа",
+      "russian": "Я тоже."
+    }
+  },
+  {
+    "id": "yuu-honin-be",
+    "kind": "word",
+    "buryat": "Юу һонин бэ?",
+    "russian": "Какие новости?",
+    "alternatives": [],
+    "source": {
+      "book": "zugaa",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Обратный перевод неточный; фраза из разговорника; обратный перевод: Что интересно?",
+    "origin": {
+      "buryat": "Юу һонин бэ?",
+      "russian": "Какие новости?"
+    }
+  },
+  {
+    "id": "bayarlaa",
+    "kind": "word",
+    "buryat": "Баярлаа!",
+    "russian": "Спасибо!",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Спасибо!",
+    "origin": {
+      "buryat": "Баярлаа!",
+      "russian": "Спасибо!"
+    }
+  },
+  {
+    "id": "bayartay",
+    "kind": "word",
+    "buryat": "Баяртай!",
+    "russian": "До свидания!",
+    "alternatives": [],
+    "source": {
+      "book": "bxr-textbook",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Встречается в текстах учебника; обратный перевод: Пока!",
+    "origin": {
+      "buryat": "Баяртай!",
+      "russian": "До свидания!"
+    }
+  },
+  {
+    "id": "uulzataraa-bayartay",
+    "kind": "word",
+    "buryat": "Уулзатараа баяртай!",
+    "russian": "До встречи!",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В учебнике: «дахин уулзатараа баяртай»; обратный перевод: Увидимся!",
+    "origin": {
+      "buryat": "Уулзатараа баяртай!",
+      "russian": "До встречи!"
+    }
+  },
+  {
+    "id": "bi-seseg-gezhe-nereteyb",
+    "kind": "word",
+    "buryat": "Би Сэсэг гэжэ нэрэтэйб.",
+    "russian": "Меня зовут Сэсэг.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-4"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Меня зовут Сесег.",
+    "origin": {
+      "buryat": "Би Сэсэг гэжэ нэрэтэйб.",
+      "russian": "Меня зовут Сэсэг."
+    }
+  },
+  {
+    "id": "bi-bair-gezhe-nereteyb",
+    "kind": "word",
+    "buryat": "Би Баир гэжэ нэрэтэйб.",
+    "russian": "Меня зовут Баир.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-4"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Меня зовут Баир.",
+    "origin": {
+      "buryat": "Би Баир гэжэ нэрэтэйб.",
+      "russian": "Меня зовут Баир."
+    }
+  },
+  {
+    "id": "tanilsahandaa-bayartay-baynab",
+    "kind": "word",
+    "buryat": "Танилсаһандаа баяртай байнаб.",
+    "russian": "Рад познакомиться.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-4"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Рад встрече.",
+    "origin": {
+      "buryat": "Танилсаһандаа баяртай байнаб.",
+      "russian": "Рад познакомиться."
+    }
+  },
+  {
+    "id": "khen-gezhe-nereteysh",
+    "kind": "word",
+    "buryat": "Хэн гэжэ нэрэтэйш?",
+    "russian": "Как тебя зовут?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-5"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Форма на «ты» по окончанию -ш: проверить вежливую форму; обратный перевод: Как вас зовут?",
+    "origin": {
+      "buryat": "Хэн гэжэ нэрэтэйш?",
+      "russian": "Как тебя зовут?"
+    }
+  },
+  {
+    "id": "shinii-nereshni-khen-be",
+    "kind": "word",
+    "buryat": "Шинии нэрэшни хэн бэ?",
+    "russian": "Как твоё имя?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-5"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Как тебя зовут?",
+    "origin": {
+      "buryat": "Шинии нэрэшни хэн бэ?",
+      "russian": "Как твоё имя?"
+    }
+  },
+  {
+    "id": "shi-khaanakhimshi",
+    "kind": "word",
+    "buryat": "Ши хаанахимши?",
+    "russian": "Откуда ты?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-6"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Откуда ты?",
+    "origin": {
+      "buryat": "Ши хаанахимши?",
+      "russian": "Откуда ты?"
+    }
+  },
+  {
+    "id": "bi-ulaan-uedehoeoe-yereeb",
+    "kind": "word",
+    "buryat": "Би Улаан-Үдэһөө ерээб.",
+    "russian": "Я из Улан-Удэ.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-6"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я из Улан-Удэ.",
+    "origin": {
+      "buryat": "Би Улаан-Үдэһөө ерээб.",
+      "russian": "Я из Улан-Удэ."
+    }
+  },
+  {
+    "id": "bi-moskvahaa-yereeb",
+    "kind": "word",
+    "buryat": "Би Москваһаа ерээб.",
+    "russian": "Я из Москвы.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-6"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я из Москвы.",
+    "origin": {
+      "buryat": "Би Москваһаа ерээб.",
+      "russian": "Я из Москвы."
+    }
+  },
+  {
+    "id": "bi-ulaan-uedede-azhahuudagbi",
+    "kind": "word",
+    "buryat": "Би Улаан-Үдэдэ ажаһуудагби.",
+    "russian": "Я живу в Улан-Удэ.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-6"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я живу в Улан-Удэ.",
+    "origin": {
+      "buryat": "Би Улаан-Үдэдэ ажаһуудагби.",
+      "russian": "Я живу в Улан-Удэ."
+    }
+  },
+  {
+    "id": "ene-minii-ezhy",
+    "kind": "word",
+    "buryat": "Энэ минии эжы.",
+    "russian": "Это моя мать.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-7"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "эжы есть в учебнике (стр. 19); обратный перевод: Это моя мать.",
+    "origin": {
+      "buryat": "Энэ минии эжы.",
+      "russian": "Это моя мать."
+    }
+  },
+  {
+    "id": "ene-minii-aba",
+    "kind": "word",
+    "buryat": "Энэ минии аба.",
+    "russian": "Это мой отец.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-7"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это мой отец.",
+    "origin": {
+      "buryat": "Энэ минии аба.",
+      "russian": "Это мой отец."
+    }
+  },
+  {
+    "id": "ene-minii-akha",
+    "kind": "word",
+    "buryat": "Энэ минии аха.",
+    "russian": "Это мой старший брат.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-7"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это мой брат.",
+    "origin": {
+      "buryat": "Энэ минии аха.",
+      "russian": "Это мой старший брат."
+    }
+  },
+  {
+    "id": "ene-minii-dueue-basagan",
+    "kind": "word",
+    "buryat": "Энэ минии дүү басаган.",
+    "russian": "Это моя младшая сестра.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-7"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это моя младшая сестра.",
+    "origin": {
+      "buryat": "Энэ минии дүү басаган.",
+      "russian": "Это моя младшая сестра."
+    }
+  },
+  {
+    "id": "ta-olon-ger-bueletey-guet",
+    "kind": "word",
+    "buryat": "Та олон гэр бүлэтэй гүт?",
+    "russian": "У вас большая семья?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-8"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У вас большая семья?",
+    "origin": {
+      "buryat": "Та олон гэр бүлэтэй гүт?",
+      "russian": "У вас большая семья?"
+    }
+  },
+  {
+    "id": "bi-yekhe-ger-bueleteyb",
+    "kind": "word",
+    "buryat": "Би ехэ гэр бүлэтэйб.",
+    "russian": "У меня большая семья.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-8"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В вопросе «олон» — в ответе «ехэ»: проверить; обратный перевод: У меня большая семья.",
+    "origin": {
+      "buryat": "Би ехэ гэр бүлэтэйб.",
+      "russian": "У меня большая семья."
+    }
+  },
+  {
+    "id": "bi-akhatayb",
+    "kind": "word",
+    "buryat": "Би ахатайб.",
+    "russian": "У меня есть брат.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-8"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У меня есть брат.",
+    "origin": {
+      "buryat": "Би ахатайб.",
+      "russian": "У меня есть брат."
+    }
+  },
+  {
+    "id": "bi-egesheteyb",
+    "kind": "word",
+    "buryat": "Би эгэшэтэйб.",
+    "russian": "У меня есть сестра.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-8"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У меня есть сестра.",
+    "origin": {
+      "buryat": "Би эгэшэтэйб.",
+      "russian": "У меня есть сестра."
+    }
+  },
+  {
+    "id": "say-uukha-duratay-guet",
+    "kind": "word",
+    "buryat": "Сай ууха дуратай гүт?",
+    "russian": "Хотите чаю?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-9"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Хотите чаю?",
+    "origin": {
+      "buryat": "Сай ууха дуратай гүт?",
+      "russian": "Хотите чаю?"
+    }
+  },
+  {
+    "id": "tiime-bayarlaab",
+    "kind": "word",
+    "buryat": "Тиимэ, баярлааб.",
+    "russian": "Да, спасибо.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-9"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Да, спасибо.",
+    "origin": {
+      "buryat": "Тиимэ, баярлааб.",
+      "russian": "Да, спасибо."
+    }
+  },
+  {
+    "id": "namda-nege-say-uegyt-daa",
+    "kind": "word",
+    "buryat": "Намда нэгэ сай үгыт даа.",
+    "russian": "Дайте мне чаю, пожалуйста.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-9"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Пожалуйста, дайте мне чашку чая.",
+    "origin": {
+      "buryat": "Намда нэгэ сай үгыт даа.",
+      "russian": "Дайте мне чаю, пожалуйста."
+    }
+  },
+  {
+    "id": "khedy-senteyb",
+    "kind": "word",
+    "buryat": "Хэды сэнтэйб?",
+    "russian": "Сколько это стоит?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-9"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Сколько это стоит?",
+    "origin": {
+      "buryat": "Хэды сэнтэйб?",
+      "russian": "Сколько это стоит?"
+    }
+  },
+  {
+    "id": "yekhe-amtatay",
+    "kind": "word",
+    "buryat": "Ехэ амтатай.",
+    "russian": "Очень вкусно.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-9"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Очень вкусно.",
+    "origin": {
+      "buryat": "Ехэ амтатай.",
+      "russian": "Очень вкусно."
+    }
+  },
+  {
+    "id": "uegloeoeder-uulzaya",
+    "kind": "word",
+    "buryat": "Үглөөдэр уулзая.",
+    "russian": "Увидимся завтра.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "разговорный маршрут"
+    },
+    "tags": [
+      "route",
+      "phrase",
+      "route-lesson-10"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Увидимся завтра.",
+    "origin": {
+      "buryat": "Үглөөдэр уулзая.",
+      "russian": "Увидимся завтра."
+    }
   }
 ]

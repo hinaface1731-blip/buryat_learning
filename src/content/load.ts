@@ -1,5 +1,6 @@
 import alphabetJson from '../../content/alphabet.json';
 import courseJson from '../../content/course.json';
+import dialoguesJson from '../../content/dialogues.json';
 import minimalPairsJson from '../../content/minimal-pairs.json';
 import notesJson from '../../content/notes.json';
 import sentencesJson from '../../content/sentences.json';
@@ -8,6 +9,8 @@ import wordsJson from '../../content/words.json';
 
 import {
   Course,
+  Dialogue,
+  Dialogues,
   Letter,
   Letters,
   MinimalPair,
@@ -29,6 +32,8 @@ export type Content = {
   letters: Letter[];
   notes: Note[];
   vowelRows: VowelRows;
+  dialogues: Dialogue[];
+  dialogueById: Map<string, Dialogue>;
   wordById: Map<string, Word>;
   sentenceById: Map<string, Sentence>;
   pairById: Map<string, MinimalPair>;
@@ -44,6 +49,7 @@ export type RawContent = {
   letters: unknown;
   notes: unknown;
   vowelRows: unknown;
+  dialogues: unknown;
 };
 
 function indexById<T extends { id: string }>(items: T[], label: string): Map<string, T> {
@@ -64,6 +70,7 @@ export function buildContent(raw: RawContent): Content {
   const letters = Letters.parse(raw.letters);
   const notes = Notes.parse(raw.notes);
   const vowelRows = VowelRows.parse(raw.vowelRows);
+  const dialogues = Dialogues.parse(raw.dialogues);
 
   const content: Content = {
     course,
@@ -73,6 +80,8 @@ export function buildContent(raw: RawContent): Content {
     letters,
     notes,
     vowelRows,
+    dialogues,
+    dialogueById: indexById(dialogues, 'dialogues'),
     wordById: indexById(words, 'words'),
     sentenceById: indexById(sentences, 'sentences'),
     pairById: indexById(minimalPairs, 'minimal-pairs'),
@@ -101,8 +110,10 @@ export function findBrokenRefs(c: Content): string[] {
       lesson.minimalPairIds.forEach((id) => check(c.pairById, id, where));
       lesson.letterIds.forEach((id) => check(c.letterById, id, where));
       lesson.sentenceIds.forEach((id) => check(c.sentenceById, id, where));
+      if (lesson.dialogueId) check(c.dialogueById, lesson.dialogueId, where);
     }
   }
+  for (const d of c.dialogues) d.lines.forEach((l) => check(c.wordById, l.wordId, d.id));
   for (const pair of c.minimalPairs) {
     if (pair.a) check(c.wordById, pair.a, pair.id);
     if (pair.b) check(c.wordById, pair.b, pair.id);
@@ -118,6 +129,7 @@ export const rawContent: RawContent = {
   letters: alphabetJson,
   notes: notesJson,
   vowelRows: vowelRowsJson,
+  dialogues: dialoguesJson,
 };
 
 let cached: Content | null = null;

@@ -1,9 +1,12 @@
 ﻿id,buryat,russian,file,priority,reason,recorded,verified
+bi-ulaan-uedehoeoe-yereeb,Би Улаан-Үдэһөө ерээб.,Я из Улан-Удэ.,assets/audio/bi-ulaan-uedehoeoe-yereeb.m4a,11,"Ү, Ө, Һ, долгий гласный",нет,нет
 gueroeoehen,гүрөөһэн,косуля,assets/audio/gueroeoehen.m4a,11,"Ү, Ө, Һ, долгий гласный",нет,нет
+bi-ulaan-uedede-azhahuudagbi,Би Улаан-Үдэдэ ажаһуудагби.,Я живу в Улан-Удэ.,assets/audio/bi-ulaan-uedede-azhahuudagbi.m4a,8,"Ү, Һ, долгий гласный",нет,нет
 dueuerekhe,дүүрэхэ,заканчиваться,assets/audio/dueuerekhe.m4a,8,"Ү, долгий гласный, минимальная пара",нет,нет
 zueydoeoel,зүйдөөл,сшитый из кусков,assets/audio/zueydoeoel.m4a,8,"Ү, Ө, долгий гласный",нет,нет
 oeoederkhueue,өөдэрхүү,заносчивый,assets/audio/oeoederkhueue.m4a,8,"Ү, Ө, долгий гласный",нет,нет
 oeoekheguey,өөхэгүй,без жира,assets/audio/oeoekheguey.m4a,8,"Ү, Ө, долгий гласный",нет,нет
+uegloeoeder-uulzaya,Үглөөдэр уулзая.,Увидимся завтра.,assets/audio/uegloeoeder-uulzaya.m4a,8,"Ү, Ө, долгий гласный",нет,нет
 ueymoeoen,үймөөн,паника,assets/audio/ueymoeoen.m4a,8,"Ү, Ө, долгий гласный",нет,нет
 ueuelen-2,үүлэн,тучи,assets/audio/ueuelen-2.m4a,8,"Ү, долгий гласный, минимальная пара",нет,нет
 haakha,һааха,доить,assets/audio/haakha.m4a,8,"Һ, долгий гласный, минимальная пара",нет,нет
@@ -18,6 +21,7 @@ taharshaguey,таһаршагүй,неразрывно,assets/audio/taharshaguey
 tuerehen,түрэһэн,родной,assets/audio/tuerehen.m4a,6,"Ү, Һ",нет,нет
 uelen,үлэн,голодный,assets/audio/uelen.m4a,6,"Ү, минимальная пара",нет,нет
 uetelhen,үтэлһэн,престарелый,assets/audio/uetelhen.m4a,6,"Ү, Һ",нет,нет
+hayn-bayna-guet,Һайн байна гүт?,Как поживаете?,assets/audio/hayn-bayna-guet.m4a,6,"Ү, Һ",нет,нет
 huezeg,һүзэг,вера,assets/audio/huezeg.m4a,6,"Ү, Һ",нет,нет
 hueler,һүлэр,рассеянный,assets/audio/hueler.m4a,6,"Ү, Һ",нет,нет
 huen,һүн,молоко,assets/audio/huen.m4a,6,"Ү, Һ",нет,нет
@@ -25,6 +29,7 @@ huekhe,һүхэ,топор,assets/audio/huekhe.m4a,6,"Ү, Һ",нет,нет
 shueder,шүдэр,путы,assets/audio/shueder.m4a,6,"Ү, минимальная пара",нет,нет
 baraa-2,бараа,закончил,assets/audio/baraa-2.m4a,5,"долгий гласный, минимальная пара",нет,нет
 baryaa,баряа,поймал,assets/audio/baryaa.m4a,5,"долгий гласный, минимальная пара",нет,нет
+bi-moskvahaa-yereeb,Би Москваһаа ерээб.,Я из Москвы.,assets/audio/bi-moskvahaa-yereeb.m4a,5,"Һ, долгий гласный",нет,нет
 boodol,боодол,место завязки,assets/audio/boodol.m4a,5,"долгий гласный, минимальная пара",нет,нет
 boroo,бороо,дождь,assets/audio/boroo.m4a,5,"долгий гласный, минимальная пара",нет,нет
 burgaahan,бургааһан,кустарник,assets/audio/burgaahan.m4a,5,"Һ, долгий гласный",нет,нет
@@ -36,10 +41,14 @@ dueuerekhe-2,дүүрэхэ,наполняться,assets/audio/dueuerekhe-2.m4a
 zaan,заан,слон,assets/audio/zaan.m4a,5,"долгий гласный, минимальная пара",нет,нет
 zueuebshe,зүүбшэ,подвески,assets/audio/zueuebshe.m4a,5,"Ү, долгий гласный",нет,нет
 medueuelel,мэдүүлэл,предложение,assets/audio/medueuelel.m4a,5,"Ү, долгий гласный",нет,нет
+namda-nege-say-uegyt-daa,Намда нэгэ сай үгыт даа.,"Дайте мне чаю, пожалуйста.",assets/audio/namda-nege-say-uegyt-daa.m4a,5,"Ү, долгий гласный",нет,нет
 noohon,нооһон,шерсть,assets/audio/noohon.m4a,5,"Һ, долгий гласный",нет,нет
 onoo,оноо,зарубки (на стреле),assets/audio/onoo.m4a,5,"долгий гласный, минимальная пара",нет,нет
 oeoerynkhin,өөрынхин,свои,assets/audio/oeoerynkhin.m4a,5,"Ө, долгий гласный",нет,нет
 oeoekhen,өөхэн,сало,assets/audio/oeoekhen.m4a,5,"Ө, долгий гласный",нет,нет
+say-uukha-duratay-guet,Сай ууха дуратай гүт?,Хотите чаю?,assets/audio/say-uukha-duratay-guet.m4a,5,"Ү, долгий гласный",нет,нет
+taniiye-ueniney-kharaagueyb,Таниие үнинэй хараагүйб,Давно вас не видела.,assets/audio/taniiye-ueniney-kharaagueyb.m4a,5,"Ү, долгий гласный",нет,нет
+tanilsahandaa-bayartay-baynab,Танилсаһандаа баяртай байнаб.,Рад познакомиться.,assets/audio/tanilsahandaa-bayartay-baynab.m4a,5,"Һ, долгий гласный",нет,нет
 tooloshoguey,тоолошогүй,неисчислимый,assets/audio/tooloshoguey.m4a,5,"Ү, долгий гласный",нет,нет
 tuukha,тууха,гнать,assets/audio/tuukha.m4a,5,"долгий гласный, минимальная пара",нет,нет
 tuelyeen,түлеэн,дрова,assets/audio/tuelyeen.m4a,5,"Ү, долгий гласный",нет,нет
@@ -77,6 +86,7 @@ khyuroeoedekhe,хюрөөдэхэ,пилить,assets/audio/khyuroeoedekhe.m4a,5
 haalishad,һаалишад,доярки,assets/audio/haalishad.m4a,5,"Һ, долгий гласный",нет,нет
 haalishan,һаалишан,доярка,assets/audio/haalishan.m4a,5,"Һ, долгий гласный",нет,нет
 haalta,һаалта,препятствие,assets/audio/haalta.m4a,5,"Һ, долгий гласный",нет,нет
+hayn-hayn-daa,"Һайн, һайн даа!","Хорошо, спасибо.",assets/audio/hayn-hayn-daa.m4a,5,"Һ, долгий гласный",нет,нет
 haynaar,һайнаар,хорошо,assets/audio/haynaar.m4a,5,"Һ, долгий гласный",нет,нет
 han-huukha,һан һууха,попадать впросак,assets/audio/han-huukha.m4a,5,"Һ, долгий гласный",нет,нет
 hanaatay,һанаатай,имеющий какую-то мысль,assets/audio/hanaatay.m4a,5,"Һ, долгий гласный",нет,нет
@@ -87,8 +97,13 @@ hurgaal,һургаал,наставление,assets/audio/hurgaal.m4a,5,"Һ, д
 hurguuli,һургуули,школа,assets/audio/hurguuli.m4a,5,"Һ, долгий гласный",нет,нет
 huuri,һуури,место,assets/audio/huuri.m4a,5,"Һ, долгий гласный",нет,нет
 edyeelueuelkhe,эдеэлүүлхэ,кормить,assets/audio/edyeelueuelkhe.m4a,5,"Ү, долгий гласный",нет,нет
+ene-minii-dueue-basagan,Энэ минии дүү басаган.,Это моя младшая сестра.,assets/audio/ene-minii-dueue-basagan.m4a,5,"Ү, долгий гласный",нет,нет
 eshee-n,эшээ(н),нора,assets/audio/eshee-n.m4a,5,"долгий гласный, минимальная пара",нет,нет
+yuu-honin-be,Юу һонин бэ?,Какие новости?,assets/audio/yuu-honin-be.m4a,5,"Һ, долгий гласный",нет,нет
 alirhan,алирһан,брусника,assets/audio/alirhan.m4a,3,Һ,нет,нет
+amgalan-ueder,Амгалан үдэр!,Добрый день!,assets/audio/amgalan-ueder.m4a,3,Ү,нет,нет
+bi-baha,Би баһа,Я тоже.,assets/audio/bi-baha.m4a,3,Һ,нет,нет
+bi-yekhe-ger-bueleteyb,Би ехэ гэр бүлэтэйб.,У меня большая семья.,assets/audio/bi-yekhe-ger-bueleteyb.m4a,3,Ү,нет,нет
 bodol,бодол,мысль,assets/audio/bodol.m4a,3,минимальная пара,нет,нет
 boro,боро,серый,assets/audio/boro.m4a,3,минимальная пара,нет,нет
 buekhen,бүхэн,каждый,assets/audio/buekhen.m4a,3,Ү,нет,нет
@@ -116,6 +131,7 @@ nuekher,нүхэр,друг,assets/audio/nuekher.m4a,3,Ү,нет,нет
 negel-onotoy-yohotoy,нэгэл онотой ёһотой,должен же быть какой-то способ,assets/audio/negel-onotoy-yohotoy.m4a,3,Һ,нет,нет
 ono,оно,способ,assets/audio/ono.m4a,3,минимальная пара,нет,нет
 sahan,саһан,снег,assets/audio/sahan.m4a,3,Һ,нет,нет
+ta-olon-ger-bueletey-guet,Та олон гэр бүлэтэй гүт?,У вас большая семья?,assets/audio/ta-olon-ger-bueletey-guet.m4a,3,Ү,нет,нет
 tukha,туха,досуг,assets/audio/tukha.m4a,3,минимальная пара,нет,нет
 tukhamni-bolonoguey,тухамни болоногүй,руки не доходят,assets/audio/tukhamni-bolonoguey.m4a,3,Ү,нет,нет
 tuemer,түмэр,железо,assets/audio/tuemer.m4a,3,Ү,нет,нет
@@ -178,6 +194,7 @@ agnuuri,агнуури,промысел,assets/audio/agnuuri.m4a,2,долгий 
 ayuultay,аюултай,опасный,assets/audio/ayuultay.m4a,2,долгий гласный,нет,нет
 baygaali,байгаали,природа,assets/audio/baygaali.m4a,2,долгий гласный,нет,нет
 baraa,бараа,мебель,assets/audio/baraa.m4a,2,долгий гласный,нет,нет
+bayarlaa,Баярлаа!,Спасибо!,assets/audio/bayarlaa.m4a,2,долгий гласный,нет,нет
 boozho,боожо,вожжи,assets/audio/boozho.m4a,2,долгий гласный,нет,нет
 boozhyn-tashuur,боожын ташуур,кнут с длинной рукояткой,assets/audio/boozhyn-tashuur.m4a,2,долгий гласный,нет,нет
 bookho,боохо,заворачивать,assets/audio/bookho.m4a,2,долгий гласный,нет,нет
@@ -216,10 +233,12 @@ tanyuulkha,танюулха,давать распознать,assets/audio/tanyu
 taryaan,таряан,урожай,assets/audio/taryaan.m4a,2,долгий гласный,нет,нет
 takhyaa,тахяа,курица,assets/audio/takhyaa.m4a,2,долгий гласный,нет,нет
 tashuur,ташуур,кнут,assets/audio/tashuur.m4a,2,долгий гласный,нет,нет
+tiime-bayarlaab,"Тиимэ, баярлааб.","Да, спасибо.",assets/audio/tiime-bayarlaab.m4a,2,долгий гласный,нет,нет
 too,тоо,число,assets/audio/too.m4a,2,долгий гласный,нет,нет
 tezheekhe,тэжээхэ,кормить,assets/audio/tezheekhe.m4a,2,долгий гласный,нет,нет
 tere-doroo,тэрэ дороо,немедленно,assets/audio/tere-doroo.m4a,2,долгий гласный,нет,нет
 uuzham,уужам,широкий,assets/audio/uuzham.m4a,2,долгий гласный,нет,нет
+uulzataraa-bayartay,Уулзатараа баяртай!,До встречи!,assets/audio/uulzataraa-bayartay.m4a,2,долгий гласный,нет,нет
 uurag-tarkhi,уураг тархи,мозг,assets/audio/uurag-tarkhi.m4a,2,долгий гласный,нет,нет
 uukha,ууха,пить,assets/audio/uukha.m4a,2,долгий гласный,нет,нет
 khaana,хаана,где,assets/audio/khaana.m4a,2,долгий гласный,нет,нет
@@ -227,12 +246,18 @@ khazhuudan,хажуудань,рядом,assets/audio/khazhuudan.m4a,2,долг�
 khataakha,хатааха,сушить,assets/audio/khataakha.m4a,2,долгий гласный,нет,нет
 khun-shubuun,хун шубуун,лебедь,assets/audio/khun-shubuun.m4a,2,долгий гласный,нет,нет
 khuryaakha,хуряаха,убирать,assets/audio/khuryaakha.m4a,2,долгий гласный,нет,нет
+khedy-senteyb,Хэды сэнтэйб?,Сколько это стоит?,assets/audio/khedy-senteyb.m4a,2,долгий гласный,нет,нет
 shaakha,шааха,вбивать,assets/audio/shaakha.m4a,2,долгий гласный,нет,нет
+shi-khaanakhimshi,Ши хаанахимши?,Откуда ты?,assets/audio/shi-khaanakhimshi.m4a,2,долгий гласный,нет,нет
+shinii-nereshni-khen-be,Шинии нэрэшни хэн бэ?,Как твоё имя?,assets/audio/shinii-nereshni-khen-be.m4a,2,долгий гласный,нет,нет
 shubuun,шубуун,птица,assets/audio/shubuun.m4a,2,долгий гласный,нет,нет
 shugy,шугы,роща,assets/audio/shugy.m4a,2,долгий гласный,нет,нет
 edyeen,эдеэн,пища,assets/audio/edyeen.m4a,2,долгий гласный,нет,нет
 edyeen-2,эдеэн,еда,assets/audio/edyeen-2.m4a,2,долгий гласный,нет,нет
 ezhy,эжы,мать,assets/audio/ezhy.m4a,2,долгий гласный,нет,нет
+ene-minii-aba,Энэ минии аба.,Это мой отец.,assets/audio/ene-minii-aba.m4a,2,долгий гласный,нет,нет
+ene-minii-akha,Энэ минии аха.,Это мой старший брат.,assets/audio/ene-minii-akha.m4a,2,долгий гласный,нет,нет
+ene-minii-ezhy,Энэ минии эжы.,Это моя мать.,assets/audio/ene-minii-ezhy.m4a,2,долгий гласный,нет,нет
 abari-zan,абари зан,поведение,assets/audio/abari-zan.m4a,0,,нет,нет
 abakha,абаха,покупать,assets/audio/abakha.m4a,0,,нет,нет
 azhaltay,ажалтай,имеющий работу,assets/audio/azhaltay.m4a,0,,нет,нет
@@ -258,6 +283,11 @@ bakha,баха,лягушка,assets/audio/bakha.m4a,0,,нет,нет
 bayalig,баялиг,богатство,assets/audio/bayalig.m4a,0,,нет,нет
 bayan,баян,богатый,assets/audio/bayan.m4a,0,,нет,нет
 bayarlakha,баярлаха,радоваться,assets/audio/bayarlakha.m4a,0,,нет,нет
+bayartay,Баяртай!,До свидания!,assets/audio/bayartay.m4a,0,,нет,нет
+bi-akhatayb,Би ахатайб.,У меня есть брат.,assets/audio/bi-akhatayb.m4a,0,,нет,нет
+bi-bair-gezhe-nereteyb,Би Баир гэжэ нэрэтэйб.,Меня зовут Баир.,assets/audio/bi-bair-gezhe-nereteyb.m4a,0,,нет,нет
+bi-seseg-gezhe-nereteyb,Би Сэсэг гэжэ нэрэтэйб.,Меня зовут Сэсэг.,assets/audio/bi-seseg-gezhe-nereteyb.m4a,0,,нет,нет
+bi-egesheteyb,Би эгэшэтэйб.,У меня есть сестра.,assets/audio/bi-egesheteyb.m4a,0,,нет,нет
 bozho-zhezhe,божо (жэжэ),маленький,assets/audio/bozho-zhezhe.m4a,0,,нет,нет
 bolgokho,болгохо,варить,assets/audio/bolgokho.m4a,0,,нет,нет
 bulgan,булган,соболь,assets/audio/bulgan.m4a,0,,нет,нет
@@ -281,6 +311,7 @@ dokholon,дохолон,хромой,assets/audio/dokholon.m4a,0,,нет,нет
 yerakhe,ерахэ,приходить,assets/audio/yerakhe.m4a,0,,нет,нет
 yeren,ерэн,девяносто,assets/audio/yeren.m4a,0,,нет,нет
 yerekhe,ерэхэ,приходить,assets/audio/yerekhe.m4a,0,,нет,нет
+yekhe-amtatay,Ехэ амтатай.,Очень вкусно.,assets/audio/yekhe-amtatay.m4a,0,,нет,нет
 zhargal,жаргал,счастье,assets/audio/zhargal.m4a,0,,нет,нет
 zhezhe,жэжэ,мелкий,assets/audio/zhezhe.m4a,0,,нет,нет
 zhel,жэл,год,assets/audio/zhel.m4a,0,,нет,нет
@@ -315,6 +346,7 @@ olon,олон,много,assets/audio/olon.m4a,0,,нет,нет
 orokho,орохо,идти,assets/audio/orokho.m4a,0,,нет,нет
 sag,саг,время,assets/audio/sag.m4a,0,,нет,нет
 say,сай,чай,assets/audio/say.m4a,0,,нет,нет
+sayn-bayna,Сайн байна!,Здравствуйте!,assets/audio/sayn-bayna.m4a,0,,нет,нет
 seseg,сэсэг,цветок,assets/audio/seseg.m4a,0,,нет,нет
 taba,таба,пять,assets/audio/taba.m4a,0,,нет,нет
 tolgoy,толгой,голова,assets/audio/tolgoy.m4a,0,,нет,нет
@@ -350,6 +382,7 @@ khonkho,хонхо,звонок,assets/audio/khonkho.m4a,0,,нет,нет
 khudal,худал,ложь,assets/audio/khudal.m4a,0,,нет,нет
 khurdan,хурдан,быстрый,assets/audio/khurdan.m4a,0,,нет,нет
 khelen,хэлэн,язык,assets/audio/khelen.m4a,0,,нет,нет
+khen-gezhe-nereteysh,Хэн гэжэ нэрэтэйш?,Как тебя зовут?,assets/audio/khen-gezhe-nereteysh.m4a,0,,нет,нет
 kheregtey,хэрэгтэй,нужный,assets/audio/kheregtey.m4a,0,,нет,нет
 shanga,шанга,сильный,assets/audio/shanga.m4a,0,,нет,нет
 shandagan,шандаган,заяц,assets/audio/shandagan.m4a,0,,нет,нет

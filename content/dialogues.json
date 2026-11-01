@@ -1,0 +1,224 @@
+[
+  {
+    "id": "d-route-1",
+    "title": "Поздоровайся",
+    "scene": "Вы — Баир. Навстречу идёт Сэсэг, поздоровайтесь с ней.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "sayn-bayna"
+      },
+      {
+        "role": "learner",
+        "wordId": "sayn-bayna"
+      },
+      {
+        "role": "partner",
+        "wordId": "hayn-bayna-guet"
+      },
+      {
+        "role": "learner",
+        "wordId": "hayn-hayn-daa"
+      }
+    ]
+  },
+  {
+    "id": "d-route-2",
+    "title": "Спроси о новостях",
+    "scene": "Вы давно не видели Сэсэг.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "taniiye-ueniney-kharaagueyb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-baha"
+      },
+      {
+        "role": "learner",
+        "wordId": "yuu-honin-be"
+      }
+    ]
+  },
+  {
+    "id": "d-route-3",
+    "title": "Поблагодари и попрощайся",
+    "scene": "Разговор закончен: поблагодарите Сэсэг и попрощайтесь.",
+    "lines": [
+      {
+        "role": "learner",
+        "wordId": "bayarlaa"
+      },
+      {
+        "role": "partner",
+        "wordId": "bayartay"
+      },
+      {
+        "role": "learner",
+        "wordId": "uulzataraa-bayartay"
+      }
+    ]
+  },
+  {
+    "id": "d-route-4",
+    "title": "Представься",
+    "scene": "Вас знакомят с Сэсэг.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "bi-seseg-gezhe-nereteyb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-bair-gezhe-nereteyb"
+      },
+      {
+        "role": "partner",
+        "wordId": "tanilsahandaa-bayartay-baynab"
+      }
+    ]
+  },
+  {
+    "id": "d-route-5",
+    "title": "Спроси имя",
+    "scene": "Вы встретили нового человека.",
+    "lines": [
+      {
+        "role": "learner",
+        "wordId": "khen-gezhe-nereteysh"
+      },
+      {
+        "role": "partner",
+        "wordId": "bi-seseg-gezhe-nereteyb"
+      },
+      {
+        "role": "partner",
+        "wordId": "shinii-nereshni-khen-be"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-bair-gezhe-nereteyb"
+      }
+    ]
+  },
+  {
+    "id": "d-route-6",
+    "title": "Скажи, откуда ты",
+    "scene": "Сэсэг спрашивает о вас.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "shi-khaanakhimshi"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-ulaan-uedehoeoe-yereeb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-ulaan-uedede-azhahuudagbi"
+      }
+    ]
+  },
+  {
+    "id": "d-route-7",
+    "title": "Покажи семью",
+    "scene": "Вы показываете Сэсэг семейное фото.",
+    "lines": [
+      {
+        "role": "learner",
+        "wordId": "ene-minii-ezhy"
+      },
+      {
+        "role": "learner",
+        "wordId": "ene-minii-aba"
+      }
+    ]
+  },
+  {
+    "id": "d-route-8",
+    "title": "Расскажи о семье",
+    "scene": "Сэсэг спрашивает о вашей семье.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ta-olon-ger-bueletey-guet"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-yekhe-ger-bueleteyb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-akhatayb"
+      }
+    ]
+  },
+  {
+    "id": "d-route-9",
+    "title": "Закажи чай",
+    "scene": "Вы в кафе, Сэсэг принимает заказ.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "say-uukha-duratay-guet"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-bayarlaab"
+      },
+      {
+        "role": "learner",
+        "wordId": "namda-nege-say-uegyt-daa"
+      },
+      {
+        "role": "learner",
+        "wordId": "khedy-senteyb"
+      }
+    ]
+  },
+  {
+    "id": "d-route-10",
+    "title": "Поговори",
+    "scene": "Весь разговор целиком: вы встретили Сэсэг, познакомились и попрощались.",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "sayn-bayna"
+      },
+      {
+        "role": "learner",
+        "wordId": "sayn-bayna"
+      },
+      {
+        "role": "learner",
+        "wordId": "khen-gezhe-nereteysh"
+      },
+      {
+        "role": "partner",
+        "wordId": "bi-seseg-gezhe-nereteyb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-bair-gezhe-nereteyb"
+      },
+      {
+        "role": "partner",
+        "wordId": "say-uukha-duratay-guet"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-bayarlaab"
+      },
+      {
+        "role": "partner",
+        "wordId": "uegloeoeder-uulzaya"
+      },
+      {
+        "role": "learner",
+        "wordId": "uulzataraa-bayartay"
+      }
+    ]
+  }
+]

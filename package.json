@@ -63,7 +63,8 @@
     "build:web": "expo export -p web",
     "serve:web": "node scripts/serve-pages.js",
     "predeploy": "npm run build:web && node -e \"require('fs').copyFileSync('dist/+not-found.html','dist/404.html')\"",
-    "deploy": "node scripts/deploy-pages.js"
+    "deploy": "node scripts/deploy-pages.js",
+    "import:dialogues": "tsx scripts/import-dialogues.ts"
   },
   "private": true,
   "jest": {

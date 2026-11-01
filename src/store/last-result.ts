@@ -13,6 +13,8 @@ export type LastResult = {
   practice: boolean;
   /** Точность не ниже порога: материал освоен, а не просто пройден. */
   mastered: boolean;
+  /** Разговорный урок: чему человек научился («здороваться»). */
+  skill?: string;
 };
 
 export const useLastResult = create<{ result: LastResult | null; set: (r: LastResult) => void }>()((set) => ({

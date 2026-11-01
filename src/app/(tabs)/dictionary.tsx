@@ -19,6 +19,8 @@ type Entry = { word: Word; keys: string[] };
 
 function source(w: Word): string {
   if (w.source.book === 'native-speaker') return 'от носителя';
+  if (w.source.book === 'zugaa') return 'разговорник Burlang';
+  if (w.source.book === 'translator') return 'машинный перевод';
   return ['учебник', w.source.page ? `стр. ${w.source.page}` : null, w.source.lesson ? `урок ${w.source.lesson}` : w.source.section].filter(Boolean).join(', ');
 }
 

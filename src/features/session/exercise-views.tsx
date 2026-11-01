@@ -30,9 +30,22 @@ function useOptionKeys(options: string[], pick: (o: string) => void, answered: b
   }, !answered);
 }
 
+const BOOK_LABEL: Record<string, string> = { 'bxr-textbook': 'Учебник', 'native-speaker': 'Носитель', zugaa: 'Разговорник Burlang', translator: 'Машинный перевод' };
+
 function sourceLine(s: { book: string; page?: number; section?: string }): string {
-  const book = s.book === 'bxr-textbook' ? 'Учебник' : s.book === 'native-speaker' ? 'Носитель' : s.book;
-  return [book, s.page ? `стр. ${s.page}` : null, s.section].filter(Boolean).join(', ');
+  return [BOOK_LABEL[s.book] ?? s.book, s.page ? `стр. ${s.page}` : null, s.section].filter(Boolean).join(', ');
+}
+
+// Фонетика внутри фразы: особая буква объясняется там, где встретилась.
+const LETTER_TIPS: [string, string][] = [
+  ['һ', 'Һ — глубокий звук из гортани; в начале слова глухой, в середине звонкий.'],
+  ['ү', 'Ү — узкий гласный, как «у» в слове «луна».'],
+  ['ө', 'Ө — широкий гласный, близкий к русскому «о», всегда долгий.'],
+];
+
+function letterTip(text: string): string | null {
+  const lower = text.toLowerCase();
+  return LETTER_TIPS.find(([ch]) => lower.includes(ch))?.[1] ?? null;
 }
 
 export function NoteView({ ex }: { ex: Extract<Exercise, { type: 'note' }> }) {
@@ -73,6 +86,7 @@ export function IntroView({ ex }: { ex: Extract<Exercise, { type: 'intro' }> }) 
       </Row>
       <T v="heading">{item.kind === 'letter' ? `называется «${item.russian}»` : item.russian}</T>
       {extra.length > 0 && <T muted>также: {extra.join(', ')}</T>}
+      {item.kind === 'word' && letterTip(item.buryat) && <T muted>{letterTip(item.buryat)}</T>}
       <T v="caption" muted>
         {sourceLine(source)}
       </T>
@@ -346,7 +360,80 @@ export function BuildSentenceView({ ex, answered, onResult }: ViewProps<'build_s
   );
 }
 
+export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) {
+  const { c } = useTheme();
+  // Реплики партнёра открываются сами до ближайшего хода ученика.
+  const nextTurn = (from: number) => {
+    let i = from;
+    while (i < ex.lines.length && ex.lines[i].role === 'partner') i++;
+    return i;
+  };
+  const [turn, setTurn] = useState(() => nextTurn(0));
+  const wrong = useRef(new Set<string>());
+  const [lastWrong, setLastWrong] = useState<string | null>(null);
+  const current = ex.lines[turn];
+  const finished = turn >= ex.lines.length;
+
+  const finish = () => {
+    const perItem: Record<string, Outcome['result']> = {};
+    for (const line of ex.lines) if (line.role === 'learner') perItem[line.item.id] = wrong.current.has(line.item.id) ? 'wrong' : 'correct';
+    const result = wrong.current.size === 0 ? 'correct' : wrong.current.size === 1 ? 'almost' : 'wrong';
+    onResult({ result, perItem }, { result, detail: result === 'correct' ? 'Весь разговор — без ошибок!' : 'Реплики с ошибками вернутся в повторении.' });
+  };
+
+  const pick = (o: string) => {
+    if (!current || answered) return;
+    if (o !== current.item.buryat) {
+      wrong.current.add(current.item.id);
+      setLastWrong(o);
+      return; // ученик находит верную реплику сам: разговор идёт дальше только с ней
+    }
+    setLastWrong(null);
+    const next = nextTurn(turn + 1);
+    setTurn(next);
+    if (next >= ex.lines.length) finish();
+  };
+  useOptionKeys(current?.options ?? [], pick, answered || finished);
+
+  const shown = ex.lines.slice(0, turn);
+  return (
+    <View style={{ gap: space.md }}>
+      <T v="heading">{ex.title}</T>
+      <T muted>{ex.scene}</T>
+      <View style={{ gap: space.sm }}>
+        {shown.map((line, i) => {
+          const partner = line.role === 'partner';
+          return (
+            <View key={i} style={[styles.bubbleRow, { justifyContent: partner ? 'flex-start' : 'flex-end' }]}>
+              {partner && <Mascot mood="explain" size={40} />}
+              <View style={[styles.bubble, { backgroundColor: partner ? c.surface : c.surfaceAlt, borderColor: c.border }]}>
+                <T v="label" style={{ fontSize: 18, lineHeight: 24 }}>
+                  {line.item.buryat}
+                </T>
+                <T v="caption" muted>
+                  {line.item.russian}
+                </T>
+              </View>
+            </View>
+          );
+        })}
+      </View>
+      {current && !answered && (
+        <View style={{ gap: space.sm }}>
+          <T muted>Ваша реплика: «{current.item.russian}»</T>
+          {current.options.map((o) => (
+            <OptionButton key={o} label={o} buryat state={o === lastWrong ? 'wrong' : 'idle'} onPress={() => pick(o)} />
+          ))}
+        </View>
+      )}
+      <UnverifiedBadge verified={ex.lines.every((l) => l.item.verified)} />
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
+  bubbleRow: { flexDirection: 'row', alignItems: 'flex-end', gap: space.sm },
+  bubble: { maxWidth: '82%', borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, paddingVertical: space.sm, paddingHorizontal: space.md, gap: 2 },
   input: { borderWidth: 1.5, borderRadius: radius.md, paddingHorizontal: space.lg, paddingVertical: 14, fontSize: 22, fontFamily: fonts.semibold },
   catRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.md, padding: space.md },
   chip: { paddingHorizontal: space.sm, paddingVertical: 8, borderRadius: radius.sm },

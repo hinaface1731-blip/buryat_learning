@@ -20,7 +20,7 @@ describe('buildLesson на реальном курсе', () => {
       const a = buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 1 });
       const b = buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 1 });
       expect(a.map((e) => e.key)).toEqual(b.map((e) => e.key));
-      expect(a.length).toBeGreaterThan(5);
+      expect(a.length).toBeGreaterThanOrEqual(l.dialogueId ? 3 : 6); // итоговый урок маршрута — в основном сцена
       expect(new Set(a.map((e) => e.key)).size).toBe(a.length);
     }
   });
@@ -42,8 +42,35 @@ describe('buildLesson на реальном курсе', () => {
     expect(types.join(',')).not.toContain('intro,intro');
   });
 
-  it('первое занятие курса — особые буквы, три карточки', () => {
-    expect(content.course.units[0].lessons[0].letterIds).toHaveLength(3);
+  it('первым идёт разговор: сразу реплики и итоговая сцена', () => {
+    const first = content.course.units[0].lessons[0];
+    expect(first.skill).toBe('здороваться');
+    const ex = buildLesson(first.id, content, pools, { hasAudio: noAudio, seed: 6 });
+    expect(ex[ex.length - 1].type).toBe('dialogue');
+    expect(ex.some((e) => e.type === 'build_sentence')).toBe(true);
+  });
+
+  it('все сцены маршрута собираются и у ученика есть выбор', () => {
+    const route = content.course.units[0].lessons;
+    expect(route).toHaveLength(10);
+    for (const l of route) {
+      const ex = buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 7 });
+      const scene = ex.find((e) => e.type === 'dialogue');
+      if (scene?.type !== 'dialogue') throw new Error(`нет сцены в ${l.id}`);
+      for (const line of scene.lines) {
+        if (line.role === 'learner') {
+          expect(line.options).toContain(line.item.buryat);
+          expect(line.options.length).toBeGreaterThan(1);
+        }
+      }
+    }
+  });
+
+  it('фразы маршрута не смешиваются с главами учебника', () => {
+    const route = new Set(content.words.filter((w) => w.tags.includes('route')).map((w) => w.id));
+    for (const unit of content.course.units.slice(1)) {
+      for (const l of unit.lessons) expect(l.wordIds.filter((id) => route.has(id))).toEqual([]);
+    }
   });
 
   it('без аудио нет listen_and_choose; с аудио — есть', () => {
@@ -54,8 +81,8 @@ describe('buildLesson на реальном курсе', () => {
   });
 
   it('без перевода предложений нет build_sentence; с переводом — есть', () => {
-    const all = allLessons.flatMap((l) => buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 2 }));
-    expect(typesOf(all).has('build_sentence')).toBe(false);
+    const book = allLessons.filter((l) => !l.dialogueId).flatMap((l) => buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 2 }));
+    expect(typesOf(book).has('build_sentence')).toBe(false);
 
     const lesson = allLessons.find((l) => l.sentenceIds.length > 0)!;
     const sid = lesson.sentenceIds[0];

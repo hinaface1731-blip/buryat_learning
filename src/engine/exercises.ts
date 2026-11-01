@@ -1,8 +1,8 @@
-import type { MinimalPair, Sentence, VowelRowId, VowelRows, Word } from '@/content/schema';
+import type { Dialogue, MinimalPair, Sentence, VowelRowId, VowelRows, Word } from '@/content/schema';
 
 import { normalizeAnswer } from './check';
 import { shuffle, type Rng } from './rng';
-import type { Exercise, Stage, StudyItem } from './types';
+import type { DialogueLine, Exercise, Stage, StudyItem } from './types';
 import { vowelRowOf } from './vowels';
 
 // Генераторы упражнений. Каждый берёт данные только из пулов курса и возвращает null,
@@ -141,6 +141,33 @@ export function sentenceTokens(text: string): string[] {
     .split(/\s+/)
     .map((t) => t.replace(/^[«"(—–]+|[.,!?;:»")]+$/g, ''))
     .filter((t) => t && !/^[—–-]$/.test(t));
+}
+
+/** Сборка разговорной реплики из слов. */
+export function buildPhrase(item: StudyItem, rng: Rng, stage: Stage): Exercise | null {
+  if (item.kind !== 'word') return null;
+  const answer = sentenceTokens(item.buryat);
+  if (answer.length < 2) return null;
+  let tokens = shuffle(answer, rng);
+  if (tokens.join(' ') === answer.join(' ')) tokens = [...answer].reverse();
+  return { key: `phrase-${item.id}`, stage, type: 'build_sentence', sentence: { id: item.id, buryat: item.buryat, verified: item.verified }, prompt: item.russian, tokens, answer };
+}
+
+/** Итоговая сцена: партнёр говорит, ученик выбирает свою реплику. */
+export function dialogueScene(dialogue: Dialogue, itemById: Map<string, StudyItem>, pools: StudyItem[][], rng: Rng): Exercise | null {
+  const lines: DialogueLine[] = [];
+  for (const line of dialogue.lines) {
+    const item = itemById.get(line.wordId);
+    if (!item) return null;
+    if (line.role === 'partner') {
+      lines.push({ role: 'partner', item, options: [] });
+      continue;
+    }
+    const others = pickDistractors(item, pools, 2, rng, 'buryat');
+    if (others.length < 1) return null;
+    lines.push({ role: 'learner', item, options: shuffle([item.buryat, ...others.map((o) => o.buryat)], rng) });
+  }
+  return { key: `dialogue-${dialogue.id}`, stage: 'control', type: 'dialogue', title: dialogue.title, scene: dialogue.scene, lines };
 }
 
 export function buildSentence(sentence: Sentence, rng: Rng, stage: Stage): Exercise | null {

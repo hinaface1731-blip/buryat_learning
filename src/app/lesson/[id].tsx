@@ -26,5 +26,5 @@ export default function LessonScreen() {
     // Новый seed на каждое открытие: при повторном прохождении порядок другой.
     return buildLesson(found.lesson.id, content, pools, { hasAudio, seed: Date.now() >>> 0 });
   };
-  return <SessionGate key={id} sessionKey={found.lesson.id} kind="lesson" lessonId={found.lesson.id} title={`${found.unit.title} · ${found.lesson.title}`} build={build} />;
+  return <SessionGate key={id} sessionKey={found.lesson.id} kind="lesson" lessonId={found.lesson.id} title={`${found.unit.title} · ${found.lesson.title}`} skill={found.lesson.skill} build={build} />;
 }

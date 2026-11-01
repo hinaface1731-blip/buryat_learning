@@ -38,8 +38,11 @@ export type Exercise = Base &
         items: { item: StudyItem; row: VowelRowId }[];
         rows: VowelRowId[];
       }
-    | { type: 'build_sentence'; sentence: Sentence; prompt: string; tokens: string[]; answer: string[] }
+    | { type: 'build_sentence'; sentence: Pick<Sentence, 'id' | 'buryat' | 'verified'>; prompt: string; tokens: string[]; answer: string[] }
+    | { type: 'dialogue'; title: string; scene: string; lines: DialogueLine[] }
   );
+
+export type DialogueLine = { role: 'partner' | 'learner'; item: StudyItem; /** Варианты реплики ученика. */ options: string[] };
 
 export type ExerciseType = Exercise['type'];
 
