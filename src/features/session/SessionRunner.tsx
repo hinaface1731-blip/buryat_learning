@@ -5,12 +5,14 @@ import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { getCourse } from '@/content/course';
-import { accuracy, advance, currentExercise, isFinished, isGraded, progressOf, sessionXp, startSession } from '@/engine/session';
+import { EXPLAIN_RETRY } from '@/engine/feedback';
+import { accuracy, advance, currentExercise, isFinished, isGraded, progressOf, sessionXp, startSession, type SessionState } from '@/engine/session';
 import type { Exercise, Outcome } from '@/engine/types';
 import { dateKey } from '@/lib/dates';
 import { useAppStore } from '@/store/app-store';
 import { useLastResult } from '@/store/last-result';
-import { heartsToday } from '@/store/logic';
+import { heartsToday, MASTERY_THRESHOLD } from '@/store/logic';
+import { useSessionStore } from '@/store/session-store';
 import { Button, ProgressBar, Row, T } from '@/ui/components';
 import { Mascot, type MascotMood } from '@/ui/Mascot';
 import { fonts, space, useTheme } from '@/ui/theme';
@@ -29,55 +31,75 @@ import {
   type Feedback,
 } from './exercise-views';
 
-type Props = { queue: Exercise[]; kind: 'lesson' | 'review'; lessonId?: string; title: string };
-
-const FEEDBACK_TEXT: Record<Feedback['result'], string> = {
-  correct: 'Верно',
-  almost: 'Почти верно — обратите внимание на ү, ө, һ',
-  wrong: 'Неверно',
+type Props = {
+  queue: Exercise[];
+  /** Сохранённое состояние, если занятие продолжается. */
+  initial?: SessionState;
+  kind: 'lesson' | 'review';
+  lessonId?: string;
+  title: string;
+  /** Ключ сохранения; без него занятие не сохраняется. */
+  sessionKey?: string;
+  /** Свободная практика: без сердечек, урок не засчитывается. */
+  practice?: boolean;
 };
+
+const FEEDBACK_TEXT: Record<Feedback['result'], string> = { correct: 'Верно', almost: 'Почти верно', wrong: 'Неверно' };
 
 const FEEDBACK_MOOD: Record<Feedback['result'], MascotMood> = { correct: 'happy', almost: 'think', wrong: 'support' };
 
-export function SessionRunner({ queue, kind, lessonId, title }: Props) {
+export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice }: Props) {
   const { c } = useTheme();
   const router = useRouter();
-  const { pools } = getCourse();
-  const [session, setSession] = useState(() => startSession(queue));
-  const [pending, setPending] = useState<{ outcome: Outcome; feedback: Feedback } | null>(null);
+  const { pools, stamp } = getCourse();
+  const [session, setSession] = useState(() => initial ?? startSession(queue));
+  const [pending, setPending] = useState<{ outcome: Outcome; feedback: Feedback; combo: number; retry: boolean } | null>(null);
+  const [combo, setCombo] = useState(0);
   const heartsEnabled = useAppStore((s) => s.settings.heartsEnabled);
   const hearts = useAppStore((s) => heartsToday(s.progress, dateKey()));
   const { finishLesson, finishReview, spendHeart } = useAppStore.getState();
+  const { save, clear } = useSessionStore.getState();
   const setLastResult = useLastResult((s) => s.set);
-  const useHearts = heartsEnabled && kind === 'lesson';
+  const useHearts = heartsEnabled && kind === 'lesson' && !practice;
 
   const ex = currentExercise(session);
 
-  const finish = (s: typeof session, outOfHearts: boolean) => {
-    const xp = outOfHearts ? s.correct : sessionXp(s, kind);
-    const grades = s.itemGrades;
-    if (!outOfHearts) {
-      if (kind === 'lesson' && lessonId) finishLesson({ lessonId, accuracy: accuracy(s), xp, grades });
-      else finishReview({ xp, grades });
-    } else {
-      finishReview({ xp, grades }); // ответы всё равно идут в SRS, урок не засчитывается
-    }
-    setLastResult({ kind, lessonId, title, accuracy: accuracy(s), xp, mistakes: s.mistakes, outOfHearts });
+  const finish = (s: SessionState, outOfHearts: boolean) => {
+    const counts = kind === 'lesson' && !!lessonId && !outOfHearts && !practice;
+    const xp = outOfHearts ? s.correct : sessionXp(s, counts ? 'lesson' : 'review');
+    if (counts) finishLesson({ lessonId: lessonId!, accuracy: accuracy(s), xp, grades: s.itemGrades });
+    else finishReview({ xp, grades: s.itemGrades }); // ответы идут в SRS, урок не засчитывается
+    if (sessionKey) clear(sessionKey);
+    setLastResult({
+      kind,
+      lessonId,
+      title,
+      accuracy: accuracy(s),
+      xp,
+      mistakes: s.mistakes,
+      outOfHearts,
+      practice: !!practice,
+      mastered: accuracy(s) >= MASTERY_THRESHOLD,
+    });
     router.replace('/result');
   };
 
   const next = () => {
     const after = advance(session, pending?.outcome);
+    const wrong = pending?.outcome.result === 'wrong';
     setPending(null);
-    const noHearts = useHearts && pending?.outcome.result === 'wrong' && hearts - 1 <= 0;
-    if (pending?.outcome.result === 'wrong' && useHearts) spendHeart();
+    const noHearts = useHearts && wrong && hearts - 1 <= 0;
+    if (wrong && useHearts) spendHeart();
     if (noHearts) return finish(after, true);
     if (isFinished(after)) return finish(after, false);
+    if (sessionKey) save(sessionKey, after, stamp);
     setSession(after);
   };
 
   const onResult = (outcome: Outcome, feedback: Feedback) => {
-    setPending({ outcome, feedback });
+    const nextCombo = outcome.result === 'correct' ? combo + 1 : 0;
+    setCombo(nextCombo);
+    setPending({ outcome, feedback, combo: nextCombo, retry: !!ex?.key.endsWith('~retry') });
     if (Platform.OS === 'web') return; // в браузере вибрации нет
     const type = { correct: Haptics.NotificationFeedbackType.Success, almost: Haptics.NotificationFeedbackType.Warning, wrong: Haptics.NotificationFeedbackType.Error }[feedback.result];
     Haptics.notificationAsync(type).catch(() => {});
@@ -95,6 +117,9 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
   if (!ex) return null;
   const answered = pending !== null;
   const viewProps = { answered, onResult, courseForms: pools.courseForms };
+  const result = pending?.feedback.result;
+  const celebrate = pending && pending.combo >= 3;
+  const detail = pending?.feedback.detail ?? (result === 'wrong' && pending?.retry ? EXPLAIN_RETRY : undefined);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: c.bg }} edges={['top', 'bottom']}>
@@ -109,22 +134,23 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
         <ScrollView contentContainerStyle={styles.body} keyboardShouldPersistTaps="handled">
           <ExerciseView key={ex.key} ex={ex} {...viewProps} />
         </ScrollView>
-        <View style={[styles.footer, { borderColor: c.border, backgroundColor: pending ? { correct: c.successBg, almost: c.warningBg, wrong: c.errorBg }[pending.feedback.result] : c.bg }]}>
-          {pending && (
+        <View style={[styles.footer, { borderColor: c.border, backgroundColor: result ? { correct: c.successBg, almost: c.warningBg, wrong: c.errorBg }[result] : c.bg }]}>
+          {pending && result && (
             <Row gap={space.md} style={{ alignItems: 'center' }}>
-              <Mascot mood={FEEDBACK_MOOD[pending.feedback.result]} size={64} />
+              <Mascot mood={FEEDBACK_MOOD[result]} size={64} />
               <View style={{ flex: 1, gap: space.xs }}>
-                <T v="heading" color={{ correct: c.success, almost: c.warning, wrong: c.error }[pending.feedback.result]}>
-                  {FEEDBACK_TEXT[pending.feedback.result]}
+                <T v="heading" color={{ correct: c.success, almost: c.warning, wrong: c.error }[result]}>
+                  {celebrate ? `${FEEDBACK_TEXT[result]} · ${pending.combo} подряд!` : FEEDBACK_TEXT[result]}
                 </T>
-                {pending.feedback.result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
+                {detail && <T>{detail}</T>}
+                {result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
               </View>
             </Row>
           )}
           {canContinue && <Button title="Дальше" onPress={next} />}
           {Platform.OS === 'web' && (
             <T v="caption" muted style={{ textAlign: 'center' }}>
-              {canContinue ? 'Enter — дальше' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти
+              {canContinue ? 'Enter — дальше' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти, прогресс сохранится
             </T>
           )}
         </View>

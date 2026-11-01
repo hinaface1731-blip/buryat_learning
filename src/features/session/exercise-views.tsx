@@ -4,6 +4,7 @@ import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { AudioButton } from '@/audio/AudioButton';
 import type { VowelRowId } from '@/content/schema';
 import { checkBuryat, checkRussian, normalizeAnswer } from '@/engine/check';
+import { EXPLAIN_MATCH, EXPLAIN_ORDER, EXPLAIN_ROWS, explainPair, explainTyped } from '@/engine/feedback';
 import type { Exercise, Outcome } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
@@ -11,7 +12,7 @@ import { Mascot } from '@/ui/Mascot';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
 import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
 
-export type Feedback = { result: Outcome['result']; correctAnswer?: string };
+export type Feedback = { result: Outcome['result']; correctAnswer?: string; /** Конкретная причина ошибки. */ detail?: string };
 export type ViewProps<K extends Exercise['type']> = {
   ex: Extract<Exercise, { type: K }>;
   answered: boolean;
@@ -138,7 +139,7 @@ export function MatchPairsView({ ex, answered, onResult }: ViewProps<'match_pair
       if (next.length === ex.items.length) {
         const perItem = Object.fromEntries(ex.items.map((i) => [i.id, wrongItems.current.has(i.id) ? ('wrong' as const) : ('correct' as const)]));
         const result = wrongItems.current.size ? 'almost' : 'correct';
-        onResult({ result, perItem }, { result });
+        onResult({ result, perItem }, { result, detail: result === 'almost' ? EXPLAIN_MATCH : undefined });
       }
     } else {
       wrongItems.current.add(item.id);
@@ -185,7 +186,7 @@ export function TypeAnswerView({ ex, answered, onResult, courseForms }: ViewProp
   const submit = () => {
     if (answered || !value.trim()) return;
     const result = checkBuryat(value, ex.answers, { courseForms });
-    onResult(one(ex.item.id, result), { result, correctAnswer: ex.answers[0] });
+    onResult(one(ex.item.id, result), { result, correctAnswer: ex.answers[0], detail: explainTyped(value, ex.answers[0], courseForms) });
   };
   return (
     <View style={{ gap: space.lg }}>
@@ -223,7 +224,11 @@ export function MinimalPairView({ ex, answered, onResult }: ViewProps<'minimal_p
     setPicked(o);
     // Строгое сравнение: здесь важна каждая буква и долгота.
     const result = normalizeAnswer(o) === normalizeAnswer(ex.answer) ? 'correct' : 'wrong';
-    onResult(one(ex.target.id, result), { result, correctAnswer: `${ex.target.buryat} — ${ex.target.russian}; ${ex.other.buryat} — ${ex.other.russian}` });
+    onResult(one(ex.target.id, result), {
+      result,
+      correctAnswer: `${ex.target.buryat} — ${ex.target.russian}; ${ex.other.buryat} — ${ex.other.russian}`,
+      detail: result === 'wrong' ? explainPair(ex.pair.contrast) : undefined,
+    });
   };
   useOptionKeys(ex.options, pick, answered);
   return (
@@ -279,7 +284,7 @@ export function CategorizeView({ ex, answered, onResult }: ViewProps<'categorize
     const perItem = Object.fromEntries(ex.items.map((x) => [x.item.id, choice[x.item.id] === x.row ? ('correct' as const) : ('wrong' as const)]));
     const wrong = Object.values(perItem).filter((r) => r === 'wrong').length;
     const result = wrong === 0 ? 'correct' : wrong === 1 ? 'almost' : 'wrong';
-    onResult({ result, perItem }, { result, correctAnswer: ex.items.map((x) => `${x.item.buryat} — ${ROW_LABEL[x.row].toLowerCase()}`).join('; ') });
+    onResult({ result, perItem }, { result, correctAnswer: ex.items.map((x) => `${x.item.buryat} — ${ROW_LABEL[x.row].toLowerCase()}`).join('; '), detail: result === 'correct' ? undefined : EXPLAIN_ROWS });
   };
   return (
     <View style={{ gap: space.md }}>
@@ -319,7 +324,7 @@ export function BuildSentenceView({ ex, answered, onResult }: ViewProps<'build_s
   const submit = () => {
     const built = chosen.map((i) => ex.tokens[i]).join(' ');
     const result = normalizeAnswer(built) === normalizeAnswer(ex.answer.join(' ')) ? 'correct' : 'wrong';
-    onResult(one(ex.sentence.id, result), { result, correctAnswer: ex.sentence.buryat });
+    onResult(one(ex.sentence.id, result), { result, correctAnswer: ex.sentence.buryat, detail: result === 'wrong' ? EXPLAIN_ORDER : undefined });
   };
   return (
     <View style={{ gap: space.lg }}>

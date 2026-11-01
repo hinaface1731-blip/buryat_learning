@@ -1,7 +1,7 @@
 import { buildContent, rawContent, type Content } from '@/content/load';
 
 import { normalizeAnswer } from '../check';
-import { buildLesson, buildReview } from '../lesson';
+import { buildLesson, buildReview, MAX_TASKS } from '../lesson';
 import { buildPools } from '../pool';
 import { advance, currentExercise, isFinished, startSession } from '../session';
 import type { Exercise } from '../types';
@@ -25,12 +25,25 @@ describe('buildLesson на реальном курсе', () => {
     }
   });
 
-  it('идёт по этапам: знакомство → тренировка → применение → контроль', () => {
-    const order = ['intro', 'training', 'application', 'control'];
+  it('короткое занятие: не больше 12 заданий и 7 новых единиц', () => {
+    for (const l of allLessons) {
+      const ex = buildLesson(l.id, content, pools, { hasAudio: () => true, seed: 4 });
+      expect(ex.filter((e) => e.type !== 'note' && e.type !== 'intro').length).toBeLessThanOrEqual(MAX_TASKS);
+      expect(ex.filter((e) => e.type === 'intro').length).toBeLessThanOrEqual(7);
+    }
+  });
+
+  it('новая единица сразу закрепляется, карточки не идут длинным рядом', () => {
     const ex = buildLesson('u2-l1', content, pools, { hasAudio: noAudio, seed: 3 });
-    const stages = ex.map((e) => order.indexOf(e.stage));
-    expect(stages).toEqual([...stages].sort((x, y) => x - y));
     expect(ex[0].type).toBe('note');
+    const first = ex.findIndex((e) => e.type === 'intro');
+    expect(ex[first + 1].type).toBe('multiple_choice');
+    const types = ex.map((e) => e.type);
+    expect(types.join(',')).not.toContain('intro,intro');
+  });
+
+  it('первое занятие курса — особые буквы, три карточки', () => {
+    expect(content.course.units[0].lessons[0].letterIds).toHaveLength(3);
   });
 
   it('без аудио нет listen_and_choose; с аудио — есть', () => {
@@ -85,13 +98,27 @@ describe('buildLesson на реальном курсе', () => {
 });
 
 describe('buildReview', () => {
-  it('одно упражнение на единицу; знакомые — на ввод', () => {
-    const ids = pools.lessonItems.get('u2-l1')!.map((i) => i.id).slice(0, 4);
+  const ids = [...pools.lessonItems.get('u2-l1')!, ...pools.lessonItems.get('u2-l2')!].map((i) => i.id);
+  const reps3 = Object.fromEntries(ids.map((id) => [id, 3]));
+
+  it('одно задание на единицу; новые — только выбор', () => {
     const fresh = buildReview(ids, content, pools, { hasAudio: noAudio, repsById: {}, seed: 1 });
-    expect(fresh).toHaveLength(4);
+    expect(fresh).toHaveLength(ids.length);
     expect(fresh.every((e) => e.type === 'multiple_choice')).toBe(true);
-    const known = buildReview(ids, content, pools, { hasAudio: noAudio, repsById: Object.fromEntries(ids.map((id) => [id, 3])), seed: 1 });
-    expect(known.every((e) => e.type === 'type_answer')).toBe(true);
+  });
+
+  it('знакомые единицы: разные типы подряд, аудио доходит до очереди', () => {
+    const known = buildReview(ids, content, pools, { hasAudio: () => true, repsById: reps3, seed: 1 });
+    const types = known.map((e) => e.type);
+    expect(new Set(types)).toEqual(new Set(['type_answer', 'listen_and_choose', 'multiple_choice']));
+    types.slice(1).forEach((t, i) => expect(t).not.toBe(types[i]));
+  });
+
+  it('переведённое предложение попадает в повторение как сборка', () => {
+    const sid = content.sentences[0].id;
+    const translated = buildContent({ ...rawContent, sentences: content.sentences.map((s) => (s.id === sid ? { ...s, translation: 'перевод' } : s)) });
+    const ex = buildReview([sid], translated, buildPools(translated), { hasAudio: noAudio, repsById: {}, seed: 1 });
+    expect(ex.map((e) => e.type)).toEqual(['build_sentence']);
   });
 });
 

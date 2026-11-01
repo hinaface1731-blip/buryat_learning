@@ -2,10 +2,21 @@ import { useRouter } from 'expo-router';
 import { View } from 'react-native';
 
 import { getCourse } from '@/content/course';
+import type { LastResult } from '@/store/last-result';
 import { useLastResult } from '@/store/last-result';
+import { MASTERY_THRESHOLD } from '@/store/logic';
 import { Button, Card, Row, Screen, T } from '@/ui/components';
 import { Mascot } from '@/ui/Mascot';
 import { space, useTheme } from '@/ui/theme';
+
+function headline(r: LastResult): { title: string; note?: string } {
+  const threshold = Math.round(MASTERY_THRESHOLD * 100);
+  if (r.outOfHearts) return { title: 'Сердечки закончились', note: 'Урок не засчитан. Сердечки восстановятся завтра; повторять можно без ограничений.' };
+  if (r.practice) return { title: 'Практика завершена', note: 'Урок не засчитан, но слова уже в повторении.' };
+  if (r.kind === 'review') return { title: 'Повторение завершено' };
+  if (r.mastered) return { title: 'Урок освоен' };
+  return { title: 'Занятие завершено', note: `Следующий урок открыт, но этот пока не закреплён: точность ниже ${threshold}%. Короткое повторение ошибок поможет.` };
+}
 
 export default function ResultScreen() {
   const router = useRouter();
@@ -26,12 +37,13 @@ export default function ResultScreen() {
     const s = content.sentenceById.get(id);
     return { id, buryat: s?.buryat ?? id, russian: s?.translation ?? '' };
   });
+  const { title, note } = headline(result);
 
   return (
     <Screen scroll edges={['top', 'bottom']}>
       <View style={{ gap: space.xs, marginTop: space.lg }}>
-        <Mascot mood={result.outOfHearts || result.accuracy < 0.5 ? 'support' : 'happy'} size={132} />
-        <T v="title">{result.outOfHearts ? 'Сердечки закончились' : result.kind === 'lesson' ? 'Урок пройден' : 'Повторение завершено'}</T>
+        <Mascot mood={result.mastered && !result.outOfHearts ? 'happy' : 'support'} size={132} />
+        <T v="title">{title}</T>
         <T muted>{result.title}</T>
       </View>
       <Row gap={space.md}>
@@ -50,7 +62,7 @@ export default function ResultScreen() {
           </T>
         </Card>
       </Row>
-      {result.outOfHearts && <T muted>Урок не засчитан. Сердечки восстановятся завтра; повторять можно без ограничений.</T>}
+      {note && <T muted>{note}</T>}
       {mistakes.length > 0 ? (
         <Card>
           <T v="label">Ошибки — уже добавлены в «Повторение»</T>
@@ -64,7 +76,8 @@ export default function ResultScreen() {
       ) : (
         <T muted>Без ошибок.</T>
       )}
-      <Button title="Дальше" onPress={() => router.replace('/')} />
+      {mistakes.length > 0 && !result.mastered && <Button title="Закрепить ошибки" onPress={() => router.replace('/review-session')} />}
+      <Button kind={mistakes.length > 0 && !result.mastered ? 'secondary' : 'primary'} title="Дальше" onPress={() => router.replace('/')} />
     </Screen>
   );
 }

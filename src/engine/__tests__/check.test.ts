@@ -1,4 +1,5 @@
 import { buildCourseForms, checkBuryat, checkRussian, isDegradedForm, normalizeAnswer } from '../check';
+import { explainPair, explainTyped } from '../feedback';
 
 // Слова из учебника: һүн — молоко, хүн — человек, хун (в «хун шубуун» — лебедь), гэр — дом, гар — рука.
 const courseForms = buildCourseForms(['һүн', 'хүн', 'хун', 'гэр', 'гар', 'өөхэн', 'һургуули', 'хун шубуун']);
@@ -64,6 +65,19 @@ describe('isDegradedForm', () => {
     expect(isDegradedForm('үхэр', 'ухэр')).toBe(false);
     expect(isDegradedForm('үхэр', 'үхэр')).toBe(false);
     expect(isDegradedForm('ухэрр', 'үхэр')).toBe(false);
+  });
+});
+
+describe('причины ошибок', () => {
+  it('особая буква, другое слово, долгота', () => {
+    expect(explainTyped('хургуули', 'һургуули', courseForms)).toBe('Здесь нужна буква һ, а не х.');
+    expect(explainTyped('хун', 'хүн', courseForms)).toContain('другое слово');
+    expect(explainTyped('зан', 'заан', courseForms)).toContain('долготу');
+    expect(explainTyped('гэр', 'заан', courseForms)).toBeUndefined();
+  });
+  it('минимальные пары по типу различия', () => {
+    expect(explainPair('length')).toContain('долготой');
+    expect(explainPair('soft')).toContain('мягкости');
   });
 });
 

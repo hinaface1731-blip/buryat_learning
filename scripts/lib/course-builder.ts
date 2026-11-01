@@ -2,7 +2,8 @@ import type { Course, Lesson, Letter, MinimalPair, Sentence, Unit, Word } from '
 
 // Раскладка единиц по юнитам и урокам. Порядок — как в книге; размер урока ~8 новых слов.
 
-const WORDS_PER_LESSON = 8;
+const WORDS_PER_LESSON = 5;
+const LETTERS_PER_LESSON = 6;
 
 /** Слово годится для уроков: не исключено, не подозревается в опечатке, не служебная помета. */
 export function isTeachable(w: Word): boolean {
@@ -76,23 +77,24 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
   const sentencesOf = (n: number) => input.sentences.filter((s) => s.source.lesson === n && !s.excluded);
   const uniq = (ws: Word[]) => [...new Map(ws.map((w) => [w.id, w])).values()];
 
-  const letterChunks = chunk(input.letters.filter((l) => !l.special), 11);
+  const letterChunks = chunk(input.letters.filter((l) => !l.special), LETTERS_PER_LESSON);
   const alphabet: Unit = {
     id: 'u1',
     title: 'Алфавит и особые буквы Ү Ө Һ',
     description: '36 букв и их названия; три буквы, которых нет в русском.',
     locked: false,
     lessons: [
-      ...letterChunks.map((ls, i) => ({
-        ...emptyLesson(`u1-l${i + 1}`, `Буквы ${ls[0].upper || ls[0].lower}–${ls[ls.length - 1].upper || ls[ls.length - 1].lower}`),
-        noteIds: i === 0 ? ['note-alphabet'] : [],
-        letterIds: ls.map((l) => l.id),
-      })),
+      // Первое занятие короткое: три буквы, которых нет в русском. Весь алфавит — после него.
       {
-        ...emptyLesson(`u1-l${letterChunks.length + 1}`, 'Ү, Ө, Һ'),
+        ...emptyLesson('u1-l1', 'Ү, Ө, Һ'),
         noteIds: ['note-special-sounds'],
         letterIds: input.letters.filter((l) => l.special).map((l) => l.id),
       },
+      ...letterChunks.map((ls, i) => ({
+        ...emptyLesson(`u1-l${i + 2}`, `Буквы ${ls[0].upper || ls[0].lower}–${ls[ls.length - 1].upper || ls[ls.length - 1].lower}`),
+        noteIds: i === 0 ? ['note-alphabet'] : [],
+        letterIds: ls.map((l) => l.id),
+      })),
     ],
   };
 

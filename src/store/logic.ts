@@ -7,9 +7,13 @@ import { newCard, review, type Card, type Grade } from '@/srs/sm2';
 export type DailyGoal = 10 | 20 | 30 | 50;
 export const DAILY_GOALS: DailyGoal[] = [10, 20, 30, 50];
 export const HEARTS_PER_DAY = 5;
+/** Ниже этой точности занятие завершено, но материал не считается освоенным. */
+export const MASTERY_THRESHOLD = 0.7;
 
 export type ProgressState = {
   xpByDate: Record<DateKey, number>;
+  /** Дни, когда цель была выполнена — по цели того дня; смена цели прошлое не меняет. */
+  goalMetDays: Record<DateKey, true>;
   completedLessons: Record<string, { bestAccuracy: number; lastCompleted: DateKey }>;
   cards: Record<string, Card>;
   hearts: { count: number; date: DateKey };
@@ -17,6 +21,7 @@ export type ProgressState = {
 
 export const initialProgress = (today: DateKey): ProgressState => ({
   xpByDate: {},
+  goalMetDays: {},
   completedLessons: {},
   cards: {},
   hearts: { count: HEARTS_PER_DAY, date: today },
@@ -30,18 +35,24 @@ export function applySrs(cards: Record<string, Card>, grades: Record<string, Gra
   return next;
 }
 
-export function addXp(state: ProgressState, xp: number, today: DateKey): ProgressState {
-  return { ...state, xpByDate: { ...state.xpByDate, [today]: (state.xpByDate[today] ?? 0) + xp } };
+export function addXp(state: ProgressState, xp: number, today: DateKey, goal: number): ProgressState {
+  const total = (state.xpByDate[today] ?? 0) + xp;
+  return {
+    ...state,
+    xpByDate: { ...state.xpByDate, [today]: total },
+    goalMetDays: total >= goal ? { ...state.goalMetDays, [today]: true } : state.goalMetDays,
+  };
 }
 
 export function completeLesson(
   state: ProgressState,
   r: { lessonId: string; accuracy: number; xp: number; grades: Record<string, Grade> },
   today: DateKey,
+  goal: number,
 ): ProgressState {
   const prev = state.completedLessons[r.lessonId];
   return {
-    ...addXp(state, r.xp, today),
+    ...addXp(state, r.xp, today, goal),
     cards: applySrs(state.cards, r.grades, today),
     completedLessons: {
       ...state.completedLessons,
@@ -50,12 +61,14 @@ export function completeLesson(
   };
 }
 
-export function completeReview(state: ProgressState, r: { xp: number; grades: Record<string, Grade> }, today: DateKey): ProgressState {
-  return { ...addXp(state, r.xp, today), cards: applySrs(state.cards, r.grades, today) };
+export function completeReview(state: ProgressState, r: { xp: number; grades: Record<string, Grade> }, today: DateKey, goal: number): ProgressState {
+  return { ...addXp(state, r.xp, today, goal), cards: applySrs(state.cards, r.grades, today) };
 }
 
-export function goalMet(state: ProgressState, goal: number, day: DateKey): boolean {
-  return (state.xpByDate[day] ?? 0) >= goal;
+/** Сегодня цель можно выполнить и понижением цели; прошлые дни зафиксированы. */
+export function goalMet(state: ProgressState, goal: number, day: DateKey, today: DateKey = day): boolean {
+  if (state.goalMetDays[day]) return true;
+  return day === today && (state.xpByDate[day] ?? 0) >= goal;
 }
 
 /**
@@ -63,13 +76,20 @@ export function goalMet(state: ProgressState, goal: number, day: DateKey): boole
  * серия не обнуляется до конца дня (считаем от вчера).
  */
 export function streak(state: ProgressState, goal: number, today: DateKey): number {
-  let day = goalMet(state, goal, today) ? today : addDays(today, -1);
+  let day = goalMet(state, goal, today, today) ? today : addDays(today, -1);
   let n = 0;
-  while (goalMet(state, goal, day)) {
+  while (goalMet(state, goal, day, today)) {
     n++;
     day = addDays(day, -1);
   }
   return n;
+}
+
+/** Миграция старого сохранения: дни считаем по цели на момент обновления — истории целей не было. */
+export function goalDaysFromXp(xpByDate: Record<DateKey, number>, goal: number): Record<DateKey, true> {
+  const out: Record<DateKey, true> = {};
+  for (const [day, xp] of Object.entries(xpByDate)) if (xp >= goal) out[day] = true;
+  return out;
 }
 
 export function heartsToday(state: ProgressState, today: DateKey): number {

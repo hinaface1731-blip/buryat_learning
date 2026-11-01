@@ -1,4 +1,4 @@
-import { completeLesson, initialProgress, loseHeart, heartsToday, streak, addXp } from '@/store/logic';
+import { completeLesson, goalDaysFromXp, initialProgress, loseHeart, heartsToday, streak, addXp } from '@/store/logic';
 
 import { dueIds, newCard, review } from '../sm2';
 
@@ -42,7 +42,7 @@ describe('SM-2', () => {
 
 describe('прогресс', () => {
   it('урок даёт XP за день и карточки SRS', () => {
-    const s = completeLesson(initialProgress(D), { lessonId: 'u2-l1', accuracy: 0.9, xp: 25, grades: { huen: 'correct', gar: 'wrong' } }, D);
+    const s = completeLesson(initialProgress(D), { lessonId: 'u2-l1', accuracy: 0.9, xp: 25, grades: { huen: 'correct', gar: 'wrong' } }, D, 20);
     expect(s.xpByDate[D]).toBe(25);
     expect(s.cards.huen.due).toBe('2026-10-26');
     expect(s.cards.gar.lapses).toBe(1);
@@ -51,15 +51,30 @@ describe('прогресс', () => {
 
   it('серия считает дни с выполненной целью и не рвётся до конца сегодняшнего дня', () => {
     let s = initialProgress(D);
-    s = addXp(s, 20, '2026-10-22');
-    s = addXp(s, 20, '2026-10-23');
-    s = addXp(s, 20, '2026-10-24');
+    s = addXp(s, 20, '2026-10-22', 20);
+    s = addXp(s, 20, '2026-10-23', 20);
+    s = addXp(s, 20, '2026-10-24', 20);
     expect(streak(s, 20, D)).toBe(3); // сегодня ещё не занимались
-    s = addXp(s, 10, D);
+    s = addXp(s, 10, D, 20);
     expect(streak(s, 20, D)).toBe(3); // цель не добрана
-    s = addXp(s, 10, D);
+    s = addXp(s, 10, D, 20);
     expect(streak(s, 20, D)).toBe(4);
     expect(streak(s, 20, '2026-10-27')).toBe(0); // пропуск дня
+  });
+
+  it('смена цели не меняет прошлую серию', () => {
+    let s = initialProgress(D);
+    s = addXp(s, 20, '2026-10-23', 20);
+    s = addXp(s, 20, '2026-10-24', 20);
+    expect(streak(s, 50, D)).toBe(2); // цель подняли — прошлое не сгорает
+    s = addXp(s, 10, '2026-10-22', 20);
+    expect(streak(s, 10, D)).toBe(2); // цель снизили — прошлый день задним числом не засчитан
+    s = addXp(s, 10, D, 50);
+    expect(streak(s, 10, D)).toBe(3); // сегодня новая цель уже выполнена
+  });
+
+  it('старое сохранение мигрирует по текущей цели', () => {
+    expect(goalDaysFromXp({ '2026-10-23': 25, '2026-10-24': 5 }, 20)).toEqual({ '2026-10-23': true });
   });
 
   it('сердечки: 5 в день, восстанавливаются на следующий день', () => {

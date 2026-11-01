@@ -10,6 +10,9 @@ export type LastResult = {
   /** id единиц с ошибками — уйдут в «Повторение». */
   mistakes: string[];
   outOfHearts: boolean;
+  practice: boolean;
+  /** Точность не ниже порога: материал освоен, а не просто пройден. */
+  mastered: boolean;
 };
 
 export const useLastResult = create<{ result: LastResult | null; set: (r: LastResult) => void }>()((set) => ({

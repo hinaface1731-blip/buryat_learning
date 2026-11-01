@@ -4,6 +4,7 @@ import { getCourse } from '@/content/course';
 import { dateKey } from '@/lib/dates';
 import { useAppStore, type ThemePref } from '@/store/app-store';
 import { DAILY_GOALS, streak } from '@/store/logic';
+import { useSessionStore } from '@/store/session-store';
 import { Button, Card, OptionButton, Row, Screen, T } from '@/ui/components';
 import { days, GOAL_LABELS, words } from '@/ui/labels';
 import { space, useTheme } from '@/ui/theme';
@@ -19,7 +20,12 @@ export default function ProfileScreen() {
   const settings = useAppStore((s) => s.settings);
   const progress = useAppStore((s) => s.progress);
   const update = useAppStore((s) => s.updateSettings);
-  const reset = useAppStore((s) => s.resetProgress);
+  const resetProgress = useAppStore((s) => s.resetProgress);
+  const clearSessions = useSessionStore((s) => s.clearAll);
+  const reset = () => {
+    clearSessions();
+    resetProgress();
+  };
   const { content } = getCourse();
   const totalXp = Object.values(progress.xpByDate).reduce((a, b) => a + b, 0);
   const unverified = content.words.filter((w) => !w.verified && !w.excluded).length;

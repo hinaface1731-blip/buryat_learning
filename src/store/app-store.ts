@@ -9,11 +9,13 @@ import type { Grade } from '@/srs/sm2';
 import {
   completeLesson,
   completeReview,
+  goalDaysFromXp,
   initialProgress,
   loseHeart,
   type DailyGoal,
   type ProgressState,
 } from './logic';
+import { useSessionStore } from './session-store';
 
 export type ThemePref = 'system' | 'light' | 'dark';
 
@@ -52,25 +54,25 @@ export const useAppStore = create<AppState>()(
       settings: initialSettings,
       progress: initialProgress(dateKey()),
       updateSettings: (patch) => set((s) => ({ settings: { ...s.settings, ...patch } })),
-      finishLesson: (r) => set((s) => ({ progress: completeLesson(s.progress, r, dateKey()) })),
-      finishReview: (r) => set((s) => ({ progress: completeReview(s.progress, r, dateKey()) })),
+      finishLesson: (r) => set((s) => ({ progress: completeLesson(s.progress, r, dateKey(), s.settings.dailyGoal) })),
+      finishReview: (r) => set((s) => ({ progress: completeReview(s.progress, r, dateKey(), s.settings.dailyGoal) })),
       spendHeart: () => set((s) => ({ progress: loseHeart(s.progress, dateKey()) })),
       // Сброс прогресса не трогает настройки (цель, тема), кроме онбординга.
       resetProgress: () => set((s) => ({ progress: initialProgress(dateKey()), settings: { ...s.settings, onboarded: false } })),
     }),
     {
       name: STORE_KEY,
-      version: 1,
+      version: 2,
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (s) => ({ settings: s.settings, progress: s.progress }),
       // Будущие версии схемы стора мигрируются здесь; неизвестное — к значениям по умолчанию.
       migrate: (persisted, version) => {
         const p = (persisted ?? {}) as Partial<Pick<AppState, 'settings' | 'progress'>>;
         if (version < 1) return { settings: initialSettings, progress: initialProgress(dateKey()) };
-        return {
-          settings: { ...initialSettings, ...p.settings },
-          progress: { ...initialProgress(dateKey()), ...p.progress },
-        };
+        const settings = { ...initialSettings, ...p.settings };
+        const progress = { ...initialProgress(dateKey()), ...p.progress };
+        if (version < 2) progress.goalMetDays = goalDaysFromXp(progress.xpByDate, settings.dailyGoal);
+        return { settings, progress };
       },
     },
   ),
@@ -79,8 +81,15 @@ export const useAppStore = create<AppState>()(
 /** true после восстановления состояния из AsyncStorage. */
 export function useHydrated(): boolean {
   return useSyncExternalStore(
-    (onChange) => useAppStore.persist.onFinishHydration(onChange),
-    () => useAppStore.persist.hasHydrated(),
+    (onChange) => {
+      const a = useAppStore.persist.onFinishHydration(onChange);
+      const b = useSessionStore.persist.onFinishHydration(onChange);
+      return () => {
+        a();
+        b();
+      };
+    },
+    () => useAppStore.persist.hasHydrated() && useSessionStore.persist.hasHydrated(),
     () => false, // статическая сборка веба: состояние появляется только в браузере
   );
 }

@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
 
+import { reviewableDueIds } from '@/content/course';
 import { dateKey } from '@/lib/dates';
-import { dueIds } from '@/srs/sm2';
 import { useAppStore } from '@/store/app-store';
 import { Button, Card, Screen, T } from '@/ui/components';
 import { words } from '@/ui/labels';
@@ -10,7 +10,7 @@ export default function ReviewTab() {
   const router = useRouter();
   const cards = useAppStore((s) => s.progress.cards);
   const today = dateKey();
-  const due = dueIds(cards, today, 1000).length;
+  const due = reviewableDueIds(cards, today, 1000).length;
   const total = Object.keys(cards).length;
   const upcoming = Object.values(cards).filter((c) => c.due > today).sort((a, b) => (a.due < b.due ? -1 : 1))[0];
 

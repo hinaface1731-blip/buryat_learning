@@ -2,12 +2,13 @@ import type { Content } from '@/content/load';
 
 import { buildSentence, categorize, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, typeAnswer } from './exercises';
 import type { Pools } from './pool';
-import { createRng, sample, seedFrom, shuffle } from './rng';
+import { createRng, sample, seedFrom, shuffle, type Rng } from './rng';
 import type { Exercise } from './types';
 
-// Урок по методике «знакомство → тренировка → применение → контроль» (Дареева, 2025):
-// карточка «Что нужно знать», знакомство с каждой единицей, выбор и сопоставление,
-// ввод, смешанный контроль. При ~8 новых единицах это 25–35 шагов, 5–7 минут.
+// Короткое занятие на 2–4 минуты: каждая новая единица сразу закрепляется вопросом,
+// затем чередуются сопоставление, пары, ввод и контроль. Заданий — не больше MAX_TASKS.
+
+export const MAX_TASKS = 12;
 
 export type BuildOptions = { seed?: number; hasAudio: (id: string) => boolean };
 
@@ -18,55 +19,62 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
   if (!lesson) throw new Error(`Нет урока ${lessonId}`);
   const rng = createRng(opts.seed ?? seedFrom(lessonId));
   const items = pools.lessonItems.get(lessonId) ?? [];
-  const distractorPools = [pools.unitItemsByLesson.get(lessonId) ?? [], pools.courseItems];
+  const pool = [pools.unitItemsByLesson.get(lessonId) ?? [], pools.courseItems];
   const pairs = lesson.minimalPairIds.map((id) => content.pairById.get(id)!).filter((p) => p.usable);
   const sentences = lesson.sentenceIds.map((id) => content.sentenceById.get(id)!).filter((s) => s.translation !== null && !s.excluded);
 
   const notes: Exercise[] = lesson.noteIds.map((id) => ({ key: `note-${id}`, stage: 'intro', type: 'note', note: content.noteById.get(id)! }));
-  const intro: Exercise[] = items.map((item) => ({ key: `intro-${item.id}`, stage: 'intro', type: 'intro', item }));
 
-  const training: Exercise[] = [
-    ...shuffle(items, rng).map((it) => multipleChoice(it, 'bur-ru', distractorPools, rng, 'training')),
-    matchPairs(items, rng, 'training'),
-    ...pairs.map((p) => minimalPairChoose(p, content.wordById, rng, 'training')),
+  const match = matchPairs(items, rng, 'training');
+  const rest = [
+    ...sample(pairs, 2, rng).map((p) => minimalPairChoose(p, content.wordById, rng, 'training')),
+    ...sample(items, 2, rng).map((it) => typeAnswer(it, 'application')),
+    ...sample(items, 1, rng).map((it) => listenAndChoose(it, opts.hasAudio, pool, rng, 'control')),
+    lesson.categorize ? categorize(pools.unitItemsByLesson.get(lessonId) ?? items, content.vowelRows, rng, 'control') : null,
+    ...sample(sentences, 1, rng).map((s) => buildSentence(s, rng, 'control')),
   ].filter(notNull);
 
-  const application: Exercise[] = sample(items, 4, rng)
-    .map((it) => typeAnswer(it, 'application'))
+  // На первый вопрос по новым единицам остаётся то, что не заняли остальные задания.
+  const room = MAX_TASKS - rest.length - (match ? 1 : 0);
+  const asked = items.slice(0, Math.max(0, room));
+  const stream: Exercise[] = items.flatMap((item): Exercise[] => {
+    const q = asked.includes(item) ? multipleChoice(item, 'bur-ru', pool, rng, 'training') : null;
+    return [{ key: `intro-${item.id}`, stage: 'intro', type: 'intro', item }, ...(q ? [q] : [])];
+  });
+
+  const left = MAX_TASKS - rest.length - (match ? 1 : 0) - stream.filter((e) => e.type === 'multiple_choice').length;
+  const control = sample(items, Math.max(0, left), rng)
+    .map((it) => multipleChoice(it, 'ru-bur', pool, rng, 'control'))
     .filter(notNull);
 
-  const control: Exercise[] = shuffle(
-    [
-      ...sample(items, 5, rng).map((it) => multipleChoice(it, 'ru-bur', distractorPools, rng, 'control')),
-      ...sample(items, 3, rng).map((it) => listenAndChoose(it, opts.hasAudio, distractorPools, rng, 'control')),
-      ...sample(pairs, 2, rng).map((p) => minimalPairChoose(p, content.wordById, rng, 'control')),
-      lesson.categorize ? categorize(pools.unitItemsByLesson.get(lessonId) ?? items, content.vowelRows, rng, 'control') : null,
-      ...sample(sentences, 2, rng).map((s) => buildSentence(s, rng, 'control')),
-    ].filter(notNull),
-    rng,
-  );
-
-  return dedupeKeys([...notes, ...intro, ...training, ...application, ...control]);
+  return dedupeKeys([...notes, ...stream, ...(match ? [match] : []), ...shuffle([...rest, ...control], rng)]);
 }
 
-/** Повторение: по одному упражнению на единицу; тип зависит от того, насколько единица уже знакома. */
+function reviewCandidates(id: string, reps: number, content: Content, pools: Pools, opts: BuildOptions, rng: Rng): Exercise[] {
+  const sentence = content.sentenceById.get(id);
+  if (sentence) return [buildSentence(sentence, rng, 'control')].filter(notNull);
+  const item = pools.itemById.get(id);
+  if (!item) return [];
+  const lessonId = [...pools.lessonItems].find(([, its]) => its.some((it) => it.id === id))?.[0];
+  const pool = [lessonId ? (pools.unitItemsByLesson.get(lessonId) ?? []) : [], pools.courseItems];
+  const list =
+    reps >= 2
+      ? [typeAnswer(item, 'control'), listenAndChoose(item, opts.hasAudio, pool, rng, 'control'), multipleChoice(item, 'ru-bur', pool, rng, 'control')]
+      : [multipleChoice(item, reps === 0 ? 'bur-ru' : 'ru-bur', pool, rng, 'control'), listenAndChoose(item, opts.hasAudio, pool, rng, 'control')];
+  return list.filter(notNull);
+}
+
+/** Повторение: по одному заданию на единицу. Сложность растёт с опытом, тип не повторяется подряд. */
 export function buildReview(itemIds: string[], content: Content, pools: Pools, opts: BuildOptions & { repsById: Record<string, number> }): Exercise[] {
   const rng = createRng(opts.seed ?? seedFrom(itemIds.join('|')));
   const out: Exercise[] = [];
-  for (const id of itemIds) {
-    const item = pools.itemById.get(id);
-    if (!item) continue;
-    const lessonId = [...pools.lessonItems].find(([, its]) => its.some((it) => it.id === id))?.[0];
-    const distractorPools = [lessonId ? (pools.unitItemsByLesson.get(lessonId) ?? []) : [], pools.courseItems];
-    const reps = opts.repsById[id] ?? 0;
-    const candidates =
-      reps >= 2
-        ? [typeAnswer(item, 'control'), listenAndChoose(item, opts.hasAudio, distractorPools, rng, 'control'), multipleChoice(item, 'ru-bur', distractorPools, rng, 'control')]
-        : [multipleChoice(item, reps === 0 ? 'bur-ru' : 'ru-bur', distractorPools, rng, 'control'), multipleChoice(item, 'bur-ru', distractorPools, rng, 'control')];
-    const ex = candidates.find(notNull);
+  for (const id of shuffle(itemIds, rng)) {
+    const options = shuffle(reviewCandidates(id, opts.repsById[id] ?? 0, content, pools, opts, rng), rng);
+    const prev = out[out.length - 1]?.type;
+    const ex = options.find((o) => o.type !== prev) ?? options[0];
     if (ex) out.push(ex);
   }
-  return dedupeKeys(shuffle(out, rng));
+  return dedupeKeys(out);
 }
 
 function dedupeKeys(list: Exercise[]): Exercise[] {
