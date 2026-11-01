@@ -1,9 +1,10 @@
-import type { ReactNode } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
+import { useEffect, useState, type ReactNode } from 'react';
+import { Animated, Pressable, ScrollView, StyleSheet, Text, View, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { useAppStore } from '@/store/app-store';
 
+import { usePressMotion, useReduceMotion } from './motion';
 import { fonts, radius, space, useTheme } from './theme';
 
 type TextVariant = 'title' | 'heading' | 'body' | 'caption' | 'buryat' | 'buryatLarge' | 'label';
@@ -53,16 +54,21 @@ export function Button({ title, onPress, kind = 'primary', disabled, style, acce
   const { c } = useTheme();
   const bg = { primary: c.primary, secondary: c.surfaceAlt, ghost: 'transparent', danger: c.errorBg }[kind];
   const fg = { primary: c.onPrimary, secondary: c.text, ghost: c.primary, danger: c.error }[kind];
+  const motion = usePressMotion();
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={accessibilityLabel ?? title}
-      accessibilityState={{ disabled: !!disabled }}
-      disabled={disabled}
-      onPress={onPress}
-      style={({ pressed }) => [styles.button, { backgroundColor: bg, opacity: disabled ? 0.45 : pressed ? 0.8 : 1 }, style]}>
-      <Text style={[textStyles.label, { color: fg, textAlign: 'center' }]}>{title}</Text>
-    </Pressable>
+    <Animated.View style={motion.style}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={accessibilityLabel ?? title}
+        accessibilityState={{ disabled: !!disabled }}
+        disabled={disabled}
+        onPress={onPress}
+        onPressIn={motion.onPressIn}
+        onPressOut={motion.onPressOut}
+        style={({ pressed }) => [styles.button, { backgroundColor: bg, opacity: disabled ? 0.45 : pressed ? 0.8 : 1 }, style]}>
+        <Text style={[textStyles.label, { color: fg, textAlign: 'center' }]}>{title}</Text>
+      </Pressable>
+    </Animated.View>
   );
 }
 
@@ -77,23 +83,38 @@ export function OptionButton({ label, state = 'idle', onPress, disabled, buryat 
     wrong: { bg: c.errorBg, border: c.error, fg: c.text },
     dim: { bg: c.surface, border: c.border, fg: c.textMuted },
   }[state];
+  const motion = usePressMotion(state === 'correct' ? 'bounce' : state === 'wrong' ? 'shake' : null);
   return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      disabled={disabled}
-      onPress={onPress}
-      style={({ pressed }) => [styles.option, { backgroundColor: palette.bg, borderColor: palette.border, opacity: pressed ? 0.85 : 1 }]}>
-      <Text style={[buryat ? textStyles.buryat : textStyles.body, { color: palette.fg, fontSize: buryat ? 20 : 17 }]}>{label}</Text>
-    </Pressable>
+    <Animated.View style={motion.style}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={label}
+        disabled={disabled}
+        onPress={onPress}
+        onPressIn={motion.onPressIn}
+        onPressOut={motion.onPressOut}
+        style={({ pressed }) => [styles.option, { backgroundColor: palette.bg, borderColor: palette.border, opacity: pressed ? 0.85 : 1 }]}>
+        <Text style={[buryat ? textStyles.buryat : textStyles.body, { color: palette.fg, fontSize: buryat ? 20 : 17 }]}>{label}</Text>
+      </Pressable>
+    </Animated.View>
   );
 }
 
 export function ProgressBar({ value, color }: { value: number; color?: string }) {
   const { c } = useTheme();
+  const reduce = useReduceMotion();
+  const clamped = Math.max(0, Math.min(1, value));
+  const [fill] = useState(() => new Animated.Value(clamped));
+  useEffect(() => {
+    // Ширину нативный драйвер анимировать не умеет.
+    const anim = Animated.timing(fill, { toValue: clamped, duration: reduce ? 0 : 320, useNativeDriver: false });
+    anim.start();
+    return () => anim.stop();
+  }, [fill, clamped, reduce]);
+  const width = fill.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] });
   return (
-    <View style={[styles.progressTrack, { backgroundColor: c.surfaceAlt }]} accessibilityRole="progressbar" accessibilityValue={{ min: 0, max: 100, now: Math.round(value * 100) }}>
-      <View style={[styles.progressFill, { width: `${Math.max(0, Math.min(1, value)) * 100}%`, backgroundColor: color ?? c.primary }]} />
+    <View style={[styles.progressTrack, { backgroundColor: c.surfaceAlt }]} accessibilityRole="progressbar" accessibilityValue={{ min: 0, max: 100, now: Math.round(clamped * 100) }}>
+      <Animated.View style={[styles.progressFill, { width, backgroundColor: color ?? c.primary }]} />
     </View>
   );
 }
