@@ -3,7 +3,7 @@ import { NotoSans_400Regular } from '@expo-google-fonts/noto-sans/400Regular';
 import { NotoSans_500Medium } from '@expo-google-fonts/noto-sans/500Medium';
 import { NotoSans_600SemiBold } from '@expo-google-fonts/noto-sans/600SemiBold';
 import { NotoSans_700Bold } from '@expo-google-fonts/noto-sans/700Bold';
-import { useFonts } from 'expo-font';
+import { FontDisplay, useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
@@ -16,12 +16,21 @@ import { useTheme } from '@/ui/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
+const swap = (uri: number) => ({ uri, display: FontDisplay.SWAP });
+const FONTS = {
+  NotoSans_400Regular: swap(NotoSans_400Regular),
+  NotoSans_500Medium: swap(NotoSans_500Medium),
+  NotoSans_600SemiBold: swap(NotoSans_600SemiBold),
+  NotoSans_700Bold: swap(NotoSans_700Bold),
+};
+
 export default function RootLayout() {
   // Noto Sans корректно рисует Ү ү Ө ө Һ һ на всех платформах.
-  const [fontsLoaded, fontError] = useFonts({ NotoSans_400Regular, NotoSans_500Medium, NotoSans_600SemiBold, NotoSans_700Bold });
+  const [fontsLoaded, fontError] = useFonts(FONTS);
   const hydrated = useHydrated();
   const { c, scheme } = useTheme();
-  const ready = (fontsLoaded || !!fontError) && hydrated;
+  // В вебе не ждём шрифты: сначала текст запасным шрифтом, Noto Sans подменит его после загрузки.
+  const ready = hydrated && (Platform.OS === 'web' || fontsLoaded || !!fontError);
 
   useEffect(() => {
     if (ready) SplashScreen.hideAsync().catch(() => {});
