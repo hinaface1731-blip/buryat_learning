@@ -17,13 +17,17 @@ const FIGURES: Record<CharacterId, number> = {
   bair: require('../../assets/characters/bair.webp'),
 };
 
-/** Сэсэг объясняет, Баир задумался: для возврата к занятию и ошибки в разговоре. */
+/** Реакции героев: возврат к занятию, удачная реплика, ошибка в разговоре. */
 export const POSES = {
   'seseg-explain': require('../../assets/art/seseg-explain.webp') as number,
+  'seseg-think': require('../../assets/art/seseg-think.webp') as number,
   'bair-think': require('../../assets/art/bair-think.webp') as number,
+  'bair-wave': require('../../assets/art/bair-wave.webp') as number,
 };
 
-export function CharacterPose({ pose, height = 150 }: { pose: keyof typeof POSES; height?: number }) {
+export type PoseId = keyof typeof POSES;
+
+export function CharacterPose({ pose, height = 150 }: { pose: PoseId; height?: number }) {
   return <Image source={POSES[pose]} style={{ width: height * 0.62, height }} contentFit="contain" loading="eager" accessible={false} />;
 }
 

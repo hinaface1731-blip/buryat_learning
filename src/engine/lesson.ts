@@ -1,9 +1,10 @@
 import type { Content } from '@/content/load';
+import type { Dialogue } from '@/content/schema';
 
 import { buildPhrase, buildSentence, categorize, dialogueScene, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, pictureChoice, typeAnswer } from './exercises';
 import type { Pools } from './pool';
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng';
-import type { Exercise } from './types';
+import type { Exercise, SceneOpening } from './types';
 
 // Короткое занятие на 2–4 минуты: каждая новая единица сразу закрепляется вопросом,
 // затем чередуются сопоставление, пары, ввод и контроль. Заданий — не больше MAX_TASKS.
@@ -26,7 +27,7 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
   const notes: Exercise[] = lesson.noteIds.map((id) => ({ key: `note-${id}`, stage: 'intro', type: 'note', note: content.noteById.get(id)! }));
 
   const dialogue = lesson.dialogueId ? content.dialogueById.get(lesson.dialogueId) : undefined;
-  const scene = dialogue ? dialogueScene(dialogue, pools.itemById, pool, rng) : null;
+  const scene = dialogue ? dialogueScene(dialogue, pools.itemById, [pools.sceneItemsByLesson.get(lessonId) ?? [], ...pool], rng) : null;
 
   const match = matchPairs(items, rng, 'training');
   const rest = [
@@ -43,9 +44,10 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
   const reserved = rest.length + (match ? 1 : 0) + (scene ? 1 : 0);
   const room = MAX_TASKS - reserved;
   const asked = items.slice(0, Math.max(0, room));
-  const stream: Exercise[] = items.flatMap((item): Exercise[] => {
+  const stream: Exercise[] = items.flatMap((item, i): Exercise[] => {
     const q = asked.includes(item) ? multipleChoice(item, 'bur-ru', pool, rng, 'training') : null;
-    return [{ key: `intro-${item.id}`, stage: 'intro', type: 'intro', item }, ...(q ? [q] : [])];
+    const opening = dialogue && item.kind === 'word' && item.word.tags.includes('phrase') ? openingOf(item.id, dialogue, i === 0) : undefined;
+    return [{ key: `intro-${item.id}`, stage: 'intro', type: 'intro', item, ...(opening ? { opening } : {}) }, ...(q ? [q] : [])];
   });
 
   const left = MAX_TASKS - reserved - stream.filter((e) => e.type === 'multiple_choice').length;
@@ -55,6 +57,12 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
 
   // Сцена — всегда в конце: в ней пригождается всё, что только что выучили.
   return dedupeKeys([...notes, ...stream, ...(match ? [match] : []), ...shuffle([...rest, ...control], rng), ...(scene ? [scene] : [])]);
+}
+
+/** Кто произносит реплику: партнёр — Сэсэг, всё остальное говорит сам ученик. */
+function openingOf(id: string, dialogue: Dialogue, first: boolean): SceneOpening {
+  const speaker = dialogue.lines.find((l) => l.wordId === id)?.role === 'partner' ? 'seseg' : 'bair';
+  return first ? { speaker, art: dialogue.art, scene: dialogue.scene } : { speaker };
 }
 
 function reviewCandidates(id: string, reps: number, content: Content, pools: Pools, opts: BuildOptions, rng: Rng): Exercise[] {

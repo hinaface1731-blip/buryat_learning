@@ -12,7 +12,7 @@ type Base = { key: string; stage: Stage };
 export type Exercise = Base &
   (
     | { type: 'note'; note: Note }
-    | { type: 'intro'; item: StudyItem }
+    | { type: 'intro'; item: StudyItem; opening?: SceneOpening }
     | {
         type: 'multiple_choice';
         item: StudyItem;
@@ -42,6 +42,9 @@ export type Exercise = Base &
     | { type: 'build_sentence'; sentence: Pick<Sentence, 'id' | 'buryat' | 'verified'>; prompt: string; tokens: string[]; answer: string[] }
     | { type: 'dialogue'; title: string; scene: string; art?: string; lines: DialogueLine[] }
   );
+
+/** Реплика разговорного урока показывается в речи героя; у первой ещё и сцена с иллюстрацией. */
+export type SceneOpening = { speaker: 'seseg' | 'bair'; art?: string; scene?: string };
 
 export type DialogueLine = { role: 'partner' | 'learner'; item: StudyItem; /** Варианты реплики ученика. */ options: string[] };
 

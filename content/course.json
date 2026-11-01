@@ -182,7 +182,7 @@
       "lessons": [
         {
           "id": "t-semya-l1",
-          "title": "Урок 1",
+          "title": "Назови близких",
           "noteIds": [],
           "wordIds": [
             "hamgan",
@@ -194,11 +194,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "называть близких",
+          "dialogueId": "d-semya-1"
         },
         {
           "id": "t-semya-l2",
-          "title": "Урок 2",
+          "title": "Расскажи о родных",
           "noteIds": [],
           "wordIds": [
             "egeshe",
@@ -212,7 +214,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "рассказывать о родных",
+          "dialogueId": "d-semya-2"
         }
       ],
       "badge": "badge-family"
@@ -225,7 +229,7 @@
       "lessons": [
         {
           "id": "t-eda-l1",
-          "title": "Урок 1",
+          "title": "Выбери напиток",
           "noteIds": [],
           "wordIds": [
             "huen",
@@ -237,11 +241,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "выбирать напиток",
+          "dialogueId": "d-eda-1"
         },
         {
           "id": "t-eda-l2",
-          "title": "Урок 2",
+          "title": "Попроси за столом",
           "noteIds": [],
           "wordIds": [
             "khileemen",
@@ -253,11 +259,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "просить за столом",
+          "dialogueId": "d-eda-2"
         },
         {
           "id": "t-eda-l3",
-          "title": "Урок 3",
+          "title": "Расскажи о покупках",
           "noteIds": [],
           "wordIds": [
             "khartaabkha",
@@ -267,7 +275,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "рассказывать о покупках",
+          "dialogueId": "d-eda-3"
         }
       ],
       "badge": "badge-tea"
@@ -280,7 +290,7 @@
       "lessons": [
         {
           "id": "t-dom-l1",
-          "title": "Урок 1",
+          "title": "Покажи свой дом",
           "noteIds": [],
           "wordIds": [
             "ueueden",
@@ -292,11 +302,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "показывать свой дом",
+          "dialogueId": "d-dom-1"
         },
         {
           "id": "t-dom-l2",
-          "title": "Урок 2",
+          "title": "Найди вещи дома",
           "noteIds": [],
           "wordIds": [
             "khalbaga",
@@ -308,11 +320,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "спрашивать о вещах в доме",
+          "dialogueId": "d-dom-2"
         },
         {
           "id": "t-dom-l3",
-          "title": "Урок 3",
+          "title": "Расскажи о комнате",
           "noteIds": [],
           "wordIds": [
             "gal",
@@ -322,7 +336,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "рассказывать о комнате",
+          "dialogueId": "d-dom-3"
         }
       ],
       "badge": "badge-family"
@@ -335,7 +351,7 @@
       "lessons": [
         {
           "id": "t-zhivotnye-l1",
-          "title": "Урок 1",
+          "title": "Расскажи о питомце",
           "noteIds": [],
           "wordIds": [
             "takhyaa",
@@ -347,11 +363,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "рассказывать о питомце",
+          "dialogueId": "d-zhivotnye-1"
         },
         {
           "id": "t-zhivotnye-l2",
-          "title": "Урок 2",
+          "title": "Узнай животных",
           "noteIds": [],
           "wordIds": [
             "morin",
@@ -363,7 +381,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "называть животных",
+          "dialogueId": "d-zhivotnye-2"
         }
       ],
       "badge": "badge-journey"
@@ -376,7 +396,7 @@
       "lessons": [
         {
           "id": "t-priroda-l1",
-          "title": "Урок 1",
+          "title": "Опиши природу",
           "noteIds": [],
           "wordIds": [
             "halkhin",
@@ -389,7 +409,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "описывать природу",
+          "dialogueId": "d-priroda-1"
         }
       ],
       "badge": "badge-journey"
@@ -402,7 +424,7 @@
       "lessons": [
         {
           "id": "t-shkola-l1",
-          "title": "Урок 1",
+          "title": "Собери вещи в школу",
           "noteIds": [],
           "wordIds": [
             "hurguuli",
@@ -414,11 +436,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "собирать вещи в школу",
+          "dialogueId": "d-shkola-1"
         },
         {
           "id": "t-shkola-l2",
-          "title": "Урок 2",
+          "title": "Расскажи о школе",
           "noteIds": [],
           "wordIds": [
             "sueuemkhe",
@@ -430,11 +454,13 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "рассказывать о школе",
+          "dialogueId": "d-shkola-2"
         },
         {
           "id": "t-shkola-l3",
-          "title": "Урок 3",
+          "title": "Скажи, что делаешь",
           "noteIds": [],
           "wordIds": [
             "khesheel",
@@ -444,7 +470,9 @@
           "minimalPairIds": [],
           "letterIds": [],
           "sentenceIds": [],
-          "categorize": false
+          "categorize": false,
+          "skill": "говорить, что вы делаете",
+          "dialogueId": "d-shkola-3"
         }
       ],
       "badge": "badge-speech"

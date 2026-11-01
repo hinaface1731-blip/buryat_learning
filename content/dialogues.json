@@ -166,7 +166,7 @@
   {
     "id": "d-route-9",
     "title": "Закажи чай",
-    "scene": "Вы в кафе, Сэсэг принимает заказ.",
+    "scene": "Вы с Сэсэг зашли в кафе выпить чаю.",
     "art": "scene-cafe",
     "lines": [
       {
@@ -228,6 +228,294 @@
       {
         "role": "learner",
         "wordId": "uulzataraa-bayartay"
+      }
+    ]
+  },
+  {
+    "id": "d-semya-1",
+    "title": "Назови близких",
+    "scene": "Вы показываете Сэсэг семейное фото.",
+    "art": "scene-family",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ene-khen-be"
+      },
+      {
+        "role": "learner",
+        "wordId": "ene-minii-khuebueuen"
+      },
+      {
+        "role": "partner",
+        "wordId": "ene-khen-be"
+      },
+      {
+        "role": "learner",
+        "wordId": "ene-minii-hamgan"
+      }
+    ]
+  },
+  {
+    "id": "d-semya-2",
+    "title": "Расскажи о родных",
+    "scene": "Сэсэг спрашивает о ваших детях и родителях.",
+    "art": "scene-family",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "uekhibueuedtey-guet"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-basagatayb"
+      },
+      {
+        "role": "partner",
+        "wordId": "ene-khen-be"
+      },
+      {
+        "role": "learner",
+        "wordId": "ene-minii-khuegshen-ezhy"
+      }
+    ]
+  },
+  {
+    "id": "d-eda-1",
+    "title": "Выбери напиток",
+    "scene": "Вы с Сэсэг зашли в кафе.",
+    "art": "scene-cafe",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "yuu-uukhabshi"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-huetey-say-uukha-hanaatayb"
+      },
+      {
+        "role": "learner",
+        "wordId": "namda-uha-uegyt-daa"
+      }
+    ]
+  },
+  {
+    "id": "d-eda-2",
+    "title": "Попроси за столом",
+    "scene": "Вы с Сэсэг обедаете.",
+    "art": "scene-cafe",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "shuelen-amtatay-gue"
+      },
+      {
+        "role": "learner",
+        "wordId": "shueleniin-yekhe-amtatay"
+      },
+      {
+        "role": "learner",
+        "wordId": "namda-khileeme-uegyt-daa"
+      }
+    ]
+  },
+  {
+    "id": "d-eda-3",
+    "title": "Расскажи о покупках",
+    "scene": "Вы вернулись из магазина и встретили Сэсэг.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "bi-alimda-duratayb"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-khartaabkha-khudaldazha-abaab"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-uendege-khudaldazha-abaab"
+      }
+    ]
+  },
+  {
+    "id": "d-dom-1",
+    "title": "Покажи свой дом",
+    "scene": "Сэсэг пришла к вам в гости.",
+    "art": "scene-family",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ene-tanay-ger-gue"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-ene-minii-ger"
+      },
+      {
+        "role": "learner",
+        "wordId": "minii-ger-yekhe"
+      }
+    ]
+  },
+  {
+    "id": "d-dom-2",
+    "title": "Найди вещи дома",
+    "scene": "Сэсэг помогает накрыть на стол.",
+    "art": "scene-family",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ayaga-khaanab"
+      },
+      {
+        "role": "learner",
+        "wordId": "stol-deere-ayaga"
+      }
+    ]
+  },
+  {
+    "id": "d-dom-3",
+    "title": "Расскажи о комнате",
+    "scene": "Сэсэг спрашивает о вашей комнате.",
+    "art": "scene-family",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "tahag-soo-yuun-baynab"
+      },
+      {
+        "role": "learner",
+        "wordId": "tahag-soo-stol-bii"
+      },
+      {
+        "role": "learner",
+        "wordId": "tahag-dulaan-bayna"
+      }
+    ]
+  },
+  {
+    "id": "d-zhivotnye-1",
+    "title": "Расскажи о питомце",
+    "scene": "Сэсэг видит вас на прогулке с собакой.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "shi-nokhoytoy-guesh"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-bi-nokhoytoyb"
+      }
+    ]
+  },
+  {
+    "id": "d-zhivotnye-2",
+    "title": "Узнай животных",
+    "scene": "Вы с Сэсэг идёте мимо фермы.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ene-morin-gue"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-morin-geeshe"
+      },
+      {
+        "role": "partner",
+        "wordId": "ene-khen-be"
+      },
+      {
+        "role": "learner",
+        "wordId": "ene-khonin-geeshe"
+      }
+    ]
+  },
+  {
+    "id": "d-priroda-1",
+    "title": "Опиши природу",
+    "scene": "Вы с Сэсэг гуляете у Байкала.",
+    "art": "scene-baikal",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "yamar-goyo-nuur-geesheb"
+      },
+      {
+        "role": "learner",
+        "wordId": "nuur-yekhe"
+      },
+      {
+        "role": "partner",
+        "wordId": "yamar-haykhan-oy-geesheb"
+      },
+      {
+        "role": "learner",
+        "wordId": "naran-dulaan-bayna"
+      }
+    ]
+  },
+  {
+    "id": "d-shkola-1",
+    "title": "Собери вещи в школу",
+    "scene": "Вы с Сэсэг собираетесь на занятия.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "ene-tanay-nom-gue"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-ene-minii-nom"
+      },
+      {
+        "role": "learner",
+        "wordId": "minii-debter-khaanab"
+      }
+    ]
+  },
+  {
+    "id": "d-shkola-2",
+    "title": "Расскажи о школе",
+    "scene": "Вы встретили Сэсэг по дороге.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "shi-hurguuli-oshono-guesh"
+      },
+      {
+        "role": "learner",
+        "wordId": "tiime-bi-hurguuli-oshokhob"
+      },
+      {
+        "role": "learner",
+        "wordId": "tanay-bagsha-khen-be"
+      }
+    ]
+  },
+  {
+    "id": "d-shkola-3",
+    "title": "Скажи, что делаешь",
+    "scene": "Сэсэг заглянула к вам на урок.",
+    "art": "scene-road",
+    "lines": [
+      {
+        "role": "partner",
+        "wordId": "yuu-khezhe-baynash"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-nom-unshazha-baynab"
+      },
+      {
+        "role": "learner",
+        "wordId": "bi-nege-uege-besheneb"
       }
     ]
   }

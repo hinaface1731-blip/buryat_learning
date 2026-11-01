@@ -33,4 +33,8 @@ export const ART: Record<string, number> = {
   'badge-numbers': require('../../assets/art/badge-numbers.webp'),
   'badge-speech': require('../../assets/art/badge-speech.webp'),
   'badge-tea': require('../../assets/art/badge-tea.webp'),
+  'mascot-book': require('../../assets/art/mascot-book.webp'),
+  'mascot-graduate': require('../../assets/art/mascot-graduate.webp'),
+  'mascot-scarf': require('../../assets/art/mascot-scarf.webp'),
+  'mascot-star': require('../../assets/art/mascot-star.webp'),
 };

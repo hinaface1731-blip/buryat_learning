@@ -26,6 +26,8 @@ export type Pools = {
   /** Все единицы юнита, в котором урок: источник дистракторов. */
   unitItemsByLesson: Map<string, StudyItem[]>;
   lessonItems: Map<string, StudyItem[]>;
+  /** Реплики всех сцен главы: неверные варианты в сцене — тоже фразы, а не отдельные слова. */
+  sceneItemsByLesson: Map<string, StudyItem[]>;
   unitIdByLesson: Map<string, string>;
   /** Слова, которые есть в уроках курса, по всем юнитам. */
   courseItems: StudyItem[];
@@ -36,9 +38,18 @@ export function buildPools(content: Content): Pools {
   const itemById = new Map<string, StudyItem>();
   const unitItemsByLesson = new Map<string, StudyItem[]>();
   const lessonItems = new Map<string, StudyItem[]>();
+  const sceneItemsByLesson = new Map<string, StudyItem[]>();
   const unitIdByLesson = new Map<string, string>();
   const courseItems: StudyItem[] = [];
   for (const unit of content.course.units) {
+    const sceneItems = new Map<string, StudyItem>();
+    for (const lesson of unit.lessons) {
+      const dialogue = lesson.dialogueId ? content.dialogueById.get(lesson.dialogueId) : undefined;
+      for (const line of dialogue?.lines ?? []) sceneItems.set(line.wordId, itemFromWord(content.wordById.get(line.wordId)!));
+    }
+    unit.lessons.forEach((l) => sceneItemsByLesson.set(l.id, [...sceneItems.values()]));
+    // Реплика может встречаться только в сцене: повторению и сцене она нужна и без своего урока.
+    sceneItems.forEach((it, id) => itemById.set(id, it));
     const unitItems: StudyItem[] = [];
     for (const lesson of unit.lessons) {
       const items = [
@@ -55,5 +66,5 @@ export function buildPools(content: Content): Pools {
   }
   // Формы для правила «почти верно»: все слова курса, включая не вошедшие в уроки.
   const courseForms = buildCourseForms(content.words.map((w) => w.buryat));
-  return { itemById, unitItemsByLesson, lessonItems, unitIdByLesson, courseItems, courseForms };
+  return { itemById, unitItemsByLesson, lessonItems, sceneItemsByLesson, unitIdByLesson, courseItems, courseForms };
 }

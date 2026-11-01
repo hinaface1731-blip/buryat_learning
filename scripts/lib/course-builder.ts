@@ -1,5 +1,7 @@
 import type { Course, Lesson, Letter, MinimalPair, Sentence, Unit, Word } from '../../src/content/schema';
 
+import type { ThematicScenes } from './dialogue-route';
+
 // Раскладка единиц по юнитам и урокам. Порядок — как в книге; размер урока ~8 новых слов.
 
 const WORDS_PER_LESSON = 5;
@@ -96,7 +98,7 @@ function routeUnit(route: RouteMeta[], words: Word[]): Unit {
   };
 }
 
-export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; letters: Letter[]; route: RouteMeta[] }): Course {
+export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; letters: Letter[]; route: RouteMeta[]; scenes?: ThematicScenes }): Course {
   const teachable = input.words.filter(isTeachable);
   const byLesson = (n: number) => teachable.filter((w) => w.source.book === 'bxr-textbook' && w.source.lesson === n);
   const introWords = teachable.filter((w) => w.source.book === 'bxr-textbook' && w.source.lesson === undefined && !w.tags.includes('route'));
@@ -134,7 +136,10 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
     if (words.length === 0) {
       return { id: `t-${id}`, title, description: 'Скоро.', locked: true, lessons: [] };
     }
-    return wordUnit({ id: `t-${id}`, title, description: info?.description ?? '', noteIds: [], words, pairs: [], sentences: [], thematic: true, badge: info?.badge });
+    const unit = wordUnit({ id: `t-${id}`, title, description: info?.description ?? '', noteIds: [], words, pairs: [], sentences: [], thematic: true, badge: info?.badge });
+    // Урок называется по результату и заканчивается сценой. Без строки в CSV остаётся «Урок N».
+    const scenes = input.scenes?.[id] ?? [];
+    return { ...unit, lessons: unit.lessons.map((l, i) => (scenes[i] ? { ...l, title: scenes[i].title, skill: scenes[i].skill, dialogueId: scenes[i].dialogueId } : l)) };
   });
 
   const units: Unit[] = [

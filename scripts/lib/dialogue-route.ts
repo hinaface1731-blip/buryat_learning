@@ -13,7 +13,16 @@ const SCENE_ART: Record<number, string> = { 1: 'scene-baikal', 2: 'scene-baikal'
 
 const originKey = (buryat: string, russian: string) => `${buryat}|${russian}`.toLowerCase();
 
-export function buildRoute(rows: Record<string, string>[], existing: Word[]): { words: Word[]; lessons: RouteLesson[]; added: number; errors: string[] } {
+type RouteOptions = { dialogueId: (n: number) => string; art: (n: number, row: Record<string, string>) => string | undefined; tags: (n: number) => string[]; section: string };
+
+const ROUTE_OPTIONS: RouteOptions = {
+  dialogueId: (n) => `d-route-${n}`,
+  art: (n) => SCENE_ART[n],
+  tags: (n) => ['route', 'phrase', `route-lesson-${n}`],
+  section: 'разговорный маршрут',
+};
+
+export function buildRoute(rows: Record<string, string>[], existing: Word[], opts: RouteOptions = ROUTE_OPTIONS): { words: Word[]; lessons: RouteLesson[]; added: number; errors: string[] } {
   const words = [...existing];
   const byOrigin = new Map(existing.map((w) => [originKey(w.origin.buryat, w.origin.russian), w]));
   const taken = new Set(existing.map((w) => w.id));
@@ -37,7 +46,7 @@ export function buildRoute(rows: Record<string, string>[], existing: Word[]): { 
     }
     let lesson = lessons.get(n);
     if (!lesson) {
-      lesson = { n, title: row.title, skill: row.skill, wordIds: [], dialogue: { id: `d-route-${n}`, title: row.title, scene: row.scene, art: SCENE_ART[n], lines: [] } };
+      lesson = { n, title: row.title, skill: row.skill, wordIds: [], dialogue: { id: opts.dialogueId(n), title: row.title, scene: row.scene, art: opts.art(n, row), lines: [] } };
       lessons.set(n, lesson);
     }
     let word = byOrigin.get(originKey(buryat, russian));
@@ -52,8 +61,8 @@ export function buildRoute(rows: Record<string, string>[], existing: Word[]): { 
         buryat,
         russian,
         alternatives: [],
-        source: { book, section: 'разговорный маршрут' },
-        tags: ['route', 'phrase', `route-lesson-${n}`],
+        source: { book, section: opts.section },
+        tags: opts.tags(n),
         verified: false,
         needs_review: book === 'translator',
         review_reasons: book === 'translator' ? ['машинный перевод'] : [],
@@ -77,4 +86,33 @@ export function buildRoute(rows: Record<string, string>[], existing: Word[]): { 
   });
 
   return { words, lessons: [...lessons.values()].sort((a, b) => a.n - b.n), added, errors };
+}
+
+/** Сцены тематических глав из content/templates/thematic-scenes.csv: урок главы получает название-результат и итоговую сцену. */
+export type ThematicScenes = Record<string, { n: number; title: string; skill: string; dialogueId: string }[]>;
+
+export function buildThematicScenes(rows: Record<string, string>[], existing: Word[]): { words: Word[]; dialogues: Dialogue[]; scenes: ThematicScenes; added: number; errors: string[] } {
+  const scenes: ThematicScenes = {};
+  const dialogues: Dialogue[] = [];
+  const errors: string[] = [];
+  let words = existing;
+  let added = 0;
+  for (const unit of new Set(rows.map((r) => r.unit))) {
+    const built = buildRoute(
+      rows.filter((r) => r.unit === unit),
+      words,
+      {
+        dialogueId: (n) => `d-${unit}-${n}`,
+        art: (_, row) => row.art || undefined,
+        tags: (n) => ['scene', 'phrase', `scene-${unit}-${n}`],
+        section: `сцена главы, ${unit}`,
+      },
+    );
+    words = built.words;
+    added += built.added;
+    errors.push(...built.errors.map((e) => `${unit}: ${e}`));
+    dialogues.push(...built.lessons.map((l) => l.dialogue));
+    scenes[unit] = built.lessons.map(({ n, title, skill, dialogue }) => ({ n, title, skill, dialogueId: dialogue.id }));
+  }
+  return { words, dialogues, scenes, added, errors };
 }

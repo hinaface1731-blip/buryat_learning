@@ -6,12 +6,13 @@ import { AudioButton } from '@/audio/AudioButton';
 import type { VowelRowId } from '@/content/schema';
 import { checkBuryat, checkRussian, normalizeAnswer } from '@/engine/check';
 import { EXPLAIN_MATCH, EXPLAIN_ORDER, EXPLAIN_ROWS, explainPair, explainTyped } from '@/engine/feedback';
-import type { Exercise, Outcome } from '@/engine/types';
+import type { Exercise, Outcome, SceneOpening, StudyItem } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
 import { ART } from '@/ui/art';
 import { CharacterFace, CharacterFigure, CharacterPose } from '@/ui/Character';
 import { Mascot } from '@/ui/Mascot';
+import { Appear } from '@/ui/motion';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
 import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
 
@@ -95,8 +96,51 @@ export function NoteView({ ex }: { ex: Extract<Exercise, { type: 'note' }> }) {
   );
 }
 
+const OPENING_INVITE: Record<SceneOpening['speaker'], string> = {
+  seseg: 'Так говорит Сэсэг. Запомните: скоро ваша очередь отвечать.',
+  bair: 'Это ваша реплика. Скоро скажете её Сэсэг сами.',
+};
+
+/** Реплика разговорного урока: сразу герой и его речь, а не словарная карточка. */
+function PhraseIntro({ item, opening }: { item: StudyItem; opening: SceneOpening }) {
+  const { c } = useTheme();
+  const tip = letterTip(item.buryat);
+  return (
+    <View style={{ gap: space.md }}>
+      {opening.art && <Image source={ART[opening.art]} style={styles.sceneArt} contentFit="cover" loading="eager" accessible={false} />}
+      {opening.scene && <T muted>{opening.scene}</T>}
+      <Row gap={space.sm} style={{ alignItems: 'flex-end' }}>
+        <Appear kind="pop">
+          <CharacterFigure id={opening.speaker} height={opening.art ? 130 : 190} />
+        </Appear>
+        <Appear delay={120} style={{ flex: 1 }}>
+          <View style={[styles.speech, { backgroundColor: c.surface, borderColor: c.border }]}>
+            <Row gap={space.sm} style={{ flexWrap: 'wrap' }}>
+              <T v="buryat" selectable style={{ flexShrink: 1 }}>
+                {item.buryat}
+              </T>
+              <AudioButton id={item.id} autoPlay />
+            </Row>
+            <T muted>{item.russian}</T>
+          </View>
+        </Appear>
+      </Row>
+      <T v="label" color={c.primary}>
+        {OPENING_INVITE[opening.speaker]}
+      </T>
+      {tip && (
+        <T v="caption" muted>
+          {tip}
+        </T>
+      )}
+      <UnverifiedBadge verified={item.verified} />
+    </View>
+  );
+}
+
 export function IntroView({ ex }: { ex: Extract<Exercise, { type: 'intro' }> }) {
   const { item } = ex;
+  if (ex.opening) return <PhraseIntro item={item} opening={ex.opening} />;
   const extra = item.kind === 'word' ? item.word.alternatives : [];
   const source = item.kind === 'word' ? item.word.source : item.letter.source;
   return (
@@ -125,13 +169,16 @@ export function IntroView({ ex }: { ex: Extract<Exercise, { type: 'intro' }> }) 
 export function MultipleChoiceView({ ex, answered, onResult }: ViewProps<'multiple_choice'>) {
   const [picked, setPicked] = useState<string | null>(null);
   const buryatOptions = ex.direction === 'ru-bur';
+  const isPhrase = ex.item.kind === 'word' && ex.item.word.tags.includes('phrase');
   const question =
     ex.item.kind === 'letter'
       ? ex.direction === 'bur-ru'
         ? 'Как называется буква?'
         : 'Какая это буква?'
       : ex.direction === 'bur-ru'
-        ? 'Что значит слово?'
+        ? isPhrase
+          ? 'Что значит эта фраза?'
+          : 'Что значит слово?'
         : 'Как сказать по-бурятски?';
   const pick = (o: string) => {
     if (answered) return;
@@ -148,8 +195,11 @@ export function MultipleChoiceView({ ex, answered, onResult }: ViewProps<'multip
   return (
     <View style={{ gap: space.lg }}>
       <T muted>{question}</T>
-      <Row>
-        <T v={buryatOptions ? 'heading' : 'buryatLarge'}>{ex.prompt}</T>
+      <Row gap={space.md}>
+        {isPhrase && <CharacterFace id={buryatOptions ? 'bair' : 'seseg'} size={48} />}
+        <T v={buryatOptions || isPhrase ? 'heading' : 'buryatLarge'} style={{ flexShrink: 1, ...(isPhrase && !buryatOptions ? { fontSize: 24, lineHeight: 31 } : null) }}>
+          {ex.prompt}
+        </T>
         {!buryatOptions && <AudioButton id={ex.item.id} />}
       </Row>
       <UnverifiedBadge verified={ex.item.verified} />
@@ -441,7 +491,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
         {shown.map((line, i) => {
           const partner = line.role === 'partner';
           return (
-            <View key={i} style={[styles.bubbleRow, { justifyContent: partner ? 'flex-start' : 'flex-end' }]}>
+            <Appear key={i} style={[styles.bubbleRow, { justifyContent: partner ? 'flex-start' : 'flex-end' }]}>
               {partner && <CharacterFace id="seseg" />}
               <View style={[styles.bubble, { backgroundColor: partner ? c.surface : c.surfaceAlt, borderColor: c.border }]}>
                 <T v="label" style={{ fontSize: 18, lineHeight: 24 }}>
@@ -452,7 +502,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
                 </T>
               </View>
               {!partner && <CharacterFace id="bair" />}
-            </View>
+            </Appear>
           );
         })}
       </View>
@@ -460,9 +510,11 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
         <View style={{ gap: space.sm }}>
           {lastWrong && (
             <Row gap={space.md}>
-              <CharacterPose pose="bair-think" height={84} />
+              <Appear kind="pop">
+                <CharacterPose pose="seseg-think" height={84} />
+              </Appear>
               <T muted style={{ flex: 1 }}>
-                Не эта реплика. Подумайте ещё.
+                Сэсэг ждёт другого ответа. Подумайте ещё.
               </T>
             </Row>
           )}
@@ -480,6 +532,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
 const styles = StyleSheet.create({
   picture: { width: '100%', height: 170 },
   sceneArt: { width: '100%', aspectRatio: 3 / 2, borderRadius: radius.lg },
+  speech: { borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, borderBottomLeftRadius: radius.sm, padding: space.md, gap: space.xs, marginBottom: space.lg },
   bubbleRow: { flexDirection: 'row', alignItems: 'flex-end', gap: space.sm },
   bubble: { flexShrink: 1, maxWidth: '78%', borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, paddingVertical: space.sm, paddingHorizontal: space.md, gap: 2 },
   input: { borderWidth: 1.5, borderRadius: radius.md, paddingHorizontal: space.lg, paddingVertical: 14, fontSize: 22, fontFamily: fonts.semibold },

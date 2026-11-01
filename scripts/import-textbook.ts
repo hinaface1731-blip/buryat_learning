@@ -10,6 +10,7 @@ import path from 'node:path';
 import { buildPairs, buildSentences, buildWords } from './lib/build-content';
 import { contentPath, readLetters, readPairs, readSentences, readWords, SOURCES, writeJson } from './lib/content-io';
 import { buildCourse, type RouteMeta } from './lib/course-builder';
+import type { ThematicScenes } from './lib/dialogue-route';
 import { loadPdfText } from './lib/pdf-text';
 import { parseTextbook } from './lib/textbook-parser';
 
@@ -30,7 +31,8 @@ async function main() {
   const sentences = buildSentences(parsed, readSentences());
   const pairs = buildPairs(parsed.pairs, words, readPairs());
   const route: RouteMeta[] = JSON.parse(fs.readFileSync(contentPath('route.json'), 'utf8'));
-  const course = buildCourse({ words, pairs, sentences, letters: readLetters(), route });
+  const scenes: ThematicScenes = JSON.parse(fs.readFileSync(contentPath('thematic-scenes.json'), 'utf8'));
+  const course = buildCourse({ words, pairs, sentences, letters: readLetters(), route, scenes });
 
   writeJson('words.json', words);
   writeJson('sentences.json', sentences);

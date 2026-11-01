@@ -12540,7 +12540,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "buuza",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12549,7 +12548,8 @@
     "origin": {
       "buryat": "бууза",
       "russian": "позы"
-    }
+    },
+    "image": "buuza"
   },
   {
     "id": "khileemen",
@@ -12567,7 +12567,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "bread",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12576,7 +12575,8 @@
     "origin": {
       "buryat": "хилээмэн",
       "russian": "хлеб"
-    }
+    },
+    "image": "bread"
   },
   {
     "id": "myakhan",
@@ -12776,7 +12776,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "chair",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12785,7 +12784,8 @@
     "origin": {
       "buryat": "стул",
       "russian": "стул"
-    }
+    },
+    "image": "chair"
   },
   {
     "id": "khalbaga",
@@ -12803,7 +12803,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "spoon",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12812,7 +12811,8 @@
     "origin": {
       "buryat": "халбага",
       "russian": "ложка"
-    }
+    },
+    "image": "spoon"
   },
   {
     "id": "tuempen",
@@ -12830,7 +12830,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "bowl",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12839,7 +12838,8 @@
     "origin": {
       "buryat": "түмпэн",
       "russian": "миска"
-    }
+    },
+    "image": "bowl"
   },
   {
     "id": "khibes",
@@ -12989,7 +12989,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "horse",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -12998,7 +12997,8 @@
     "origin": {
       "buryat": "морин",
       "russian": "конь"
-    }
+    },
+    "image": "horse"
   },
   {
     "id": "khonin",
@@ -13016,7 +13016,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "sheep",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13025,7 +13024,8 @@
     "origin": {
       "buryat": "хонин",
       "russian": "овца"
-    }
+    },
+    "image": "sheep"
   },
   {
     "id": "yamaan",
@@ -13121,7 +13121,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "birch",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13130,7 +13129,8 @@
     "origin": {
       "buryat": "хуһан",
       "russian": "берёза"
-    }
+    },
+    "image": "birch"
   },
   {
     "id": "nom",
@@ -13148,7 +13148,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "book",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13157,7 +13156,8 @@
     "origin": {
       "buryat": "ном",
       "russian": "книга"
-    }
+    },
+    "image": "book"
   },
   {
     "id": "debter",
@@ -13175,7 +13175,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "notebook",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13184,7 +13183,8 @@
     "origin": {
       "buryat": "дэбтэр",
       "russian": "тетрадь"
-    }
+    },
+    "image": "notebook"
   },
   {
     "id": "sueuemkhe",
@@ -13204,7 +13204,6 @@
     "verified": false,
     "needs_review": false,
     "review_reasons": [],
-    "image": "backpack",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13213,7 +13212,8 @@
     "origin": {
       "buryat": "сүүмхэ",
       "russian": "сумка"
-    }
+    },
+    "image": "backpack"
   },
   {
     "id": "bagsha",
@@ -13388,7 +13388,6 @@
     "review_reasons": [
       "машинный перевод"
     ],
-    "image": "apple",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13397,7 +13396,8 @@
     "origin": {
       "buryat": "алима",
       "russian": "яблоко"
-    }
+    },
+    "image": "apple"
   },
   {
     "id": "kharandaa",
@@ -13416,7 +13416,6 @@
     "review_reasons": [
       "машинный перевод"
     ],
-    "image": "pencil",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13425,7 +13424,8 @@
     "origin": {
       "buryat": "харандаа",
       "russian": "карандаш"
-    }
+    },
+    "image": "pencil"
   },
   {
     "id": "sheree",
@@ -13444,7 +13444,6 @@
     "review_reasons": [
       "машинный перевод"
     ],
-    "image": "table",
     "possible_typo": false,
     "typo_candidates": [],
     "form": null,
@@ -13453,6 +13452,1237 @@
     "origin": {
       "buryat": "шэрээ",
       "russian": "стол"
+    },
+    "image": "table"
+  },
+  {
+    "id": "ene-khen-be",
+    "kind": "word",
+    "buryat": "Энэ хэн бэ?",
+    "russian": "Кто это?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Кто это?",
+    "origin": {
+      "buryat": "Энэ хэн бэ?",
+      "russian": "Кто это?"
+    }
+  },
+  {
+    "id": "ene-minii-khuebueuen",
+    "kind": "word",
+    "buryat": "Энэ минии хүбүүн.",
+    "russian": "Это мой сын.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это мой сын.",
+    "origin": {
+      "buryat": "Энэ минии хүбүүн.",
+      "russian": "Это мой сын."
+    }
+  },
+  {
+    "id": "ene-minii-hamgan",
+    "kind": "word",
+    "buryat": "Энэ минии һамган.",
+    "russian": "Это моя жена.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это моя жена.",
+    "origin": {
+      "buryat": "Энэ минии һамган.",
+      "russian": "Это моя жена."
+    }
+  },
+  {
+    "id": "uekhibueuedtey-guet",
+    "kind": "word",
+    "buryat": "Үхибүүдтэй гүт?",
+    "russian": "У вас есть дети?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У вас есть дети?",
+    "origin": {
+      "buryat": "Үхибүүдтэй гүт?",
+      "russian": "У вас есть дети?"
+    }
+  },
+  {
+    "id": "bi-basagatayb",
+    "kind": "word",
+    "buryat": "Би басагатайб.",
+    "russian": "У меня есть дочь.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У меня есть дочь.",
+    "origin": {
+      "buryat": "Би басагатайб.",
+      "russian": "У меня есть дочь."
+    }
+  },
+  {
+    "id": "ene-minii-khuegshen-ezhy",
+    "kind": "word",
+    "buryat": "Энэ минии хүгшэн эжы.",
+    "russian": "Это моя бабушка.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, semya"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-semya-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это моя бабушка.",
+    "origin": {
+      "buryat": "Энэ минии хүгшэн эжы.",
+      "russian": "Это моя бабушка."
+    }
+  },
+  {
+    "id": "yuu-uukhabshi",
+    "kind": "word",
+    "buryat": "Юу уухабши?",
+    "russian": "Что ты будешь пить?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Что ты будешь пить?",
+    "origin": {
+      "buryat": "Юу уухабши?",
+      "russian": "Что ты будешь пить?"
+    }
+  },
+  {
+    "id": "bi-huetey-say-uukha-hanaatayb",
+    "kind": "word",
+    "buryat": "Би һүтэй сай ууха һанаатайб.",
+    "russian": "Я хочу чай с молоком.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я хочу пить чай с молоком.",
+    "origin": {
+      "buryat": "Би һүтэй сай ууха һанаатайб.",
+      "russian": "Я хочу чай с молоком."
+    }
+  },
+  {
+    "id": "namda-uha-uegyt-daa",
+    "kind": "word",
+    "buryat": "Намда уһа үгыт даа.",
+    "russian": "Дайте воды, пожалуйста.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Пожалуйста, дайте мне немного воды.",
+    "origin": {
+      "buryat": "Намда уһа үгыт даа.",
+      "russian": "Дайте воды, пожалуйста."
+    }
+  },
+  {
+    "id": "shuelen-amtatay-gue",
+    "kind": "word",
+    "buryat": "Шүлэн амтатай гү?",
+    "russian": "Суп вкусный?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Суп вкусный?",
+    "origin": {
+      "buryat": "Шүлэн амтатай гү?",
+      "russian": "Суп вкусный?"
+    }
+  },
+  {
+    "id": "shueleniin-yekhe-amtatay",
+    "kind": "word",
+    "buryat": "Шүлэниинь ехэ амтатай.",
+    "russian": "Суп очень вкусный.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Суп очень вкусный.",
+    "origin": {
+      "buryat": "Шүлэниинь ехэ амтатай.",
+      "russian": "Суп очень вкусный."
+    }
+  },
+  {
+    "id": "namda-khileeme-uegyt-daa",
+    "kind": "word",
+    "buryat": "Намда хилээмэ үгыт даа.",
+    "russian": "Дайте хлеба, пожалуйста.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Дай мне немного хлеба.",
+    "origin": {
+      "buryat": "Намда хилээмэ үгыт даа.",
+      "russian": "Дайте хлеба, пожалуйста."
+    }
+  },
+  {
+    "id": "bi-alimda-duratayb",
+    "kind": "word",
+    "buryat": "Би алимда дуратайб.",
+    "russian": "Я люблю яблоки.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я люблю яблоки.",
+    "origin": {
+      "buryat": "Би алимда дуратайб.",
+      "russian": "Я люблю яблоки."
+    }
+  },
+  {
+    "id": "bi-khartaabkha-khudaldazha-abaab",
+    "kind": "word",
+    "buryat": "Би хартаабха худалдажа абааб.",
+    "russian": "Я купил картофель.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я купил картошку.",
+    "origin": {
+      "buryat": "Би хартаабха худалдажа абааб.",
+      "russian": "Я купил картофель."
+    }
+  },
+  {
+    "id": "bi-uendege-khudaldazha-abaab",
+    "kind": "word",
+    "buryat": "Би үндэгэ худалдажа абааб.",
+    "russian": "Я купил яйца.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, eda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-eda-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я купила яйца.",
+    "origin": {
+      "buryat": "Би үндэгэ худалдажа абааб.",
+      "russian": "Я купил яйца."
+    }
+  },
+  {
+    "id": "ene-tanay-ger-gue",
+    "kind": "word",
+    "buryat": "Энэ танай гэр гү?",
+    "russian": "Это ваш дом?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это твой дом?",
+    "origin": {
+      "buryat": "Энэ танай гэр гү?",
+      "russian": "Это ваш дом?"
+    }
+  },
+  {
+    "id": "tiime-ene-minii-ger",
+    "kind": "word",
+    "buryat": "Тиимэ, энэ минии гэр.",
+    "russian": "Да, это мой дом.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Да, это мой дом.",
+    "origin": {
+      "buryat": "Тиимэ, энэ минии гэр.",
+      "russian": "Да, это мой дом."
+    }
+  },
+  {
+    "id": "minii-ger-yekhe",
+    "kind": "word",
+    "buryat": "Минии гэр ехэ.",
+    "russian": "Мой дом большой.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Мой дом большой.",
+    "origin": {
+      "buryat": "Минии гэр ехэ.",
+      "russian": "Мой дом большой."
+    }
+  },
+  {
+    "id": "ayaga-khaanab",
+    "kind": "word",
+    "buryat": "Аяга хаанаб?",
+    "russian": "Где чашка?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Где чашка?",
+    "origin": {
+      "buryat": "Аяга хаанаб?",
+      "russian": "Где чашка?"
+    }
+  },
+  {
+    "id": "stol-deere-ayaga",
+    "kind": "word",
+    "buryat": "Стол дээрэ аяга.",
+    "russian": "Чашка на столе.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В курсе «стол» — шэрээ; переводчик дал «стол»: проверить; обратный перевод: Чашка на столе.",
+    "origin": {
+      "buryat": "Стол дээрэ аяга.",
+      "russian": "Чашка на столе."
+    }
+  },
+  {
+    "id": "tahag-soo-yuun-baynab",
+    "kind": "word",
+    "buryat": "Таһаг соо юун байнаб?",
+    "russian": "Что в комнате?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Что в комнате?",
+    "origin": {
+      "buryat": "Таһаг соо юун байнаб?",
+      "russian": "Что в комнате?"
+    }
+  },
+  {
+    "id": "tahag-soo-stol-bii",
+    "kind": "word",
+    "buryat": "Таһаг соо стол бии.",
+    "russian": "В комнате есть стол.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "В курсе «стол» — шэрээ; переводчик дал «стол»: проверить; обратный перевод: В комнате стоит стол.",
+    "origin": {
+      "buryat": "Таһаг соо стол бии.",
+      "russian": "В комнате есть стол."
+    }
+  },
+  {
+    "id": "tahag-dulaan-bayna",
+    "kind": "word",
+    "buryat": "Таһаг дулаан байна.",
+    "russian": "В комнате тепло.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, dom"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-dom-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: В комнате тепло.",
+    "origin": {
+      "buryat": "Таһаг дулаан байна.",
+      "russian": "В комнате тепло."
+    }
+  },
+  {
+    "id": "shi-nokhoytoy-guesh",
+    "kind": "word",
+    "buryat": "Ши нохойтой гүш?",
+    "russian": "У тебя есть собака?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, zhivotnye"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-zhivotnye-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: У вас есть собака?",
+    "origin": {
+      "buryat": "Ши нохойтой гүш?",
+      "russian": "У тебя есть собака?"
+    }
+  },
+  {
+    "id": "tiime-bi-nokhoytoyb",
+    "kind": "word",
+    "buryat": "Тиимэ, би нохойтойб.",
+    "russian": "Да, у меня есть собака.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, zhivotnye"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-zhivotnye-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Да, у меня есть собака.",
+    "origin": {
+      "buryat": "Тиимэ, би нохойтойб.",
+      "russian": "Да, у меня есть собака."
+    }
+  },
+  {
+    "id": "ene-morin-gue",
+    "kind": "word",
+    "buryat": "Энэ морин гү?",
+    "russian": "Это лошадь?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, zhivotnye"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-zhivotnye-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это лошадь?",
+    "origin": {
+      "buryat": "Энэ морин гү?",
+      "russian": "Это лошадь?"
+    }
+  },
+  {
+    "id": "tiime-morin-geeshe",
+    "kind": "word",
+    "buryat": "Тиимэ, морин гээшэ.",
+    "russian": "Да, это лошадь.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, zhivotnye"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-zhivotnye-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Да, это лошадь.",
+    "origin": {
+      "buryat": "Тиимэ, морин гээшэ.",
+      "russian": "Да, это лошадь."
+    }
+  },
+  {
+    "id": "ene-khonin-geeshe",
+    "kind": "word",
+    "buryat": "Энэ хонин гээшэ.",
+    "russian": "Это овца.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, zhivotnye"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-zhivotnye-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это овца.",
+    "origin": {
+      "buryat": "Энэ хонин гээшэ.",
+      "russian": "Это овца."
+    }
+  },
+  {
+    "id": "yamar-goyo-nuur-geesheb",
+    "kind": "word",
+    "buryat": "Ямар гоё нуур гээшэб!",
+    "russian": "Какое красивое озеро!",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, priroda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-priroda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Какое красивое озеро!",
+    "origin": {
+      "buryat": "Ямар гоё нуур гээшэб!",
+      "russian": "Какое красивое озеро!"
+    }
+  },
+  {
+    "id": "nuur-yekhe",
+    "kind": "word",
+    "buryat": "Нуур ехэ.",
+    "russian": "Озеро большое.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, priroda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-priroda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Озеро большое.",
+    "origin": {
+      "buryat": "Нуур ехэ.",
+      "russian": "Озеро большое."
+    }
+  },
+  {
+    "id": "yamar-haykhan-oy-geesheb",
+    "kind": "word",
+    "buryat": "Ямар һайхан ой гээшэб!",
+    "russian": "Какой красивый лес!",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, priroda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-priroda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Какой красивый лес!",
+    "origin": {
+      "buryat": "Ямар һайхан ой гээшэб!",
+      "russian": "Какой красивый лес!"
+    }
+  },
+  {
+    "id": "naran-dulaan-bayna",
+    "kind": "word",
+    "buryat": "Наран дулаан байна.",
+    "russian": "Солнце тёплое.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, priroda"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-priroda-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Солнце теплое.",
+    "origin": {
+      "buryat": "Наран дулаан байна.",
+      "russian": "Солнце тёплое."
+    }
+  },
+  {
+    "id": "ene-tanay-nom-gue",
+    "kind": "word",
+    "buryat": "Энэ танай ном гү?",
+    "russian": "Это ваша книга?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Это твоя книга?",
+    "origin": {
+      "buryat": "Энэ танай ном гү?",
+      "russian": "Это ваша книга?"
+    }
+  },
+  {
+    "id": "tiime-ene-minii-nom",
+    "kind": "word",
+    "buryat": "Тиимэ, энэ минии ном.",
+    "russian": "Да, это моя книга.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Да, это моя книга.",
+    "origin": {
+      "buryat": "Тиимэ, энэ минии ном.",
+      "russian": "Да, это моя книга."
+    }
+  },
+  {
+    "id": "minii-debter-khaanab",
+    "kind": "word",
+    "buryat": "Минии дэбтэр хаанаб?",
+    "russian": "Где моя тетрадь?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-1"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Где мой блокнот?",
+    "origin": {
+      "buryat": "Минии дэбтэр хаанаб?",
+      "russian": "Где моя тетрадь?"
+    }
+  },
+  {
+    "id": "shi-hurguuli-oshono-guesh",
+    "kind": "word",
+    "buryat": "Ши һургуули ошоно гүш?",
+    "russian": "Ты идёшь в школу?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Ты ходишь в школу?",
+    "origin": {
+      "buryat": "Ши һургуули ошоно гүш?",
+      "russian": "Ты идёшь в школу?"
+    }
+  },
+  {
+    "id": "tiime-bi-hurguuli-oshokhob",
+    "kind": "word",
+    "buryat": "Тиимэ, би һургуули ошохоб.",
+    "russian": "Да, я иду в школу.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "Переводчик вернул латинскую h вместо һ: заменена; обратный перевод: Да, я иду в школу.",
+    "origin": {
+      "buryat": "Тиимэ, би һургуули ошохоб.",
+      "russian": "Да, я иду в школу."
+    }
+  },
+  {
+    "id": "tanay-bagsha-khen-be",
+    "kind": "word",
+    "buryat": "Танай багша хэн бэ?",
+    "russian": "Кто ваш учитель?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-2"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Кто твой учитель?",
+    "origin": {
+      "buryat": "Танай багша хэн бэ?",
+      "russian": "Кто ваш учитель?"
+    }
+  },
+  {
+    "id": "yuu-khezhe-baynash",
+    "kind": "word",
+    "buryat": "Юу хэжэ байнаш?",
+    "russian": "Что ты делаешь?",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Что ты делаешь?",
+    "origin": {
+      "buryat": "Юу хэжэ байнаш?",
+      "russian": "Что ты делаешь?"
+    }
+  },
+  {
+    "id": "bi-nom-unshazha-baynab",
+    "kind": "word",
+    "buryat": "Би ном уншажа байнаб.",
+    "russian": "Я читаю книгу.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я читаю книгу.",
+    "origin": {
+      "buryat": "Би ном уншажа байнаб.",
+      "russian": "Я читаю книгу."
+    }
+  },
+  {
+    "id": "bi-nege-uege-besheneb",
+    "kind": "word",
+    "buryat": "Би нэгэ үгэ бэшэнэб.",
+    "russian": "Я пишу слово.",
+    "alternatives": [],
+    "source": {
+      "book": "translator",
+      "section": "сцена главы, shkola"
+    },
+    "tags": [
+      "scene",
+      "phrase",
+      "scene-shkola-3"
+    ],
+    "verified": false,
+    "needs_review": true,
+    "review_reasons": [
+      "машинный перевод"
+    ],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "обратный перевод: Я пишу слово.",
+    "origin": {
+      "buryat": "Би нэгэ үгэ бэшэнэб.",
+      "russian": "Я пишу слово."
     }
   }
 ]

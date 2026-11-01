@@ -51,6 +51,44 @@ describe('buildLesson на реальном курсе', () => {
     expect(ex.some((e) => e.type === 'build_sentence')).toBe(true);
   });
 
+  it('разговор начинается с героя и сцены: первая реплика открывается иллюстрацией', () => {
+    const ex = buildLesson(content.course.units[0].lessons[0].id, content, pools, { hasAudio: noAudio, seed: 6 });
+    const intros = ex.filter((e) => e.type === 'intro');
+    const [first, ...others] = intros;
+    if (first.type !== 'intro') throw new Error('нет знакомства');
+    expect(first.opening).toMatchObject({ speaker: 'seseg', art: 'scene-baikal' });
+    expect(first.opening?.scene).toBeTruthy();
+    for (const e of others) if (e.type === 'intro') expect(e.opening?.scene).toBeUndefined();
+  });
+
+  it('у уроков тематических глав есть результат в названии и итоговая сцена', () => {
+    for (const u of content.course.units.slice(1, 7)) {
+      for (const l of u.lessons) {
+        expect(l.title).not.toMatch(/^Урок \d+$/);
+        expect(l.skill).toBeTruthy();
+        const ex = buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 11 });
+        const scene = ex[ex.length - 1];
+        if (scene.type !== 'dialogue') throw new Error(`нет сцены в ${l.id}`);
+        expect(scene.lines.some((line) => line.role === 'learner')).toBe(true);
+        expect(ex.filter((e) => e.type === 'intro' && e.opening)).toEqual([]); // слова главы — обычные карточки
+      }
+    }
+  });
+
+  it('неверные варианты в сцене — тоже фразы', () => {
+    const l = content.course.units.find((u) => u.id === 't-semya')!.lessons[0];
+    const ex = buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 11 });
+    const scene = ex[ex.length - 1];
+    if (scene.type !== 'dialogue') throw new Error('нет сцены');
+    const phrases = new Set(pools.sceneItemsByLesson.get(l.id)!.map((i) => i.buryat));
+    for (const line of scene.lines) if (line.role === 'learner') for (const o of line.options) expect(phrases.has(o)).toBe(true);
+  });
+
+  it('реплика, которая есть только в сцене, доступна повторению', () => {
+    const only = content.words.find((w) => w.tags.some((t) => t.startsWith('scene-')) && !allLessons.some((l) => l.wordIds.includes(w.id)))!;
+    expect(buildReview([only.id], content, pools, { hasAudio: noAudio, repsById: {}, seed: 1 })).toHaveLength(1);
+  });
+
   it('все сцены маршрута собираются и у ученика есть выбор', () => {
     const route = content.course.units[0].lessons;
     expect(route).toHaveLength(10);
