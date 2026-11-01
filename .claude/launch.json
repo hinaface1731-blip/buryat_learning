@@ -9,9 +9,10 @@
     },
     {
       "name": "web-dist",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["expo", "serve", "--port", "8090"],
-      "port": 8090
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve-pages.js"],
+      "port": 8081,
+      "url": "http://localhost:8081"
     }
   ]
 }

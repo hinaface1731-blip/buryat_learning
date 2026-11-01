@@ -46,11 +46,21 @@ npm run web
 npm run build:web
 ```
 
-Локальная проверка собранного сайта (http://localhost:8081):
+Локальная проверка собранного сайта так, как его отдаёт GitHub Pages (http://localhost:8081/buryat_learning/):
 
 ```bash
 npm run serve:web
 ```
+
+### Публикация на GitHub Pages
+
+Сайт: https://hinaface1731-blip.github.io/buryat_learning/. Он лежит в подпапке, поэтому `/buryat_learning` записан в `experiments.baseUrl` (`app.json`), в `src/app/+html.tsx` и в `public/manifest.json`. При смене имени репозитория поменяйте во всех трёх местах и в `scripts/serve-pages.js`.
+
+```bash
+npm run deploy
+```
+
+Команда собирает сайт и отправляет `dist/` в ветку `gh-pages`. В репозитории один раз нужно включить: **Settings → Pages → Deploy from a branch → `gh-pages` / `(root)`**.
 
 Отличия от приложения:
 - на широком экране — центральная колонка шириной до 640 px;
@@ -59,7 +69,18 @@ npm run serve:web
 - без вибрации;
 - можно установить как приложение (PWA): `public/manifest.json`, иконки `public/icon-*.png`.
 
-> Перед публичной публикацией: лицензия учебника не подтверждена (см. `content/SOURCES.md`), а слова из него попадают в собранный сайт.
+> Лицензия учебника не подтверждена (см. `content/SOURCES.md`), а слова из него есть в публичном репозитории и на сайте.
+
+## Талисман
+
+Нерпа из `assets/mascot/`, компонент `src/ui/Mascot.tsx`:
+
+| Настроение | Файл | Где показывается |
+|---|---|---|
+| Объясняет | `explain.webp` | онбординг, карточка «Что нужно знать» |
+| Радуется | `happy.webp` | верный ответ, итог урока |
+| Задумался | `think.webp` | минимальные пары, ряды гласных, «почти верно» |
+| Поддерживает | `support.webp` | ошибка, итог с точностью ниже 50%, закончились сердечки |
 
 ## Курс (MVP)
 

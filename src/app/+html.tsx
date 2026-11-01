@@ -18,8 +18,9 @@ export default function Root({ children }: { children: React.ReactNode }) {
         <meta name="theme-color" content="#0E181E" media="(prefers-color-scheme: dark)" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="Бурятский" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/icon-192.png" />
+        {/* Сайт лежит в подпапке GitHub Pages: тот же путь, что experiments.baseUrl в app.json. */}
+        <link rel="manifest" href="/buryat_learning/manifest.json" />
+        <link rel="apple-touch-icon" href="/buryat_learning/icon-192.png" />
         <ScrollViewStyleReset />
         <style dangerouslySetInnerHTML={{ __html: BACKGROUND }} />
         {headNodes}

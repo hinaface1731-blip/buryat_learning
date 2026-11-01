@@ -11,7 +11,8 @@ import { dateKey } from '@/lib/dates';
 import { useAppStore } from '@/store/app-store';
 import { useLastResult } from '@/store/last-result';
 import { heartsToday } from '@/store/logic';
-import { Button, ProgressBar, T } from '@/ui/components';
+import { Button, ProgressBar, Row, T } from '@/ui/components';
+import { Mascot, type MascotMood } from '@/ui/Mascot';
 import { fonts, space, useTheme } from '@/ui/theme';
 import { useWebKeys } from '@/ui/useWebKeys';
 
@@ -35,6 +36,8 @@ const FEEDBACK_TEXT: Record<Feedback['result'], string> = {
   almost: 'Почти верно — обратите внимание на ү, ө, һ',
   wrong: 'Неверно',
 };
+
+const FEEDBACK_MOOD: Record<Feedback['result'], MascotMood> = { correct: 'happy', almost: 'think', wrong: 'support' };
 
 export function SessionRunner({ queue, kind, lessonId, title }: Props) {
   const { c } = useTheme();
@@ -108,12 +111,15 @@ export function SessionRunner({ queue, kind, lessonId, title }: Props) {
         </ScrollView>
         <View style={[styles.footer, { borderColor: c.border, backgroundColor: pending ? { correct: c.successBg, almost: c.warningBg, wrong: c.errorBg }[pending.feedback.result] : c.bg }]}>
           {pending && (
-            <View style={{ gap: space.xs }}>
-              <T v="heading" color={{ correct: c.success, almost: c.warning, wrong: c.error }[pending.feedback.result]}>
-                {FEEDBACK_TEXT[pending.feedback.result]}
-              </T>
-              {pending.feedback.result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
-            </View>
+            <Row gap={space.md} style={{ alignItems: 'center' }}>
+              <Mascot mood={FEEDBACK_MOOD[pending.feedback.result]} size={64} />
+              <View style={{ flex: 1, gap: space.xs }}>
+                <T v="heading" color={{ correct: c.success, almost: c.warning, wrong: c.error }[pending.feedback.result]}>
+                  {FEEDBACK_TEXT[pending.feedback.result]}
+                </T>
+                {pending.feedback.result !== 'correct' && pending.feedback.correctAnswer && <T>Правильно: {pending.feedback.correctAnswer}</T>}
+              </View>
+            </Row>
           )}
           {canContinue && <Button title="Дальше" onPress={next} />}
           {Platform.OS === 'web' && (

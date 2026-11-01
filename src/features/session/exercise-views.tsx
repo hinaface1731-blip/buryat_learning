@@ -7,6 +7,7 @@ import { checkBuryat, checkRussian, normalizeAnswer } from '@/engine/check';
 import type { Exercise, Outcome } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
+import { Mascot } from '@/ui/Mascot';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
 import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
 
@@ -36,9 +37,12 @@ function sourceLine(s: { book: string; page?: number; section?: string }): strin
 export function NoteView({ ex }: { ex: Extract<Exercise, { type: 'note' }> }) {
   return (
     <Card>
-      <T v="caption" muted>
-        Что нужно знать
-      </T>
+      <Row gap={space.md}>
+        <Mascot mood="explain" size={64} />
+        <T v="caption" muted>
+          Что нужно знать
+        </T>
+      </Row>
       <T v="heading">{ex.note.title}</T>
       <T>{ex.note.body}</T>
       {ex.note.source && (
@@ -224,7 +228,12 @@ export function MinimalPairView({ ex, answered, onResult }: ViewProps<'minimal_p
   useOptionKeys(ex.options, pick, answered);
   return (
     <View style={{ gap: space.lg }}>
-      <T muted>Выберите слово со значением</T>
+      <Row gap={space.md}>
+        {!answered && <Mascot mood="think" size={64} />}
+        <T muted style={{ flex: 1 }}>
+          Слова почти одинаковые. Выберите слово со значением
+        </T>
+      </Row>
       <T v="heading">«{ex.prompt}»</T>
       <UnverifiedBadge verified={ex.pair.verified && ex.target.verified && ex.other.verified} />
       <Row gap={space.md}>
@@ -274,7 +283,12 @@ export function CategorizeView({ ex, answered, onResult }: ViewProps<'categorize
   };
   return (
     <View style={{ gap: space.md }}>
-      <T muted>К какому ряду относятся гласные слова?</T>
+      <Row gap={space.md}>
+        {!answered && <Mascot mood="think" size={64} />}
+        <T muted style={{ flex: 1 }}>
+          К какому ряду относятся гласные слова?
+        </T>
+      </Row>
       <UnverifiedBadge verified={false} label="ряды подсказаны автоматически по таблице учебника, не проверено" />
       {ex.items.map(({ item, row }) => (
         <View key={item.id} style={[styles.catRow, { borderColor: c.border, backgroundColor: c.surface }]}>

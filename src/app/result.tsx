@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import { getCourse } from '@/content/course';
 import { useLastResult } from '@/store/last-result';
 import { Button, Card, Row, Screen, T } from '@/ui/components';
+import { Mascot } from '@/ui/Mascot';
 import { space, useTheme } from '@/ui/theme';
 
 export default function ResultScreen() {
@@ -28,7 +29,8 @@ export default function ResultScreen() {
 
   return (
     <Screen scroll edges={['top', 'bottom']}>
-      <View style={{ gap: space.xs, marginTop: space.xl }}>
+      <View style={{ gap: space.xs, marginTop: space.lg }}>
+        <Mascot mood={result.outOfHearts || result.accuracy < 0.5 ? 'support' : 'happy'} size={132} />
         <T v="title">{result.outOfHearts ? 'Сердечки закончились' : result.kind === 'lesson' ? 'Урок пройден' : 'Повторение завершено'}</T>
         <T muted>{result.title}</T>
       </View>

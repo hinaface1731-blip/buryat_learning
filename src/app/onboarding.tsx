@@ -6,6 +6,7 @@ import { useAppStore } from '@/store/app-store';
 import { DAILY_GOALS, type DailyGoal } from '@/store/logic';
 import { Button, OptionButton, Screen, T } from '@/ui/components';
 import { GOAL_LABELS } from '@/ui/labels';
+import { Mascot } from '@/ui/Mascot';
 import { space } from '@/ui/theme';
 
 export default function Onboarding() {
@@ -21,7 +22,8 @@ export default function Onboarding() {
 
   return (
     <Screen scroll>
-      <View style={{ gap: space.sm, marginTop: space.xl }}>
+      <View style={{ gap: space.sm, marginTop: space.lg }}>
+        <Mascot mood="explain" size={132} />
         <T v="title">Бурятский язык</T>
         <T muted>
           Курс для взрослых, которые начинают с нуля. Литературный бурятский (на основе хоринского диалекта). Короткие уроки, повторение по интервалам, без спешки.
