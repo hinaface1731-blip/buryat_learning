@@ -40,7 +40,6 @@
     "@types/react": "~19.3.0",
     "eslint": "^9.39.5",
     "eslint-config-expo": "^58.0.4",
-    "gh-pages": "^6.3.0",
     "jest": "^30.5.2",
     "jest-expo": "~58.0.13",
     "pdfjs-dist": "^6.4.299",
@@ -64,7 +63,7 @@
     "build:web": "expo export -p web",
     "serve:web": "node scripts/serve-pages.js",
     "predeploy": "npm run build:web && node -e \"require('fs').copyFileSync('dist/+not-found.html','dist/404.html')\"",
-    "deploy": "gh-pages --nojekyll -d dist"
+    "deploy": "node scripts/deploy-pages.js"
   },
   "private": true,
   "jest": {
