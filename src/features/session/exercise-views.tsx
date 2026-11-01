@@ -8,6 +8,7 @@ import { EXPLAIN_MATCH, EXPLAIN_ORDER, EXPLAIN_ROWS, explainPair, explainTyped }
 import type { Exercise, Outcome } from '@/engine/types';
 import { BuryatKeysBar, insertAt } from '@/ui/BuryatKeysBar';
 import { Button, Card, OptionButton, Row, T, UnverifiedBadge, type OptionState } from '@/ui/components';
+import { CharacterFace, CharacterFigure } from '@/ui/Character';
 import { Mascot } from '@/ui/Mascot';
 import { fonts, radius, space, useTheme } from '@/ui/theme';
 import { optionIndex, useWebKeys } from '@/ui/useWebKeys';
@@ -400,12 +401,19 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
     <View style={{ gap: space.md }}>
       <T v="heading">{ex.title}</T>
       <T muted>{ex.scene}</T>
+      {/* В начале сцены герои в полный рост, дальше место нужно репликам. */}
+      {shown.length <= 1 && (
+        <Row style={{ justifyContent: 'center' }} gap={space.xl}>
+          <CharacterFigure id="seseg" />
+          <CharacterFigure id="bair" />
+        </Row>
+      )}
       <View style={{ gap: space.sm }}>
         {shown.map((line, i) => {
           const partner = line.role === 'partner';
           return (
             <View key={i} style={[styles.bubbleRow, { justifyContent: partner ? 'flex-start' : 'flex-end' }]}>
-              {partner && <Mascot mood="explain" size={40} />}
+              {partner && <CharacterFace id="seseg" />}
               <View style={[styles.bubble, { backgroundColor: partner ? c.surface : c.surfaceAlt, borderColor: c.border }]}>
                 <T v="label" style={{ fontSize: 18, lineHeight: 24 }}>
                   {line.item.buryat}
@@ -414,6 +422,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
                   {line.item.russian}
                 </T>
               </View>
+              {!partner && <CharacterFace id="bair" />}
             </View>
           );
         })}
@@ -433,7 +442,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
 
 const styles = StyleSheet.create({
   bubbleRow: { flexDirection: 'row', alignItems: 'flex-end', gap: space.sm },
-  bubble: { maxWidth: '82%', borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, paddingVertical: space.sm, paddingHorizontal: space.md, gap: 2 },
+  bubble: { flexShrink: 1, maxWidth: '78%', borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.lg, paddingVertical: space.sm, paddingHorizontal: space.md, gap: 2 },
   input: { borderWidth: 1.5, borderRadius: radius.md, paddingHorizontal: space.lg, paddingVertical: 14, fontSize: 22, fontFamily: fonts.semibold },
   catRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.md, padding: space.md },
   chip: { paddingHorizontal: space.sm, paddingVertical: 8, borderRadius: radius.sm },
