@@ -1,13 +1,13 @@
 import type { Content } from '@/content/load';
 import type { Dialogue } from '@/content/schema';
 
-import { buildPhrase, buildSentence, categorize, dialogueScene, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, pictureChoice, typeAnswer } from './exercises';
+import { buildPhrase, buildSentence, categorize, dialogueScene, listenAndChoose, matchPairs, minimalPairChoose, multipleChoice, pictureChoice, spellWord, typeAnswer } from './exercises';
 import type { Pools } from './pool';
 import { createRng, sample, seedFrom, shuffle, type Rng } from './rng';
 import type { Exercise, SceneOpening } from './types';
 
 // Короткое занятие на 2–4 минуты: каждая новая единица сразу закрепляется вопросом,
-// затем чередуются сопоставление, пары, ввод и контроль. Заданий — не больше MAX_TASKS.
+// затем чередуются сопоставление, пары, сборка слова и контроль. Заданий — не больше MAX_TASKS.
 
 export const MAX_TASKS = 12;
 
@@ -33,8 +33,10 @@ export function buildLesson(lessonId: string, content: Content, pools: Pools, op
   const rest = [
     ...sample(items, items.length, rng).map((it) => pictureChoice(it, pool, rng, 'training')).filter(notNull).slice(0, 3),
     ...sample(pairs, 2, rng).map((p) => minimalPairChoose(p, content.wordById, rng, 'training')),
-    // Реплику собирают из слов; вводить целиком — только короткие.
-    ...sample(items, 2, rng).map((it) => (dialogue ? (buildPhrase(it, rng, 'application') ?? typeAnswer(it, 'application')) : typeAnswer(it, 'application'))),
+    // В уроке ничего не печатают с нуля: реплику собирают из слов, слово — из букв. Ввод — только в повторении.
+    ...sample(items, 2, rng).map((it) =>
+      dialogue ? (buildPhrase(it, rng, 'application') ?? spellWord(it, pool, rng, 'application')) : (spellWord(it, pool, rng, 'application') ?? buildPhrase(it, rng, 'application')),
+    ),
     ...sample(items, 1, rng).map((it) => listenAndChoose(it, opts.hasAudio, pool, rng, 'control')),
     lesson.categorize ? categorize(pools.unitItemsByLesson.get(lessonId) ?? items, content.vowelRows, rng, 'control') : null,
     ...sample(sentences, 1, rng).map((s) => buildSentence(s, rng, 'control')),

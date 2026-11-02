@@ -83,6 +83,30 @@ export function typeAnswer(item: StudyItem, stage: Stage): Exercise | null {
   return { key: `type-${item.id}`, stage, type: 'type_answer', item, prompt: item.russian, answers: [item.buryat] };
 }
 
+// Пары, которые новичок путает: лишняя буква-двойник учит различать ү/у, ө/о, һ/х.
+const TWINS: Record<string, string> = { ү: 'у', у: 'ү', ө: 'о', о: 'ө', һ: 'х', х: 'һ' };
+const MAX_SPELL_LETTERS = 12;
+const SPELL_DECOYS = 3;
+
+/** Слово из букв: буквы слова вперемешку плюс несколько лишних. Только для слов в одно слово. */
+export function spellWord(item: StudyItem, pools: StudyItem[][], rng: Rng, stage: Stage): Exercise | null {
+  if (item.kind !== 'word') return null;
+  const tokens = sentenceTokens(item.buryat);
+  if (tokens.length !== 1) return null;
+  const answer = Array.from(tokens[0].toLowerCase()).filter((ch) => /\p{L}/u.test(ch));
+  if (answer.length < 2 || answer.length > MAX_SPELL_LETTERS) return null;
+  const inWord = new Set(answer);
+  const decoys: string[] = [];
+  const add = (ch: string) => {
+    if (decoys.length < SPELL_DECOYS && !inWord.has(ch) && !decoys.includes(ch) && /\p{L}/u.test(ch)) decoys.push(ch);
+  };
+  for (const ch of shuffle([...inWord], rng)) if (TWINS[ch] && decoys.length < 2) add(TWINS[ch]);
+  for (const pool of pools) for (const other of shuffle(pool, rng)) for (const ch of Array.from(other.buryat.toLowerCase())) add(ch);
+  let tiles = shuffle([...answer, ...decoys], rng);
+  if (tiles.slice(0, answer.length).join('') === answer.join('')) tiles = [...tiles].reverse();
+  return { key: `spell-${item.id}`, stage, type: 'spell_word', item, prompt: item.russian, tiles, answer: item.buryat };
+}
+
 export function minimalPairChoose(pair: MinimalPair, words: Map<string, Word>, rng: Rng, stage: Stage): Exercise | null {
   if (!pair.usable || !pair.a || !pair.b) return null;
   const a = words.get(pair.a);

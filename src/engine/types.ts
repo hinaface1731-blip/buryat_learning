@@ -24,6 +24,7 @@ export type Exercise = Base &
     | { type: 'picture_choice'; item: StudyItem; image: string; options: string[]; answer: string }
     | { type: 'match_pairs'; items: StudyItem[]; left: string[]; right: string[] }
     | { type: 'type_answer'; item: StudyItem; prompt: string; answers: string[] }
+    | { type: 'spell_word'; item: StudyItem; prompt: string; /** Буквы слова и лишние, вперемешку, в нижнем регистре. */ tiles: string[]; answer: string }
     | {
         type: 'minimal_pair_choose';
         pair: MinimalPair;

@@ -2,8 +2,10 @@ import { buildContent, rawContent, type Content } from '@/content/load';
 import { ART } from '@/ui/art';
 
 import { normalizeAnswer } from '../check';
+import { spellWord } from '../exercises';
 import { buildLesson, buildReview, MAX_TASKS } from '../lesson';
 import { buildPools } from '../pool';
+import { createRng } from '../rng';
 import { advance, currentExercise, isFinished, startSession } from '../session';
 import type { Exercise } from '../types';
 import { vowelRowOf } from '../vowels';
@@ -49,6 +51,30 @@ describe('buildLesson на реальном курсе', () => {
     const ex = buildLesson(first.id, content, pools, { hasAudio: noAudio, seed: 6 });
     expect(ex[ex.length - 1].type).toBe('dialogue');
     expect(ex.some((e) => e.type === 'build_sentence')).toBe(true);
+  });
+
+  it('в уроках не печатают с нуля: однословную реплику собирают из букв', () => {
+    for (const l of allLessons) {
+      for (const seed of [1, 2, 3]) expect(typesOf(buildLesson(l.id, content, pools, { hasAudio: noAudio, seed })).has('type_answer')).toBe(false);
+    }
+    const thanks = [...pools.itemById.values()].find((it) => normalizeAnswer(it.buryat) === 'баярлаа');
+    if (!thanks) throw new Error('нет «Баярлаа»');
+    const ex = spellWord(thanks, [pools.courseItems], createRng(5), 'application');
+    if (ex?.type !== 'spell_word') throw new Error('нет сборки слова');
+    const letters = Array.from('баярлаа');
+    // Все буквы слова на месте, плюс лишние, которых в слове нет.
+    const rest = [...ex.tiles];
+    for (const ch of letters) rest.splice(rest.indexOf(ch), 1);
+    expect(rest.length).toBeGreaterThan(0);
+    expect(rest.every((ch) => !letters.includes(ch))).toBe(true);
+  });
+
+  it('лишняя буква — двойник особой: для «у» предлагается «ү»', () => {
+    const word = [...pools.itemById.values()].find((it) => it.kind === 'word' && /^[а-я]+$/.test(it.buryat) && it.buryat.includes('у') && !it.buryat.includes('ү'));
+    if (!word) throw new Error('нет слова с «у»');
+    const ex = spellWord(word, [pools.courseItems], createRng(1), 'application');
+    if (ex?.type !== 'spell_word') throw new Error('нет сборки слова');
+    expect(ex.tiles).toContain('ү');
   });
 
   it('разговор начинается с героя и сцены: первая реплика открывается иллюстрацией', () => {
@@ -140,7 +166,8 @@ describe('buildLesson на реальном курсе', () => {
 
   it('без перевода предложений нет build_sentence; с переводом — есть', () => {
     const book = allLessons.filter((l) => !l.dialogueId).flatMap((l) => buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 2 }));
-    expect(typesOf(book).has('build_sentence')).toBe(false);
+    // Сборку реплики из слов урок даёт и без перевода предложений; здесь важны только предложения.
+    expect(book.some((e) => e.key.startsWith('sent-'))).toBe(false);
 
     const lesson = allLessons.find((l) => l.sentenceIds.length > 0)!;
     const sid = lesson.sentenceIds[0];

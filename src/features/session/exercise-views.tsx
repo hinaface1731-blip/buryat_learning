@@ -308,6 +308,49 @@ export function TypeAnswerView({ ex, answered, onResult, courseForms }: ViewProp
   );
 }
 
+export function SpellWordView({ ex, answered, onResult, courseForms }: ViewProps<'spell_word'>) {
+  const { c } = useTheme();
+  const [chosen, setChosen] = useState<number[]>([]);
+  const built = chosen.map((i) => ex.tiles[i]).join('');
+  const submit = () => {
+    if (answered || !chosen.length) return;
+    const result = checkBuryat(built, [ex.answer], { courseForms });
+    onResult(one(ex.item.id, result), { result, correctAnswer: ex.answer, detail: explainTyped(built, ex.answer, courseForms) });
+  };
+  // Веб: буква с клавиатуры берёт свободную плитку, Backspace убирает последнюю, Enter проверяет.
+  useWebKeys((key) => {
+    if (key === 'Enter') return submit();
+    if (key === 'Backspace') return setChosen(chosen.slice(0, -1));
+    const i = ex.tiles.findIndex((t, j) => t === key.toLowerCase() && !chosen.includes(j));
+    if (i >= 0) setChosen([...chosen, i]);
+  }, !answered);
+  return (
+    <View style={{ gap: space.lg }}>
+      <T muted>Соберите слово из букв</T>
+      <T v="heading">{ex.prompt}</T>
+      <UnverifiedBadge verified={ex.item.verified} />
+      <View style={[styles.wrap, styles.spellSlot, { borderColor: c.border }]} accessibilityLabel={built ? `Собрано: ${built}` : 'Пока пусто'}>
+        {chosen.map((i) => (
+          <View key={`c${i}`} style={styles.tile}>
+            <OptionButton label={ex.tiles[i]} buryat state="selected" disabled={answered} onPress={() => setChosen(chosen.filter((x) => x !== i))} />
+          </View>
+        ))}
+      </View>
+      <View style={[styles.wrap, { justifyContent: 'center' }]}>
+        {ex.tiles.map((t, i) => (
+          <View key={`t${i}`} style={[styles.tile, chosen.includes(i) && { opacity: 0 }]} accessibilityElementsHidden={chosen.includes(i)} importantForAccessibility={chosen.includes(i) ? 'no-hide-descendants' : 'auto'}>
+            <OptionButton label={t} buryat disabled={answered || chosen.includes(i)} onPress={() => setChosen([...chosen, i])} />
+          </View>
+        ))}
+      </View>
+      <T v="caption" muted>
+        Буквы можно убрать нажатием. Есть лишние.
+      </T>
+      {!answered && <Button title="Проверить" onPress={submit} disabled={!chosen.length} />}
+    </View>
+  );
+}
+
 export function MinimalPairView({ ex, answered, onResult }: ViewProps<'minimal_pair_choose'>) {
   const [picked, setPicked] = useState<string | null>(null);
   const pick = (o: string) => {
@@ -539,4 +582,6 @@ const styles = StyleSheet.create({
   catRow: { flexDirection: 'row', alignItems: 'center', gap: space.sm, borderWidth: StyleSheet.hairlineWidth, borderRadius: radius.md, padding: space.md },
   chip: { paddingHorizontal: space.sm, paddingVertical: 8, borderRadius: radius.sm },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: space.sm, minHeight: 54 },
+  spellSlot: { borderBottomWidth: 1.5, paddingBottom: space.sm, minHeight: 64 },
+  tile: { minWidth: 48 },
 });

@@ -32,6 +32,7 @@ import {
   MultipleChoiceView,
   NoteView,
   PictureChoiceView,
+  SpellWordView,
   TypeAnswerView,
   type Feedback,
 } from './exercise-views';
@@ -170,7 +171,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
           {canContinue && <Button title="Дальше" onPress={next} />}
           {Platform.OS === 'web' && (
             <T v="caption" muted style={{ textAlign: 'center' }}>
-              {canContinue ? 'Enter — дальше' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти, прогресс сохранится
+              {canContinue ? 'Enter — дальше' : ex.type === 'spell_word' ? 'Буквы — с клавиатуры, Enter — проверить' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти, прогресс сохранится
             </T>
           )}
         </View>
@@ -193,6 +194,8 @@ function ExerciseView({ ex, ...p }: { ex: Exercise; answered: boolean; onResult:
       return <MatchPairsView ex={ex} {...p} />;
     case 'type_answer':
       return <TypeAnswerView ex={ex} {...p} />;
+    case 'spell_word':
+      return <SpellWordView ex={ex} {...p} />;
     case 'minimal_pair_choose':
       return <MinimalPairView ex={ex} {...p} />;
     case 'listen_and_choose':
