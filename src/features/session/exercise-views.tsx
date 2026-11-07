@@ -3,6 +3,7 @@ import { useMemo, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import { AudioButton } from '@/audio/AudioButton';
+import { playSfx } from '@/audio/sfx';
 import type { VowelRowId } from '@/content/schema';
 import { checkBuryat, checkRussian, normalizeAnswer } from '@/engine/check';
 import { EXPLAIN_MATCH, EXPLAIN_ORDER, EXPLAIN_ROWS, explainPair, explainTyped } from '@/engine/feedback';
@@ -227,6 +228,7 @@ export function MatchPairsView({ ex, answered, onResult }: ViewProps<'match_pair
       const next = [...matched, item.id];
       setMatched(next);
       setLeft(null);
+      if (next.length < ex.items.length) playSfx('match');
       if (next.length === ex.items.length) {
         const perItem = Object.fromEntries(ex.items.map((i) => [i.id, wrongItems.current.has(i.id) ? ('wrong' as const) : ('correct' as const)]));
         const result = wrongItems.current.size ? 'almost' : 'correct';
@@ -234,6 +236,7 @@ export function MatchPairsView({ ex, answered, onResult }: ViewProps<'match_pair
       }
     } else {
       wrongItems.current.add(item.id);
+      playSfx('wrong');
       setFlash(russian);
       setTimeout(() => setFlash(null), 450);
     }
@@ -311,6 +314,10 @@ export function TypeAnswerView({ ex, answered, onResult, courseForms }: ViewProp
 export function SpellWordView({ ex, answered, onResult, courseForms }: ViewProps<'spell_word'>) {
   const { c } = useTheme();
   const [chosen, setChosen] = useState<number[]>([]);
+  const pickTile = (i: number) => {
+    playSfx('tap');
+    setChosen([...chosen, i]);
+  };
   const built = chosen.map((i) => ex.tiles[i]).join('');
   const submit = () => {
     if (answered || !chosen.length) return;
@@ -322,7 +329,7 @@ export function SpellWordView({ ex, answered, onResult, courseForms }: ViewProps
     if (key === 'Enter') return submit();
     if (key === 'Backspace') return setChosen(chosen.slice(0, -1));
     const i = ex.tiles.findIndex((t, j) => t === key.toLowerCase() && !chosen.includes(j));
-    if (i >= 0) setChosen([...chosen, i]);
+    if (i >= 0) pickTile(i);
   }, !answered);
   return (
     <View style={{ gap: space.lg }}>
@@ -339,7 +346,7 @@ export function SpellWordView({ ex, answered, onResult, courseForms }: ViewProps
       <View style={[styles.wrap, { justifyContent: 'center' }]}>
         {ex.tiles.map((t, i) => (
           <View key={`t${i}`} style={[styles.tile, chosen.includes(i) && { opacity: 0 }]} accessibilityElementsHidden={chosen.includes(i)} importantForAccessibility={chosen.includes(i) ? 'no-hide-descendants' : 'auto'}>
-            <OptionButton label={t} buryat disabled={answered || chosen.includes(i)} onPress={() => setChosen([...chosen, i])} />
+            <OptionButton label={t} buryat disabled={answered || chosen.includes(i)} onPress={() => pickTile(i)} />
           </View>
         ))}
       </View>
@@ -455,6 +462,10 @@ export function CategorizeView({ ex, answered, onResult }: ViewProps<'categorize
 
 export function BuildSentenceView({ ex, answered, onResult }: ViewProps<'build_sentence'>) {
   const [chosen, setChosen] = useState<number[]>([]);
+  const pickTile = (i: number) => {
+    playSfx('tap');
+    setChosen([...chosen, i]);
+  };
   const submit = () => {
     const built = chosen.map((i) => ex.tokens[i]).join(' ');
     const result = normalizeAnswer(built) === normalizeAnswer(ex.answer.join(' ')) ? 'correct' : 'wrong';
@@ -472,7 +483,7 @@ export function BuildSentenceView({ ex, answered, onResult }: ViewProps<'build_s
       </View>
       <View style={styles.wrap}>
         {ex.tokens.map((t, i) =>
-          chosen.includes(i) ? null : <OptionButton key={`t${i}`} label={t} buryat disabled={answered} onPress={() => setChosen([...chosen, i])} />,
+          chosen.includes(i) ? null : <OptionButton key={`t${i}`} label={t} buryat disabled={answered} onPress={() => pickTile(i)} />,
         )}
       </View>
       {!answered && <Button title="Проверить" onPress={submit} disabled={chosen.length !== ex.tokens.length} />}
@@ -505,6 +516,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
     if (!current || answered) return;
     if (o !== current.item.buryat) {
       wrong.current.add(current.item.id);
+      playSfx('wrong');
       setLastWrong(o);
       return; // ученик находит верную реплику сам: разговор идёт дальше только с ней
     }
@@ -512,6 +524,7 @@ export function DialogueView({ ex, answered, onResult }: ViewProps<'dialogue'>) 
     const next = nextTurn(turn + 1);
     setTurn(next);
     if (next >= ex.lines.length) finish();
+    else playSfx('match');
   };
   useOptionKeys(current?.options ?? [], pick, answered || finished);
 

@@ -151,6 +151,7 @@ export default function ProfileScreen() {
       </View>
 
       <Card>
+        <SettingSwitch label="Звуки" hint="Верный и неверный ответ, конец урока, награды." value={settings.sound} onChange={(v) => update({ sound: v })} />
         <SettingSwitch label="Сердечки" hint="5 в день; ошибка в уроке отнимает одно. Повторение без ограничений." value={settings.heartsEnabled} onChange={(v) => update({ heartsEnabled: v })} />
         <SettingSwitch
           label="Показывать непроверенное"

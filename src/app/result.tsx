@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Platform, View } from 'react-native';
 import * as Haptics from 'expo-haptics';
 
+import { playSfx } from '@/audio/sfx';
 import { getCourse } from '@/content/course';
 import type { LastResult } from '@/store/last-result';
 import { useLastResult } from '@/store/last-result';
@@ -30,9 +31,11 @@ export default function ResultScreen() {
   const { pools, content } = getCourse();
   const rewarded = !!result?.chapter || !!result?.achievements.length;
 
+  const finished = !!result && !result.outOfHearts;
   useEffect(() => {
+    if (finished) playSfx(rewarded ? 'reward' : 'lessonDone');
     if (rewarded && Platform.OS !== 'web') Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
-  }, [rewarded]);
+  }, [finished, rewarded]);
 
   if (!result) {
     return (

@@ -1,4 +1,6 @@
 import * as Haptics from 'expo-haptics';
+
+import { playSfx } from '@/audio/sfx';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -119,6 +121,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
     const nextCombo = outcome.result === 'correct' ? combo + 1 : 0;
     setCombo(nextCombo);
     setPending({ outcome, feedback, combo: nextCombo, retry: !!ex?.key.endsWith('~retry') });
+    playSfx(feedback.result);
     if (Platform.OS === 'web') return; // в браузере вибрации нет
     const type = { correct: Haptics.NotificationFeedbackType.Success, almost: Haptics.NotificationFeedbackType.Warning, wrong: Haptics.NotificationFeedbackType.Error }[feedback.result];
     Haptics.notificationAsync(type).catch(() => {});

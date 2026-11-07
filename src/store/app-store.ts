@@ -30,6 +30,8 @@ export type Settings = {
   name: string;
   /** Ключ аватара из src/ui/Avatar.tsx. */
   avatar: string;
+  /** Звуки интерфейса: ответ, конец урока, награда. */
+  sound: boolean;
 };
 
 const initialSettings: Settings = {
@@ -40,6 +42,7 @@ const initialSettings: Settings = {
   heartsEnabled: false,
   theme: 'system',
   showUnverified: false,
+  sound: true,
 };
 
 type AppState = {
@@ -68,7 +71,7 @@ export const useAppStore = create<AppState>()(
     }),
     {
       name: STORE_KEY,
-      version: 3,
+      version: 4,
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (s) => ({ settings: s.settings, progress: s.progress }),
       // Будущие версии схемы стора мигрируются здесь; неизвестное — к значениям по умолчанию.
