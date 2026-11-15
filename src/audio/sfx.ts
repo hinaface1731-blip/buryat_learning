@@ -2,7 +2,7 @@ import { createAudioPlayer, type AudioPlayer } from 'expo-audio';
 
 import { useAppStore } from '@/store/app-store';
 
-// Звуки интерфейса из UI SFX (https://github.com/romainsimon/uisfx), набор arcade, аудио CC0.
+// Звуки интерфейса из UI SFX (https://github.com/romainsimon/uisfx), набор soft, аудио CC0.
 // Плееры создаются при первом звуке и живут всё время работы приложения: их всего семь.
 
 const SOURCES = {
@@ -18,7 +18,7 @@ const SOURCES = {
 export type Sfx = keyof typeof SOURCES;
 
 // Нажатия тише исходов: они звучат часто.
-const VOLUME: Record<Sfx, number> = { correct: 0.8, almost: 0.6, wrong: 0.6, tap: 0.35, match: 0.5, lessonDone: 0.9, reward: 0.9 };
+const VOLUME: Record<Sfx, number> = { correct: 0.6, almost: 0.45, wrong: 0.4, tap: 0.25, match: 0.4, lessonDone: 0.7, reward: 0.7 };
 
 const players: Partial<Record<Sfx, AudioPlayer>> = {};
 

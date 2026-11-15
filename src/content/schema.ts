@@ -4,7 +4,7 @@ import { z } from 'zod';
 // (content/SOURCES.md) или от носителя через CSV; всё хранится с verified:false
 // до подтверждения.
 
-export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual', 'zugaa', 'translator', 'temslov']);
+export const BookId = z.enum(['bxr-textbook', 'buryat-grammar-1962', 'native-speaker', 'manual', 'zugaa', 'translator', 'temslov', 'burfm-audio', 'kids-audio']);
 export type BookId = z.infer<typeof BookId>;
 
 const SourceRef = z.object({
@@ -176,3 +176,21 @@ export const Sentences = z.array(Sentence);
 export const MinimalPairs = z.array(MinimalPair);
 export const Letters = z.array(Letter);
 export const Notes = z.array(Note);
+
+/** Реплика разговорного сценария; wordId — если совпала со словом курса (запись, повторение). */
+export const ConversationLine = z.object({ buryat: z.string().min(1), russian: z.string().min(1), wordId: z.string().optional() });
+export type ConversationLine = z.infer<typeof ConversationLine>;
+
+export const ConversationOption = ConversationLine.extend({ verdict: z.enum(['correct', 'almost', 'wrong']), explain: z.string().optional() });
+export type ConversationOption = z.infer<typeof ConversationOption>;
+
+/** Разговор с Сэсэг: она говорит, ученик выбирает ответ, ошибку объясняют, в конце — оценка. */
+export const Conversation = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  title: z.string(),
+  scene: z.string(),
+  art: z.string().optional(),
+  steps: z.array(z.object({ say: ConversationLine, options: z.array(ConversationOption).min(2), reply: ConversationLine.optional() })).min(1),
+});
+export type Conversation = z.infer<typeof Conversation>;
+export const Conversations = z.array(Conversation);

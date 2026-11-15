@@ -8,6 +8,7 @@ import fs from 'node:fs';
 import { contentPath, readLetters, readPairs, readSentences, readWords, writeJson } from './lib/content-io';
 import { buildCourse } from './lib/course-builder';
 import { parseCsv } from './lib/csv';
+import { buildConversations } from './lib/conversations';
 import { buildRoute, buildThematicScenes } from './lib/dialogue-route';
 
 function main() {
@@ -16,7 +17,9 @@ function main() {
   const route = buildRoute(rows, readWords());
   const thematicRows = parseCsv(fs.readFileSync(contentPath('templates/thematic-scenes.csv'), 'utf8'));
   const thematic = buildThematicScenes(thematicRows, route.words);
-  const errors = [...route.errors, ...thematic.errors];
+  const convRows = parseCsv(fs.readFileSync(contentPath('templates/conversations.csv'), 'utf8'));
+  const conv = buildConversations(convRows, thematic.words);
+  const errors = [...route.errors, ...thematic.errors, ...conv.errors];
   if (errors.length) {
     errors.forEach((e) => console.error(e));
     process.exit(1);
@@ -27,8 +30,10 @@ function main() {
   writeJson('dialogues.json', [...route.lessons.map((l) => l.dialogue), ...thematic.dialogues]);
   writeJson('route.json', routeMeta);
   writeJson('thematic-scenes.json', scenes);
+  writeJson('conversations.json', conv.conversations);
   writeJson('course.json', buildCourse({ words, pairs: readPairs(), sentences: readSentences(), letters: readLetters(), route: routeMeta, scenes }));
   console.log(`Уроков маршрута: ${route.lessons.length}, сцен в главах: ${thematic.dialogues.length}, новых реплик: ${route.added + thematic.added}`);
+  console.log(`Разговоров: ${conv.conversations.length}; реплик не из курса (составлены вручную, ждут сверки): ${conv.manual.length}`);
 }
 
 main();

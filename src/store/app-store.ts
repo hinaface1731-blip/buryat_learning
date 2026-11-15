@@ -8,13 +8,16 @@ import type { Grade } from '@/srs/sm2';
 
 import {
   completeLesson,
+  completeListening,
   completeReview,
   goalDaysFromXp,
   initialProgress,
+  joinEvent,
   loseHeart,
   type DailyGoal,
   type ProgressState,
 } from './logic';
+import { allQuestsDone } from './quests';
 import { useSessionStore } from './session-store';
 
 export type ThemePref = 'system' | 'light' | 'dark';
@@ -32,6 +35,10 @@ export type Settings = {
   avatar: string;
   /** Звуки интерфейса: ответ, конец урока, награда. */
   sound: boolean;
+  /** Час ежедневного напоминания (локальное уведомление) или null — выключено. */
+  reminderHour: number | null;
+  /** «Путь» картой Бурятии или списком глав. */
+  pathView: 'map' | 'list';
 };
 
 const initialSettings: Settings = {
@@ -43,6 +50,8 @@ const initialSettings: Settings = {
   theme: 'system',
   showUnverified: false,
   sound: true,
+  reminderHour: null,
+  pathView: 'map',
 };
 
 type AppState = {
@@ -52,10 +61,18 @@ type AppState = {
   finishLesson: (r: { lessonId: string; accuracy: number; xp: number; grades: Record<string, Grade> }) => void;
   finishReview: (r: { xp: number; grades: Record<string, Grade> }) => void;
   spendHeart: () => void;
+  finishListening: (lessonId: string) => void;
+  finishEvent: (season: string) => void;
   resetProgress: () => void;
 };
 
 export const STORE_KEY = 'buryat-mvp/v1';
+
+/** После каждого занятия: если все задания дня выполнены, день отмечается для достижения. */
+function withQuests(p: ProgressState, goal: number): ProgressState {
+  const today = dateKey();
+  return !p.questDays[today] && allQuestsDone(p, today, goal) ? { ...p, questDays: { ...p.questDays, [today]: true } } : p;
+}
 
 export const useAppStore = create<AppState>()(
   persist(
@@ -63,15 +80,17 @@ export const useAppStore = create<AppState>()(
       settings: initialSettings,
       progress: initialProgress(dateKey()),
       updateSettings: (patch) => set((s) => ({ settings: { ...s.settings, ...patch } })),
-      finishLesson: (r) => set((s) => ({ progress: completeLesson(s.progress, r, dateKey(), s.settings.dailyGoal) })),
-      finishReview: (r) => set((s) => ({ progress: completeReview(s.progress, r, dateKey(), s.settings.dailyGoal) })),
+      finishLesson: (r) => set((s) => ({ progress: withQuests(completeLesson(s.progress, r, dateKey(), s.settings.dailyGoal), s.settings.dailyGoal) })),
+      finishReview: (r) => set((s) => ({ progress: withQuests(completeReview(s.progress, r, dateKey(), s.settings.dailyGoal), s.settings.dailyGoal) })),
+      finishEvent: (season) => set((s) => ({ progress: joinEvent(s.progress, season, dateKey()) })),
       spendHeart: () => set((s) => ({ progress: loseHeart(s.progress, dateKey()) })),
+      finishListening: (lessonId) => set((s) => ({ progress: withQuests(completeListening(s.progress, lessonId, dateKey(), s.settings.dailyGoal), s.settings.dailyGoal) })),
       // Сброс прогресса не трогает настройки (цель, тема), кроме онбординга.
       resetProgress: () => set((s) => ({ progress: initialProgress(dateKey()), settings: { ...s.settings, onboarded: false } })),
     }),
     {
       name: STORE_KEY,
-      version: 4,
+      version: 7,
       storage: createJSONStorage(() => AsyncStorage),
       partialize: (s) => ({ settings: s.settings, progress: s.progress }),
       // Будущие версии схемы стора мигрируются здесь; неизвестное — к значениям по умолчанию.

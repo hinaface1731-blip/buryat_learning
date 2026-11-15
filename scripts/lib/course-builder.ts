@@ -1,5 +1,6 @@
 import type { Course, Lesson, Letter, MinimalPair, Sentence, Unit, Word } from '../../src/content/schema';
 
+import { AUDIO_THEMES, audioTag } from './audio-words';
 import type { ThematicScenes } from './dialogue-route';
 
 // Раскладка единиц по юнитам и урокам. Порядок — как в книге; размер урока ~8 новых слов.
@@ -76,6 +77,10 @@ const THEMATIC_INFO: Record<string, { description: string; badge?: string }> = {
   zhivotnye: { description: 'Домашние животные.', badge: 'badge-journey' },
   priroda: { description: 'Солнце, лес и озеро.', badge: 'badge-journey' },
   shkola: { description: 'Книга, тетрадь, учитель.', badge: 'badge-speech' },
+  chisla: { description: 'От одного до тысячи — на слух из радиоуроков.', badge: 'badge-numbers' },
+  tsveta: { description: 'Цвета и первые глаголы: «я читаю», «ты читаешь».', badge: 'badge-journey' },
+  odezhda: { description: 'Шапка, рубашка, пояс, обувь.', badge: 'badge-family' },
+  'chasti-tela': { description: 'Голова, руки, глаза.', badge: 'badge-family' },
 };
 
 export type RouteMeta = { n: number; title: string; skill: string; wordIds: string[]; dialogueId: string };
@@ -96,6 +101,27 @@ function routeUnit(route: RouteMeta[], words: Word[]): Unit {
       dialogueId: r.dialogueId,
     })),
   };
+}
+
+/** Темы радиоуроков, для которых есть своя тематическая глава: слова идут туда и открывают её. */
+const AUDIO_TO_THEMATIC: Record<number, string> = { 3: 'chisla', 6: 'tsveta', 7: 'chasti-tela', 8: 'odezhda' };
+
+const inThematic = (w: Word, id: string) => w.tags.includes(`unit:${id}`) || Object.entries(AUDIO_TO_THEMATIC).some(([n, t]) => t === id && w.tags.includes(audioTag(Number(n))));
+
+/** Аудиокурс: урок на тему радиоурока, слова — с записями из него. Длинная тема делится на части. */
+function audioUnit(teachable: Word[], taught: Set<string>): Unit | null {
+  const lessons: Lesson[] = [];
+  for (const [n, title] of Object.entries(AUDIO_THEMES)) {
+    // Слово, которое уже учат в другой главе, получает только запись — второй раз его не вводим.
+    const words = teachable.filter((w) => w.tags.includes(audioTag(Number(n))) && !taught.has(w.id) && !(Number(n) in AUDIO_TO_THEMATIC));
+    if (words.length < 2) continue;
+    const parts = chunk(words, WORDS_PER_LESSON);
+    parts.forEach((ws, i) =>
+      lessons.push({ ...emptyLesson(`a-fm-l${n}${parts.length > 1 ? `-${i + 1}` : ''}`, parts.length > 1 ? `${title} ${i + 1}` : title), wordIds: ws.map((w) => w.id), skill: `узнавать на слух: ${title.toLowerCase()}` }),
+    );
+  }
+  if (lessons.length === 0) return null;
+  return { id: 'a-fm', title: 'Аудиокурс «Буряад FM»', description: 'Слова из радиоуроков: слушать и узнавать живую речь.', locked: false, badge: 'badge-speech', lessons };
 }
 
 export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; sentences: Sentence[]; letters: Letter[]; route: RouteMeta[]; scenes?: ThematicScenes }): Course {
@@ -132,7 +158,7 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
 
   const thematic = THEMATIC_UNITS.map(([id, title]): Unit => {
     const info = THEMATIC_INFO[id];
-    const words = teachable.filter((w) => w.tags.includes(`unit:${id}`));
+    const words = teachable.filter((w) => inThematic(w, id));
     if (words.length === 0) {
       return { id: `t-${id}`, title, description: 'Скоро.', locked: true, lessons: [] };
     }
@@ -186,5 +212,9 @@ export function buildCourse(input: { words: Word[]; pairs: MinimalPair[]; senten
     ...thematic.filter((u) => u.locked),
   ];
 
+  // Аудиокурс — после живой лексики: в него идут только слова, которых нет в других главах.
+  const taught = new Set(units.flatMap((u) => u.lessons.flatMap((l) => l.wordIds)));
+  const audio = audioUnit(teachable, taught);
+  if (audio) units.splice(units.findIndex((u) => u.id === 'u1'), 0, audio);
   return { id: 'buryat-mvp', title: 'Бурятский язык с нуля', units };
 }

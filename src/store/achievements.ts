@@ -1,11 +1,12 @@
 import { addDays, type DateKey } from '@/lib/dates';
 
 import type { ProgressState } from './logic';
+import { weeksWon } from './quests';
 
 // Достижения выводятся из прогресса и нигде не хранятся: так их не нужно мигрировать,
 // а всё уже сделанное засчитывается сразу. Все показатели только растут — полученное не пропадает.
 
-type Stats = { lessons: number; perfect: number; bestStreak: number; xp: number; words: number };
+type Stats = { lessons: number; perfect: number; bestStreak: number; xp: number; words: number; listened: number; quests: number; weeks: number; events: number };
 type UnitLike = { id: string; title: string; badge?: string; lessons: { id: string }[] };
 
 export type Achievement = {
@@ -29,6 +30,10 @@ const STATIC: { id: string; title: string; hint: string; art: string; target: nu
   { id: 'xp-1000', title: 'Тысяча очков', hint: 'Наберите 1000 XP', art: 'badge-numbers', target: 1000, stat: 'xp' },
   { id: 'words-25', title: 'Первые слова', hint: 'Выучите 25 слов и фраз', art: 'mascot-book', target: 25, stat: 'words' },
   { id: 'words-100', title: 'Сотня слов', hint: 'Выучите 100 слов и фраз', art: 'mascot-book', target: 100, stat: 'words' },
+  { id: 'listen-5', title: 'Слушатель', hint: 'Дослушайте 5 аудиоуроков', art: 'badge-speech', target: 5, stat: 'listened' },
+  { id: 'quests-7', title: 'Задания дня', hint: 'Выполните все задания дня 7 раз', art: 'mascot-star', target: 7, stat: 'quests' },
+  { id: 'week-1', title: 'Недельное испытание', hint: 'Наберите 150 XP за неделю', art: 'badge-numbers', target: 1, stat: 'weeks' },
+  { id: 'event-1', title: 'Праздник вместе', hint: 'Поучаствуйте в сезонном событии', art: 'badge-tea', target: 1, stat: 'events' },
 ];
 
 /** Самая длинная серия за всё время: серия на сегодня может оборваться, а достижение — нет. */
@@ -56,6 +61,10 @@ export function achievementsOf(state: ProgressState, units: UnitLike[]): Achieve
     bestStreak: bestStreak(state.goalMetDays),
     xp: totalXp(state),
     words: Object.keys(state.cards).length,
+    listened: Object.keys(state.listened ?? {}).length,
+    quests: Object.keys(state.questDays ?? {}).length,
+    weeks: weeksWon(state),
+    events: Object.keys(state.events ?? {}).length,
   };
   const count = (list: UnitLike[]) => list.filter((u) => isUnitDone(u, state)).length;
   const open = units.filter((u) => u.lessons.length > 0);

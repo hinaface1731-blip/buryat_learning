@@ -34,10 +34,12 @@ import {
   MultipleChoiceView,
   NoteView,
   PictureChoiceView,
+  SpeakView,
   SpellWordView,
   TypeAnswerView,
   type Feedback,
 } from './exercise-views';
+import { ConversationView } from './ConversationView';
 
 type Props = {
   queue: Exercise[];
@@ -52,6 +54,8 @@ type Props = {
   practice?: boolean;
   /** Чему учит урок: показывается в итоге. */
   skill?: string;
+  /** Вызывается после засчитанного конца занятия (например, участие в событии). */
+  onComplete?: () => void;
 };
 
 const FEEDBACK_TEXT: Record<Feedback['result'], string> = { correct: 'Верно', almost: 'Почти верно', wrong: 'Неверно' };
@@ -61,7 +65,7 @@ const FEEDBACK_MOOD: Record<Feedback['result'], MascotMood> = { correct: 'happy'
 /** В сцене реагируют сами герои, а не талисман. */
 const FEEDBACK_POSE: Record<Feedback['result'], PoseId> = { correct: 'bair-wave', almost: 'seseg-think', wrong: 'bair-think' };
 
-export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice, skill }: Props) {
+export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKey, practice, skill, onComplete }: Props) {
   const { c } = useTheme();
   const router = useRouter();
   const { pools, stamp } = getCourse();
@@ -83,6 +87,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
     const before = useAppStore.getState().progress;
     if (counts) finishLesson({ lessonId: lessonId!, accuracy: accuracy(s), xp, grades: s.itemGrades });
     else finishReview({ xp, grades: s.itemGrades }); // ответы идут в SRS, урок не засчитывается
+    if (!outOfHearts) onComplete?.();
     const after = useAppStore.getState().progress;
     const units = getCourse().content.course.units;
     const unit = units.find((u) => u.lessons.some((l) => l.id === lessonId));
@@ -157,7 +162,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
           <ExerciseView key={ex.key} ex={ex} {...viewProps} />
         </ScrollView>
         <View style={[styles.footer, { borderColor: c.border, backgroundColor: result ? { correct: c.successBg, almost: c.warningBg, wrong: c.errorBg }[result] : c.bg }]}>
-          {pending && result && (
+          {pending && result && ex.type !== 'conversation' && (
             <Appear>
               <Row gap={space.md} style={{ alignItems: 'center' }}>
                 <Appear kind="pop">{ex.type === 'dialogue' ? <CharacterPose pose={FEEDBACK_POSE[result]} height={84} /> : <Mascot mood={FEEDBACK_MOOD[result]} size={64} />}</Appear>
@@ -174,7 +179,7 @@ export function SessionRunner({ queue, initial, kind, lessonId, title, sessionKe
           {canContinue && <Button title="Дальше" onPress={next} />}
           {Platform.OS === 'web' && (
             <T v="caption" muted style={{ textAlign: 'center' }}>
-              {canContinue ? 'Enter — дальше' : ex.type === 'spell_word' ? 'Буквы — с клавиатуры, Enter — проверить' : 'Клавиши 1–4 — выбор ответа'} · Esc — выйти, прогресс сохранится
+              {[canContinue ? 'Enter — дальше' : ex.type === 'spell_word' ? 'Буквы — с клавиатуры, Enter — проверить' : ex.type === 'speak_repeat' ? null : 'Клавиши 1–4 — выбор ответа', 'Esc — выйти, прогресс сохранится'].filter(Boolean).join(' · ')}
             </T>
           )}
         </View>
@@ -203,12 +208,16 @@ function ExerciseView({ ex, ...p }: { ex: Exercise; answered: boolean; onResult:
       return <MinimalPairView ex={ex} {...p} />;
     case 'listen_and_choose':
       return <ListenView ex={ex} {...p} />;
+    case 'speak_repeat':
+      return <SpeakView ex={ex} {...p} />;
     case 'categorize':
       return <CategorizeView ex={ex} {...p} />;
     case 'build_sentence':
       return <BuildSentenceView ex={ex} {...p} />;
     case 'dialogue':
       return <DialogueView ex={ex} {...p} />;
+    case 'conversation':
+      return <ConversationView ex={ex} {...p} />;
   }
 }
 

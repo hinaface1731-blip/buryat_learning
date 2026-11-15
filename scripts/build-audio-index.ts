@@ -10,6 +10,8 @@ import { readWords, ROOT } from './lib/content-io';
 
 const AUDIO_DIR = path.join(ROOT, 'assets', 'audio');
 const OUT = path.join(ROOT, 'src', 'audio', 'audioIndex.ts');
+const LESSON_DIR = path.join(ROOT, 'assets', 'lessons');
+const LESSON_OUT = path.join(ROOT, 'src', 'audio', 'lessonIndex.ts');
 
 function main() {
   const files = fs.readdirSync(AUDIO_DIR).filter((f) => f.endsWith('.m4a')).sort();
@@ -26,6 +28,19 @@ ${lines.join('\n')}
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, src);
   console.log(`Аудиофайлов в индексе: ${files.length}`);
+  // Аудиоуроки целиком: assets/lessons/{id}.m4a → src/audio/lessonIndex.ts.
+  const lessons = fs.existsSync(LESSON_DIR) ? fs.readdirSync(LESSON_DIR).filter((f) => f.endsWith('.m4a')).sort() : [];
+  fs.writeFileSync(
+    LESSON_OUT,
+    `// Сгенерировано scripts/build-audio-index.ts — не редактировать вручную.
+// Аудиоуроки целиком: assets/lessons/{id}.m4a, описание — content/audio-lessons.json.
+
+export const lessonIndex: Record<string, number> = {
+${lessons.map((f) => `  ${JSON.stringify(f.replace(/\.m4a$/, ''))}: require('../../assets/lessons/${f}'),`).join('\n')}
+};
+`,
+  );
+  console.log(`Аудиоуроков: ${lessons.length}`);
   if (unknown.length) console.log(`Внимание: нет слова с таким id: ${unknown.join(', ')}`);
 }
 

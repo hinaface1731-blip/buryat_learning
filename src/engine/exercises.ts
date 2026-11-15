@@ -141,6 +141,11 @@ export function listenAndChoose(item: StudyItem, hasAudio: (id: string) => boole
   };
 }
 
+export function speakRepeat(item: StudyItem, hasAudio: (id: string) => boolean, stage: Stage): Exercise | null {
+  if (!hasAudio(item.id)) return null;
+  return { key: `speak-${item.id}`, stage, type: 'speak_repeat', item, audioId: item.id };
+}
+
 export function categorize(items: StudyItem[], vowelRows: VowelRows, rng: Rng, stage: Stage): Exercise | null {
   const classified: { item: StudyItem; row: VowelRowId }[] = [];
   for (const item of shuffle(items, rng)) {

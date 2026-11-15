@@ -10,7 +10,7 @@ export const SOURCES = path.join(CONTENT, 'sources');
 
 export const contentPath = (name: string) => path.join(CONTENT, name);
 
-function readJson(file: string): unknown {
+export function readJson(file: string): unknown {
   return JSON.parse(fs.readFileSync(contentPath(file), 'utf8'));
 }
 

@@ -17,6 +17,12 @@ export type ProgressState = {
   completedLessons: Record<string, { bestAccuracy: number; lastCompleted: DateKey }>;
   cards: Record<string, Card>;
   hearts: { count: number; date: DateKey };
+  /** Аудиоуроки, прослушанные до конца: id → день первого прослушивания. */
+  listened: Record<string, DateKey>;
+  /** Дни, когда выполнены все три задания дня. */
+  questDays: Record<DateKey, true>;
+  /** Сезонные события, в которых человек поучаствовал: «sagaalgan-2026» → день. */
+  events: Record<string, DateKey>;
 };
 
 export const initialProgress = (today: DateKey): ProgressState => ({
@@ -25,7 +31,23 @@ export const initialProgress = (today: DateKey): ProgressState => ({
   completedLessons: {},
   cards: {},
   hearts: { count: HEARTS_PER_DAY, date: today },
+  listened: {},
+  questDays: {},
+  events: {},
 });
+
+/** Участие в событии засчитывается один раз за сезон. */
+export function joinEvent(state: ProgressState, season: string, today: DateKey): ProgressState {
+  return state.events[season] ? state : { ...state, events: { ...state.events, [season]: today } };
+}
+
+/** XP за первое полное прослушивание аудиоурока: урок длинный, но пассивный. */
+export const LISTEN_XP = 10;
+
+export function completeListening(state: ProgressState, lessonId: string, today: DateKey, goal: number): ProgressState {
+  if (state.listened[lessonId]) return state;
+  return { ...addXp(state, LISTEN_XP, today, goal), listened: { ...state.listened, [lessonId]: today } };
+}
 
 export function applySrs(cards: Record<string, Card>, grades: Record<string, Grade>, today: DateKey): Record<string, Card> {
   const next = { ...cards };

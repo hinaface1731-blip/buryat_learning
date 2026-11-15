@@ -1,0 +1,694 @@
+[
+  {
+    "id": "znakomstvo",
+    "title": "Знакомство",
+    "scene": "Праздник во дворе. К вам подходит Сэсэг.",
+    "art": "scene-baikal",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Сайн байна!",
+          "russian": "Здравствуйте!",
+          "wordId": "sayn-bayna"
+        },
+        "options": [
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Мэндэ!",
+            "russian": "Привет!",
+            "wordId": "mende",
+            "verdict": "almost",
+            "explain": "«Мэндэ» — тоже приветствие, но разговорное. Незнакомому человеку лучше «Сайн байна!»."
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "wrong",
+            "explain": "«Баяртай» — «до свидания». При встрече говорят «Сайн байна!»."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Хэн гэжэ нэрэтэйш?",
+          "russian": "Как тебя зовут?",
+          "wordId": "khen-gezhe-nereteysh"
+        },
+        "options": [
+          {
+            "buryat": "Би Баир гэжэ нэрэтэйб.",
+            "russian": "Меня зовут Баир.",
+            "wordId": "bi-bair-gezhe-nereteyb",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Шинии нэрэшни хэн бэ?",
+            "russian": "Как твоё имя?",
+            "wordId": "shinii-nereshni-khen-be",
+            "verdict": "wrong",
+            "explain": "Это вопрос «как твоё имя?». Сэсэг спрашивает вас — ответьте: «Би … гэжэ нэрэтэйб»."
+          },
+          {
+            "buryat": "Би Улаан-Үдэһөө ерээб.",
+            "russian": "Я из Улан-Удэ.",
+            "wordId": "bi-ulaan-uedehoeoe-yereeb",
+            "verdict": "wrong",
+            "explain": "Это «я из Улан-Удэ». Сэсэг спросила имя."
+          }
+        ],
+        "reply": {
+          "buryat": "Танилсаһандаа баяртай байнаб.",
+          "russian": "Рада познакомиться.",
+          "wordId": "tanilsahandaa-bayartay-baynab"
+        }
+      },
+      {
+        "say": {
+          "buryat": "Ши хаанахимши?",
+          "russian": "Откуда ты?",
+          "wordId": "shi-khaanakhimshi"
+        },
+        "options": [
+          {
+            "buryat": "Би Улаан-Үдэһөө ерээб.",
+            "russian": "Я из Улан-Удэ.",
+            "wordId": "bi-ulaan-uedehoeoe-yereeb",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Би Улаан-Үдэдэ ажаһуудагби.",
+            "russian": "Я живу в Улан-Удэ.",
+            "wordId": "bi-ulaan-uedede-azhahuudagbi",
+            "verdict": "almost",
+            "explain": "Это «я живу в Улан-Удэ». Близко, но спросили, откуда вы: «…һөө ерээб» — «я из…»."
+          },
+          {
+            "buryat": "Би баһа.",
+            "russian": "Я тоже.",
+            "wordId": "bi-baha",
+            "verdict": "wrong",
+            "explain": "«Би баһа» — «я тоже». На вопрос «откуда?» так не отвечают."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Уулзатараа баяртай!",
+          "russian": "До встречи!",
+          "wordId": "uulzataraa-bayartay"
+        },
+        "options": [
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "wrong",
+            "explain": "«Сайн байна» — приветствие, а разговор заканчивается."
+          },
+          {
+            "buryat": "Юу һонин бэ?",
+            "russian": "Какие новости?",
+            "wordId": "yuu-honin-be",
+            "verdict": "wrong",
+            "explain": "«Юу һонин бэ?» — «какие новости?». Это начало разговора, а не конец."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rynok",
+    "title": "На рынке",
+    "scene": "Вы на рынке. Сэсэг продаёт овощи.",
+    "art": "scene-road",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Сайн байна! Юу абахабта?",
+          "russian": "Здравствуйте! Что будете брать?"
+        },
+        "options": [
+          {
+            "buryat": "Би хартаабха абахаб.",
+            "russian": "Я возьму картофель.",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Би хартаабха худалдажа абааб.",
+            "russian": "Я купил картофель.",
+            "wordId": "bi-khartaabkha-khudaldazha-abaab",
+            "verdict": "almost",
+            "explain": "Это прошедшее время: «я купил». Сейчас нужно «абахаб» — «возьму»."
+          },
+          {
+            "buryat": "Ехэ амтатай.",
+            "russian": "Очень вкусно.",
+            "wordId": "yekhe-amtatay",
+            "verdict": "wrong",
+            "explain": "«Ехэ амтатай» — «очень вкусно». Вас спросили, что вы возьмёте."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Ондоо юумэн хэрэгтэй гү?",
+          "russian": "Ещё что-нибудь нужно?"
+        },
+        "options": [
+          {
+            "buryat": "Үгы, баярлаа. Хэды сэнтэйб?",
+            "russian": "Нет, спасибо. Сколько стоит?",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Тиимэ, баярлааб.",
+            "russian": "Да, спасибо.",
+            "wordId": "tiime-bayarlaab",
+            "verdict": "almost",
+            "explain": "«Да, спасибо» значит, что нужно ещё что-то. Если всё — «Үгы, баярлаа»: «нет, спасибо»."
+          },
+          {
+            "buryat": "Энэ хэн бэ?",
+            "russian": "Кто это?",
+            "wordId": "ene-khen-be",
+            "verdict": "wrong",
+            "explain": "«Энэ хэн бэ?» — «кто это?». Здесь спрашивают про покупку."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Зуун табин түхэриг.",
+          "russian": "Сто пятьдесят рублей."
+        },
+        "options": [
+          {
+            "buryat": "Баярлаа! Баяртай!",
+            "russian": "Спасибо! До свидания!",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Ехэ үнэтэй!",
+            "russian": "Очень дорого!",
+            "verdict": "almost",
+            "explain": "Так говорят, если дорого, — можно, но не обязательно. Расплатитесь и поблагодарите: «Баярлаа!»."
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "wrong",
+            "explain": "Это приветствие. В конце покупки благодарят и прощаются."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kafe",
+    "title": "В кафе",
+    "scene": "Вы зашли в кафе. Сэсэг здесь работает.",
+    "art": "scene-cafe",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Юу уухабта?",
+          "russian": "Что будете пить?"
+        },
+        "options": [
+          {
+            "buryat": "Намда нэгэ сай үгыт даа.",
+            "russian": "Дайте мне чаю, пожалуйста.",
+            "wordId": "namda-nege-say-uegyt-daa",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Сай.",
+            "russian": "Чай.",
+            "wordId": "say",
+            "verdict": "almost",
+            "explain": "Понятно, но вежливее целой фразой: «Намда нэгэ сай үгыт даа»."
+          },
+          {
+            "buryat": "Хэды сэнтэйб?",
+            "russian": "Сколько это стоит?",
+            "wordId": "khedy-senteyb",
+            "verdict": "wrong",
+            "explain": "«Хэды сэнтэйб?» — «сколько стоит?». Об этом спрашивают в конце."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Юу эдихэбта?",
+          "russian": "Что будете есть?"
+        },
+        "options": [
+          {
+            "buryat": "Намда шүлэн үгыт даа.",
+            "russian": "Дайте мне суп, пожалуйста.",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Шүлэн амтатай гү?",
+            "russian": "Суп вкусный?",
+            "wordId": "shuelen-amtatay-gue",
+            "verdict": "almost",
+            "explain": "Спросить можно, но потом всё равно нужно заказать: «Намда шүлэн үгыт даа»."
+          },
+          {
+            "buryat": "Би нохойтойб.",
+            "russian": "У меня есть собака.",
+            "verdict": "wrong",
+            "explain": "«У меня есть собака» — не к месту."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Шүлэн амтатай гү?",
+          "russian": "Суп вкусный?",
+          "wordId": "shuelen-amtatay-gue"
+        },
+        "options": [
+          {
+            "buryat": "Шүлэниинь ехэ амтатай.",
+            "russian": "Суп очень вкусный.",
+            "wordId": "shueleniin-yekhe-amtatay",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Ехэ амтатай.",
+            "russian": "Очень вкусно.",
+            "wordId": "yekhe-amtatay",
+            "verdict": "correct",
+            "explain": "Коротко и верно. Полностью: «Шүлэниинь ехэ амтатай»."
+          },
+          {
+            "buryat": "Нуур ехэ.",
+            "russian": "Озеро большое.",
+            "wordId": "nuur-yekhe",
+            "verdict": "wrong",
+            "explain": "«Нуур ехэ» — «озеро большое». Это про природу, а не про суп."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Ондоо юумэн хэрэгтэй гү?",
+          "russian": "Ещё что-нибудь нужно?"
+        },
+        "options": [
+          {
+            "buryat": "Үгы, баярлаа. Хэды сэнтэйб?",
+            "russian": "Нет, спасибо. Сколько стоит?",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Баярлаа!",
+            "russian": "Спасибо!",
+            "wordId": "bayarlaa",
+            "verdict": "almost",
+            "explain": "Поблагодарили — хорошо. Ещё ответьте «нет»: «Үгы, баярлаа»."
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "wrong",
+            "explain": "Это приветствие, а вас спросили, нужно ли что-то ещё."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "turel",
+    "title": "Семейные фото",
+    "scene": "Сэсэг рассматривает ваши семейные фотографии.",
+    "art": "scene-family",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Энэ хэн бэ?",
+          "russian": "Кто это? (на фото — ваша мама)",
+          "wordId": "ene-khen-be"
+        },
+        "options": [
+          {
+            "buryat": "Энэ минии эжы.",
+            "russian": "Это моя мама.",
+            "wordId": "ene-minii-ezhy",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Минии эжы.",
+            "russian": "Моя мама.",
+            "verdict": "almost",
+            "explain": "Понятно. Полным предложением: «Энэ минии эжы» — «это моя мама»."
+          },
+          {
+            "buryat": "Энэ минии аба.",
+            "russian": "Это мой отец.",
+            "wordId": "ene-minii-aba",
+            "verdict": "wrong",
+            "explain": "«Аба» — отец. Мама — «эжы»."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Та олон гэр бүлэтэй гүт?",
+          "russian": "У вас большая семья?",
+          "wordId": "ta-olon-ger-bueletey-guet"
+        },
+        "options": [
+          {
+            "buryat": "Би ехэ гэр бүлэтэйб.",
+            "russian": "У меня большая семья.",
+            "wordId": "bi-yekhe-ger-bueleteyb",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Тиимэ.",
+            "russian": "Да.",
+            "verdict": "almost",
+            "explain": "«Да» — верно. Добавьте целую фразу: «Би ехэ гэр бүлэтэйб»."
+          },
+          {
+            "buryat": "Энэ минии гэр.",
+            "russian": "Это мой дом.",
+            "verdict": "wrong",
+            "explain": "«Гэр» — дом, а «гэр бүлэ» — семья. Спросили про семью."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Үхибүүдтэй гүт?",
+          "russian": "У вас есть дети?",
+          "wordId": "uekhibueuedtey-guet"
+        },
+        "options": [
+          {
+            "buryat": "Би басагатайб.",
+            "russian": "У меня есть дочь.",
+            "wordId": "bi-basagatayb",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Би эгэшэтэйб.",
+            "russian": "У меня есть сестра.",
+            "wordId": "bi-egesheteyb",
+            "verdict": "almost",
+            "explain": "Это «у меня есть старшая сестра». Дочь — «басаган»: «Би басагатайб»."
+          },
+          {
+            "buryat": "Ехэ амтатай.",
+            "russian": "Очень вкусно.",
+            "wordId": "yekhe-amtatay",
+            "verdict": "wrong",
+            "explain": "«Очень вкусно» — это про еду."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Ямар һайхан гэр бүлэ гээшэб!",
+          "russian": "Какая прекрасная семья!"
+        },
+        "options": [
+          {
+            "buryat": "Баярлаа!",
+            "russian": "Спасибо!",
+            "wordId": "bayarlaa",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "wrong",
+            "explain": "«Баяртай» — «до свидания». «Спасибо» — «Баярлаа»."
+          },
+          {
+            "buryat": "Юу һонин бэ?",
+            "russian": "Какие новости?",
+            "wordId": "yuu-honin-be",
+            "verdict": "wrong",
+            "explain": "«Какие новости?» — не ответ на комплимент. Скажите «Баярлаа!»."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ulaan-ude",
+    "title": "Поездка в Улан-Удэ",
+    "scene": "Вы приехали в Улан-Удэ. Сэсэг встречает вас на вокзале.",
+    "art": "scene-road",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Сайн байна! Һайн байна гүт?",
+          "russian": "Здравствуйте! Как поживаете?"
+        },
+        "options": [
+          {
+            "buryat": "Һайн, һайн даа!",
+            "russian": "Хорошо, спасибо.",
+            "wordId": "hayn-hayn-daa",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Һайн.",
+            "russian": "Хорошо.",
+            "wordId": "hayn",
+            "verdict": "almost",
+            "explain": "Хорошо! Теплее с «даа»: «Һайн, һайн даа!»."
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "wrong",
+            "explain": "«Баяртай» — «до свидания», а вы только приехали."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Ши Москваһаа ерээ гүш?",
+          "russian": "Ты приехал из Москвы?"
+        },
+        "options": [
+          {
+            "buryat": "Тиимэ, би Москваһаа ерээб.",
+            "russian": "Да, я из Москвы.",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Тиимэ.",
+            "russian": "Да.",
+            "verdict": "almost",
+            "explain": "Верно. Полнее: «Тиимэ, би Москваһаа ерээб»."
+          },
+          {
+            "buryat": "Би Улаан-Үдэдэ ажаһуудагби.",
+            "russian": "Я живу в Улан-Удэ.",
+            "wordId": "bi-ulaan-uedede-azhahuudagbi",
+            "verdict": "wrong",
+            "explain": "Это «я живу в Улан-Удэ», а вы только приехали."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Ямар гоё нуур гээшэб!",
+          "russian": "Какое красивое озеро!",
+          "wordId": "yamar-goyo-nuur-geesheb"
+        },
+        "options": [
+          {
+            "buryat": "Тиимэ, ехэ гоё!",
+            "russian": "Да, очень красиво!",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Нуур ехэ.",
+            "russian": "Озеро большое.",
+            "wordId": "nuur-yekhe",
+            "verdict": "almost",
+            "explain": "«Озеро большое» — верно, но Сэсэг говорит о красоте: «Тиимэ, ехэ гоё!»."
+          },
+          {
+            "buryat": "Ехэ амтатай.",
+            "russian": "Очень вкусно.",
+            "wordId": "yekhe-amtatay",
+            "verdict": "wrong",
+            "explain": "«Очень вкусно» — это про еду."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Үглөөдэр уулзая.",
+          "russian": "Увидимся завтра.",
+          "wordId": "uegloeoeder-uulzaya"
+        },
+        "options": [
+          {
+            "buryat": "Уулзатараа баяртай!",
+            "russian": "До встречи!",
+            "wordId": "uulzataraa-bayartay",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "wrong",
+            "explain": "Это приветствие, а вы прощаетесь до завтра."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gostyakh",
+    "title": "В гостях",
+    "scene": "Вы пришли в гости к Сэсэг.",
+    "art": "scene-family",
+    "steps": [
+      {
+        "say": {
+          "buryat": "Орогты, орогты!",
+          "russian": "Проходите, проходите!"
+        },
+        "options": [
+          {
+            "buryat": "Баярлаа!",
+            "russian": "Спасибо!",
+            "wordId": "bayarlaa",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "almost",
+            "explain": "Поздороваться — хорошо, а на приглашение пройти отвечают «Баярлаа!»."
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "wrong",
+            "explain": "«Баяртай» — «до свидания», а вы только пришли."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Сай ууха дуратай гүт?",
+          "russian": "Хотите чаю?",
+          "wordId": "say-uukha-duratay-guet"
+        },
+        "options": [
+          {
+            "buryat": "Тиимэ, баярлааб.",
+            "russian": "Да, спасибо.",
+            "wordId": "tiime-bayarlaab",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Сай.",
+            "russian": "Чай.",
+            "wordId": "say",
+            "verdict": "almost",
+            "explain": "Понятно, но лучше ответить полностью: «Тиимэ, баярлааб»."
+          },
+          {
+            "buryat": "Хэды сэнтэйб?",
+            "russian": "Сколько это стоит?",
+            "wordId": "khedy-senteyb",
+            "verdict": "wrong",
+            "explain": "«Сколько стоит?» — в гостях за чай не платят."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Энэ манай гэр.",
+          "russian": "Это наш дом."
+        },
+        "options": [
+          {
+            "buryat": "Ямар һайхан гэр гээшэб!",
+            "russian": "Какой красивый дом!",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Минии гэр ехэ.",
+            "russian": "Мой дом большой.",
+            "wordId": "minii-ger-yekhe",
+            "verdict": "wrong",
+            "explain": "Это «мой дом большой», а вы в гостях у Сэсэг."
+          },
+          {
+            "buryat": "Гоё.",
+            "russian": "Красиво.",
+            "wordId": "goyo",
+            "verdict": "almost",
+            "explain": "Верно. Полностью: «Ямар һайхан гэр гээшэб!» — «какой красивый дом!»."
+          }
+        ]
+      },
+      {
+        "say": {
+          "buryat": "Дахин ерэгты!",
+          "russian": "Приходите ещё!"
+        },
+        "options": [
+          {
+            "buryat": "Баярлаа! Уулзатараа баяртай!",
+            "russian": "Спасибо! До встречи!",
+            "verdict": "correct"
+          },
+          {
+            "buryat": "Баяртай!",
+            "russian": "До свидания!",
+            "wordId": "bayartay",
+            "verdict": "almost",
+            "explain": "Верно. Теплее поблагодарить: «Баярлаа! Уулзатараа баяртай!»."
+          },
+          {
+            "buryat": "Сайн байна!",
+            "russian": "Здравствуйте!",
+            "wordId": "sayn-bayna",
+            "verdict": "wrong",
+            "explain": "Это приветствие, а вы уходите."
+          }
+        ]
+      }
+    ]
+  }
+]

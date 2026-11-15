@@ -6,6 +6,9 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { getCourse, reviewableDueIds } from '@/content/course';
 import type { Unit } from '@/content/schema';
 import { lessonStatus, nextLessonId, type LessonStatus } from '@/features/path/lesson-status';
+import { EventBanner, QuestsCard } from '@/features/path/QuestsCard';
+import { WorldMap } from '@/features/world/WorldMap';
+import { currentPlaceId, placeStates } from '@/features/world/world';
 import { addDays, dateKey } from '@/lib/dates';
 import { useAppStore } from '@/store/app-store';
 import { heartsToday, streak, type ProgressState } from '@/store/logic';
@@ -50,6 +53,8 @@ export default function PathScreen() {
   const shownUnit = expanded ?? currentUnit;
   const name = useAppStore((s) => s.settings.name.trim());
   const hello = greeting(progress, goal, today, name);
+  const view = useAppStore((s) => s.settings.pathView);
+  const places = placeStates(units, progress.completedLessons);
 
   return (
     <Screen scroll>
@@ -80,7 +85,27 @@ export default function PathScreen() {
         {due > 0 && <Button kind="secondary" title={`Повторить: ${words(due)}`} onPress={() => router.push('/review-session')} />}
       </Card>
 
-      {open.map((unit, i) => (
+      <EventBanner today={today} />
+      <QuestsCard today={today} />
+
+      <Row gap={space.sm}>
+        {(['map', 'list'] as const).map((v) => (
+          <View key={v} style={{ flex: 1 }}>
+            <Button kind={(view ?? 'map') === v ? 'primary' : 'secondary'} title={v === 'map' ? 'Маршрут' : 'Главы'} onPress={() => useAppStore.getState().updateSettings({ pathView: v })} />
+          </View>
+        ))}
+      </Row>
+
+      {view !== 'list' && (
+        <View style={{ gap: space.sm }}>
+          <WorldMap states={places} current={currentPlaceId(places, next)} />
+          <T v="caption" muted>
+            Путешествие с нерпёнком: каждое место — несколько глав. Нажмите на место, чтобы узнать о нём и открыть уроки.
+          </T>
+        </View>
+      )}
+
+      {view === 'list' && open.map((unit, i) => (
         <Chapter
           key={unit.id}
           number={i + 1}

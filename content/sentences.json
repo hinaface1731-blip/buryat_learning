@@ -3,8 +3,8 @@
     "id": "s-l1-e5-1",
     "kind": "sentence",
     "buryat": "Хара нохой.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Чёрная собака.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -16,15 +16,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хара нохой."
   },
   {
     "id": "s-l1-e5-2",
     "kind": "sentence",
     "buryat": "Һонин ном.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Интересная книга.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -36,15 +36,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һонин ном."
   },
   {
     "id": "s-l1-e5-3",
     "kind": "sentence",
     "buryat": "Хүйтэн намар.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Холодная осень.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -56,15 +56,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүйтэн намар."
   },
   {
     "id": "s-l1-e5-4",
     "kind": "sentence",
     "buryat": "Манай нютаг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Наш родной край.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -76,15 +76,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Манай нютаг."
   },
   {
     "id": "s-l1-e5-5",
     "kind": "sentence",
     "buryat": "Ноябрь-намарай һүүлшын һара.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Ноябрь — последний месяц осени.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -96,15 +96,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ноябрь-намарай һүүлшын һара."
   },
   {
     "id": "s-l1-e5-6",
     "kind": "sentence",
     "buryat": "Нимгэн мүльһэн.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Тонкий лёд.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -116,15 +116,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Нимгэн мүльһэн."
   },
   {
     "id": "s-l1-e5-7",
     "kind": "sentence",
     "buryat": "Ногоон шэрэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Зелёная краска.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -136,15 +136,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ногоон шэрэ."
   },
   {
     "id": "s-l1-e5-8",
     "kind": "sentence",
     "buryat": "Ноёнтой ханиланхаар, нохойтой ханила.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Чем дружить с начальником, лучше дружи с собакой.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 10,
@@ -156,15 +156,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ноёнтой ханиланхаар, нохойтой ханила."
   },
   {
     "id": "s-l1-e6-1",
     "kind": "sentence",
     "buryat": "Шан(г)га һалхин.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сильный ветер.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -176,15 +176,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шан(г)га һалхин."
   },
   {
     "id": "s-l1-e6-2",
     "kind": "sentence",
     "buryat": "Хон(г)хо дуугарна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Звенит колокольчик.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -196,15 +196,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хон(г)хо дуугарна."
   },
   {
     "id": "s-l1-e6-3",
     "kind": "sentence",
     "buryat": "Шубуунай үдэн(г).",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Птичье перо.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -216,15 +216,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шубуунай үдэн(г)."
   },
   {
     "id": "s-l1-e6-4",
     "kind": "sentence",
     "buryat": "Манай эндэ нарһан(г), уляаһан(г) ургадаг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "У нас здесь растут сосна и осина.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -236,15 +236,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Манай эндэ нарһан(г), уляаһан(г) ургадаг."
   },
   {
     "id": "s-l1-e6-5",
     "kind": "sentence",
     "buryat": "Ой соо томо ба жэжэшье ан(г)гууд бии.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "В лесу есть и крупные, и мелкие звери.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -256,15 +256,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ой соо томо ба жэжэшье ан(г)гууд бии."
   },
   {
     "id": "s-l1-e6-6",
     "kind": "sentence",
     "buryat": "Булган(г) зэрлиг амитан.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Соболь — дикое животное.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -276,15 +276,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Булган(г) зэрлиг амитан."
   },
   {
     "id": "s-l1-e6-7",
     "kind": "sentence",
     "buryat": "Энэ жэл алирһан(г), мойһон(г) элбэг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "В этом году много смородины и черёмухи.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -296,15 +296,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Энэ жэл алирһан(г), мойһон(г) элбэг."
   },
   {
     "id": "s-l2-e1-1",
     "kind": "sentence",
     "buryat": "Урда нэгэн сагта, уужам нэгэ нютагта ядагархан яһан эбэртэй, шодогорхон шодон һүүлтэй бабана тэхэ эшэгэн ябадаг байгаа һэн ха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Давным-давно в одном просторном краю жил козлёнок с тоненькими рожками и коротким хвостиком.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -316,15 +316,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Урда нэгэн сагта, уужам нэгэ нютагта ядагархан яһан эбэртэй, шодогорхон шодон һүүлтэй бабана тэхэ эшэгэн ябадаг байгаа һэн ха."
   },
   {
     "id": "s-l2-e1-2",
     "kind": "sentence",
     "buryat": "Эхэ оромнай байгаалиин баялигаар ямар баян гээшэб!",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Как богата природными богатствами наша родная земля!",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 11,
@@ -336,15 +336,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эхэ оромнай байгаалиин баялигаар ямар баян гээшэб!"
   },
   {
     "id": "s-l2-e1-3",
     "kind": "sentence",
     "buryat": "Минин хүгшэн эжы ерэн наһатай болобо.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Моей бабушке исполнилось девяносто лет.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -356,15 +356,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Минин хүгшэн эжы ерэн наһатай болобо."
   },
   {
     "id": "s-l2-e1-4",
     "kind": "sentence",
     "buryat": "Уһан үерлэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Вода разлилась.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -376,15 +376,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Уһан үерлэбэ."
   },
   {
     "id": "s-l2-e1-5",
     "kind": "sentence",
     "buryat": "Энэ уедэ уһанда орожо болохогүй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сейчас в воду заходить нельзя.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -396,15 +396,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Энэ уедэ уһанда орожо болохогүй."
   },
   {
     "id": "s-l2-e1-6",
     "kind": "sentence",
     "buryat": "Үер болоходо аюултай.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Во время наводнения опасно.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -416,15 +416,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үер болоходо аюултай."
   },
   {
     "id": "s-l2-e1-7",
     "kind": "sentence",
     "buryat": "Манай нютагта ехэ нуур бии.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "В наших краях есть большое озеро.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -436,15 +436,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Манай нютагта ехэ нуур бии."
   },
   {
     "id": "s-l2-e1-8",
     "kind": "sentence",
     "buryat": "Хоёр, юһэ, арбан найма.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Два, девять, восемнадцать.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -456,15 +456,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хоёр, юһэ, арбан найма."
   },
   {
     "id": "s-l2-e1-9",
     "kind": "sentence",
     "buryat": "Үхибүүд нэгэ юумэн тухай шэбэнэн хөөрэлдэнэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Дети о чём-то шёпотом разговаривают.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -476,15 +476,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үхибүүд нэгэ юумэн тухай шэбэнэн хөөрэлдэнэ."
   },
   {
     "id": "s-l2-e1-10",
     "kind": "sentence",
     "buryat": "Шэхээрээ дуулаһан — худал, нюдөөрөө үзэһэн — үнэн.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Услышанное ушами — ложь, увиденное глазами — правда.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -497,15 +497,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шэхээрээ дуулаһан — худал, нюдөөрөө үзэһэн — үнэн."
   },
   {
     "id": "s-l2-e1-11",
     "kind": "sentence",
     "buryat": "Γндэр гоё гэрнүүд баригдана.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Строятся высокие красивые дома.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -517,15 +517,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Γндэр гоё гэрнүүд баригдана."
   },
   {
     "id": "s-l2-e1-12",
     "kind": "sentence",
     "buryat": "Эжы намда дулаан бээлэй оёно.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Мама шьёт мне тёплые рукавицы.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -537,15 +537,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эжы намда дулаан бээлэй оёно."
   },
   {
     "id": "s-l2-e1-13",
     "kind": "sentence",
     "buryat": "Ёһо заншалта һайндэрнүүд.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Традиционные праздники.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -557,15 +557,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ёһо заншалта һайндэрнүүд."
   },
   {
     "id": "s-l2-e1-14",
     "kind": "sentence",
     "buryat": "Ёһотой хүн.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Порядочный человек.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 12,
@@ -577,7 +577,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ёһотой хүн."
   },
   {
@@ -604,8 +604,8 @@
     "id": "s-l2-e2-2",
     "kind": "sentence",
     "buryat": "Манай колхозой таряан һайнаар ургана.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Хлеба нашего колхоза хорошо растут.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -618,15 +618,15 @@
     ],
     "verified": false,
     "excluded": true,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Манай колхозой таряан һайнаар ургана."
   },
   {
     "id": "s-l2-e2-3",
     "kind": "sentence",
     "buryat": "Энэ жэл һархяаг олон.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "В этом году много грибов.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -638,7 +638,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Энэ жэл һархяаг олон."
   },
   {
@@ -665,8 +665,8 @@
     "id": "s-l2-e2-5",
     "kind": "sentence",
     "buryat": "Ёлко гоёхо.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Наряжать ёлку.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -678,15 +678,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ёлко гоёхо."
   },
   {
     "id": "s-l2-e2-6",
     "kind": "sentence",
     "buryat": "Аба морёо уһанда оруулба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Отец завёл коня в воду.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -698,15 +698,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Аба морёо уһанда оруулба."
   },
   {
     "id": "s-l2-e2-7",
     "kind": "sentence",
     "buryat": "Орёо мэдүүлэл.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сложное предложение.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -718,15 +718,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Орёо мэдүүлэл."
   },
   {
     "id": "s-l2-e2-8",
     "kind": "sentence",
     "buryat": "Эжы үнеэгээ эдеэлүүлбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Мама накормила корову.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -738,15 +738,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эжы үнеэгээ эдеэлүүлбэ."
   },
   {
     "id": "s-l2-e2-9",
     "kind": "sentence",
     "buryat": "Үхибүүд һургуулидаа түлеэ хюрөөдэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Дети напилили дров для школы.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -758,15 +758,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үхибүүд һургуулидаа түлеэ хюрөөдэбэ."
   },
   {
     "id": "s-l2-e2-10",
     "kind": "sentence",
     "buryat": "Эжы һүеэ хөөрүүлээд, хүбүүдтээ уулгаба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Мама вскипятила молоко и напоила сыновей.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -778,15 +778,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эжы һүеэ хөөрүүлээд, хүбүүдтээ уулгаба."
   },
   {
     "id": "s-l2-e2-11",
     "kind": "sentence",
     "buryat": "Һүхөөр түлеэ хахалдаг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Дрова колют топором.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -798,15 +798,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һүхөөр түлеэ хахалдаг."
   },
   {
     "id": "s-l2-e2-12",
     "kind": "sentence",
     "buryat": "\"А\" үзэг эрдэмэй дээжэ, аяга сай эдеэнэй дээжэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Буква «А» — начало знаний, чашка чая — начало угощения.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -818,15 +818,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "\"А\" үзэг эрдэмэй дээжэ, аяга сай эдеэнэй дээжэ."
   },
   {
     "id": "s-l2-e2-13",
     "kind": "sentence",
     "buryat": "Һургуулиин газаа хүүгэд хүхюунээр наадана.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Возле школы дети весело играют.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -838,15 +838,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һургуулиин газаа хүүгэд хүхюунээр наадана."
   },
   {
     "id": "s-l2-e2-14",
     "kind": "sentence",
     "buryat": "Намайе танюулба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Меня представили.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -858,15 +858,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Намайе танюулба."
   },
   {
     "id": "s-l2-e2-15",
     "kind": "sentence",
     "buryat": "Би хүбүүнэйнгээ бэшэгтэ харюу бэшэнэб.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Я пишу ответ на письмо сына.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 13,
@@ -878,15 +878,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Би хүбүүнэйнгээ бэшэгтэ харюу бэшэнэб."
   },
   {
     "id": "s-l2-t1-1",
     "kind": "sentence",
     "buryat": "Намар хүрэжэ ерэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Наступила осень.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -899,15 +899,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Намар хүрэжэ ерэбэ."
   },
   {
     "id": "s-l2-t1-2",
     "kind": "sentence",
     "buryat": "Үбһэ ногоон, сэсэгүүд хагдарба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Трава и цветы пожухли.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -920,15 +920,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үбһэ ногоон, сэсэгүүд хагдарба."
   },
   {
     "id": "s-l2-t1-3",
     "kind": "sentence",
     "buryat": "Хуһад шарлаба, уляаһад улайба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Берёзы пожелтели, осины покраснели.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -941,15 +941,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хуһад шарлаба, уляаһад улайба."
   },
   {
     "id": "s-l2-t1-4",
     "kind": "sentence",
     "buryat": "Модоной набшаһад унана.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "С деревьев падают листья.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -962,15 +962,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Модоной набшаһад унана."
   },
   {
     "id": "s-l2-t1-5",
     "kind": "sentence",
     "buryat": "Үдэр богони болоно.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "День становится короче.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -983,15 +983,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үдэр богони болоно."
   },
   {
     "id": "s-l2-t1-6",
     "kind": "sentence",
     "buryat": "Наранай шараса һуларна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Солнечные лучи слабеют.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -1004,15 +1004,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Наранай шараса һуларна."
   },
   {
     "id": "s-l2-t1-7",
     "kind": "sentence",
     "buryat": "Тиигэбэшье яһала дулаан байна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Но всё же ещё довольно тепло.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -1025,15 +1025,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Тиигэбэшье яһала дулаан байна."
   },
   {
     "id": "s-l2-t1-8",
     "kind": "sentence",
     "buryat": "Огородой эдеэн, талха таряан эдеэшэнхэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Овощи в огороде и хлеба созрели.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -1046,15 +1046,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Огородой эдеэн, талха таряан эдеэшэнхэй."
   },
   {
     "id": "s-l2-t1-9",
     "kind": "sentence",
     "buryat": "Хүн зоной ажал хүдэлмэри түлэг дундаа ябажа байна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Работа у людей идёт полным ходом.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -1067,15 +1067,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүн зоной ажал хүдэлмэри түлэг дундаа ябажа байна."
   },
   {
     "id": "s-l2-t1-10",
     "kind": "sentence",
     "buryat": "Поли дээгүур трактор, комбайнууд баян ургаса хуряана.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "По полю тракторы и комбайны убирают богатый урожай.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 14,
@@ -1089,7 +1089,7 @@
     ],
     "verified": false,
     "excluded": true,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Поли дээгүур трактор, комбайнууд баян ургаса хуряана."
   },
   {
@@ -1117,8 +1117,8 @@
     "id": "s-l3-e1-2",
     "kind": "sentence",
     "buryat": "Бэрхэ хүн.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Умелый человек.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1131,15 +1131,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бэрхэ хүн."
   },
   {
     "id": "s-l3-e1-3",
     "kind": "sentence",
     "buryat": "Хун шубуун.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Лебедь.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1152,15 +1152,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хун шубуун."
   },
   {
     "id": "s-l3-e1-4",
     "kind": "sentence",
     "buryat": "Шэнэ гэр.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Новый дом.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1173,15 +1173,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шэнэ гэр."
   },
   {
     "id": "s-l3-e1-5",
     "kind": "sentence",
     "buryat": "Гар барилсаха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Пожать друг другу руки.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1194,15 +1194,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Гар барилсаха."
   },
   {
     "id": "s-l3-e1-6",
     "kind": "sentence",
     "buryat": "Һайн үдэр.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Добрый день.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1215,7 +1215,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һайн үдэр."
   },
   {
@@ -1243,8 +1243,8 @@
     "id": "s-l3-e1-8",
     "kind": "sentence",
     "buryat": "Хажуудань һууха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сесть рядом с ним.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1257,15 +1257,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хажуудань һууха."
   },
   {
     "id": "s-l3-e1-9",
     "kind": "sentence",
     "buryat": "Үнеэгээ һааха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Подоить свою корову.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1278,15 +1278,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үнеэгээ һааха."
   },
   {
     "id": "s-l3-e1-10",
     "kind": "sentence",
     "buryat": "Бүхэ хүн.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сильный человек.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1299,15 +1299,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бүхэ хүн."
   },
   {
     "id": "s-l3-e1-11",
     "kind": "sentence",
     "buryat": "Нуурай баха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Озёрная лягушка.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1320,15 +1320,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Нуурай баха."
   },
   {
     "id": "s-l3-e1-12",
     "kind": "sentence",
     "buryat": "Олон зон.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Много людей.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1341,15 +1341,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Олон зон."
   },
   {
     "id": "s-l3-e1-13",
     "kind": "sentence",
     "buryat": "Зун ерэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Наступило лето.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 15,
@@ -1362,15 +1362,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Зун ерэбэ."
   },
   {
     "id": "s-l3-e2-1",
     "kind": "sentence",
     "buryat": "Даха үмдэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Надел доху.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1383,15 +1383,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Даха үмдэбэ."
   },
   {
     "id": "s-l3-e2-2",
     "kind": "sentence",
     "buryat": "Үүргэ дааха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Взять на себя обязанность.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1404,15 +1404,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үүргэ дааха."
   },
   {
     "id": "s-l3-e2-3",
     "kind": "sentence",
     "buryat": "Таба наһатай.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Пять лет от роду.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1425,15 +1425,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Таба наһатай."
   },
   {
     "id": "s-l3-e2-4",
     "kind": "sentence",
     "buryat": "Таабари тааба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Отгадал загадку.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1446,7 +1446,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Таабари тааба."
   },
   {
@@ -1474,8 +1474,8 @@
     "id": "s-l3-e2-6",
     "kind": "sentence",
     "buryat": "Хадааһа шааха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Забить гвоздь.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1488,15 +1488,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хадааһа шааха."
   },
   {
     "id": "s-l3-e2-7",
     "kind": "sentence",
     "buryat": "Модон хатаба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Дерево засохло.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1509,15 +1509,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Модон хатаба."
   },
   {
     "id": "s-l3-e2-8",
     "kind": "sentence",
     "buryat": "Намаг хатааба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Осушили болото.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1530,15 +1530,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Намаг хатааба."
   },
   {
     "id": "s-l3-e2-9",
     "kind": "sentence",
     "buryat": "Абари зан.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Характер.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1551,15 +1551,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Абари зан."
   },
   {
     "id": "s-l3-e2-10",
     "kind": "sentence",
     "buryat": "Томо заан.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Большой слон.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1572,7 +1572,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Томо заан."
   },
   {
@@ -1600,8 +1600,8 @@
     "id": "s-l3-e2-12",
     "kind": "sentence",
     "buryat": "Бараа абаха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Купить товар.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1614,7 +1614,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бараа абаха."
   },
   {
@@ -1642,8 +1642,8 @@
     "id": "s-l3-e2-14",
     "kind": "sentence",
     "buryat": "Үхибүүд даараа.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Дети замёрзли.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1656,15 +1656,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үхибүүд даараа."
   },
   {
     "id": "s-l3-e3-1",
     "kind": "sentence",
     "buryat": "Доро байна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Находится внизу.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1677,15 +1677,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Доро байна."
   },
   {
     "id": "s-l3-e3-2",
     "kind": "sentence",
     "buryat": "Тэрэ дороо.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Тут же, сразу.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1698,7 +1698,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Тэрэ дороо."
   },
   {
@@ -1789,8 +1789,8 @@
     "id": "s-l3-e3-7",
     "kind": "sentence",
     "buryat": "Һанал бодол.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Мысли.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1803,15 +1803,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һанал бодол."
   },
   {
     "id": "s-l3-e3-8",
     "kind": "sentence",
     "buryat": "Аргамжын боодол.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Моток верёвки.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1824,15 +1824,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Аргамжын боодол."
   },
   {
     "id": "s-l3-e3-9",
     "kind": "sentence",
     "buryat": "Үндэгэ болгохо.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Сварить яйца.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1845,15 +1845,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үндэгэ болгохо."
   },
   {
     "id": "s-l3-e3-10",
     "kind": "sentence",
     "buryat": "Гараа боолгохо.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Перевязать руку.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 16,
@@ -1866,15 +1866,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Гараа боолгохо."
   },
   {
     "id": "s-l3-e4-1",
     "kind": "sentence",
     "buryat": "Сэсэг зураба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Нарисовал цветок.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -1887,7 +1887,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Сэсэг зураба."
   },
   {
@@ -1936,8 +1936,8 @@
     "id": "s-l3-e4-4",
     "kind": "sentence",
     "buryat": "Шубуу бууда.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Подстрели птицу.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -1950,15 +1950,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шубуу бууда."
   },
   {
     "id": "s-l3-e4-5",
     "kind": "sentence",
     "buryat": "Хүнэй уг гарбал.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Происхождение человека.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -1971,15 +1971,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүнэй уг гарбал."
   },
   {
     "id": "s-l3-e4-6",
     "kind": "sentence",
     "buryat": "Бата уһа ууг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Бата, выпей воды.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -1992,15 +1992,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бата уһа ууг."
   },
   {
     "id": "s-l3-e4-7",
     "kind": "sentence",
     "buryat": "Ураг ерэбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Приехала родня.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -2013,7 +2013,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ураг ерэбэ."
   },
   {
@@ -2062,8 +2062,8 @@
     "id": "s-l3-e4-10",
     "kind": "sentence",
     "buryat": "Малаа тууха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Гнать скот.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 17,
@@ -2076,15 +2076,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Малаа тууха."
   },
   {
     "id": "s-l3-e5-1",
     "kind": "sentence",
     "buryat": "Нооһон бээлэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Шерстяные рукавицы.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2097,15 +2097,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Нооһон бээлэй."
   },
   {
     "id": "s-l3-e5-2",
     "kind": "sentence",
     "buryat": "Ябаа бэлэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Ходил.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2118,15 +2118,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ябаа бэлэй."
   },
   {
     "id": "s-l3-e5-3",
     "kind": "sentence",
     "buryat": "Мүргэдэг тэхэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Бодливый козёл.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2139,15 +2139,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Мүргэдэг тэхэ."
   },
   {
     "id": "s-l3-e5-4",
     "kind": "sentence",
     "buryat": "Ашаа тээхэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Перевозить груз.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2160,15 +2160,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Ашаа тээхэ."
   },
   {
     "id": "s-l3-e5-5",
     "kind": "sentence",
     "buryat": "Бэшэ нүхэдшни хаанаб?",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Где твои другие друзья?",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2181,15 +2181,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бэшэ нүхэдшни хаанаб?"
   },
   {
     "id": "s-l3-e5-6",
     "kind": "sentence",
     "buryat": "Бэшэг бэшээ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Написал письмо.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2202,15 +2202,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Бэшэг бэшээ."
   },
   {
     "id": "s-l3-e5-7",
     "kind": "sentence",
     "buryat": "Эшэгүй һүхэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Топор без топорища.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2223,15 +2223,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эшэгүй һүхэ."
   },
   {
     "id": "s-l3-e5-8",
     "kind": "sentence",
     "buryat": "Эшээ түхеэрхэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Приладить топорище.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2244,15 +2244,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эшээ түхеэрхэ."
   },
   {
     "id": "s-l3-e6-1",
     "kind": "sentence",
     "buryat": "Эжытэеэ зүбшэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Посоветуйся с мамой.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2265,7 +2265,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Эжытэеэ зүбшэ."
   },
   {
@@ -2293,8 +2293,8 @@
     "id": "s-l3-e6-3",
     "kind": "sentence",
     "buryat": "Гэртэм хүргэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Проводи меня до дома.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2307,15 +2307,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Гэртэм хүргэ."
   },
   {
     "id": "s-l3-e6-4",
     "kind": "sentence",
     "buryat": "Хүүргэ бариха.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Строить мост.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2328,7 +2328,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүүргэ бариха."
   },
   {
@@ -2398,8 +2398,8 @@
     "id": "s-l3-e6-8",
     "kind": "sentence",
     "buryat": "Аашалхаяа дүүрэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Хватит капризничать.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2412,7 +2412,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Аашалхаяа дүүрэ."
   },
   {
@@ -2440,8 +2440,8 @@
     "id": "s-l3-e6-10",
     "kind": "sentence",
     "buryat": "Уһаар дүүрэхэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Наполнить водой.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 18,
@@ -2454,15 +2454,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Уһаар дүүрэхэ."
   },
   {
     "id": "s-l4-e1-1",
     "kind": "sentence",
     "buryat": "Манай колхоз олон гахайтай.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "В нашем колхозе много свиней.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 19,
@@ -2475,15 +2475,15 @@
     ],
     "verified": false,
     "excluded": true,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Манай колхоз олон гахайтай."
   },
   {
     "id": "s-l4-e1-2",
     "kind": "sentence",
     "buryat": "Үбэл гахайнууд дулаан байрада байдаг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Зимой свиньи живут в тёплом помещении.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 19,
@@ -2495,15 +2495,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үбэл гахайнууд дулаан байрада байдаг."
   },
   {
     "id": "s-l4-e1-3",
     "kind": "sentence",
     "buryat": "Гахайшан гахай һайнаар тэжээнэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Свинарь хорошо кормит свиней.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 19,
@@ -2515,7 +2515,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Гахайшан гахай һайнаар тэжээнэ."
   },
   {
@@ -2586,8 +2586,8 @@
     "id": "s-l4-e2-1",
     "kind": "sentence",
     "buryat": "Толгойнь үһэн үдхэн, толгойнь дотороо хооһон.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Волосы на голове густые, а в голове пусто.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 20,
@@ -2600,7 +2600,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Толгойнь үһэн үдхэн, толгойнь дотороо хооһон."
   },
   {
@@ -2711,8 +2711,8 @@
     "id": "s-l4-e3-2",
     "kind": "sentence",
     "buryat": "Һаалишад ехэ амжалта туйлаба.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Доярки добились больших успехов.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 20,
@@ -2724,15 +2724,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Һаалишад ехэ амжалта туйлаба."
   },
   {
     "id": "s-l4-e3-3",
     "kind": "sentence",
     "buryat": "Аюша агнуурида ошолдохые гуйна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Аюша просится на охоту.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 20,
@@ -2744,15 +2744,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Аюша агнуурида ошолдохые гуйна."
   },
   {
     "id": "s-l4-e4-1",
     "kind": "sentence",
     "buryat": "Хүн бүхэн түрэһэн эхэтэй, турэлхи хэлэтэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "У каждого человека есть родная мать и родной язык.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2764,15 +2764,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүн бүхэн түрэһэн эхэтэй, турэлхи хэлэтэй."
   },
   {
     "id": "s-l4-e4-2",
     "kind": "sentence",
     "buryat": "Үнеэнэй аша туһа ехэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "От коровы большая польза.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2784,15 +2784,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үнеэнэй аша туһа ехэ."
   },
   {
     "id": "s-l4-e4-3",
     "kind": "sentence",
     "buryat": "Үнеэн — сагаан эдеэнэй эхэ юм.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Корова — источник «белой пищи», молочных продуктов.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2804,7 +2804,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үнеэн — сагаан эдеэнэй эхэ юм."
   },
   {
@@ -2831,8 +2831,8 @@
     "id": "s-l4-e4-5",
     "kind": "sentence",
     "buryat": "Үбэлэй хүйтэн үнгэрбэ.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Зимние холода прошли.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2844,15 +2844,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үбэлэй хүйтэн үнгэрбэ."
   },
   {
     "id": "s-l4-e4-6",
     "kind": "sentence",
     "buryat": "Миисгэй модон дээрэ һууна.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Кошка сидит на дереве.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2864,15 +2864,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Миисгэй модон дээрэ һууна."
   },
   {
     "id": "s-l4-e4-7",
     "kind": "sentence",
     "buryat": "Үхибүүдтэ эхэ эсэгэ хэрэгтэй, үтэлһэн зондо ургэмжэ хэрэгтэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Детям нужны родители, а старикам — опора.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2884,7 +2884,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үхибүүдтэ эхэ эсэгэ хэрэгтэй, үтэлһэн зондо ургэмжэ хэрэгтэй."
   },
   {
@@ -2932,8 +2932,8 @@
     "id": "s-l4-e5-3",
     "kind": "sentence",
     "buryat": "Энэ зүйлнүүдынь таһаршагүй холбоотой.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Эти вещи неразрывно связаны.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2945,15 +2945,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Энэ зүйлнүүдынь таһаршагүй холбоотой."
   },
   {
     "id": "s-l4-e5-4",
     "kind": "sentence",
     "buryat": "Зоболон үзөөгүй хүн жаргал гээшые мэдэхэгүй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Кто не знал страданий, не знает и счастья.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2966,15 +2966,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Зоболон үзөөгүй хүн жаргал гээшые мэдэхэгүй."
   },
   {
     "id": "s-l4-e5-5",
     "kind": "sentence",
     "buryat": "Адхарһан аяга дүүрэдэггүй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Пролитую чашу не наполнить.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -2986,15 +2986,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Адхарһан аяга дүүрэдэггүй."
   },
   {
     "id": "s-l4-e5-6",
     "kind": "sentence",
     "buryat": "Дайдын ногоон тоолошогүй, далайн оёор хэмнэшэгүй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Траву степи не сосчитать, дно моря не измерить.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 21,
@@ -3006,15 +3006,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Дайдын ногоон тоолошогүй, далайн оёор хэмнэшэгүй."
   },
   {
     "id": "s-l4-t2-1",
     "kind": "sentence",
     "buryat": "Үбэлэй сагта шандаган саб сагаан үнгэтэй.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Зимой заяц совсем белый.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3027,15 +3027,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Үбэлэй сагта шандаган саб сагаан үнгэтэй."
   },
   {
     "id": "s-l4-t2-2",
     "kind": "sentence",
     "buryat": "Саһанай ороходо, шандаган ехээр баярладаг.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Когда выпадает снег, заяц очень радуется.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3048,15 +3048,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Саһанай ороходо, шандаган ехээр баярладаг."
   },
   {
     "id": "s-l4-t2-3",
     "kind": "sentence",
     "buryat": "Шугы соо бургааһанай үбэртэ саһа хонхойлоод хэбтэхэдэнь, тэрэниие обёорхогүйш.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Когда он лежит в лесу под ивой, вырыв ямку в снегу, его не заметишь.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3069,15 +3069,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Шугы соо бургааһанай үбэртэ саһа хонхойлоод хэбтэхэдэнь, тэрэниие обёорхогүйш."
   },
   {
     "id": "s-l4-t2-4",
     "kind": "sentence",
     "buryat": "Хүншье, аншье харангүй хажуугаарнь гараха байгаа.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "И человек, и зверь пройдут мимо, не заметив его.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3090,15 +3090,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Хүншье, аншье харангүй хажуугаарнь гараха байгаа."
   },
   {
     "id": "s-l4-t2-5",
     "kind": "sentence",
     "buryat": "Теэд шандаган ехэ айран амитан юм.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Но заяц — очень пугливое животное.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3111,15 +3111,15 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Теэд шандаган ехэ айран амитан юм."
   },
   {
     "id": "s-l4-t2-6",
     "kind": "sentence",
     "buryat": "Тэрээндэ дүтэ юумэнэй һаршаганахада, бодоод гүйшэдэг, холо харайдаг хурдан амитан юм.",
-    "translation": null,
-    "needs_translation": true,
+    "translation": "Стоит рядом чему-то зашуршать, он вскакивает и убегает: это быстрый зверь, прыгает далеко.",
+    "needs_translation": false,
     "source": {
       "book": "bxr-textbook",
       "page": 22,
@@ -3132,7 +3132,7 @@
     ],
     "verified": false,
     "excluded": false,
-    "comment": "",
+    "comment": "перевод — черновик: Google Переводчик с ручной правкой, ждёт сверки",
     "origin": "Тэрээндэ дүтэ юумэнэй һаршаганахада, бодоод гүйшэдэг, холо харайдаг хурдан амитан юм."
   }
 ]

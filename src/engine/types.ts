@@ -1,4 +1,4 @@
-import type { Letter, MinimalPair, Note, Sentence, VowelRowId, Word } from '@/content/schema';
+import type { Conversation, Letter, MinimalPair, Note, Sentence, VowelRowId, Word } from '@/content/schema';
 
 /** Единица, которую учат и повторяют (SRS держится за её id). */
 export type StudyItem =
@@ -35,6 +35,8 @@ export type Exercise = Base &
         answer: string;
       }
     | { type: 'listen_and_choose'; item: StudyItem; audioId: string; options: string[]; answer: string }
+    /** Послушай и повтори: оценку ставит сам ученик, сравнив свою запись с образцом. */
+    | { type: 'speak_repeat'; item: StudyItem; audioId: string }
     | {
         type: 'categorize';
         items: { item: StudyItem; row: VowelRowId }[];
@@ -42,6 +44,8 @@ export type Exercise = Base &
       }
     | { type: 'build_sentence'; sentence: Pick<Sentence, 'id' | 'buryat' | 'verified'>; prompt: string; tokens: string[]; answer: string[] }
     | { type: 'dialogue'; title: string; scene: string; art?: string; lines: DialogueLine[] }
+    /** Разговорный сценарий: ветки ответов с объяснениями, оценка в конце. */
+    | { type: 'conversation'; conv: Conversation }
   );
 
 /** Реплика разговорного урока показывается в речи героя; у первой ещё и сцена с иллюстрацией. */

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "sagaalgan",
+    "title": "Сагаалган",
+    "description": "Праздник Белого месяца — бурятский Новый год по лунному календарю. Встречают гостей, угощают «белой пищей», поздравляют: «Сар шэнэдөө сайн байна!»",
+    "start": { "2026": "2026-02-18", "2027": "2027-02-07" },
+    "days": 15,
+    "wordIds": ["sagaalgan", "haynder", "yoho-zanshalta", "sayn-bayna", "bayarlaa", "say", "myakhan", "hara-2"],
+    "badge": "badge-tea",
+    "note": "Дата по лунному календарю меняется каждый год — уточнять по календарю Буддийской традиционной сангхи России."
+  },
+  {
+    "id": "baikal-day",
+    "title": "День Байкала",
+    "description": "Второе воскресенье сентября. Байкал — «Байгал далай», священное море бурят.",
+    "rule": "second-sunday-september",
+    "days": 7,
+    "wordIds": ["nuur", "dalay-2", "uhan", "zagahan", "naran", "uula", "tala", "oy", "narhan", "khuhan"],
+    "badge": "badge-journey"
+  }
+]

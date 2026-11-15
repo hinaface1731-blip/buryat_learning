@@ -1,3 +1,4 @@
+import { RecordingPresets, requestRecordingPermissionsAsync, setAudioModeAsync, useAudioPlayer, useAudioRecorder, useAudioRecorderState } from 'expo-audio';
 import { Image } from 'expo-image';
 import { useMemo, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -35,7 +36,7 @@ function useOptionKeys(options: string[], pick: (o: string) => void, answered: b
   }, !answered);
 }
 
-const BOOK_LABEL: Record<string, string> = { 'bxr-textbook': 'Учебник', 'native-speaker': 'Носитель', zugaa: 'Разговорник Burlang', translator: 'Машинный перевод' };
+const BOOK_LABEL: Record<string, string> = { 'bxr-textbook': 'Учебник', 'native-speaker': 'Носитель', zugaa: 'Разговорник Burlang', translator: 'Машинный перевод', temslov: 'Тематический словарь', 'burfm-audio': 'Аудиоурок «Буряад FM»', 'kids-audio': 'Детский аудиокурс' };
 
 function sourceLine(s: { book: string; page?: number; section?: string }): string {
   return [BOOK_LABEL[s.book] ?? s.book, s.page ? `стр. ${s.page}` : null, s.section].filter(Boolean).join(', ');
@@ -405,12 +406,85 @@ export function ListenView({ ex, answered, onResult }: ViewProps<'listen_and_cho
   return (
     <View style={{ gap: space.lg }}>
       <T muted>Что вы слышите?</T>
-      <AudioButton id={ex.audioId} size="lg" autoPlay />
+      <AudioButton id={ex.audioId} size="lg" autoPlay slow />
       <View style={{ gap: space.sm }}>
         {ex.options.map((o) => (
           <OptionButton key={o} label={o} buryat state={!answered ? 'idle' : o === ex.answer ? 'correct' : o === picked ? 'wrong' : 'dim'} onPress={() => pick(o)} disabled={answered} />
         ))}
       </View>
+    </View>
+  );
+}
+
+/** Послушай и повтори: запись своего голоса и сравнение с образцом. Оценку ставит сам ученик. */
+export function SpeakView({ ex, answered, onResult }: ViewProps<'speak_repeat'>) {
+  const { c } = useTheme();
+  const recorder = useAudioRecorder(RecordingPresets.HIGH_QUALITY);
+  const rec = useAudioRecorderState(recorder);
+  const mine = useAudioPlayer(null);
+  const [uri, setUri] = useState<string | null>(null);
+  const [denied, setDenied] = useState(false);
+
+  const start = async () => {
+    const { granted } = await requestRecordingPermissionsAsync();
+    if (!granted) return setDenied(true);
+    await setAudioModeAsync({ allowsRecording: true, playsInSilentMode: true });
+    await recorder.prepareToRecordAsync();
+    recorder.record();
+  };
+  const stop = async () => {
+    await recorder.stop();
+    // На iOS после записи звук идёт в слуховой динамик, пока запись не выключена.
+    await setAudioModeAsync({ allowsRecording: false, playsInSilentMode: true });
+    if (recorder.uri) {
+      setUri(recorder.uri);
+      mine.replace({ uri: recorder.uri });
+    }
+  };
+  const playMine = () => {
+    void mine.seekTo(0);
+    mine.play();
+  };
+  const grade = (result: 'correct' | 'almost') => onResult(one(ex.item.id, result), { result, detail: result === 'almost' ? 'Послушайте образец ещё раз в медленном темпе и повторите.' : undefined });
+
+  return (
+    <View style={{ gap: space.lg }}>
+      <T muted>Послушайте и повторите вслух</T>
+      <T v="title" style={{ fontFamily: fonts.bold }}>
+        {ex.item.buryat}
+      </T>
+      <T muted>{ex.item.russian}</T>
+      <AudioButton id={ex.audioId} size="lg" autoPlay slow />
+      {denied ? (
+        <Card>
+          <T>Нет доступа к микрофону. Разрешите его в настройках телефона или браузера — а пока можно повторять вслух без записи.</T>
+        </Card>
+      ) : (
+        <Row gap={space.sm} style={{ flexWrap: 'wrap' }}>
+          <Button
+            kind={rec.isRecording ? 'danger' : 'secondary'}
+            title={rec.isRecording ? `Стоп · ${Math.round(rec.durationMillis / 1000)} с` : uri ? 'Записать ещё раз' : '● Записать себя'}
+            onPress={() => void (rec.isRecording ? stop() : start())}
+            disabled={answered}
+          />
+          {uri && !rec.isRecording && <Button kind="ghost" title="▶ Моя запись" onPress={playMine} />}
+        </Row>
+      )}
+      {!answered && (
+        <View style={{ gap: space.sm, borderTopWidth: StyleSheet.hairlineWidth, borderColor: c.border, paddingTop: space.md }}>
+          <T v="caption" muted>
+            Сравните на слух. Как получилось?
+          </T>
+          <Row gap={space.sm}>
+            <View style={{ flex: 1 }}>
+              <Button title="Похоже" onPress={() => grade('correct')} />
+            </View>
+            <View style={{ flex: 1 }}>
+              <Button kind="secondary" title="Ещё потренируюсь" onPress={() => grade('almost')} />
+            </View>
+          </Row>
+        </View>
+      )}
     </View>
   );
 }

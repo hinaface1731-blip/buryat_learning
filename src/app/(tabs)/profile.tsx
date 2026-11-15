@@ -1,9 +1,12 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Image } from 'expo-image';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Alert, Platform, Pressable, StyleSheet, Switch, TextInput, View } from 'react-native';
 
 import { getCourse } from '@/content/course';
+import { cancelReminder, REMINDERS_SUPPORTED, scheduleReminder } from '@/lib/reminders';
+import { SERVER_ENABLED } from '@/lib/supabase';
 import { dateKey } from '@/lib/dates';
 import { achievementsOf, totalXp, type Achievement } from '@/store/achievements';
 import { useAppStore, type ThemePref } from '@/store/app-store';
@@ -15,6 +18,8 @@ import { Button, Card, OptionButton, ProgressBar, Row, Screen, T } from '@/ui/co
 import { GOAL_LABELS } from '@/ui/labels';
 import { fonts, space, useTheme } from '@/ui/theme';
 
+const REMINDER_HOURS = [8, 12, 19, 21];
+
 const THEMES: [ThemePref, string][] = [
   ['system', 'Как в системе'],
   ['light', 'Светлая'],
@@ -23,6 +28,7 @@ const THEMES: [ThemePref, string][] = [
 
 export default function ProfileScreen() {
   const { c } = useTheme();
+  const router = useRouter();
   const settings = useAppStore((s) => s.settings);
   const progress = useAppStore((s) => s.progress);
   const update = useAppStore((s) => s.updateSettings);
@@ -150,6 +156,34 @@ export default function ProfileScreen() {
         </Row>
       </View>
 
+      {REMINDERS_SUPPORTED && (
+        <View style={{ gap: space.sm }}>
+          <T v="heading">Напоминание</T>
+          <Row gap={space.sm}>
+            {[null, ...REMINDER_HOURS].map((h) => (
+              <View key={String(h)} style={{ flex: 1 }}>
+                <OptionButton
+                  label={h === null ? 'Нет' : `${h}:00`}
+                  state={settings.reminderHour === h ? 'selected' : 'idle'}
+                  onPress={async () => {
+                    if (h === null) {
+                      await cancelReminder();
+                      update({ reminderHour: null });
+                      return;
+                    }
+                    if (await scheduleReminder(h)) update({ reminderHour: h });
+                    else Alert.alert('Нет разрешения', 'Разрешите уведомления для приложения в настройках телефона.');
+                  }}
+                />
+              </View>
+            ))}
+          </Row>
+          <T v="caption" muted>
+            Каждый день в выбранный час — уведомление на этом телефоне.
+          </T>
+        </View>
+      )}
+
       <Card>
         <SettingSwitch label="Звуки" hint="Верный и неверный ответ, конец урока, награды." value={settings.sound} onChange={(v) => update({ sound: v })} />
         <SettingSwitch label="Сердечки" hint="5 в день; ошибка в уроке отнимает одно. Повторение без ограничений." value={settings.heartsEnabled} onChange={(v) => update({ heartsEnabled: v })} />
@@ -164,10 +198,12 @@ export default function ProfileScreen() {
       <Card>
         <T v="label">Источники</T>
         <T v="caption" muted>
-          «Учебник бурятского языка» (уроки 1–4 и введение), разговорник Burlang.Zugaa, часть фраз — машинный перевод; справочно — «Грамматика бурятского языка. Фонетика и морфология» (1962). Лицензия источников не подтверждена. Все слова и фразы ждут сверки с носителем языка.
+          «Учебник бурятского языка» (уроки 1–4 и введение), разговорник Burlang.Zugaa, часть фраз — машинный перевод; справочно — «Грамматика бурятского языка. Фонетика и морфология» (1962). Записи слов — из аудиоуроков (радио «Буряад FM» и детский курс). Лицензия источников не подтверждена. Все слова и фразы ждут сверки с носителем языка.
         </T>
       </Card>
 
+      {SERVER_ENABLED && <Button kind="secondary" title="Аккаунт, друзья и рейтинг" onPress={() => router.push('/account')} />}
+      <Button kind="secondary" title="Перенос прогресса на другое устройство" onPress={() => router.push('/backup')} />
       <Button kind="danger" title="Сбросить прогресс" onPress={confirmReset} />
       <T v="caption" color={c.textMuted}>
         Данные хранятся только на этом устройстве.

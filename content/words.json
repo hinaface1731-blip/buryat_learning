@@ -585,7 +585,8 @@
       ]
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:20"
     ],
     "verified": false,
     "needs_review": false,
@@ -849,7 +850,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:1"
     ],
     "verified": false,
     "needs_review": false,
@@ -1035,7 +1037,8 @@
       ]
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:14"
     ],
     "verified": false,
     "needs_review": false,
@@ -1125,7 +1128,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:18"
     ],
     "verified": false,
     "needs_review": false,
@@ -1299,7 +1303,8 @@
     },
     "tags": [
       "lesson-1",
-      "unit:dom"
+      "unit:dom",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -1521,7 +1526,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -1555,7 +1561,8 @@
       ]
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -1609,7 +1616,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:14"
     ],
     "verified": false,
     "needs_review": false,
@@ -1677,7 +1685,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:2"
     ],
     "verified": false,
     "needs_review": false,
@@ -1731,7 +1740,8 @@
       "lesson": 1
     },
     "tags": [
-      "lesson-1"
+      "lesson-1",
+      "audio:14"
     ],
     "verified": false,
     "needs_review": false,
@@ -1867,7 +1877,8 @@
     },
     "tags": [
       "lesson-1",
-      "unit:priroda"
+      "unit:priroda",
+      "audio:16"
     ],
     "verified": false,
     "needs_review": false,
@@ -3127,7 +3138,8 @@
     },
     "tags": [
       "lesson-2",
-      "unit:priroda"
+      "unit:priroda",
+      "audio:15"
     ],
     "verified": false,
     "needs_review": false,
@@ -3181,7 +3193,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "audio:3"
     ],
     "verified": false,
     "needs_review": false,
@@ -3265,7 +3278,8 @@
       "lesson": 2
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "audio:7"
     ],
     "verified": false,
     "needs_review": false,
@@ -3503,7 +3517,8 @@
     },
     "tags": [
       "lesson-2",
-      "unit:dom"
+      "unit:dom",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -3538,7 +3553,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -3757,7 +3773,8 @@
       ]
     },
     "tags": [
-      "lesson-2"
+      "lesson-2",
+      "audio:10"
     ],
     "verified": false,
     "needs_review": false,
@@ -4167,7 +4184,8 @@
     },
     "tags": [
       "lesson-2",
-      "unit:zhivotnye"
+      "unit:zhivotnye",
+      "audio:12"
     ],
     "verified": false,
     "needs_review": false,
@@ -5232,7 +5250,8 @@
       ]
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "audio:7"
     ],
     "verified": false,
     "needs_review": false,
@@ -6024,7 +6043,8 @@
       "lesson": 3
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "audio:8"
     ],
     "verified": false,
     "needs_review": false,
@@ -6203,7 +6223,8 @@
       ]
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -6320,7 +6341,8 @@
       "lesson": 3
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -7972,7 +7994,8 @@
     },
     "tags": [
       "lesson-3",
-      "unit:priroda"
+      "unit:priroda",
+      "audio:3"
     ],
     "verified": false,
     "needs_review": false,
@@ -8057,7 +8080,8 @@
       "lesson": 3
     },
     "tags": [
-      "lesson-3"
+      "lesson-3",
+      "audio:4"
     ],
     "verified": false,
     "needs_review": false,
@@ -8361,7 +8385,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -9600,7 +9625,8 @@
     },
     "tags": [
       "lesson-4",
-      "unit:zhivotnye"
+      "unit:zhivotnye",
+      "audio:12"
     ],
     "verified": false,
     "needs_review": false,
@@ -9779,7 +9805,8 @@
       ]
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -10248,7 +10275,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "audio:17"
     ],
     "verified": false,
     "needs_review": false,
@@ -10275,7 +10303,8 @@
       "lesson": 4
     },
     "tags": [
-      "lesson-4"
+      "lesson-4",
+      "audio:14"
     ],
     "verified": false,
     "needs_review": false,
@@ -10522,7 +10551,8 @@
     },
     "tags": [
       "lesson-4",
-      "unit:priroda"
+      "unit:priroda",
+      "audio:16"
     ],
     "verified": false,
     "needs_review": false,
@@ -10661,7 +10691,8 @@
       "section": "§8"
     },
     "tags": [
-      "intro"
+      "intro",
+      "audio:10"
     ],
     "verified": false,
     "needs_review": false,
@@ -11185,7 +11216,8 @@
       "section": "§8"
     },
     "tags": [
-      "intro"
+      "intro",
+      "audio:6"
     ],
     "verified": false,
     "needs_review": false,
@@ -11212,7 +11244,8 @@
       "section": "§8"
     },
     "tags": [
-      "intro"
+      "intro",
+      "audio:16"
     ],
     "verified": false,
     "needs_review": false,
@@ -11519,7 +11552,8 @@
       "route",
       "phrase",
       "route-lesson-3",
-      "confirmed:temslov"
+      "confirmed:temslov",
+      "audio:1"
     ],
     "verified": false,
     "needs_review": true,
@@ -11579,7 +11613,8 @@
       "route",
       "phrase",
       "route-lesson-3",
-      "confirmed:temslov"
+      "confirmed:temslov",
+      "audio:1"
     ],
     "verified": false,
     "needs_review": true,
@@ -12299,7 +12334,8 @@
       "page": 6
     },
     "tags": [
-      "unit:semya"
+      "unit:semya",
+      "audio:1"
     ],
     "verified": false,
     "needs_review": false,
@@ -12377,7 +12413,8 @@
       "page": 6
     },
     "tags": [
-      "unit:semya"
+      "unit:semya",
+      "audio:5"
     ],
     "verified": false,
     "needs_review": false,
@@ -12589,7 +12626,8 @@
       "page": 17
     },
     "tags": [
-      "unit:eda"
+      "unit:eda",
+      "audio:9"
     ],
     "verified": false,
     "needs_review": false,
@@ -12641,7 +12679,8 @@
       "page": 16
     },
     "tags": [
-      "unit:eda"
+      "unit:eda",
+      "audio:9"
     ],
     "verified": false,
     "needs_review": false,
@@ -12745,7 +12784,8 @@
       "page": 10
     },
     "tags": [
-      "unit:dom"
+      "unit:dom",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -12956,7 +12996,8 @@
       "page": 11
     },
     "tags": [
-      "unit:dom"
+      "unit:dom",
+      "audio:11"
     ],
     "verified": false,
     "needs_review": false,
@@ -13038,7 +13079,8 @@
       "page": 14
     },
     "tags": [
-      "unit:zhivotnye"
+      "unit:zhivotnye",
+      "audio:12"
     ],
     "verified": false,
     "needs_review": false,
@@ -14683,6 +14725,2254 @@
     "origin": {
       "buryat": "Би нэгэ үгэ бэшэнэб.",
       "russian": "Я пишу слово."
+    }
+  },
+  {
+    "id": "minii",
+    "kind": "word",
+    "buryat": "минии",
+    "russian": "мой",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-1, 44.49 с"
+    },
+    "tags": [
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "минии",
+      "russian": "мой"
+    }
+  },
+  {
+    "id": "obog",
+    "kind": "word",
+    "buryat": "обог",
+    "russian": "фамилия",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-1-mixdown, 212.56 с"
+    },
+    "tags": [
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "обог",
+      "russian": "фамилия"
+    }
+  },
+  {
+    "id": "ezhy-2",
+    "kind": "word",
+    "buryat": "эжы",
+    "russian": "мама",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-1-mixdown, 215.28 с"
+    },
+    "tags": [
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "эжы",
+      "russian": "мама"
+    }
+  },
+  {
+    "id": "tiime-ene-minii-nuekher",
+    "kind": "word",
+    "buryat": "Тиимэ, энэ минии нүхэр",
+    "russian": "да, это мой друг",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-1-mixdown, 295.34 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Тиимэ, энэ минии нүхэр",
+      "russian": "да, это мой друг"
+    }
+  },
+  {
+    "id": "mende",
+    "kind": "word",
+    "buryat": "Мэндэ",
+    "russian": "привет",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-1-mixdown, 425.56 с"
+    },
+    "tags": [
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Мэндэ",
+      "russian": "привет"
+    }
+  },
+  {
+    "id": "nagasa-ezhy",
+    "kind": "word",
+    "buryat": "нагаса эжы",
+    "russian": "бабушка",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-1-mixdown, 447.84 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:1"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "нагаса эжы",
+      "russian": "бабушка"
+    }
+  },
+  {
+    "id": "shi-khaanakhibshi",
+    "kind": "word",
+    "buryat": "Ши хаанахибши?",
+    "russian": "ты откуда родом",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-2-mixdown, 113.51 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Ши хаанахибши?",
+      "russian": "ты откуда родом"
+    }
+  },
+  {
+    "id": "ta-khaanakhibta",
+    "kind": "word",
+    "buryat": "Та хаанахибта?",
+    "russian": "откуда вы родом",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-2-mixdown, 118.47 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Та хаанахибта?",
+      "russian": "откуда вы родом"
+    }
+  },
+  {
+    "id": "tere-khaanakhib",
+    "kind": "word",
+    "buryat": "Тэрэ хаанахиб?",
+    "russian": "откуда он родом",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-2-mixdown, 211.72 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Тэрэ хаанахиб?",
+      "russian": "откуда он родом"
+    }
+  },
+  {
+    "id": "garbal",
+    "kind": "word",
+    "buryat": "гарбал",
+    "russian": "происхождение",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-2-mixdown, 328.53 с"
+    },
+    "tags": [
+      "audio:2"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "гарбал",
+      "russian": "происхождение"
+    }
+  },
+  {
+    "id": "gurban",
+    "kind": "word",
+    "buryat": "гурбан",
+    "russian": "три",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-3-mixdown, 56.73 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "гурбан",
+      "russian": "три"
+    }
+  },
+  {
+    "id": "zurgaan",
+    "kind": "word",
+    "buryat": "зургаан",
+    "russian": "шесть",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-3-mixdown, 63.51 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "зургаан",
+      "russian": "шесть"
+    }
+  },
+  {
+    "id": "doloon",
+    "kind": "word",
+    "buryat": "долоон",
+    "russian": "семь",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-3-mixdown, 65.93 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "долоон",
+      "russian": "семь"
+    }
+  },
+  {
+    "id": "arban",
+    "kind": "word",
+    "buryat": "арбан",
+    "russian": "десять",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-3-mixdown, 72.95 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "арбан",
+      "russian": "десять"
+    }
+  },
+  {
+    "id": "nayman",
+    "kind": "word",
+    "buryat": "найман",
+    "russian": "восемь",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-9, 144.0 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "найман",
+      "russian": "восемь"
+    }
+  },
+  {
+    "id": "hara-2",
+    "kind": "word",
+    "buryat": "һара",
+    "russian": "луна",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-15-mixdown, 215.94 с"
+    },
+    "tags": [
+      "audio:3"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "һара",
+      "russian": "луна"
+    }
+  },
+  {
+    "id": "magtakha",
+    "kind": "word",
+    "buryat": "магтаха",
+    "russian": "хвалить",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 160.84 с"
+    },
+    "tags": [
+      "audio:4"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "магтаха",
+      "russian": "хвалить"
+    }
+  },
+  {
+    "id": "hanakha",
+    "kind": "word",
+    "buryat": "һанаха",
+    "russian": "вспомнить",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 169.22 с"
+    },
+    "tags": [
+      "audio:4"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "һанаха",
+      "russian": "вспомнить"
+    }
+  },
+  {
+    "id": "ulaan",
+    "kind": "word",
+    "buryat": "улаан",
+    "russian": "красный",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-10, 75.65 с"
+    },
+    "tags": [
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "улаан",
+      "russian": "красный"
+    }
+  },
+  {
+    "id": "bogoni",
+    "kind": "word",
+    "buryat": "богони",
+    "russian": "короткий",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-6, 83.04 с"
+    },
+    "tags": [
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "богони",
+      "russian": "короткий"
+    }
+  },
+  {
+    "id": "shara",
+    "kind": "word",
+    "buryat": "шара",
+    "russian": "желтый",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 124.64 с"
+    },
+    "tags": [
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "шара",
+      "russian": "желтый"
+    }
+  },
+  {
+    "id": "khuekhe",
+    "kind": "word",
+    "buryat": "хүхэ",
+    "russian": "синий",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 138.34 с"
+    },
+    "tags": [
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хүхэ",
+      "russian": "синий"
+    }
+  },
+  {
+    "id": "yagaan",
+    "kind": "word",
+    "buryat": "ягаан",
+    "russian": "розовый",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 141.0 с"
+    },
+    "tags": [
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "ягаан",
+      "russian": "розовый"
+    }
+  },
+  {
+    "id": "bi-unshanab",
+    "kind": "word",
+    "buryat": "Би уншанаб",
+    "russian": "я читаю",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 180.58 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Би уншанаб",
+      "russian": "я читаю"
+    }
+  },
+  {
+    "id": "shi-unshanash",
+    "kind": "word",
+    "buryat": "Ши уншанаш",
+    "russian": "ты читаешь",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 184.9 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Ши уншанаш",
+      "russian": "ты читаешь"
+    }
+  },
+  {
+    "id": "bide-unshanabdi",
+    "kind": "word",
+    "buryat": "Бидэ уншанабди",
+    "russian": "мы читаем",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-6-mixdown, 196.36 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:6"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Бидэ уншанабди",
+      "russian": "мы читаем"
+    }
+  },
+  {
+    "id": "khamar",
+    "kind": "word",
+    "buryat": "хамар",
+    "russian": "нос",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-7-mixdown, 152.35 с"
+    },
+    "tags": [
+      "audio:7"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хамар",
+      "russian": "нос"
+    }
+  },
+  {
+    "id": "aman",
+    "kind": "word",
+    "buryat": "аман",
+    "russian": "рот",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-7-mixdown, 156.49 с"
+    },
+    "tags": [
+      "audio:7"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "аман",
+      "russian": "рот"
+    }
+  },
+  {
+    "id": "zaga",
+    "kind": "word",
+    "buryat": "зага",
+    "russian": "воротник",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 80.56 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "зага",
+      "russian": "воротник"
+    }
+  },
+  {
+    "id": "buehe",
+    "kind": "word",
+    "buryat": "бүһэ",
+    "russian": "пояс",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 92.42 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "бүһэ",
+      "russian": "пояс"
+    }
+  },
+  {
+    "id": "taylakha",
+    "kind": "word",
+    "buryat": "тайлаха",
+    "russian": "снимать",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 104.56 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "тайлаха",
+      "russian": "снимать"
+    }
+  },
+  {
+    "id": "khuushan",
+    "kind": "word",
+    "buryat": "хуушан",
+    "russian": "старый",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 115.68 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хуушан",
+      "russian": "старый"
+    }
+  },
+  {
+    "id": "malgay",
+    "kind": "word",
+    "buryat": "малгай",
+    "russian": "шапка",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 134.37 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "малгай",
+      "russian": "шапка"
+    }
+  },
+  {
+    "id": "samsa",
+    "kind": "word",
+    "buryat": "самса",
+    "russian": "рубашка",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 137.79 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "самса",
+      "russian": "рубашка"
+    }
+  },
+  {
+    "id": "uemden",
+    "kind": "word",
+    "buryat": "үмдэн",
+    "russian": "брюки",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 141.93 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үмдэн",
+      "russian": "брюки"
+    }
+  },
+  {
+    "id": "degel",
+    "kind": "word",
+    "buryat": "дэгэл",
+    "russian": "шуба",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 151.35 с"
+    },
+    "tags": [
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "дэгэл",
+      "russian": "шуба"
+    }
+  },
+  {
+    "id": "khuekhe-samsa",
+    "kind": "word",
+    "buryat": "хүхэ самса",
+    "russian": "синяя рубашка",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-8-mixdown, 226.72 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:8"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хүхэ самса",
+      "russian": "синяя рубашка"
+    }
+  },
+  {
+    "id": "zoeoekhey",
+    "kind": "word",
+    "buryat": "зөөхэй",
+    "russian": "сметана",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-9-mixdown, 96.91 с"
+    },
+    "tags": [
+      "audio:9"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "зөөхэй",
+      "russian": "сметана"
+    }
+  },
+  {
+    "id": "zagahan",
+    "kind": "word",
+    "buryat": "загаһан",
+    "russian": "рыба",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-9-mixdown, 141.55 с"
+    },
+    "tags": [
+      "audio:9"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "загаһан",
+      "russian": "рыба"
+    }
+  },
+  {
+    "id": "tabikha",
+    "kind": "word",
+    "buryat": "табиха",
+    "russian": "ставить",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-9-mixdown, 174.65 с"
+    },
+    "tags": [
+      "audio:9"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "табиха",
+      "russian": "ставить"
+    }
+  },
+  {
+    "id": "khatuu",
+    "kind": "word",
+    "buryat": "хатуу",
+    "russian": "твердый",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-10-mixdown, 228.96 с"
+    },
+    "tags": [
+      "audio:10"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хатуу",
+      "russian": "твердый"
+    }
+  },
+  {
+    "id": "shuluun",
+    "kind": "word",
+    "buryat": "шулуун",
+    "russian": "камень",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-11-mixdown, 90.13 с"
+    },
+    "tags": [
+      "audio:11"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "шулуун",
+      "russian": "камень"
+    }
+  },
+  {
+    "id": "baga",
+    "kind": "word",
+    "buryat": "бага",
+    "russian": "маленький",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-11-mixdown, 97.43 с"
+    },
+    "tags": [
+      "audio:11"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "бага",
+      "russian": "маленький"
+    }
+  },
+  {
+    "id": "uuzham-2",
+    "kind": "word",
+    "buryat": "уужам",
+    "russian": "просторный",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-11-mixdown, 100.37 с"
+    },
+    "tags": [
+      "audio:11"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "уужам",
+      "russian": "просторный"
+    }
+  },
+  {
+    "id": "tahalga",
+    "kind": "word",
+    "buryat": "таһалга",
+    "russian": "комната",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-11-mixdown, 126.75 с"
+    },
+    "tags": [
+      "audio:11"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "таһалга",
+      "russian": "комната"
+    }
+  },
+  {
+    "id": "oron",
+    "kind": "word",
+    "buryat": "орон",
+    "russian": "кровать",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-4, 425.11 с"
+    },
+    "tags": [
+      "audio:11"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "орон",
+      "russian": "кровать"
+    }
+  },
+  {
+    "id": "sugluulkha",
+    "kind": "word",
+    "buryat": "суглуулха",
+    "russian": "собирать",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-13-mixdown, 515.35 с"
+    },
+    "tags": [
+      "audio:13"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "суглуулха",
+      "russian": "собирать"
+    }
+  },
+  {
+    "id": "hamar",
+    "kind": "word",
+    "buryat": "һамар",
+    "russian": "орех",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-13-mixdown, 556.93 с"
+    },
+    "tags": [
+      "audio:13"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "һамар",
+      "russian": "орех"
+    }
+  },
+  {
+    "id": "urgakha-2",
+    "kind": "word",
+    "buryat": "ургаха",
+    "russian": "расти",
+    "alternatives": [],
+    "source": {
+      "book": "kids-audio",
+      "section": "urok-10, 571.84 с"
+    },
+    "tags": [
+      "audio:13"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "ургаха",
+      "russian": "расти"
+    }
+  },
+  {
+    "id": "tende",
+    "kind": "word",
+    "buryat": "тэндэ",
+    "russian": "там",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-13-mixdown, 594.73 с"
+    },
+    "tags": [
+      "audio:13"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "тэндэ",
+      "russian": "там"
+    }
+  },
+  {
+    "id": "khabar",
+    "kind": "word",
+    "buryat": "хабар",
+    "russian": "весна",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-14-mixdown, 110.3 с"
+    },
+    "tags": [
+      "audio:14"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хабар",
+      "russian": "весна"
+    }
+  },
+  {
+    "id": "uegloeoe",
+    "kind": "word",
+    "buryat": "үглөө",
+    "russian": "утро",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-14-mixdown, 123.3 с"
+    },
+    "tags": [
+      "audio:14"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үглөө",
+      "russian": "утро"
+    }
+  },
+  {
+    "id": "ueder",
+    "kind": "word",
+    "buryat": "үдэр",
+    "russian": "день",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 189.37 с"
+    },
+    "tags": [
+      "audio:14"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үдэр",
+      "russian": "день"
+    }
+  },
+  {
+    "id": "tala",
+    "kind": "word",
+    "buryat": "тала",
+    "russian": "степь",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-15-mixdown, 228.1 с"
+    },
+    "tags": [
+      "audio:15"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "тала",
+      "russian": "степь"
+    }
+  },
+  {
+    "id": "dalay-2",
+    "kind": "word",
+    "buryat": "далай",
+    "russian": "море",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-15-mixdown, 234.92 с"
+    },
+    "tags": [
+      "audio:15"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "далай",
+      "russian": "море"
+    }
+  },
+  {
+    "id": "sakhilgaan",
+    "kind": "word",
+    "buryat": "сахилгаан",
+    "russian": "молния",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-16-mixdown-1, 58.44 с"
+    },
+    "tags": [
+      "audio:16"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "сахилгаан",
+      "russian": "молния"
+    }
+  },
+  {
+    "id": "manan",
+    "kind": "word",
+    "buryat": "манан",
+    "russian": "туман",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-16-mixdown-1, 67.1 с"
+    },
+    "tags": [
+      "audio:16"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "манан",
+      "russian": "туман"
+    }
+  },
+  {
+    "id": "muenoeoeder-dulaan",
+    "kind": "word",
+    "buryat": "Мүнөөдэр дулаан",
+    "russian": "сегодня тепло",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-16-mixdown-1, 153.52 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:16"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Мүнөөдэр дулаан",
+      "russian": "сегодня тепло"
+    }
+  },
+  {
+    "id": "shono",
+    "kind": "word",
+    "buryat": "шоно",
+    "russian": "волк",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-17-mixdown, 112.34 с"
+    },
+    "tags": [
+      "audio:17"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "шоно",
+      "russian": "волк"
+    }
+  },
+  {
+    "id": "tonshuul",
+    "kind": "word",
+    "buryat": "тоншуул",
+    "russian": "дятел",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-17-mixdown, 132.4 с"
+    },
+    "tags": [
+      "audio:17"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "тоншуул",
+      "russian": "дятел"
+    }
+  },
+  {
+    "id": "melkhey",
+    "kind": "word",
+    "buryat": "мэлхэй",
+    "russian": "черепаха",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-17-mixdown, 135.18 с"
+    },
+    "tags": [
+      "audio:17"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "мэлхэй",
+      "russian": "черепаха"
+    }
+  },
+  {
+    "id": "toskhon",
+    "kind": "word",
+    "buryat": "тосхон",
+    "russian": "деревня",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 67.93 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "тосхон",
+      "russian": "деревня"
+    }
+  },
+  {
+    "id": "talmay",
+    "kind": "word",
+    "buryat": "талмай",
+    "russian": "площадь",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 81.43 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "талмай",
+      "russian": "площадь"
+    }
+  },
+  {
+    "id": "amarkha",
+    "kind": "word",
+    "buryat": "амарха",
+    "russian": "отдыхать",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 109.35 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "амарха",
+      "russian": "отдыхать"
+    }
+  },
+  {
+    "id": "honirkhokho",
+    "kind": "word",
+    "buryat": "һонирхохо",
+    "russian": "интересоваться",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 120.2 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "һонирхохо",
+      "russian": "интересоваться"
+    }
+  },
+  {
+    "id": "urda",
+    "kind": "word",
+    "buryat": "урда",
+    "russian": "южный",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 138.58 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "урда",
+      "russian": "южный"
+    }
+  },
+  {
+    "id": "khoyto",
+    "kind": "word",
+    "buryat": "хойто",
+    "russian": "северный",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 142.32 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хойто",
+      "russian": "северный"
+    }
+  },
+  {
+    "id": "nyutag-3",
+    "kind": "word",
+    "buryat": "нютаг",
+    "russian": "местность",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 159.61 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "нютаг",
+      "russian": "местность"
+    }
+  },
+  {
+    "id": "khoto",
+    "kind": "word",
+    "buryat": "хото",
+    "russian": "город",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 163.65 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "хото",
+      "russian": "город"
+    }
+  },
+  {
+    "id": "seserlig",
+    "kind": "word",
+    "buryat": "сэсэрлиг",
+    "russian": "сад",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 186.75 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "сэсэрлиг",
+      "russian": "сад"
+    }
+  },
+  {
+    "id": "zueuen",
+    "kind": "word",
+    "buryat": "зүүн",
+    "russian": "левый",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 227.33 с"
+    },
+    "tags": [
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "зүүн",
+      "russian": "левый"
+    }
+  },
+  {
+    "id": "minii-nyutag-buryaad-oron",
+    "kind": "word",
+    "buryat": "Минии нютаг Буряад орон",
+    "russian": "моя родина бурятия",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 279.15 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Минии нютаг Буряад орон",
+      "russian": "моя родина бурятия"
+    }
+  },
+  {
+    "id": "tuerel-toskhon",
+    "kind": "word",
+    "buryat": "Түрэл тосхон",
+    "russian": "родная деревня",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-18-mixdown, 304.39 с"
+    },
+    "tags": [
+      "phrase",
+      "audio:18"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Түрэл тосхон",
+      "russian": "родная деревня"
+    }
+  },
+  {
+    "id": "uedeshe",
+    "kind": "word",
+    "buryat": "үдэшэ",
+    "russian": "вечером",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 85.09 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үдэшэ",
+      "russian": "вечером"
+    }
+  },
+  {
+    "id": "herikhe",
+    "kind": "word",
+    "buryat": "һэрихэ",
+    "russian": "проснуться",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 95.79 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "һэрихэ",
+      "russian": "проснуться"
+    }
+  },
+  {
+    "id": "untakha",
+    "kind": "word",
+    "buryat": "унтаха",
+    "russian": "спать",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 109.81 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "унтаха",
+      "russian": "спать"
+    }
+  },
+  {
+    "id": "delgueuer",
+    "kind": "word",
+    "buryat": "дэлгүүр",
+    "russian": "магазин",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 113.71 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "дэлгүүр",
+      "russian": "магазин"
+    }
+  },
+  {
+    "id": "altan",
+    "kind": "word",
+    "buryat": "алтан",
+    "russian": "золото",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 144.39 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "алтан",
+      "russian": "золото"
+    }
+  },
+  {
+    "id": "tuelekhe",
+    "kind": "word",
+    "buryat": "түлэхэ",
+    "russian": "платить",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 172.71 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "түлэхэ",
+      "russian": "платить"
+    }
+  },
+  {
+    "id": "nemekhe",
+    "kind": "word",
+    "buryat": "нэмэхэ",
+    "russian": "добавить",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 178.77 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "нэмэхэ",
+      "russian": "добавить"
+    }
+  },
+  {
+    "id": "muengen",
+    "kind": "word",
+    "buryat": "мүнгэн",
+    "russian": "деньги",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 256.49 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "мүнгэн",
+      "russian": "деньги"
+    }
+  },
+  {
+    "id": "uenetey",
+    "kind": "word",
+    "buryat": "үнэтэй",
+    "russian": "дорогой",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 261.43 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үнэтэй",
+      "russian": "дорогой"
+    }
+  },
+  {
+    "id": "muengen-2",
+    "kind": "word",
+    "buryat": "мүнгэн",
+    "russian": "серебро",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 277.75 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "мүнгэн",
+      "russian": "серебро"
+    }
+  },
+  {
+    "id": "khudaldakha",
+    "kind": "word",
+    "buryat": "худалдаха",
+    "russian": "продавать",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 288.13 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "худалдаха",
+      "russian": "продавать"
+    }
+  },
+  {
+    "id": "uegloeoegueuer",
+    "kind": "word",
+    "buryat": "үглөөгүүр",
+    "russian": "утром",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-19-mixdown, 330.4 с"
+    },
+    "tags": [
+      "audio:19"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "үглөөгүүр",
+      "russian": "утром"
+    }
+  },
+  {
+    "id": "sagaalgan",
+    "kind": "word",
+    "buryat": "Сагаалган",
+    "russian": "праздник белого месяца",
+    "alternatives": [],
+    "source": {
+      "book": "burfm-audio",
+      "section": "urok-20-mixdown, 62.15 с"
+    },
+    "tags": [
+      "audio:20"
+    ],
+    "verified": false,
+    "needs_review": false,
+    "review_reasons": [],
+    "possible_typo": false,
+    "typo_candidates": [],
+    "form": null,
+    "excluded": false,
+    "comment": "написание по словарю, звучание — из аудиоурока",
+    "origin": {
+      "buryat": "Сагаалган",
+      "russian": "праздник белого месяца"
     }
   }
 ]

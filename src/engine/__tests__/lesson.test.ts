@@ -165,7 +165,9 @@ describe('buildLesson на реальном курсе', () => {
   });
 
   it('без перевода предложений нет build_sentence; с переводом — есть', () => {
-    const book = allLessons.filter((l) => !l.dialogueId).flatMap((l) => buildLesson(l.id, content, pools, { hasAudio: noAudio, seed: 2 }));
+    const untranslated: Content = buildContent({ ...rawContent, sentences: content.sentences.map((s) => ({ ...s, translation: null })) });
+    const untranslatedPools = buildPools(untranslated);
+    const book = allLessons.filter((l) => !l.dialogueId).flatMap((l) => buildLesson(l.id, untranslated, untranslatedPools, { hasAudio: noAudio, seed: 2 }));
     // Сборку реплики из слов урок даёт и без перевода предложений; здесь важны только предложения.
     expect(book.some((e) => e.key.startsWith('sent-'))).toBe(false);
 
@@ -173,7 +175,8 @@ describe('buildLesson на реальном курсе', () => {
     const sid = lesson.sentenceIds[0];
     const translated: Content = buildContent({
       ...rawContent,
-      sentences: content.sentences.map((s) => (s.id === sid ? { ...s, translation: 'тестовый перевод' } : s)),
+      // Перевод только у одного предложения: урок берёт одно предложение из переведённых.
+      sentences: untranslated.sentences.map((s) => (s.id === sid ? { ...s, translation: 'тестовый перевод' } : s)),
     });
     const withTranslation = buildLesson(lesson.id, translated, buildPools(translated), { hasAudio: noAudio, seed: 2 });
     expect(withTranslation.some((e) => e.type === 'build_sentence' && e.sentence.id === sid)).toBe(true);

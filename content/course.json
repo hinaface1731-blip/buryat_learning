@@ -478,6 +478,402 @@
       "badge": "badge-speech"
     },
     {
+      "id": "t-chisla",
+      "title": "Числа",
+      "description": "От одного до тысячи — на слух из радиоуроков.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-chisla-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "khoyor",
+            "naran",
+            "gurban",
+            "zurgaan",
+            "doloon"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-chisla-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "arban",
+            "nayman",
+            "hara-2"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-numbers"
+    },
+    {
+      "id": "t-tsveta",
+      "title": "Цвета",
+      "description": "Цвета и первые глаголы: «я читаю», «ты читаешь».",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-tsveta-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "nogoon",
+            "khara",
+            "goyo",
+            "uta",
+            "sagaan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-tsveta-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "boro",
+            "ulaan",
+            "bogoni",
+            "shara",
+            "khuekhe"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-tsveta-l3",
+          "title": "Урок 3",
+          "noteIds": [],
+          "wordIds": [
+            "yagaan",
+            "bi-unshanab",
+            "shi-unshanash",
+            "bide-unshanabdi"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-journey"
+    },
+    {
+      "id": "t-odezhda",
+      "title": "Одежда",
+      "description": "Шапка, рубашка, пояс, обувь.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-odezhda-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "uemdekhe",
+            "zaga",
+            "buehe",
+            "taylakha",
+            "khuushan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        },
+        {
+          "id": "t-odezhda-l2",
+          "title": "Урок 2",
+          "noteIds": [],
+          "wordIds": [
+            "malgay",
+            "samsa",
+            "uemden",
+            "degel",
+            "khuekhe-samsa"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-family"
+    },
+    {
+      "id": "t-chasti-tela",
+      "title": "Части тела",
+      "description": "Голова, руки, глаза.",
+      "locked": false,
+      "lessons": [
+        {
+          "id": "t-chasti-tela-l1",
+          "title": "Урок 1",
+          "noteIds": [],
+          "wordIds": [
+            "nyuden",
+            "gar",
+            "khamar",
+            "aman"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false
+        }
+      ],
+      "badge": "badge-family"
+    },
+    {
+      "id": "a-fm",
+      "title": "Аудиокурс «Буряад FM»",
+      "description": "Слова из радиоуроков: слушать и узнавать живую речь.",
+      "locked": false,
+      "badge": "badge-speech",
+      "lessons": [
+        {
+          "id": "a-fm-l1",
+          "title": "Знакомство",
+          "noteIds": [],
+          "wordIds": [
+            "minii",
+            "obog",
+            "ezhy-2",
+            "tiime-ene-minii-nuekher",
+            "mende",
+            "nagasa-ezhy"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: знакомство"
+        },
+        {
+          "id": "a-fm-l2",
+          "title": "Откуда вы родом",
+          "noteIds": [],
+          "wordIds": [
+            "shi-khaanakhibshi",
+            "ta-khaanakhibta",
+            "tere-khaanakhib",
+            "garbal"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: откуда вы родом"
+        },
+        {
+          "id": "a-fm-l4",
+          "title": "Возраст и внешность",
+          "noteIds": [],
+          "wordIds": [
+            "magtakha",
+            "hanakha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: возраст и внешность"
+        },
+        {
+          "id": "a-fm-l9",
+          "title": "Еда",
+          "noteIds": [],
+          "wordIds": [
+            "zoeoekhey",
+            "zagahan",
+            "tabikha"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: еда"
+        },
+        {
+          "id": "a-fm-l11",
+          "title": "Дом",
+          "noteIds": [],
+          "wordIds": [
+            "shuluun",
+            "baga",
+            "uuzham-2",
+            "tahalga",
+            "oron"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: дом"
+        },
+        {
+          "id": "a-fm-l13",
+          "title": "Растения",
+          "noteIds": [],
+          "wordIds": [
+            "sugluulkha",
+            "hamar",
+            "urgakha-2",
+            "tende"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: растения"
+        },
+        {
+          "id": "a-fm-l14",
+          "title": "Время",
+          "noteIds": [],
+          "wordIds": [
+            "khabar",
+            "uegloeoe",
+            "ueder"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: время"
+        },
+        {
+          "id": "a-fm-l15",
+          "title": "Природа",
+          "noteIds": [],
+          "wordIds": [
+            "tala",
+            "dalay-2"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: природа"
+        },
+        {
+          "id": "a-fm-l16",
+          "title": "Погода",
+          "noteIds": [],
+          "wordIds": [
+            "sakhilgaan",
+            "manan",
+            "muenoeoeder-dulaan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: погода"
+        },
+        {
+          "id": "a-fm-l17",
+          "title": "Дикие животные",
+          "noteIds": [],
+          "wordIds": [
+            "shono",
+            "tonshuul",
+            "melkhey"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: дикие животные"
+        },
+        {
+          "id": "a-fm-l18-1",
+          "title": "Город и село 1",
+          "noteIds": [],
+          "wordIds": [
+            "toskhon",
+            "talmay",
+            "amarkha",
+            "honirkhokho",
+            "urda"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: город и село"
+        },
+        {
+          "id": "a-fm-l18-2",
+          "title": "Город и село 2",
+          "noteIds": [],
+          "wordIds": [
+            "khoyto",
+            "nyutag-3",
+            "khoto",
+            "seserlig",
+            "zueuen",
+            "minii-nyutag-buryaad-oron",
+            "tuerel-toskhon"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: город и село"
+        },
+        {
+          "id": "a-fm-l19-1",
+          "title": "Рынок и день 1",
+          "noteIds": [],
+          "wordIds": [
+            "uedeshe",
+            "herikhe",
+            "untakha",
+            "delgueuer",
+            "altan"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: рынок и день"
+        },
+        {
+          "id": "a-fm-l19-2",
+          "title": "Рынок и день 2",
+          "noteIds": [],
+          "wordIds": [
+            "tuelekhe",
+            "nemekhe",
+            "muengen",
+            "uenetey",
+            "muengen-2",
+            "khudaldakha",
+            "uegloeoegueuer"
+          ],
+          "minimalPairIds": [],
+          "letterIds": [],
+          "sentenceIds": [],
+          "categorize": false,
+          "skill": "узнавать на слух: рынок и день"
+        }
+      ]
+    },
+    {
       "id": "u1",
       "title": "Алфавит и особые буквы Ү Ө Һ",
       "description": "36 букв и их названия; три буквы, которых нет в русском.",
@@ -2038,34 +2434,6 @@
           "categorize": true
         }
       ]
-    },
-    {
-      "id": "t-chisla",
-      "title": "Числа",
-      "description": "Скоро.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-tsveta",
-      "title": "Цвета",
-      "description": "Скоро.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-odezhda",
-      "title": "Одежда",
-      "description": "Скоро.",
-      "locked": true,
-      "lessons": []
-    },
-    {
-      "id": "t-chasti-tela",
-      "title": "Части тела",
-      "description": "Скоро.",
-      "locked": true,
-      "lessons": []
     }
   ]
 }

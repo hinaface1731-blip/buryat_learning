@@ -31,7 +31,7 @@ export default function TabsLayout() {
         sceneStyle: { backgroundColor: c.bg },
       }}>
       <Tabs.Screen name="index" options={{ title: 'Путь', tabBarIcon: ({ color }) => <TabIcon name="map" fallback="map-outline" color={color} /> }} />
-      <Tabs.Screen name="review" options={{ title: 'Повторение', tabBarIcon: ({ color }) => <TabIcon name="arrow.triangle.2.circlepath" fallback="repeat-outline" color={color} /> }} />
+      <Tabs.Screen name="practice" options={{ title: 'Практикум', tabBarIcon: ({ color }) => <TabIcon name="dumbbell" fallback="barbell-outline" color={color} /> }} />
       <Tabs.Screen name="dictionary" options={{ title: 'Словарь', tabBarIcon: ({ color }) => <TabIcon name="character.book.closed" fallback="book-outline" color={color} /> }} />
       <Tabs.Screen name="profile" options={{ title: 'Профиль', tabBarIcon: ({ color }) => <TabIcon name="person.crop.circle" fallback="person-circle-outline" color={color} /> }} />
     </Tabs>

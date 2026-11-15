@@ -5,6 +5,9 @@ import { NotoSans_600SemiBold } from '@expo-google-fonts/noto-sans/600SemiBold';
 import { NotoSans_700Bold } from '@expo-google-fonts/noto-sans/700Bold';
 import { FontDisplay, useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
+
+import { initReminders } from '@/lib/reminders';
+import { startAccount } from '@/store/account';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
@@ -15,6 +18,8 @@ import { useHydrated } from '@/store/app-store';
 import { useTheme } from '@/ui/theme';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
+initReminders();
+startAccount();
 
 const swap = (uri: number) => ({ uri, display: FontDisplay.SWAP });
 const FONTS = {
@@ -49,6 +54,10 @@ export default function RootLayout() {
             <Stack.Screen name="onboarding" options={{ gestureEnabled: false }} />
             <Stack.Screen name="lesson/[id]" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
             <Stack.Screen name="review-session" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
+            <Stack.Screen name="practice/[section]" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
+            <Stack.Screen name="listen/[id]" />
+            <Stack.Screen name="place/[id]" />
+            <Stack.Screen name="chat" options={{ presentation: 'fullScreenModal' }} />
             <Stack.Screen name="result" options={{ presentation: 'fullScreenModal', gestureEnabled: false }} />
           </Stack>
         </View>

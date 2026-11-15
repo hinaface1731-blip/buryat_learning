@@ -28,7 +28,12 @@
           "imageWidth": 200
         }
       ],
-      "expo-audio",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Микрофон нужен, чтобы записать своё произношение и сравнить его с образцом."
+        }
+      ],
       "expo-asset",
       "expo-image",
       "expo-web-browser"

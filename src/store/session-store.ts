@@ -8,6 +8,8 @@ import type { SessionState } from '@/engine/session';
 // после каждого шага и весит заметно больше.
 
 export const REVIEW_SESSION_KEY = 'review';
+/** Тренировки Практикума: сохраняются, но на «Пути» как незавершённый урок не показываются. */
+export const PRACTICE_PREFIX = 'practice-';
 
 export type SavedSession = {
   /** Отпечаток контента: после обновления курса старую очередь не продолжаем. */
@@ -39,9 +41,9 @@ export const useSessionStore = create<State>()(
   ),
 );
 
-/** Самый свежий незавершённый урок (не повторение). */
+/** Самый свежий незавершённый урок (не повторение и не тренировка). */
 export function latestSavedLesson(saved: Record<string, SavedSession>, stamp: string): string | null {
-  const lessons = Object.entries(saved).filter(([key, s]) => key !== REVIEW_SESSION_KEY && s.stamp === stamp);
+  const lessons = Object.entries(saved).filter(([key, s]) => key !== REVIEW_SESSION_KEY && !key.startsWith(PRACTICE_PREFIX) && s.stamp === stamp);
   lessons.sort(([, a], [, b]) => b.savedAt - a.savedAt);
   return lessons[0]?.[0] ?? null;
 }
